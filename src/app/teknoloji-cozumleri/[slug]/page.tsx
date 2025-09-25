@@ -1,5 +1,9 @@
 import { mockServices, mockTechSolutions } from "@/lib/mock-data";
 import { PlaceholderContent } from "@/components/placeholder-content";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { CheckCircle } from "lucide-react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export async function generateStaticParams() {
     return mockTechSolutions.map((service) => ({
@@ -14,5 +18,55 @@ export default function TeknolojiCozumDetayPage({ params }: { params: { slug: st
         return <PlaceholderContent title="Çözüm Bulunamadı" description="Aradığınız teknoloji çözümü mevcut değil." />;
     }
 
-    return <PlaceholderContent title={service.title} description={service.summary} />;
+    return (
+        <>
+            <div className="bg-secondary">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                    <div className="max-w-3xl mx-auto text-center">
+                        <div className="inline-block bg-primary/10 p-4 rounded-full mb-4">
+                            <service.icon className="h-12 w-12 text-primary" />
+                        </div>
+                        <h1 className="text-4xl font-bold font-headline">{service.title}</h1>
+                        <p className="mt-4 text-xl text-muted-foreground">{service.summary}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div className="grid lg:grid-cols-3 gap-12">
+                    <div className="lg:col-span-2">
+                        <div className="prose dark:prose-invert max-w-none" dangerouslySetInnerHTML={{ __html: service.content }}/>
+                    </div>
+                    <aside className="lg:col-span-1 sticky top-24 h-fit">
+                        <Card>
+                            <CardHeader>
+                                <CardTitle className="font-headline">Neden Bizi Seçmelisiniz?</CardTitle>
+                            </CardHeader>
+                            <CardContent className="space-y-4">
+                                <div className="flex items-start gap-3">
+                                    <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                                    <p className="text-sm text-muted-foreground">Brigade Electronics yetkili servisi ve çözüm ortağı.</p>
+                                </div>
+                                <div className="flex items-start gap-3">
+                                    <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                                    <p className="text-sm text-muted-foreground">Her sektöre ve araca özel mühendislik yaklaşımı.</p>
+                                </div>
+                                 <div className="flex items-start gap-3">
+                                    <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                                    <p className="text-sm text-muted-foreground">Deneyimli ve sertifikalı teknik ekip.</p>
+                                </div>
+                                <div className="flex items-start gap-3">
+                                    <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                                    <p className="text-sm text-muted-foreground">Proje sonrası tam destek ve servis güvencesi.</p>
+                                </div>
+                                <Button asChild className="w-full mt-4">
+                                    <Link href="/iletisim">Teklif Alın</Link>
+                                </Button>
+                            </CardContent>
+                        </Card>
+                    </aside>
+                </div>
+            </div>
+        </>
+    );
 }
