@@ -1,5 +1,5 @@
 import type { Product, Service, Sector, Project } from '@/lib/types';
-import { Camera, ShieldCheck, Wrench, Route, Cpu, Ship, Truck, Bus, Tractor, Construction } from 'lucide-react';
+import { Camera, ShieldCheck, Wrench, Route, Cpu, Ship, Truck, Bus, Tractor, Construction, Ambulance, Trash2, HardHat, Warehouse, Anchor, Cog } from 'lucide-react';
 
 export const mockServices: Service[] = [
   {
@@ -43,40 +43,136 @@ export const mockTechSolutions: Service[] = [
 export const mockSectors: Sector[] = [
   {
     id: '1',
-    name: 'Lojistik ve Taşımacılık',
-    slug: 'lojistik-ve-tasimacilik',
-    imageUrl: 'sector-logistics',
-    imageHint: 'trucks warehouse',
-    challenges: 'Kör noktalar, geri manevra kazaları, yük ve araç güvenliği, artan yakıt maliyetleri.',
-    solutionsContent: 'Backeye®360 kamera sistemleri ile aracın etrafında 360 derece kuşbakışı görüş sağlayarak manevra kazalarını önlüyoruz. Mobil DVR sistemleri ile yük güvenliğini sağlıyor, telematik çözümlerle rota ve yakıt optimizasyonu sunuyoruz.',
+    name: 'Tarım',
+    slug: 'tarim',
+    icon: Tractor,
+    imageUrl: 'sector-agriculture',
+    imageHint: 'tractor field',
+    challenges: 'Verimlilik ve güvenlik dengesi, geniş ve çeşitli arazi koşulları.',
+    solutionsContent: 'Tarımsal verimliliği ve güvenliği artırmak için özel olarak tasarlanmış sağlam ve güvenilir güvenlik çözümleri sunuyoruz.',
+    description: 'Tarım, küresel pazarda rekabetçi kalmak için verimliliğin hayati olduğu, kendine özgü zorluklara sahip, oldukça çeşitli bir endüstridir. Verimlilik ve güvenlik arasında bir denge kurma ihtiyacı çok önemlidir.'
   },
   {
     id: '2',
-    name: 'İnşaat ve Hafriyat',
-    slug: 'insaat-ve-hafriyat',
-    imageUrl: 'sector-construction',
-    imageHint: 'construction site',
-    challenges: 'Şantiye alanındaki personel ve diğer araçların operatör tarafından fark edilmemesi, zorlu arazi koşullarında manevra zorlukları, ekipman güvenliği.',
-    solutionsContent: 'Brigade\'in ultra dayanıklı kamera ve radar sistemleri, en zorlu şantiye koşullarında bile kusursuz çalışır. Sidescan® ve Backscan® radar sensörleri, operatörü sesli ve görsel olarak uyararak kör noktalardaki tehlikeleri bertaraf eder.',
+    name: 'Havalimanları',
+    slug: 'havalimanlari',
+    icon: Ship, // Using Ship as a proxy for Plane, as Plane is not in lucide-react
+    imageUrl: 'sector-airports',
+    imageHint: 'airport tarmac',
+    challenges: 'Sürekli hareket halindeki çok çeşitli işletme araçları, yoğun insan ve araç trafiği.',
+    solutionsContent: 'Havalimanı operasyonlarının karmaşıklığını anlıyor ve yer hizmetleri araçları için özel güvenlik sistemleri sağlıyoruz.',
+    description: 'Havalimanları, sürekli hareket halinde olan çok çeşitli işletme araçlarının bulunduğu son derece yoğun yerlerdir. Bir havalimanı içindeki birden fazla şirket binlerce kişiyi istihdam etmekte ve her gün binlerce kişi daha seyahat etmektedir.'
   },
   {
     id: '3',
-    name: 'Belediye ve Atık Yönetimi',
-    slug: 'belediye-ve-atik-yonetimi',
-    imageUrl: 'sector-waste',
-    imageHint: 'garbage truck',
-    challenges: 'Dar sokaklar, yaya ve bisikletli trafiği, geri manevra sırasında yaşanan kazalar, personel güvenliği.',
-    solutionsContent: 'Özellikle çöp kamyonları ve yol süpürme araçları için tasarlanan 360 derece kamera sistemleri ve radar çözümleri, operatörün çevresindeki tüm hareketliliği görmesini sağlar. Bu, özellikle meskun mahallerdeki operasyonlarda kaza riskini minimuma indirir.',
-  },
-    {
-    id: '4',
-    name: 'Yolcu Taşımacılığı',
-    slug: 'yolcu-tasimaciligi',
+    name: 'Otobüs ve Yolcu Taşımacılığı',
+    slug: 'otobus-ve-yolcu-tasimaciligi',
+    icon: Bus,
     imageUrl: 'sector-bus',
     imageHint: 'city bus',
-    challenges: 'Duraklara yanaşma, yolcu indirme-bindirme sırasında güvenlik, şehir içi manevralar, vandalizm.',
-    solutionsContent: 'Okul servisleri, şehir içi ve şehirler arası otobüsler için geliştirdiğimiz kamera ve kayıt sistemleri, hem yolcu güvenliğini artırır hem de olası adli durumlarda kanıt niteliği taşır. Kör nokta kameraları, şoförün aracın yan ve arka taraflarını tam olarak görmesini sağlar.',
+    challenges: 'Yolcu güvenliği, yoğun trafikte manevra, duraklara yanaşma.',
+    solutionsContent: 'Yolcu taşıyan araçlar için kör nokta tespiti, kamera sistemleri ve DVR çözümleri ile hem yolcuların hem de sürücülerin güvenliğini sağlıyoruz.',
+    description: 'Otobüsler, şehirlerarası otobüsler ve minibüsler gibi PSV taşımacılığı ve yolcu taşıyan araçlar, günümüzün yolcuları ve tatilcileri için temel bir hizmet sunmaktadır.'
   },
+  {
+    id: '4',
+    name: 'İnşaat',
+    slug: 'insaat',
+    icon: Construction,
+    imageUrl: 'sector-construction',
+    imageHint: 'construction site',
+    challenges: 'İşçi ve araç güvenliği, ağır iş makineleri, zorlu şantiye koşulları.',
+    solutionsContent: 'Ağır iş makineleri için 360 derece görüş sistemleri, radar sensörleri ve dayanıklı kameralar ile şantiye güvenliğini en üst düzeye çıkarıyoruz.',
+    description: 'İnşaat sahalarında işçi ve araç güvenliği her şeyden önemlidir. Ancak, karayolu ve arazi inşaat araçlarıyla birleşen ağır iş makineleri gerçek bir tehdit oluşturmaktadır.'
+  },
+  {
+    id: '5',
+    name: 'Dağıtım',
+    slug: 'dagitim',
+    icon: Warehouse,
+    imageUrl: 'sector-distribution',
+    imageHint: 'delivery van',
+    challenges: 'Eve teslimat ve kurye hizmetlerindeki artış, verimli ve güvenli operasyon ihtiyacı.',
+    solutionsContent: 'Teslimat araçlarının verimli ve güvenli bir şekilde çalışmasını sağlamak için kör nokta kameraları ve telematik çözümleri sunuyoruz.',
+    description: 'Dağıtım endüstrisinin patlama yapması ve eve teslimat ve kurye hizmetlerine olan talebin artmasıyla, teslimat araçlarının verimli ancak güvenli bir şekilde çalışması esastır.'
+  },
+  {
+    id: '6',
+    name: 'Acil Durum Hizmetleri',
+    slug: 'acil-durum-hizmetleri',
+    icon: Ambulance,
+    imageUrl: 'sector-emergency',
+    imageHint: 'ambulance lights',
+    challenges: 'Yoğun trafikte ve kalabalık yaya alanlarında yüksek hızda güvenli sürüş.',
+    solutionsContent: 'Ambulans, itfaiye gibi acil durum araçlarının olaylara hızlı ve güvenli bir şekilde müdahale etmelerine yardımcı olan özel kamera ve uyarı sistemleri sağlıyoruz.',
+    description: 'Acil servis araçlarının sürücüleri çok sayıda tehlikeyle karşılaşır. Olaylara hızla müdahale etmek, yoğun trafikte ve kalabalık yaya alanlarında yüksek hızlarda gezinmeyi gerektirir.'
+  },
+  {
+    id: '7',
+    name: 'Nakliye ve Lojistik',
+    slug: 'nakliye-ve-lojistik',
+    icon: Truck,
+    imageUrl: 'sector-logistics',
+    imageHint: 'truck highway',
+    challenges: 'Ağır vasıtaların karayollarındaki algısı, çarpışmalar, sıkışıklık ve gürültü kirliliği.',
+    solutionsContent: 'Ağır vasıtalar için 360 derece görüş sistemleri, yan ve arka sensörler ve akıllı geri vites alarmları ile hem güvenliği artırıyor hem de kamuoyu algısını iyileştiriyoruz.',
+    description: 'Nakliye ve lojistik ekonominin bel kemiğidir, ancak ağır yük araçlarının kamuoyundaki algısı zayıftır. Yollara hakim olan ve çarpışmalara, sıkışıklığa ve gürültü kirliliğine neden olan makineler olarak görülürler.'
+  },
+  {
+    id: '8',
+    name: 'Taş Ocağı ve Madencilik',
+    slug: 'tas-ocagi-ve-madencilik',
+    icon: HardHat,
+    imageUrl: 'sector-mining',
+    imageHint: 'mining truck',
+    challenges: 'Zorlu ortamlar, büyük mobil tesislerin saha çalışanları için oluşturduğu tehlike.',
+    solutionsContent: 'Maden ve taş ocaklarındaki zorlu koşullar için özel olarak tasarlanmış, en dayanıklı radar ve kamera sistemleri ile işçi güvenliğini sağlıyoruz.',
+    description: 'Maden ve taş ocağı sahalarında çalışanları güvende tutmak zorlu ama gerekli bir görevdir. Sektörler zorlu ortamlarda faaliyet gösterir ve büyük mobil tesisler saha çalışanları için çok gerçek bir tehlike oluşturabilir.'
+  },
+  {
+    id: '9',
+    name: 'Çöp ve Atık Yönetimi',
+    slug: 'cop-ve-atik-yonetimi',
+    icon: Trash2,
+    imageUrl: 'sector-waste',
+    imageHint: 'garbage truck',
+    challenges: 'Büyük ve ağır araçların manevra kabiliyetinin düşük olması, dar sokaklar.',
+    solutionsContent: 'Çöp kamyonları için özel olarak geliştirilmiş 360 derece kamera sistemleri, radar sensörleri ve akıllı alarmlar ile kentsel alanlarda güvenliği en üst düzeye çıkarıyoruz.',
+    description: 'Çöp araçları ve atık kamyonları tipik olarak büyük ve ağırdır, bu da onları normal binek araçlara kıyasla daha az manevra kabiliyetine sahip kılar.'
+  },
+  {
+    id: '10',
+    name: 'Yol İnşaatı',
+    slug: 'yol-insaati',
+    icon: Construction,
+    imageUrl: 'sector-road-construction',
+    imageHint: 'road construction',
+    challenges: 'Yol işçilerini içeren olaylardaki artış, tehlikeli çalışma ortamı.',
+    solutionsContent: 'Yol yapım makineleri ve çalışanları için RFID tabanlı güvenlik sistemleri ve 360 derece görüş çözümleri ile olayları önlemeye yardımcı oluyoruz.',
+    description: 'Yol inşaatı tehlikeli bir meslektir ve çalışmak için en tehlikeli yerlerden biri olarak sıralanır. Yollar daha güvenli ve kayıplar 40 yılı aşkın süredir en düşük seviyede olmasına rağmen, yol işçilerini içeren olaylar artmıştır.'
+  },
+  {
+    id: '11',
+    name: 'Özel Araçlar',
+    slug: 'ozel-araclar',
+    icon: Cog,
+    imageUrl: 'sector-specialist',
+    imageHint: 'specialist vehicle',
+    challenges: 'Belirli amaç ve çalışma ortamına göre özel güvenlik çözümleri gerekliliği.',
+    solutionsContent: 'Her bir özel aracın amacına ve çalışma ortamına göre uyarlanmış, ısmarlama güvenlik çözümleri tasarlıyor ve uyguluyoruz.',
+    description: 'Tarım, otoyol inşaatı, taş ocakları, mavi ışık, limanlar ve kamu hizmetleri gibi alanlarda kullanılan özel araçlar ve makineler, kendi özel amaçlarına ve çalışma ortamlarına göre uyarlanmış ısmarlama güvenlik çözümleri gerektirir.'
+  },
+  {
+    id: '12',
+    name: 'Deniz Limanları',
+    slug: 'deniz-limanlari',
+    icon: Anchor,
+    imageUrl: 'sector-seaports',
+    imageHint: 'seaport crane',
+    challenges: 'Sürekli hareket eden yükler, araçlar ve tesisler; en yüksek araç kaynaklı olay oranlarından biri.',
+    solutionsContent: 'Liman operasyonlarındaki her türlü araç için RFID etiketli güvenlik bölgeleri, radar sistemleri ve merkezi kayıt çözümleri ile verimliliği ve güvenliği bir arada sağlıyoruz.',
+    description: 'Liman operasyonlarını verimli ancak güvenli bir şekilde yürütmek zorlu bir iştir. Sürekli hareket eden yükler, araçlar ve tesisler ile limanlardaki araçla ilgili olayların herhangi bir endüstrinin en yükseklerinden biri olması şaşırtıcı değildir.'
+  }
 ];
 
 export const mockProducts: Product[] = [
@@ -109,7 +205,7 @@ export const mockProducts: Product[] = [
     notes: 'Kurulum için kalibrasyon kiti gereklidir. Monitör ve kamera uzatma kabloları dahil değildir.',
     imageUrls: ['product-backeye-360-1', 'product-backeye-360-2'],
     isFeatured: true,
-    relatedSectors: ['lojistik-ve-tasimacilik', 'insaat-ve-hafriyat', 'belediye-ve-atik-yonetimi', 'yolcu-tasimaciligi'],
+    relatedSectors: ['nakliye-ve-lojistik', 'insaat', 'cop-ve-atik-yonetimi', 'otobus-ve-yolcu-tasimaciligi'],
   },
   {
     id: 'product-2',
@@ -138,7 +234,7 @@ export const mockProducts: Product[] = [
     notes: 'Kurulum için kalibrasyon matları gereklidir.',
     imageUrls: ['product-backeye-360-1', 'product-backeye-360-2'],
     isFeatured: true,
-    relatedSectors: ['lojistik-ve-tasimacilik', 'insaat-ve-hafriyat', 'belediye-ve-atik-yonetimi', 'yolcu-tasimaciligi'],
+    relatedSectors: ['nakliye-ve-lojistik', 'insaat', 'cop-ve-atik-yonetimi', 'otobus-ve-yolcu-tasimaciligi'],
   },
   {
     id: 'product-3',
@@ -163,7 +259,7 @@ export const mockProducts: Product[] = [
     warranty: '2 Yıl',
     imageUrls: ['product-sidescan-1'],
     isFeatured: false,
-    relatedSectors: ['lojistik-ve-tasimacilik', 'insaat-ve-hafriyat'],
+    relatedSectors: ['nakliye-ve-lojistik', 'insaat'],
   },
   {
     id: 'product-4',
@@ -187,7 +283,7 @@ export const mockProducts: Product[] = [
     warranty: '5 Yıl',
     imageUrls: ['product-backeye-360-1'],
     isFeatured: true,
-    relatedSectors: ['insaat-ve-hafriyat'],
+    relatedSectors: ['insaat', 'tas-ocagi-ve-madencilik'],
   },
   {
     id: 'product-5',
@@ -210,7 +306,7 @@ export const mockProducts: Product[] = [
     warranty: '3 Yıl',
     imageUrls: ['product-backeye-360-1'],
     isFeatured: false,
-    relatedSectors: ['lojistik-ve-tasimacilik', 'belediye-ve-atik-yonetimi'],
+    relatedSectors: ['nakliye-ve-lojistik', 'cop-ve-atik-yonetimi'],
   },
   {
     id: 'product-6',
@@ -231,7 +327,7 @@ export const mockProducts: Product[] = [
     warranty: '3 Yıl',
     imageUrls: ['product-mdr-508-1'],
     isFeatured: false,
-    relatedSectors: ['lojistik-ve-tasimacilik', 'yolcu-tasimaciligi'],
+    relatedSectors: ['nakliye-ve-lojistik', 'otobus-ve-yolcu-tasimaciligi'],
   },
    {
     id: 'product-7',
@@ -250,7 +346,7 @@ export const mockProducts: Product[] = [
     ],
     imageUrls: ['product-sidescan-2'],
     isFeatured: false,
-    relatedSectors: ['lojistik-ve-tasimacilik', 'yolcu-tasimaciligi'],
+    relatedSectors: ['nakliye-ve-lojistik', 'otobus-ve-yolcu-tasimaciligi'],
   },
   {
     id: 'product-8',
@@ -270,7 +366,7 @@ export const mockProducts: Product[] = [
     ],
     imageUrls: ['product-sidescan-2'],
     isFeatured: false,
-    relatedSectors: ['lojistik-ve-tasimacilik', 'yolcu-tasimaciligi'],
+    relatedSectors: ['nakliye-ve-lojistik', 'otobus-ve-yolcu-tasimaciligi'],
   },
   {
     id: 'product-9',
@@ -288,7 +384,7 @@ export const mockProducts: Product[] = [
     ],
     imageUrls: ['product-sidescan-1'],
     isFeatured: true,
-    relatedSectors: ['belediye-ve-atik-yonetimi', 'lojistik-ve-tasimacilik'],
+    relatedSectors: ['cop-ve-atik-yonetimi', 'nakliye-ve-lojistik'],
   },
   {
     id: 'product-10',
@@ -306,7 +402,7 @@ export const mockProducts: Product[] = [
     ],
     imageUrls: ['product-sidescan-1'],
     isFeatured: false,
-    relatedSectors: ['yolcu-tasimaciligi', 'belediye-ve-atik-yonetimi'],
+    relatedSectors: ['otobus-ve-yolcu-tasimaciligi', 'cop-ve-atik-yonetimi'],
   },
   {
     id: 'product-11',
@@ -325,7 +421,7 @@ export const mockProducts: Product[] = [
     warranty: 'Ömür Boyu',
     imageUrls: ['product-sidescan-2'],
     isFeatured: true,
-    relatedSectors: ['insaat-ve-hafriyat', 'belediye-ve-atik-yonetimi'],
+    relatedSectors: ['insaat', 'cop-ve-atik-yonetimi', 'tas-ocagi-ve-madencilik'],
   },
   {
     id: 'product-12',
@@ -343,7 +439,7 @@ export const mockProducts: Product[] = [
     ],
     imageUrls: ['product-sidescan-2'],
     isFeatured: false,
-    relatedSectors: ['yolcu-tasimaciligi', 'belediye-ve-atik-yonetimi'],
+    relatedSectors: ['otobus-ve-yolcu-tasimaciligi', 'cop-ve-atik-yonetimi'],
   }
 ];
 
@@ -353,7 +449,7 @@ export const mockProjects: Project[] = [
     title: 'Büyük Bir Lojistik Firması İçin Filo Güvenlik Modernizasyonu',
     slug: 'lojistik-filo-guvenlik-modernizasyonu',
     clientName: 'Gizli Lojistik A.Ş.',
-    sector: 'lojistik-ve-tasimacilik',
+    sector: 'nakliye-ve-lojistik',
     coverImage: 'project-logistics-1',
     imageHint: 'truck fleet',
     challenge: 'Müşterimiz, şehir içi dağıtım yapan çekici ve kamyon filosunda, özellikle sağa dönüşler ve geri manevralar sırasında sık sık küçük çaplı kazalar yaşıyordu. Bu durum hem maddi hasara hem de sigorta maliyetlerinde artışa neden oluyordu.',
@@ -366,7 +462,7 @@ export const mockProjects: Project[] = [
     title: 'Belediye Atık Toplama Araçlarında Yaya Güvenliği Projesi',
     slug: 'belediye-atik-toplama-yaya-guvenligi',
     clientName: 'Anadolu Yakası Belediyesi',
-    sector: 'belediye-ve-atik-yonetimi',
+    sector: 'cop-ve-atik-yonetimi',
     coverImage: 'project-waste-1',
     imageHint: 'garbage truck city',
     challenge: 'Belediyenin atık toplama kamyonları, dar sokaklarda ve yoğun yaya trafiğinin olduğu bölgelerde çalışırken ciddi güvenlik riskleri oluşturuyordu. Özellikle aracın arkasında ve yanında çalışan personelin güvenliği en büyük endişeydi.',
@@ -375,3 +471,5 @@ export const mockProjects: Project[] = [
     usedProducts: ['mdr-600-serisi', 'bbs-tek-akilli-alarm'],
   },
 ];
+
+    
