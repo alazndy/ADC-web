@@ -1,10 +1,22 @@
 {
   "placeholderImages": [
     {
-      "id": "sector-logistics",
-      "description": "Logistics sector image",
-      "imageUrl": "https://images.unsplash.com/photo-1638368885492-7df8ff32920d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx0cnVja3MlMjB3YXJlaG91c2V8ZW58MHx8fHwxNzU4Nzk2Mzc4fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "trucks warehouse"
+      "id": "sector-agriculture",
+      "description": "Agriculture sector image",
+      "imageUrl": "https://images.unsplash.com/photo-1560493676-04071c5f467b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0cmFjdG9yJTIwZmllbGR8ZW58MHx8fHwxNzE2NDAxNzY4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "tractor field"
+    },
+    {
+      "id": "sector-airports",
+      "description": "Airports sector image",
+      "imageUrl": "https://images.unsplash.com/photo-1570125909248-b39b0a1b6a16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhirportJTIwdGFybWFjfGVufDB8fHx8MTcxNjQwMTgwM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "airport tarmac"
+    },
+    {
+      "id": "sector-bus",
+      "description": "Bus sector image",
+      "imageUrl": "https://images.unsplash.com/photo-1621560471624-224511e9570b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjaXR5JTIwYnVzfGVufDB8fHx8MTc1ODcyOTY3Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "city bus"
     },
     {
       "id": "sector-construction",
@@ -13,16 +25,52 @@
       "imageHint": "construction site"
     },
     {
+      "id": "sector-distribution",
+      "description": "Distribution sector image",
+      "imageUrl": "https://images.unsplash.com/photo-1606791402809-51c3c43ec3a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkZWxpdmVyeSUyMHZhbnxlbnwwfHx8fDE3MTY0MDE4NTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "delivery van"
+    },
+    {
+      "id": "sector-emergency",
+      "description": "Emergency sector image",
+      "imageUrl": "https://images.unsplash.com/photo-1613824508938-552763347f31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhbWJ1bGFuY2UlMjBsaWdodHN8ZW58MHx8fHwxNzE2NDAxODgyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ambulance lights"
+    },
+    {
+      "id": "sector-logistics",
+      "description": "Logistics sector image",
+      "imageUrl": "https://images.unsplash.com/photo-1577977491796-3b7f5c5310da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0cnVjayUyMGhpZ2h3YXl8ZW58MHx8fHwxNzE2NDAxOTE5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "truck highway"
+    },
+    {
+      "id": "sector-mining",
+      "description": "Mining sector image",
+      "imageUrl": "https://images.unsplash.com/photo-1547497992-bde64a511634?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtaW5pbmclMjB0cnVja3xlbnwwfHx8fDE3MTY0MDE5NDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mining truck"
+    },
+    {
       "id": "sector-waste",
       "description": "Waste management sector image",
       "imageUrl": "https://images.unsplash.com/photo-1635691315495-ff39debe5764?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxnYXJiYWdlJTIwdHJ1Y2t8ZW58MHx8fHwxNzU4NzA1OTAzfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "garbage truck"
     },
     {
-      "id": "sector-bus",
-      "description": "Bus sector image",
-      "imageUrl": "https://images.unsplash.com/photo-1621560471624-224511e9570b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjaXR5JTIwYnVzfGVufDB8fHx8MTc1ODcyOTY3Nnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "city bus"
+      "id": "sector-road-construction",
+      "description": "Road construction sector image",
+      "imageUrl": "https://images.unsplash.com/photo-1589291146522-99645b448f2b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyb2FkJTIwY29uc3RydWN0aW9ufGVufDB8fHx8MTcxNjQwMjAwMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "road construction"
+    },
+    {
+      "id": "sector-specialist",
+      "description": "Specialist vehicle sector image",
+      "imageUrl": "https://images.unsplash.com/photo-1503341459-7d07e3518e87?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzcGVjaWFsaXN0JTIwdmVoaWNsZXxlbnwwfHx8fDE3MTY0MDIwMjh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "specialist vehicle"
+    },
+    {
+      "id": "sector-seaports",
+      "description": "Seaports sector image",
+      "imageUrl": "https://images.unsplash.com/photo-1605333509930-749e49195d43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzZWFwb3J0JTIwY3JhbmV8ZW58MHx8fHwxNzE2NDAyMDU2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "seaport crane"
     },
     {
       "id": "product-backeye-360-1",
@@ -45,7 +93,7 @@
     {
       "id": "product-sidescan-2",
       "description": "Sidescan product image 2",
-      "imageUrl": "https://picsum.photos/seed/23/800/600",
+      "imageUrl": "https://images.unsplash.com/photo-1558530737-1a5aad5874f7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8dHJ1Y2slMjBzZW5zb3J8ZW58MHx8fHwxNzU4Nzk3NjEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "truck sensor"
     },
     {

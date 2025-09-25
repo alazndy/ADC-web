@@ -29,10 +29,12 @@ export interface Sector {
   id: string;
   name: string;
   slug: string;
+  icon: React.ComponentType<{ className?: string }>;
   imageUrl: string;
   imageHint: string;
   challenges: string;
   solutionsContent: string;
+  description: string;
 }
 
 export interface Project {
@@ -48,3 +50,5 @@ export interface Project {
   result: string;
   usedProducts: string[]; // Array of product slugs
 }
+
+    

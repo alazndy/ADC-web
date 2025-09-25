@@ -1,4 +1,4 @@
-import { mockProjects, mockProducts } from "@/lib/mock-data";
+import { mockProjects, mockProducts, mockSectors } from "@/lib/mock-data";
 import { findImage } from "@/lib/placeholder-images";
 import Image from "next/image";
 import Link from "next/link";
@@ -24,6 +24,7 @@ export default function ProjeDetayPage({ params }: { params: { slug: string } })
 
     const image = findImage(project.coverImage);
     const relatedProducts = mockProducts.filter(p => project.usedProducts.includes(p.slug));
+    const sector = mockSectors.find(s => s.slug === project.sector);
 
     return (
         <>
@@ -39,7 +40,7 @@ export default function ProjeDetayPage({ params }: { params: { slug: string } })
                 )}
                 <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-                        <Badge variant="destructive" className="mb-4 text-base">{mockSectors.find(s => s.slug === project.sector)?.name}</Badge>
+                        {sector && <Badge variant="destructive" className="mb-4 text-base">{sector.name}</Badge>}
                         <h1 className="text-4xl font-bold font-headline">{project.title}</h1>
                         {project.clientName && <p className="mt-2 text-lg text-white/80">Müşteri: {project.clientName}</p>}
                     </div>
@@ -93,3 +94,5 @@ export default function ProjeDetayPage({ params }: { params: { slug: string } })
         </>
     );
 }
+
+    

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { mockProjects } from '@/lib/mock-data';
+import { mockProjects, mockSectors } from '@/lib/mock-data';
 import { findImage } from '@/lib/placeholder-images';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -22,6 +22,7 @@ export default function ProjelerPage() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {mockProjects.map((project) => {
             const image = findImage(project.coverImage);
+            const sector = mockSectors.find(s => s.slug === project.sector);
             return (
               <Card key={project.id} className="group overflow-hidden flex flex-col">
                 {image && (
@@ -36,7 +37,7 @@ export default function ProjelerPage() {
                   </div>
                 )}
                 <CardContent className="p-6 flex-grow flex flex-col">
-                  <Badge variant="outline" className='mb-2 w-fit'>{project.sector}</Badge>
+                  {sector && <Badge variant="outline" className='mb-2 w-fit'>{sector.name}</Badge>}
                   <h2 className="text-xl font-bold font-headline flex-grow">{project.title}</h2>
                   <p className="mt-3 text-muted-foreground line-clamp-3">
                     <strong>Zorluk:</strong> {project.challenge}
@@ -53,3 +54,5 @@ export default function ProjelerPage() {
     </>
   );
 }
+
+    
