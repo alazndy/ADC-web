@@ -153,6 +153,41 @@ const driverSafetySystemSubCategories = [
     },
 ];
 
+const recordingSystemSubCategories = [
+    {
+        title: 'Dijital Kayıt Cihazları (MDR)',
+        slug: 'digital-recorders-mdr',
+        description: 'Brigade\'in MDR dijital video kayıt cihazları, bir olay durumunda yanılmaz kanıtlar ve doğru tanıklıklar sağlayarak ideal çözümü sunar. Sizi ve sürücülerinizi koruduğundan emin olabilirsiniz.',
+        features: ['Koruma Sağlar', 'En İyi Sürücü Pratiklerini Teşvik Eder', 'Vandalizmi Caydırır', 'İç Huzuru'],
+        image: 'placeholder-16',
+        imageHint: 'digital video recorder',
+    },
+    {
+        title: 'Araç Kameraları (Dashcams)',
+        slug: 'dashcams',
+        description: 'Brigade\'in Araç Kameraları – kompakt, birleşik kamera ve kayıt sistemleri – araç olayları durumunda kanıt sağlar. Avuç içi büyüklüğündeki cihazlar, ön camınıza kolayca takılarak ilerideki yolu kaydetmenizi sağlar.',
+        features: ['Yüksek Çözünürlük', 'Konum ve Hız', 'Çoklu Kayıt Modları', 'İndirilebilir Yazılım'],
+        image: 'placeholder-18',
+        imageHint: 'dashcam view',
+    },
+    {
+        title: 'Yapay Zeka Destekli Araç Kameraları',
+        slug: 'ai-connected-dashcams',
+        description: 'Yapay Zeka Destekli Araç Kamerası, olay uyarıları, yüksek çözünürlüklü olay kaydı ve sürücü davranışını izlemek için AI teknolojisini kullanan, ön cama monte edilen kompakt bir çift kamera sistemidir.',
+        features: ['Yapay Zeka', '4G Bağlantısı', '1TB Depolama', 'Yüksek Çözünürlük'],
+        image: 'placeholder-19',
+        imageHint: 'AI dashcam interface',
+    },
+    {
+        title: 'AI Sürücü Dikkat Dağınıklığı Kameraları',
+        slug: 'ai-driver-distraction-cameras',
+        description: 'AI Sürücü Dikkat Dağınıklığı Kameraları, sürücü dikkat dağınıklığını ve yorgunluğunu azaltmak için tasarlanmış gelişmiş bir güvenlik sistemidir. Aracın içine yerleştirilen kamera, sürücünün yüzünü, gözlerini ve kafa hareketlerini sürekli olarak izler. Dahili AI, dikkat dağınıklığı ve yorgunluk belirtilerini tespit etmek için sürücüyü analiz eder ve sürücüye sesli uyarılar verir.',
+        features: ['Daha Güvenli Yollar', 'Aşamalı Uyarılar', 'Sürücü Güvencesi'],
+        image: 'placeholder-20',
+        imageHint: 'driver monitoring camera',
+    },
+];
+
 
 export async function generateStaticParams() {
     return allCategories.map((category) => ({
@@ -172,11 +207,13 @@ export default function UrunKategoriPage({ params }: { params: { kategoriSlug: s
   const isCameraMonitor = params.kategoriSlug === 'kamera-monitor-sistemleri';
   const isDetectionSystem = params.kategoriSlug === 'tespit-sistemleri';
   const isDriverSafety = params.kategoriSlug === 'surucu-guvenlik-sistemleri';
+  const isRecordingSystem = params.kategoriSlug === 'kayit-sistemleri';
   
   let subCategories = [];
   if (isCameraMonitor) subCategories = cameraMonitorSubCategories;
   else if (isDetectionSystem) subCategories = detectionSystemSubCategories;
   else if (isDriverSafety) subCategories = driverSafetySystemSubCategories;
+  else if (isRecordingSystem) subCategories = recordingSystemSubCategories;
   
   const hasSpecialLayout = subCategories.length > 0;
 
@@ -187,6 +224,8 @@ export default function UrunKategoriPage({ params }: { params: { kategoriSlug: s
     pageDescription = "Brigade’in Tespit Sistemleri, hareketli veya sabit olsun, araca yakın engeller hakkında sürücüyü uyarır. Kabin içindeki sesli ve/veya görsel bir uyarı, mesafeyi bildirirken, arabanın döndüğünü bisikletlilere ve yayalara bildirmek için isteğe bağlı bir harici konuşma alarmı eklenebilir.";
   } else if (isDriverSafety) {
     pageDescription = "Brigade’in Sürücü Güvenlik Sistemleri, yol koşullarını ve sürücü davranışını izlemek, uyuşukluk, dikkat dağınıklığı ve yorgunluk belirtilerini tespit etmek için AI teknolojisinden yararlanır. Bu kompakt, kabin içi sistemler, sürücü güvenliğini ve uyanıklığını artırmak için gerçek zamanlı sesli uyarılar verir.";
+  } else if (isRecordingSystem) {
+    pageDescription = "Filo güvenliğinizi, Brigade Electronics'in araç kayıt sistemleriyle artırın. Filonuz için en üst düzeyde güvenlik sağlamak üzere kapsamlı izleme ile.";
   }
 
 
