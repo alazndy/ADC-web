@@ -1,0 +1,117 @@
+/**
+ * @fileOverview Firestore Security Rules for ADC Tasarım Application
+ *
+ * Core Philosophy:
+ * This ruleset enforces public read access for most collections while restricting write access.
+ *
+ * Data Structure:
+ * The database consists of several top-level collections: products, services, techSolutions, sectors, projects, blogPosts, and formSubmissions.  These are designed for public read access.
+ *
+ * Key Security Decisions:
+ * - Public read access is granted to all collections.
+ * - Write access is denied to all users, including authenticated users, for all collections. This assumes that data modification will be handled by backend services or administrative tools outside of the scope of these rules.
+ * - No user listing is allowed.
+ */
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    /**
+     * @description Grants public read access to product information and denies all write access.
+     * @path /products/{productId}
+     * @allow get, list: if true;
+     * @deny create, update, delete: if false;
+     * @principle Allows public access for reads, prevents unauthorized data modifications.
+     */
+    match /products/{productId} {
+      allow get, list: if true;
+      allow create: if false;
+      allow update: if false;
+      allow delete: if false;
+    }
+
+    /**
+     * @description Grants public read access to service information and denies all write access.
+     * @path /services/{serviceId}
+     * @allow get, list: if true;
+     * @deny create, update, delete: if false;
+     * @principle Allows public access for reads, prevents unauthorized data modifications.
+     */
+    match /services/{serviceId} {
+      allow get, list: if true;
+      allow create: if false;
+      allow update: if false;
+      allow delete: if false;
+    }
+
+    /**
+     * @description Grants public read access to technology solution information and denies all write access.
+     * @path /techSolutions/{techSolutionId}
+     * @allow get, list: if true;
+     * @deny create, update, delete: if false;
+     * @principle Allows public access for reads, prevents unauthorized data modifications.
+     */
+    match /techSolutions/{techSolutionId} {
+      allow get, list: if true;
+      allow create: if false;
+      allow update: if false;
+      allow delete: if false;
+    }
+
+    /**
+     * @description Grants public read access to sector information and denies all write access.
+     * @path /sectors/{sectorId}
+     * @allow get, list: if true;
+     * @deny create, update, delete: if false;
+     * @principle Allows public access for reads, prevents unauthorized data modifications.
+     */
+    match /sectors/{sectorId} {
+      allow get, list: if true;
+      allow create: if false;
+      allow update: if false;
+      allow delete: if false;
+    }
+
+    /**
+     * @description Grants public read access to project information and denies all write access.
+     * @path /projects/{projectId}
+     * @allow get, list: if true;
+     * @deny create, update, delete: if false;
+     * @principle Allows public access for reads, prevents unauthorized data modifications.
+     */
+    match /projects/{projectId} {
+      allow get, list: if true;
+      allow create: if false;
+      allow update: if false;
+      allow delete: if false;
+    }
+
+    /**
+     * @description Grants public read access to blog post information and denies all write access.
+     * @path /blogPosts/{blogPostId}
+     * @allow get, list: if true;
+     * @deny create, update, delete: if false;
+     * @principle Allows public access for reads, prevents unauthorized data modifications.
+     */
+    match /blogPosts/{blogPostId} {
+      allow get, list: if true;
+      allow create: if false;
+      allow update: if false;
+      allow delete: if false;
+    }
+
+    /**
+     * @description Grants public read access to form submission data and denies all write access.
+     * @path /formSubmissions/{formSubmissionId}
+     * @allow get, list: if true;
+     * @deny create, update, delete: if false;
+     * @principle Allows public access for reads, prevents unauthorized data modifications.
+     */
+    match /formSubmissions/{formSubmissionId} {
+      allow get, list: if true;
+      allow create: if false;
+      allow update: if false;
+      allow delete: if false;
+    }
+  }
+}
