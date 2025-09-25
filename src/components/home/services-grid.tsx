@@ -1,9 +1,9 @@
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { mockServices, mockTechSolutions } from "@/lib/mock-data";
+import { services, techSolutions } from "@/lib/data";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
-const featuredServices = [...mockServices.slice(0, 2), ...mockTechSolutions.slice(0, 2)];
+const featuredServices = [...services.slice(0, 2), ...techSolutions.slice(0, 2)];
 
 export function ServicesGrid() {
   return (
@@ -19,7 +19,7 @@ export function ServicesGrid() {
         </div>
         <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {featuredServices.map((service) => {
-            const href = mockServices.some(s => s.id === service.id)
+            const href = services.some(s => s.id === service.id)
               ? `/hizmetler/${service.slug}`
               : `/teknoloji-cozumleri/${service.slug}`;
             return (
@@ -46,3 +46,4 @@ export function ServicesGrid() {
     </section>
   );
 }
+

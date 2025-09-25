@@ -1,4 +1,4 @@
-import { mockSectors, mockProducts } from "@/lib/mock-data";
+import { sectors, products } from "@/lib/data";
 import { findImage } from "@/lib/placeholder-images";
 import { PlaceholderContent } from "@/components/placeholder-content";
 import Image from "next/image";
@@ -7,20 +7,20 @@ import { AlertTriangle, Shield } from "lucide-react";
 import { ProductCard } from "@/components/product-card";
 
 export async function generateStaticParams() {
-    return mockSectors.map((sector) => ({
+    return sectors.map((sector) => ({
         slug: sector.slug,
     }));
 }
 
 export default function SektorDetayPage({ params }: { params: { slug:string } }) {
-    const sector = mockSectors.find(p => p.slug === params.slug);
+    const sector = sectors.find(p => p.slug === params.slug);
 
     if (!sector) {
         return <PlaceholderContent title="Sektör Bulunamadı" description="Aradığınız sektör mevcut değil." />;
     }
 
     const image = findImage(sector.imageUrls[0]);
-    const relatedProducts = mockProducts.filter(p => p.relatedSectors.includes(sector.slug));
+    const relatedProducts = products.filter(p => p.relatedSectors.includes(sector.slug));
 
     return (
         <>
@@ -85,3 +85,4 @@ export default function SektorDetayPage({ params }: { params: { slug:string } })
         </>
     );
 }
+

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { mockSectors } from '@/lib/mock-data';
+import { sectors } from '@/lib/data';
 import { findImage } from '@/lib/placeholder-images';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight } from 'lucide-react';
@@ -19,7 +19,7 @@ export default function SektorlerPage() {
 
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {mockSectors.map((sector) => {
+                    {sectors.map((sector) => {
                         const image = findImage(sector.imageUrls[0]);
                         return (
                             <Link href={`/sektorler/${sector.slug}`} key={sector.id} className="group flex">

@@ -2,11 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { mockProjects } from "@/lib/mock-data";
+import { projects } from "@/lib/data";
 import { findImage } from "@/lib/placeholder-images";
 import { Badge } from "@/components/ui/badge";
 
-const highlightedProject = mockProjects[0];
+const highlightedProject = projects[0];
 
 export function ProjectHighlight() {
   if (!highlightedProject) return null;
@@ -57,3 +57,4 @@ export function ProjectHighlight() {
     </section>
   );
 }
+

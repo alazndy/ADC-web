@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { mockProducts } from "@/lib/mock-data";
+import { products } from "@/lib/data";
 import { findImage } from "@/lib/placeholder-images";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight } from "lucide-react";
@@ -14,7 +14,7 @@ import { ProductCard } from '@/components/product-card';
 import Autoplay from "embla-carousel-autoplay";
 
 export function FeaturedProducts2() {
-  const featuredProducts = mockProducts.filter(p => p.isFeatured);
+  const featuredProducts = products.filter(p => p.isFeatured);
   const mainFeatured = featuredProducts[0];
   const otherFeatured = featuredProducts.slice(1);
   const mainImage = findImage(mainFeatured?.imageUrls[0] || '');
@@ -87,4 +87,5 @@ export function FeaturedProducts2() {
     </section>
   );
 }
+
 
