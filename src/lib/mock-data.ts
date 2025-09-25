@@ -60,8 +60,8 @@ export const mockSectors: Sector[] = [
     imageUrl: 'sector-airports',
     imageHint: 'airport tarmac',
     description: 'Havalimanları, sürekli hareket halinde olan çok çeşitli işletme araçlarının bulunduğu son derece yoğun yerlerdir. Bir havalimanı içindeki birden fazla şirket binlerce kişiyi istihdam etmekte ve her gün binlerce kişi daha seyahat etmektedir.',
-    challenges: 'Sürekli hareket halindeki çok çeşitli işletme araçları, yoğun insan ve araç trafiği.',
-    solutionsContent: '<p>Havalimanı operasyonlarının karmaşıklığını anlıyor ve yer hizmetleri araçları için özel güvenlik sistemleri sağlıyoruz.</p>',
+    challenges: 'Sürekli hareket halindeki çok çeşitli işletme araçları, sıkışık ve gürültülü ortamlar, farklı hız ve yönlerde hareket eden filolar ve sıkı zaman çizelgeleri altında güvenlik sağlama zorluğu. Apronlar, en tehlikeli havalimanı ortamları olabilir.',
+    solutionsContent: '<h3>Havalimanı Güvenliği İçin Çözümler</h3><p>Brigade\'in ticari araç ve tesis güvenlik sistemleri, çoğu havalimanı aracı için uygundur. Bu güvenlik sistemleri arasında ön ve arka görüş kameraları, 360° kameralar, kabin içi monitörler, Sidescan® Predict ultrasonik sensörler, Backsense® Radar tespiti, bbs-tek® geri vites alarmları ve mobil dijital kayıt cihazları bulunur.</p><h4>Öne Çıkan Ürünler:</h4><ul><li>Backeye®360 Kamera Monitör Sistemi</li><li>Backsense® Radar</li><li>Geri Vites Alarmı</li><li>Dijital Kayıt Cihazları (MDR)</li><li>Kameralar ve Monitörler</li></ul>',
   },
   {
     id: '3',
@@ -71,8 +71,8 @@ export const mockSectors: Sector[] = [
     imageUrl: 'sector-bus',
     imageHint: 'city bus',
     description: 'Otobüsler, şehirlerarası otobüsler ve minibüsler gibi PSV taşımacılığı ve yolcu taşıyan araçlar, günümüzün yolcuları ve tatilcileri için temel bir hizmet sunmaktadır.',
-    challenges: 'Yolcu güvenliği, yoğun trafikte manevra, duraklara yanaşma.',
-    solutionsContent: '<p>Yolcu taşıyan araçlar için kör nokta tespiti, kamera sistemleri ve DVR çözümleri ile hem yolcuların hem de sürücülerin güvenliğini sağlıyoruz.</p>',
+    challenges: 'Yoğun şehir ortamlarında bisikletliler ve diğer korunmasız yol kullanıcıları ile çarpışmalar, aracın arka çıkıntısı nedeniyle manevra sırasında hasar, otogar ve depolarda tehlikeli geri manevralar, vandalizm ve yolculara/personele yönelik saldırılar.',
+    solutionsContent: '<h3>Yolcu Taşımacılığı Güvenlik Çözümleri</h3><p>Yolcuların, çalışanların ve halkın güvenliği esastır. Araçların büyüklüğü ve sürücü konumu nedeniyle oluşan geniş kör noktalar, çarpışma riskini büyük ölçüde artırır. Brigade güvenlik sistemleri, olayları önlemeye ve sahte sigorta taleplerini caydırmaya yardımcı olur.</p><h4>Öne Çıkan Ürünler:</h4><ul><li>Backeye®360 Kamera Monitör Sistemi</li><li>Backsense® Radar</li><li>Geri Vites Alarmı</li><li>Dijital Kayıt Cihazları (MDR)</li><li>Kameralar ve Monitörler</li></ul>',
   },
   {
     id: '4',
@@ -82,8 +82,8 @@ export const mockSectors: Sector[] = [
     imageUrl: 'sector-construction',
     imageHint: 'construction site',
     description: 'İnşaat sahalarında işçi ve araç güvenliği her şeyden önemlidir. Ancak, karayolu ve arazi inşaat araçlarıyla birleşen ağır iş makineleri gerçek bir tehdit oluşturmaktadır.',
-    challenges: 'İşçi ve araç güvenliği, ağır iş makineleri, zorlu şantiye koşulları.',
-    solutionsContent: '<p>Ağır iş makineleri için 360 derece görüş sistemleri, radar sensörleri ve dayanıklı kameralar ile şantiye güvenliğini en üst düzeye çıkarıyoruz.</p>',
+    challenges: 'Ön, yan ve arka kör noktalar nedeniyle şantiye içi ve dışında çarpışmalar; karanlık, sis, toz gibi kötü görüş koşulları; kulak koruyucuların yaklaşan araçları duymayı engellemesi; ve tek tonlu geri vites alarmlarının işçiler tarafından göz ardı edilmesi.',
+    solutionsContent: '<h3>İnşaat Güvenliği İçin Çözümler</h3><p>Yavaş hareket eden araçlar, kör noktalar ve zorlu koşullar, dünyanın en yüksek riskli çalışma ortamlarından bazılarını yaratır. Brigade\'in pazar lideri inşaat aracı güvenlik sistemleri, FORS, CLOCS, HS2 gibi yönetmeliklere uygun olarak olayları durdurmak ve güvenliği artırmak için tasarlanmıştır.</p><h4>Öne Çıkan Ürünler:</h4><ul><li>Backeye®360 AI Kameralı 360° Sistemler</li><li>Backsense® Radar</li><li>bbs-tek® Beyaz Sesli Geri Vites Alarmı</li><li>Mobil Dijital Kayıt Cihazları (MDR)</li></ul>',
   },
   {
     id: '5',
@@ -756,5 +756,7 @@ export const mockProjects: Project[] = [
     usedProducts: ['mdr-600-serisi', 'bbs-tek-akilli-alarm'],
   },
 ];
+
+    
 
     
