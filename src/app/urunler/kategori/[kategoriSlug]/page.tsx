@@ -362,7 +362,7 @@ export default function UrunKategoriPage({ params }: { params: { kategoriSlug: s
                         <div>
                             <h2 className="text-3xl font-headline font-bold text-center mb-10">Kayıt Sistemleri</h2>
                             <p className="max-w-3xl mx-auto text-center text-muted-foreground mb-12">Sahte iddialar, "çarpışma için para" dolandırıcılıkları ve kayıplar, işletmelere her yıl milyonlara mal oluyor; ayrıca araç vandalizmi ve sürücülere yönelik saldırılar gibi sorunlar da var. Brigade Van'ın dijital kayıt ürünleri, bir olay durumunda doğru bir tanık sağlayarak ve reddedilemez kanıtlar sunarak bir çözüm sunar.</p>
-                             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                             <div className="grid md:grid-cols-2 gap-6">
                                 {brigadeVanProducts["Kayıt Sistemleri"].map((product, index) => (
                                      <Card key={index} className="flex flex-col">
                                         <CardHeader>
@@ -449,6 +449,3 @@ export default function UrunKategoriPage({ params }: { params: { kategoriSlug: s
     </>
   );
 }
-
-
-    
