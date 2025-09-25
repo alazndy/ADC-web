@@ -6,11 +6,11 @@ import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import { FirebaseClientProvider } from '@/firebase';
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
-const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space-grotesk' });
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' });
+const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space-grotesk', display: 'swap' });
 
 export const metadata: Metadata = {
-  title: 'ADCentral',
+  title: 'ADC Tasarım',
   description: 'ADC Tasarım - Teknoloji ve Mühendislik Çözüm Ortağınız',
 };
 

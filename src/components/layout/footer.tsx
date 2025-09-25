@@ -79,7 +79,7 @@ export default function Footer() {
         </div>
         <div className="mt-12 border-t border-white/10 pt-8 flex flex-col sm:flex-row justify-between items-center">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} ADCentral. Tüm hakları saklıdır.
+            © {new Date().getFullYear()} ADC Tasarım. Tüm hakları saklıdır.
           </p>
           <div className="mt-4 sm:mt-0">
             <p className="text-sm text-muted-foreground">ISO 9001, Brigade Yetkili Servis</p>

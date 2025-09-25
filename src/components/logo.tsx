@@ -10,7 +10,7 @@ export function Logo({ forceWhiteText = false }: { forceWhiteText?: boolean }) {
         "text-xl font-bold tracking-tight font-headline",
         forceWhiteText && "text-white"
         )}>
-        ADCentral
+        ADC Tasarım
       </span>
     </Link>
   );
