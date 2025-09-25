@@ -42,18 +42,18 @@ const productCategories = [
     image: findImage('placeholder-26'),
     imageHint: 'warning alarm light',
     items: ['Sessiz Araç Ses Cihazı (AVAS)', 'Tonal Alarmlar', 'Geri Vites & Uyarı Alarmları'],
-    link: `/urunler/kategori/${categoryToSlug('Uyarı Alarmları')}`
+    link: `/urunler/kategori/${categoryToSlug('Uyarı Sistemleri')}`
   },
   {
     title: 'Brigade Van',
     image: findImage('sector-distribution'),
     imageHint: 'delivery van city',
     items: ['Hafif ticari araçlar için özel güvenlik çözümleri.'],
-    link: `/urunler/kategori/${categoryToSlug('Brigade Van')}` 
+    link: `/urunler/brigade-van` 
   },
   {
     title: 'Brigade Telematik',
-    image: findImage('placeholder-18'),
+    image: findImage('telematics-hero'),
     imageHint: 'telematics dashboard data',
     items: ['Telematik', 'Telematik Görüntüleme'],
     link: '/teknoloji-cozumleri/telematik-ve-filo-yonetimi'
@@ -133,4 +133,3 @@ export default function UrunlerPage() {
     </div>
   );
 }
-

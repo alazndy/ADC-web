@@ -1,7 +1,8 @@
 
 import { products } from '@/lib/data';
 
-export const allCategories = [...new Set(products.map(p => p.category))].sort();
+// Add "Brigade Van" to the list of categories manually as it doesn't exist in products
+export const allCategories = [...new Set(products.map(p => p.category)), "Brigade Van"].sort();
 
 export const categoryToSlug = (categoryName: string) => {
   if (!categoryName) return '';
@@ -17,6 +18,6 @@ export const categoryToSlug = (categoryName: string) => {
 };
 
 export const slugToCategory = (slug: string) => {
+    // Find matching category name from allCategories by comparing slugs
     return allCategories.find(cat => categoryToSlug(cat) === slug);
 };
-
