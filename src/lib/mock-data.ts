@@ -48,20 +48,20 @@ export const mockSectors: Sector[] = [
     icon: Tractor,
     imageUrl: 'sector-agriculture',
     imageHint: 'tractor field',
-    challenges: 'Verimlilik ve güvenlik dengesi, geniş ve çeşitli arazi koşulları.',
-    solutionsContent: 'Tarımsal verimliliği ve güvenliği artırmak için özel olarak tasarlanmış sağlam ve güvenilir güvenlik çözümleri sunuyoruz.',
-    description: 'Tarım, küresel pazarda rekabetçi kalmak için verimliliğin hayati olduğu, kendine özgü zorluklara sahip, oldukça çeşitli bir endüstridir. Verimlilik ve güvenlik arasında bir denge kurma ihtiyacı çok önemlidir.'
+    description: 'Tarım, küresel pazarda rekabetçi kalmak için verimliliğin hayati olduğu, kendine özgü zorluklara sahip, oldukça çeşitli bir endüstridir. Verimlilik ve güvenlik arasında bir denge kurma ihtiyacı çok önemlidir.',
+    challenges: 'Modern makinelerin tasarımı önemli performans iyileştirmelerine yol açmış olsa da, bu makinelerin doğası ve boyutu operatör görüşünün bozulmasına neden olmaktadır. Kör noktalar, tarım makinelerini içeren birçok kazada katkıda bulunan bir faktördür.',
+    solutionsContent: '<h3>Güvenlik Sistemi Önerileri</h3><p>Doğru cihazları seçmenize yardımcı olmak için her araç için önerilerde bulunduk. Önerilen çözümler arasında <strong>Yükleyici</strong>, <strong>Telehandler</strong>, <strong>Traktör</strong> ve <strong>Biçerdöver</strong> bulunmaktadır.</p><h4>Öne Çıkan Ürünler:</h4><ul><li>Backeye®360 Kamera Monitör Sistemi</li><li>Backsense® Radar</li><li>Geri Vites Alarmı</li><li>Dijital Kayıt Cihazları (MDR)</li></ul>',
   },
   {
     id: '2',
     name: 'Havalimanları',
     slug: 'havalimanlari',
-    icon: Ship, // Using Ship as a proxy for Plane, as Plane is not in lucide-react
+    icon: Ship,
     imageUrl: 'sector-airports',
     imageHint: 'airport tarmac',
+    description: 'Havalimanları, sürekli hareket halinde olan çok çeşitli işletme araçlarının bulunduğu son derece yoğun yerlerdir. Bir havalimanı içindeki birden fazla şirket binlerce kişiyi istihdam etmekte ve her gün binlerce kişi daha seyahat etmektedir.',
     challenges: 'Sürekli hareket halindeki çok çeşitli işletme araçları, yoğun insan ve araç trafiği.',
-    solutionsContent: 'Havalimanı operasyonlarının karmaşıklığını anlıyor ve yer hizmetleri araçları için özel güvenlik sistemleri sağlıyoruz.',
-    description: 'Havalimanları, sürekli hareket halinde olan çok çeşitli işletme araçlarının bulunduğu son derece yoğun yerlerdir. Bir havalimanı içindeki birden fazla şirket binlerce kişiyi istihdam etmekte ve her gün binlerce kişi daha seyahat etmektedir.'
+    solutionsContent: '<p>Havalimanı operasyonlarının karmaşıklığını anlıyor ve yer hizmetleri araçları için özel güvenlik sistemleri sağlıyoruz.</p>',
   },
   {
     id: '3',
@@ -70,9 +70,9 @@ export const mockSectors: Sector[] = [
     icon: Bus,
     imageUrl: 'sector-bus',
     imageHint: 'city bus',
+    description: 'Otobüsler, şehirlerarası otobüsler ve minibüsler gibi PSV taşımacılığı ve yolcu taşıyan araçlar, günümüzün yolcuları ve tatilcileri için temel bir hizmet sunmaktadır.',
     challenges: 'Yolcu güvenliği, yoğun trafikte manevra, duraklara yanaşma.',
-    solutionsContent: 'Yolcu taşıyan araçlar için kör nokta tespiti, kamera sistemleri ve DVR çözümleri ile hem yolcuların hem de sürücülerin güvenliğini sağlıyoruz.',
-    description: 'Otobüsler, şehirlerarası otobüsler ve minibüsler gibi PSV taşımacılığı ve yolcu taşıyan araçlar, günümüzün yolcuları ve tatilcileri için temel bir hizmet sunmaktadır.'
+    solutionsContent: '<p>Yolcu taşıyan araçlar için kör nokta tespiti, kamera sistemleri ve DVR çözümleri ile hem yolcuların hem de sürücülerin güvenliğini sağlıyoruz.</p>',
   },
   {
     id: '4',
@@ -81,9 +81,9 @@ export const mockSectors: Sector[] = [
     icon: Construction,
     imageUrl: 'sector-construction',
     imageHint: 'construction site',
+    description: 'İnşaat sahalarında işçi ve araç güvenliği her şeyden önemlidir. Ancak, karayolu ve arazi inşaat araçlarıyla birleşen ağır iş makineleri gerçek bir tehdit oluşturmaktadır.',
     challenges: 'İşçi ve araç güvenliği, ağır iş makineleri, zorlu şantiye koşulları.',
-    solutionsContent: 'Ağır iş makineleri için 360 derece görüş sistemleri, radar sensörleri ve dayanıklı kameralar ile şantiye güvenliğini en üst düzeye çıkarıyoruz.',
-    description: 'İnşaat sahalarında işçi ve araç güvenliği her şeyden önemlidir. Ancak, karayolu ve arazi inşaat araçlarıyla birleşen ağır iş makineleri gerçek bir tehdit oluşturmaktadır.'
+    solutionsContent: '<p>Ağır iş makineleri için 360 derece görüş sistemleri, radar sensörleri ve dayanıklı kameralar ile şantiye güvenliğini en üst düzeye çıkarıyoruz.</p>',
   },
   {
     id: '5',
@@ -92,9 +92,9 @@ export const mockSectors: Sector[] = [
     icon: Warehouse,
     imageUrl: 'sector-distribution',
     imageHint: 'delivery van',
+    description: 'Dağıtım endüstrisinin patlama yapması ve eve teslimat ve kurye hizmetlerine olan talebin artmasıyla, teslimat araçlarının verimli ancak güvenli bir şekilde çalışması esastır.',
     challenges: 'Eve teslimat ve kurye hizmetlerindeki artış, verimli ve güvenli operasyon ihtiyacı.',
-    solutionsContent: 'Teslimat araçlarının verimli ve güvenli bir şekilde çalışmasını sağlamak için kör nokta kameraları ve telematik çözümleri sunuyoruz.',
-    description: 'Dağıtım endüstrisinin patlama yapması ve eve teslimat ve kurye hizmetlerine olan talebin artmasıyla, teslimat araçlarının verimli ancak güvenli bir şekilde çalışması esastır.'
+    solutionsContent: '<p>Teslimat araçlarının verimli ve güvenli bir şekilde çalışmasını sağlamak için kör nokta kameraları ve telematik çözümleri sunuyoruz.</p>',
   },
   {
     id: '6',
@@ -103,9 +103,9 @@ export const mockSectors: Sector[] = [
     icon: Ambulance,
     imageUrl: 'sector-emergency',
     imageHint: 'ambulance lights',
+    description: 'Acil servis araçlarının sürücüleri çok sayıda tehlikeyle karşılaşır. Olaylara hızla müdahale etmek, yoğun trafikte ve kalabalık yaya alanlarında yüksek hızlarda gezinmeyi gerektirir.',
     challenges: 'Yoğun trafikte ve kalabalık yaya alanlarında yüksek hızda güvenli sürüş.',
-    solutionsContent: 'Ambulans, itfaiye gibi acil durum araçlarının olaylara hızlı ve güvenli bir şekilde müdahale etmelerine yardımcı olan özel kamera ve uyarı sistemleri sağlıyoruz.',
-    description: 'Acil servis araçlarının sürücüleri çok sayıda tehlikeyle karşılaşır. Olaylara hızla müdahale etmek, yoğun trafikte ve kalabalık yaya alanlarında yüksek hızlarda gezinmeyi gerektirir.'
+    solutionsContent: '<p>Ambulans, itfaiye gibi acil durum araçlarının olaylara hızlı ve güvenli bir şekilde müdahale etmelerine yardımcı olan özel kamera ve uyarı sistemleri sağlıyoruz.</p>',
   },
   {
     id: '7',
@@ -114,9 +114,9 @@ export const mockSectors: Sector[] = [
     icon: Truck,
     imageUrl: 'sector-logistics',
     imageHint: 'truck highway',
+    description: 'Nakliye ve lojistik ekonominin bel kemiğidir, ancak ağır yük araçlarının kamuoyundaki algısı zayıftır. Yollara hakim olan ve çarpışmalara, sıkışıklığa ve gürültü kirliliğine neden olan makineler olarak görülürler.',
     challenges: 'Ağır vasıtaların karayollarındaki algısı, çarpışmalar, sıkışıklık ve gürültü kirliliği.',
-    solutionsContent: 'Ağır vasıtalar için 360 derece görüş sistemleri, yan ve arka sensörler ve akıllı geri vites alarmları ile hem güvenliği artırıyor hem de kamuoyu algısını iyileştiriyoruz.',
-    description: 'Nakliye ve lojistik ekonominin bel kemiğidir, ancak ağır yük araçlarının kamuoyundaki algısı zayıftır. Yollara hakim olan ve çarpışmalara, sıkışıklığa ve gürültü kirliliğine neden olan makineler olarak görülürler.'
+    solutionsContent: '<p>Ağır vasıtalar için 360 derece görüş sistemleri, yan ve arka sensörler ve akıllı geri vites alarmları ile hem güvenliği artırıyor hem de kamuoyu algısını iyileştiriyoruz.</p>',
   },
   {
     id: '8',
@@ -125,9 +125,9 @@ export const mockSectors: Sector[] = [
     icon: HardHat,
     imageUrl: 'sector-mining',
     imageHint: 'mining truck',
+    description: 'Maden ve taş ocağı sahalarında çalışanları güvende tutmak zorlu ama gerekli bir görevdir. Sektörler zorlu ortamlarda faaliyet gösterir ve büyük mobil tesisler saha çalışanları için çok gerçek bir tehlike oluşturabilir.',
     challenges: 'Zorlu ortamlar, büyük mobil tesislerin saha çalışanları için oluşturduğu tehlike.',
-    solutionsContent: 'Maden ve taş ocaklarındaki zorlu koşullar için özel olarak tasarlanmış, en dayanıklı radar ve kamera sistemleri ile işçi güvenliğini sağlıyoruz.',
-    description: 'Maden ve taş ocağı sahalarında çalışanları güvende tutmak zorlu ama gerekli bir görevdir. Sektörler zorlu ortamlarda faaliyet gösterir ve büyük mobil tesisler saha çalışanları için çok gerçek bir tehlike oluşturabilir.'
+    solutionsContent: '<p>Maden ve taş ocaklarındaki zorlu koşullar için özel olarak tasarlanmış, en dayanıklı radar ve kamera sistemleri ile işçi güvenliğini sağlıyoruz.</p>',
   },
   {
     id: '9',
@@ -136,9 +136,9 @@ export const mockSectors: Sector[] = [
     icon: Trash2,
     imageUrl: 'sector-waste',
     imageHint: 'garbage truck',
+    description: 'Çöp araçları ve atık kamyonları tipik olarak büyük ve ağırdır, bu da onları normal binek araçlara kıyasla daha az manevra kabiliyetine sahip kılar.',
     challenges: 'Büyük ve ağır araçların manevra kabiliyetinin düşük olması, dar sokaklar.',
-    solutionsContent: 'Çöp kamyonları için özel olarak geliştirilmiş 360 derece kamera sistemleri, radar sensörleri ve akıllı alarmlar ile kentsel alanlarda güvenliği en üst düzeye çıkarıyoruz.',
-    description: 'Çöp araçları ve atık kamyonları tipik olarak büyük ve ağırdır, bu da onları normal binek araçlara kıyasla daha az manevra kabiliyetine sahip kılar.'
+    solutionsContent: '<p>Çöp kamyonları için özel olarak geliştirilmiş 360 derece kamera sistemleri, radar sensörleri ve akıllı alarmlar ile kentsel alanlarda güvenliği en üst düzeye çıkarıyoruz.</p>',
   },
   {
     id: '10',
@@ -147,9 +147,9 @@ export const mockSectors: Sector[] = [
     icon: Construction,
     imageUrl: 'sector-road-construction',
     imageHint: 'road construction',
+    description: 'Yol inşaatı tehlikeli bir meslektir ve çalışmak için en tehlikeli yerlerden biri olarak sıralanır. Yollar daha güvenli ve kayıplar 40 yılı aşkın süredir en düşük seviyede olmasına rağmen, yol işçilerini içeren olaylar artmıştır.',
     challenges: 'Yol işçilerini içeren olaylardaki artış, tehlikeli çalışma ortamı.',
-    solutionsContent: 'Yol yapım makineleri ve çalışanları için RFID tabanlı güvenlik sistemleri ve 360 derece görüş çözümleri ile olayları önlemeye yardımcı oluyoruz.',
-    description: 'Yol inşaatı tehlikeli bir meslektir ve çalışmak için en tehlikeli yerlerden biri olarak sıralanır. Yollar daha güvenli ve kayıplar 40 yılı aşkın süredir en düşük seviyede olmasına rağmen, yol işçilerini içeren olaylar artmıştır.'
+    solutionsContent: '<p>Yol yapım makineleri ve çalışanları için RFID tabanlı güvenlik sistemleri ve 360 derece görüş çözümleri ile olayları önlemeye yardımcı oluyoruz.</p>',
   },
   {
     id: '11',
@@ -158,9 +158,9 @@ export const mockSectors: Sector[] = [
     icon: Cog,
     imageUrl: 'sector-specialist',
     imageHint: 'specialist vehicle',
+    description: 'Tarım, otoyol inşaatı, taş ocakları, mavi ışık, limanlar ve kamu hizmetleri gibi alanlarda kullanılan özel araçlar ve makineler, kendi özel amaçlarına ve çalışma ortamlarına göre uyarlanmış ısmarlama güvenlik çözümleri gerektirir.',
     challenges: 'Belirli amaç ve çalışma ortamına göre özel güvenlik çözümleri gerekliliği.',
-    solutionsContent: 'Her bir özel aracın amacına ve çalışma ortamına göre uyarlanmış, ısmarlama güvenlik çözümleri tasarlıyor ve uyguluyoruz.',
-    description: 'Tarım, otoyol inşaatı, taş ocakları, mavi ışık, limanlar ve kamu hizmetleri gibi alanlarda kullanılan özel araçlar ve makineler, kendi özel amaçlarına ve çalışma ortamlarına göre uyarlanmış ısmarlama güvenlik çözümleri gerektirir.'
+    solutionsContent: '<p>Her bir özel aracın amacına ve çalışma ortamına göre uyarlanmış, ısmarlama güvenlik çözümleri tasarlıyor ve uyguluyoruz.</p>',
   },
   {
     id: '12',
@@ -169,9 +169,9 @@ export const mockSectors: Sector[] = [
     icon: Anchor,
     imageUrl: 'sector-seaports',
     imageHint: 'seaport crane',
+    description: 'Liman operasyonlarını verimli ancak güvenli bir şekilde yürütmek zorlu bir iştir. Sürekli hareket eden yükler, araçlar ve tesisler ile limanlardaki araçla ilgili olayların herhangi bir endüstrinin en yükseklerinden biri olması şaşırtıcı değildir.',
     challenges: 'Sürekli hareket eden yükler, araçlar ve tesisler; en yüksek araç kaynaklı olay oranlarından biri.',
-    solutionsContent: 'Liman operasyonlarındaki her türlü araç için RFID etiketli güvenlik bölgeleri, radar sistemleri ve merkezi kayıt çözümleri ile verimliliği ve güvenliği bir arada sağlıyoruz.',
-    description: 'Liman operasyonlarını verimli ancak güvenli bir şekilde yürütmek zorlu bir iştir. Sürekli hareket eden yükler, araçlar ve tesisler ile limanlardaki araçla ilgili olayların herhangi bir endüstrinin en yükseklerinden biri olması şaşırtıcı değildir.'
+    solutionsContent: '<p>Liman operasyonlarındaki her türlü araç için RFID etiketli güvenlik bölgeleri, radar sistemleri ve merkezi kayıt çözümleri ile verimliliği ve güvenliği bir arada sağlıyoruz.</p>',
   }
 ];
 
@@ -240,7 +240,7 @@ export const mockProducts: Product[] = [
     id: 'product-3',
     name: 'HUMAN FORM RECOGNITION (HFR) KAMERA',
     slug: 'hfr-kamera',
-    partNumber: '7321 (Ön), 7396 (Arka)',
+    partNumber: '7321, 7396',
     category: 'İnsan Formu Tanıma (HFR) Kameraları',
     shortDescription: 'Ön ve arka kör noktalardaki insanları tanır ve sürücüyü uyarır.',
     longDescription: 'Yapay Zeka kullanarak insan formunu algılayan ve sürücüyü olası bir çarpışma öncesinde görsel ve/veya sesli olarak uyaran aktif kör nokta tespit sistemleridir. Algılanan kişiler, kamera görüntüsü üzerine bindirilmiş renkli bir kutu içinde gösterilir. Görüntü işleme doğrudan kamera ünitesi tarafından yapılır.',
@@ -265,7 +265,7 @@ export const mockProducts: Product[] = [
     id: 'product-4',
     name: 'ELITE AHD KAMERA 1080p',
     slug: 'elite-ahd-kamera-1080p',
-    partNumber: '6408 (PAL), 6410 (NTSC)',
+    partNumber: '6408, 6410',
     category: 'Elite Serisi Kameralar',
     shortDescription: 'En zorlu koşullar için en üst düzey performans sunan yüksek çözünürlüklü kamera.',
     longDescription: 'Orijinal Ekipman Üreticileri (OEM\'ler) ve karoserciler için ilk tercih olan, en zorlu koşullarda istisnai kalite ve tutarlı performans sunan en üst düzey sistemlerdir.',
@@ -287,12 +287,60 @@ export const mockProducts: Product[] = [
   },
   {
     id: 'product-5',
+    name: 'WDR\'li ELITE KAMERA',
+    slug: 'wdr-li-elite-kamera',
+    partNumber: '1623, 1905, 2871, 4924',
+    category: 'Elite Serisi Kameralar',
+    shortDescription: 'Geniş Dinamik Aralık (WDR) teknolojisine sahip, zorlu ışık koşulları için ideal kamera.',
+    longDescription: 'Geliştirilmiş detay için Geniş Dinamik Aralık (WDR) teknolojisine sahip bu kameralar, ultra düşük ışık performansı için 5 Kızılötesi LED, Isıtıcı ve Mikrofon gibi özelliklerle donatılmıştır.',
+    features: [
+      'Geniş Dinamik Aralık (WDR)',
+      '5 Kızılötesi LED',
+      'Isıtıcı',
+      'Mikrofon'
+    ],
+    specs: {
+      'Görüş Açısı (YxDxD)': '102°x76°x132° (PAL)',
+      'Koruma Sınıfı': 'IP68 (BE-890C için IP69K)',
+      'Boyutlar (GxYxD)': '86x72x80mm'
+    },
+    warranty: '5 Yıl',
+    imageUrls: ['product-backeye-360-1'],
+    isFeatured: false,
+    relatedSectors: ['insaat', 'tas-ocagi-ve-madencilik'],
+  },
+  {
+    id: 'product-6',
+    name: 'WDR\'li SHUTTER KAMERA',
+    slug: 'wdr-li-shutter-kamera',
+    partNumber: '1242',
+    category: 'Elite Serisi Kameralar',
+    shortDescription: 'Otomatik shutter özelliği ile lensi kirden ve hasardan koruyan WDR\'li kamera.',
+    longDescription: 'Geniş Dinamik Aralık (WDR) teknolojisine ek olarak, otomatik shutter, ısıtıcı ve mikrofon özelliklerine sahiptir. Özellikle çamurlu ve tozlu ortamlar için idealdir.',
+    features: [
+      'Geniş Dinamik Aralık (WDR)',
+      'Otomatik shutter',
+      'Isıtıcı',
+      'Mikrofon'
+    ],
+    specs: {
+      'Görüş Açısı (YxDxD)': '103°x71°x134°',
+      'Koruma Sınıfı': 'IP69K',
+      'Boyutlar (GxYxD)': '123x86x80mm'
+    },
+    warranty: '5 Yıl',
+    imageUrls: ['product-backeye-360-1'],
+    isFeatured: false,
+    relatedSectors: ['insaat', 'tas-ocagi-ve-madencilik', 'cop-ve-atik-yonetimi'],
+  },
+  {
+    id: 'product-7',
     name: 'SELECT AHD KAMERA 1080p',
     slug: 'select-ahd-kamera-1080p',
-    partNumber: '5466',
+    partNumber: '5466, 5467, 5470, 5471',
     category: 'Select Serisi Kameralar',
     shortDescription: 'Yüksek kaliteli, güvenilir ve popüler orta sınıf kamera sistemi.',
-    longDescription: 'Yüksek kaliteli, güvenilir ve popüler orta sınıf sistemlerdir. 1080p AHD çözünürlük sunar.',
+    longDescription: 'Yüksek kaliteli, güvenilir ve popüler orta sınıf sistemlerdir. 1080p AHD çözünürlük, 4 adet yüksek güçlü kızılötesi LED, mikrofon ve ayna görünümü özellikleri sunar.',
     features: [
       '4 adet yüksek güçlü kızılötesi LED',
       'Mikrofon',
@@ -309,11 +357,139 @@ export const mockProducts: Product[] = [
     relatedSectors: ['nakliye-ve-lojistik', 'cop-ve-atik-yonetimi'],
   },
   {
-    id: 'product-6',
+    id: 'product-8',
+    name: 'SHUTTER KAMERA (Select Serisi)',
+    slug: 'select-shutter-kamera',
+    partNumber: '2808',
+    category: 'Select Serisi Kameralar',
+    shortDescription: 'Otomatik shutter ve ısıtıcı özellikli, güvenilir orta sınıf kamera.',
+    longDescription: 'Select serisinin bu shutter kamerası, 4 adet yüksek güçlü kızılötesi LED, otomatik shutter, ısıtıcı ve mikrofon özellikleriyle gelir. Zorlu koşullar için uygun maliyetli bir çözümdür.',
+    features: [
+      '4 adet yüksek güçlü kızılötesi LED',
+      'Otomatik Shutter',
+      'Isıtıcı',
+      'Mikrofon'
+    ],
+    specs: {
+      'Görüş Açısı (YxDxD)': '98°x73°x108°',
+      'Koruma Sınıfı': 'IP68/IP69K',
+      'Boyutlar (GxYxD)': '122x85x82mm'
+    },
+    warranty: '3 Yıl',
+    imageUrls: ['product-backeye-360-1'],
+    isFeatured: false,
+    relatedSectors: ['insaat', 'cop-ve-atik-yonetimi'],
+  },
+  {
+    id: 'product-9',
+    name: 'AHD EYEBALL KAMERA',
+    slug: 'ahd-eyeball-kamera',
+    partNumber: '7143, 7144, 7145, 7146',
+    category: 'Select Serisi Kameralar',
+    shortDescription: 'Kompakt, gömme montajlı "eyeball" kamera.',
+    longDescription: 'Gömme montajlı "eyeball" kamera, 5 adet yüksek güçlü kızılötesi LED ve mikrofon özelliklerine sahiptir. Kompakt tasarımı sayesinde estetiğin önemli olduğu uygulamalar için idealdir.',
+    features: [
+      'Gömme montajlı "eyeball" tasarım',
+      '5 adet yüksek güçlü kızılötesi LED',
+      'Mikrofon'
+    ],
+    specs: {
+      'Görüş Açısı (YxDxD)': '130°x70°x151°',
+      'Koruma Sınıfı': 'IP69K',
+      'Boyutlar (GxYxD)': '57x42x70mm'
+    },
+    warranty: '3 Yıl',
+    imageUrls: ['product-backeye-360-1'],
+    isFeatured: false,
+    relatedSectors: ['otobus-ve-yolcu-tasimaciligi', 'dagitim'],
+  },
+  {
+    id: 'product-10',
+    name: 'AHD MİNİ KAMERA',
+    slug: 'ahd-mini-kamera',
+    partNumber: 'DMC-1035, DMC-1031',
+    category: 'Select Serisi Kameralar',
+    shortDescription: 'İç mekan kullanımı için yüksek çözünürlüklü mini kamera.',
+    longDescription: 'İç mekan kullanımı için tasarlanmış yüksek çözünürlüklü AHD mini kamera.',
+    features: [],
+    imageUrls: ['product-backeye-360-1'],
+    isFeatured: false,
+    relatedSectors: ['otobus-ve-yolcu-tasimaciligi'],
+  },
+  {
+    id: 'product-11',
+    name: 'SİLİNDİR KAMERA',
+    slug: 'silindir-kamera',
+    partNumber: 'VBV-485C, VBV-481C',
+    category: 'Select Serisi Kameralar',
+    shortDescription: '9 LED\'li, IP69K/IP68 korumalı silindir kamera.',
+    longDescription: '9 adet LED\'i bulunan, IP69K/IP68 korumalı, dayanıklı silindir kamera.',
+    features: ['9 LED', 'IP69K/IP68 Koruma'],
+    imageUrls: ['product-backeye-360-1'],
+    isFeatured: false,
+    relatedSectors: ['insaat', 'tarim'],
+  },
+  {
+    id: 'product-12',
+    name: 'AHD DOME KAMERA',
+    slug: 'ahd-dome-kamera',
+    partNumber: 'MD-60, MD-61 Serisi',
+    category: 'Select Serisi Kameralar',
+    shortDescription: 'İç veya dış mekanda kullanılabilen, 150° hareket aralığına sahip dome kamera.',
+    longDescription: 'İç veya dış mekanda kullanılabilen, 150° hareket aralığına sahip AHD dome kamera.',
+    features: ['150° hareket aralığı'],
+    imageUrls: ['product-backeye-360-1'],
+    isFeatured: false,
+    relatedSectors: ['otobus-ve-yolcu-tasimaciligi', 'depolama'],
+  },
+  {
+    id: 'product-13',
+    name: 'BE-970WFM 7" Dörtlü Monitör',
+    slug: 'be-970wfm-monitor',
+    category: 'Elite Serisi Monitörler',
+    partNumber: '800, 801',
+    shortDescription: 'IP69K korumalı, 4 kamera girişli, 7 inçlik en üst düzey dörtlü monitör.',
+    longDescription: 'Zorlu koşullar için tasarlanmış, 7 inçlik, IP69K korumalı, 4 kamera girişli Elite serisi monitör.',
+    features: ['7 inç', 'IP69K', '4 kamera girişi'],
+    warranty: '5 Yıl',
+    imageUrls: ['product-backeye-360-2'],
+    isFeatured: false,
+    relatedSectors: ['insaat', 'tas-ocagi-ve-madencilik', 'tarim'],
+  },
+  {
+    id: 'product-14',
+    name: 'VBV-7104HFM 10.4" Dörtlü Monitör',
+    slug: 'vbv-7104hfm-monitor',
+    category: 'Select Serisi Monitörler',
+    partNumber: '1021',
+    shortDescription: 'AHD ve CVBS uyumlu, 4 kamera girişli, 10.4 inçlik geniş ekran monitör.',
+    longDescription: 'AHD ve CVBS kameralarla uyumlu, 4 kamera girişli, 10.4 inçlik geniş ekran Select serisi monitör.',
+    features: ['10.4 inç', '4 kamera girişi', 'AHD & CVBS uyumlu'],
+    warranty: '3 Yıl',
+    imageUrls: ['product-backeye-360-2'],
+    isFeatured: false,
+    relatedSectors: ['nakliye-ve-lojistik', 'otobus-ve-yolcu-tasimaciligi'],
+  },
+  {
+    id: 'product-15',
+    name: 'VBV-243M 4.3" Ayna Monitör',
+    slug: 'vbv-243m-monitor',
+    category: 'Essential Serisi Monitörler',
+    partNumber: '1172',
+    shortDescription: 'Mevcut dikiz aynasına takılabilen 4.3 inç dijital ayna monitör.',
+    longDescription: 'Mevcut dikiz aynasına kolayca takılabilen, 2 kamera girişli, 4.3 inç boyutunda pratik ayna monitör.',
+    features: ['4.3 inç', 'Aynaya takılabilir', '2 kamera girişi'],
+    warranty: '1 Yıl',
+    imageUrls: ['product-backeye-360-2'],
+    isFeatured: false,
+    relatedSectors: ['dagitim', 'ozel-araclar'],
+  },
+  {
+    id: 'product-16',
     name: 'MOBİL DİJİTAL KAYIT CİHAZI 600 SERİSİ',
     slug: 'mdr-600-serisi',
-    partNumber: 'MDR-644 (8 kanal), MDR-641 (5 kanal)',
     category: 'Kayıt Sistemleri',
+    partNumber: 'MDR-644 (8 kanal), MDR-641 (5 kanal)',
     shortDescription: '8 veya 5 kanallı, 4G/WiFi opsiyonlu, SSD tabanlı sağlam mobil DVR.',
     longDescription: 'Araç verilerini ve 16 adede kadar kameradan gelen görüntüleri yakalayabilen sistemlerdir. 4G modellerinde uzaktan erişim ve coğrafi sınırlama (Geo-fencing), dahili GPS ve H.265 görüntü sıkıştırma gibi özellikler sunar.',
     features: [
@@ -329,8 +505,29 @@ export const mockProducts: Product[] = [
     isFeatured: false,
     relatedSectors: ['nakliye-ve-lojistik', 'otobus-ve-yolcu-tasimaciligi'],
   },
-   {
-    id: 'product-7',
+  {
+    id: 'product-17',
+    name: 'MOBİL DİJİTAL KAYIT CİHAZI 500 SERİSİ',
+    slug: 'mdr-500-serisi',
+    category: 'Kayıt Sistemleri',
+    partNumber: 'MDR-508 (8 kanal)',
+    shortDescription: '8 kanallı, 4G/WiFi opsiyonlu, SSD tabanlı, AHD destekli mobil DVR.',
+    longDescription: 'AHD yüksek çözünürlük desteği, dahili GPS ve H.264 sıkıştırma özelliklerine sahip, 8 kanallı, SSD tabanlı kayıt cihazıdır. 1TB veya 2TB SSD, 4G ve WiFi seçenekleri mevcuttur.',
+    features: [
+      '8 kanal video girişi',
+      'AHD Yüksek Çözünürlük',
+      '1TB veya 2TB SSD seçenekleri',
+      '4G ve WiFi opsiyonları',
+      'Dahili GPS',
+      'H.264 görüntü sıkıştırma'
+    ],
+    warranty: '3 Yıl',
+    imageUrls: ['product-mdr-508-1'],
+    isFeatured: false,
+    relatedSectors: ['nakliye-ve-lojistik', 'otobus-ve-yolcu-tasimaciligi'],
+  },
+  {
+    id: 'product-18',
     name: 'ARAÇ İÇİ KAMERA (Dash Cam) - DC-204-AI',
     slug: 'dash-cam-dc-204-ai',
     partNumber: 'DC-204-AI',
@@ -349,7 +546,7 @@ export const mockProducts: Product[] = [
     relatedSectors: ['nakliye-ve-lojistik', 'otobus-ve-yolcu-tasimaciligi'],
   },
   {
-    id: 'product-8',
+    id: 'product-19',
     name: 'IP SÜRÜCÜ GÜVENLİK SİSTEMİ (Yapay Zekalı)',
     slug: 'ip-surucu-guvenlik-sistemi-ai',
     partNumber: 'IP-DFC-AI, IP-FFC-AI-01',
@@ -369,7 +566,24 @@ export const mockProducts: Product[] = [
     relatedSectors: ['nakliye-ve-lojistik', 'otobus-ve-yolcu-tasimaciligi'],
   },
   {
-    id: 'product-9',
+    id: 'product-20',
+    name: 'SÜRÜCÜ GÜVENLİK KAMERASI (DDAW dahil)',
+    slug: 'surucu-guvenlik-kamerasi-ddaw',
+    partNumber: 'MDSM-22, MDSM-22S-DDAW',
+    category: 'Sürücü Güvenlik Sistemleri',
+    shortDescription: 'AB GSR yönetmeliğine uygun, sürücü uykululuğu ve dikkatini izleyen kamera sistemi.',
+    longDescription: 'MDSM-22 modeli yorgunluk, dikkat dağınıklığı, telefon kullanımı gibi birçok riskli davranışı algılar. MDSM-22S-DDAW modeli ise özel olarak AB 2019/2144 GSR yönetmeliğinin DDAW (Sürücü Uykululuk ve Dikkat Uyarısı) gerekliliklerine uygun olarak geliştirilmiştir.',
+    features: [
+        'Sürücü uykululuğu ve dikkat dağınıklığı tespiti',
+        'Telefon kullanımı, sigara içme, emniyet kemeri takmama tespiti',
+        'AB GSR DDAW yönetmeliğine uygun model seçeneği (MDSM-22S-DDAW)'
+    ],
+    imageUrls: ['product-sidescan-2'],
+    isFeatured: false,
+    relatedSectors: ['nakliye-ve-lojistik', 'otobus-ve-yolcu-tasimaciligi'],
+  },
+  {
+    id: 'product-21',
     name: 'Sidescan®Flex Ultrasonik Tespit Sistemi',
     slug: 'sidescan-flex-ss-4200w',
     partNumber: 'SS-4200W',
@@ -387,7 +601,7 @@ export const mockProducts: Product[] = [
     relatedSectors: ['cop-ve-atik-yonetimi', 'nakliye-ve-lojistik'],
   },
   {
-    id: 'product-10',
+    id: 'product-22',
     name: 'Radar Predict - Yan Çarpışma Tahmini',
     slug: 'radar-predict-rp-001',
     partNumber: 'RP-001 / RP-010',
@@ -405,10 +619,63 @@ export const mockProducts: Product[] = [
     relatedSectors: ['otobus-ve-yolcu-tasimaciligi', 'cop-ve-atik-yonetimi'],
   },
   {
-    id: 'product-11',
+    id: 'product-23',
+    name: 'Front Radar - Ön Çarpışma Önleme',
+    slug: 'front-radar-fr-001',
+    partNumber: 'FR-001DVS / FR-001R159',
+    category: 'Tespit Sistemleri',
+    shortDescription: 'Aracın önündeki korunmasız yol kullanıcılarını (VRU) algılamak için 180° çift radar sistemi.',
+    longDescription: 'Aracın önündeki yayalar ve bisikletliler gibi korunmasız yol kullanıcılarını algılamak için tasarlanmış 180 derecelik bir çift radar sistemidir. Çarpışma riski olduğunda sürücüyü uyarır.',
+    features: [
+        '180° ön algılama',
+        'VRU (korunmasız yol kullanıcısı) tespiti',
+        'Çift radar sistemi'
+    ],
+    imageUrls: ['product-sidescan-1'],
+    isFeatured: false,
+    relatedSectors: ['nakliye-ve-lojistik', 'insaat'],
+  },
+  {
+    id: 'product-24',
+    name: 'Backsense® Programlanabilir Radar',
+    slug: 'backsense-programmable-bs-8100',
+    partNumber: 'BS-8100',
+    category: 'Tespit Sistemleri',
+    shortDescription: '60 metreye kadar programlanabilir algılama menziline sahip ağır hizmet tipi radar.',
+    longDescription: '60 metreye kadar programlanabilir algılama menziline sahip bu radar, sabit nesneleri veya karoseriyi kalibre etme yeteneği ile özelleştirilmiş algılama alanları sağlar. Ağır hizmet tipi uygulamalar için idealdir.',
+    features: [
+        '60 metreye kadar programlanabilir algılama',
+        'Özelleştirilebilir algılama alanı',
+        'Sabit nesneleri eleme özelliği',
+        'Ağır hizmet tipi tasarım'
+    ],
+    imageUrls: ['product-sidescan-1'],
+    isFeatured: false,
+    relatedSectors: ['tas-ocagi-ve-madencilik', 'insaat', 'limanlar'],
+  },
+  {
+    id: 'product-25',
+    name: 'ZoneSafe® RFID Tespit Sistemi',
+    slug: 'zonesafe-rfid',
+    partNumber: 'ZS-1000-ECU, ZS-1000-AP',
+    category: 'Tespit Sistemleri',
+    shortDescription: 'Araçlar, sahadaki personel ve varlıklar arasında 360 derecelik bir tespit bölgesi oluşturan RFID sistemi.',
+    longDescription: 'ZoneSafe, araçların etrafında 3 ila 10 metre arasında ayarlanabilen bir algılama bölgesi oluşturmak için RFID teknolojisini kullanır. Bölgeye bir etiket girdiğinde, sürücü sesli ve görsel bir uyarı alır.',
+    features: [
+        'RFID teknolojisi ile 360° algılama',
+        '3-10 metre ayarlanabilir algılama bölgesi',
+        'Yaya, sürücü ve varlık etiketleri',
+        'Sesli ve görsel uyarılar'
+    ],
+    imageUrls: ['product-sidescan-1'],
+    isFeatured: false,
+    relatedSectors: ['tas-ocagi-ve-madencilik', 'insaat', 'depolama', 'limanlar'],
+  },
+  {
+    id: 'product-26',
     name: 'bbs-tek® BEYAZ SES (WHITE SOUND) Akıllı Alarm',
     slug: 'bbs-tek-akilli-alarm',
-    partNumber: 'SA-BBS-107',
+    partNumber: 'SA-BBS-107 (87-107 dB), SA-BBS-97 (77-97 dB)',
     category: 'Uyarı Alarmları',
     shortDescription: 'Anında duyulabilen ve sadece tehlike bölgesinde etkili olan, kendi sesini ayarlayabilen geri vites alarmı.',
     longDescription: 'Geleneksel "bip-bip" alarmlarının aksine, bbs-tek® alarmları geniş frekans aralığındaki "şşş" benzeri beyaz sesi kullanır. Bu sesin kaynağı anında tespit edilebilir ve sadece tehlike bölgesinde duyulur, gürültü kirliliğini önler. Akıllı modeller, ses seviyesini ortam gürültüsünün 5-10dB üzerine otomatik olarak ayarlar.',
@@ -424,7 +691,7 @@ export const mockProducts: Product[] = [
     relatedSectors: ['insaat', 'cop-ve-atik-yonetimi', 'tas-ocagi-ve-madencilik'],
   },
   {
-    id: 'product-12',
+    id: 'product-27',
     name: 'QVS - Sessiz Araç Ses Cihazı',
     slug: 'qvs-sessiz-arac-ses-cihazi',
     partNumber: 'QVS-001-75',
@@ -439,9 +706,27 @@ export const mockProducts: Product[] = [
     ],
     imageUrls: ['product-sidescan-2'],
     isFeatured: false,
-    relatedSectors: ['otobus-ve-yolcu-tasimaciligi', 'cop-ve-atik-yonetimi'],
+    relatedSectors: ['otobus-ve-yolcu-tasimaciligi', 'cop-ve-atik-yonetimi', 'dagitim'],
+  },
+  {
+    id: 'product-28',
+    name: 'Konuşan Geri Vites Alarmı (Gece Vardiyası)',
+    slug: 'konusan-alarm-gece-vardiyasi',
+    partNumber: 'BC-01(NS)',
+    category: 'Uyarı Alarmları',
+    shortDescription: '"Ssh! Güvenli bir mesafede durun, araç geri gidiyor..." mesajı ve sesi kesme özelliği.',
+    longDescription: 'Gece veya gürültüye duyarlı alanlar için tasarlanmış bu konuşan alarm, "Ssh! Güvenli bir mesafede durun, araç geri gidiyor..." mesajını verir. Geri vitese çift takılarak sesi geçici olarak kesme özelliğine sahiptir.',
+    features: [
+        'Düşük gürültülü ortamlar için özel mesaj',
+        'Sesi geçici olarak kesme özelliği',
+        'IP68 koruma sınıfı'
+    ],
+    imageUrls: ['product-sidescan-2'],
+    isFeatured: false,
+    relatedSectors: ['cop-ve-atik-yonetimi', 'dagitim'],
   }
 ];
+
 
 export const mockProjects: Project[] = [
   {
