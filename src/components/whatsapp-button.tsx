@@ -14,10 +14,7 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
   );
 
 export function WhatsAppButton() {
-  const phoneNumber = "905315130224";
-  const message = "Merhaba, web sitenizden ulaşıyorum. Ürünleriniz hakkında bilgi almak istiyorum.";
-
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  const whatsappUrl = "https://api.whatsapp.com/send/?phone=905315130224&text=Merhaba%2C+web+sitenizden+ula%C5%9F%C4%B1yorum.+%C3%9Cr%C3%BCnleriniz+hakk%C4%B1nda+bilgi+almak+istiyorum.&type=phone_number&app_absent=0";
 
   return (
     <Button
