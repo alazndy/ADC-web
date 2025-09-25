@@ -10,6 +10,7 @@ export interface Product {
   specs?: { [key: string]: string };
   imageUrls: string[];
   datasheetUrl?: string;
+  technicalDrawingUrl?: string;
   relatedSectors: string[]; // Array of sector slugs
   isFeatured: boolean;
   warranty?: string;
@@ -50,5 +51,3 @@ export interface Project {
   result: string;
   usedProducts: string[]; // Array of product slugs
 }
-
-    

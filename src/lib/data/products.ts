@@ -28,6 +28,8 @@ export const products: Product[] = [
     warranty: '5 Yıl',
     notes: 'Kurulum için kalibrasyon kiti gereklidir. Monitör ve kamera uzatma kabloları dahil değildir.',
     imageUrls: ['placeholder-1'],
+    datasheetUrl: '/sample.pdf',
+    technicalDrawingUrl: '/sample.pdf',
     isFeatured: true,
     relatedSectors: ['nakliye-ve-lojistik', 'insaat', 'cop-ve-atik-yonetimi', 'otobus-ve-yolcu-tasimaciligi'],
   },
@@ -500,7 +502,7 @@ export const products: Product[] = [
     name: 'bbs-tek® BEYAZ SES (WHITE SOUND) Akıllı Alarm',
     slug: 'bbs-tek-akilli-alarm',
     partNumber: 'SA-BBS-107 (87-107 dB), SA-BBS-97 (77-97 dB)',
-    category: 'Uyarı Alarmları',
+    category: 'Uyarı Sistemleri',
     shortDescription: 'Anında duyulabilen ve sadece tehlike bölgesinde etkili olan, kendi sesini ayarlayabilen geri vites alarmı.',
     longDescription: 'Geleneksel "bip-bip" alarmlarının aksine, bbs-tek® alarmları geniş frekans aralığındaki "şşş" benzeri beyaz sesi kullanır. Bu sesin kaynağı anında tespit edilebilir ve sadece tehlike bölgesinde duyulur, gürültü kirliliğini önler. Akıllı modeller, ses seviyesini ortam gürültüsünün 5-10dB üzerine otomatik olarak ayarlar.',
     features: [
@@ -519,7 +521,7 @@ export const products: Product[] = [
     name: 'QVS - Sessiz Araç Ses Cihazı',
     slug: 'qvs-sessiz-arac-ses-cihazi',
     partNumber: 'QVS-001-75',
-    category: 'Uyarı Alarmları',
+    category: 'Uyarı Sistemleri',
     shortDescription: 'Elektrikli ve hibrit araçlar için, düşük hızlarda yayaları uyarmak amacıyla motor sesi taklit eder.',
     longDescription: 'Elektrikli ve hibrit araçların sessiz çalışması, yayalar için bir risk oluşturabilir. Brigade QVS, aracın hızına, ivmelenmesine ve direksiyon açısına göre değişen, gerçekçi bir motor sesi üreterek bu riski ortadan kaldırır. UN R138 ve diğer uluslararası standartlara uygundur.',
     features: [
@@ -537,7 +539,7 @@ export const products: Product[] = [
     name: 'Konuşan Geri Vites Alarmı (Gece Vardiyası)',
     slug: 'konusan-alarm-gece-vardiyasi',
     partNumber: 'BC-01(NS)',
-    category: 'Uyarı Alarmları',
+    category: 'Uyarı Sistemleri',
     shortDescription: '"Ssh! Güvenli bir mesafede durun, araç geri gidiyor..." mesajı ve sesi kesme özelliği.',
     longDescription: 'Gece veya gürültüye duyarlı alanlar için tasarlanmış bu konuşan alarm, "Ssh! Güvenli bir mesafede durun, araç geri gidiyor..." mesajını verir. Geri vitese çift takılarak sesi geçici olarak kesme özelliğine sahiptir.',
     features: [
