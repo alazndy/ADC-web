@@ -7,7 +7,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, FileText, Tag, Truck } from "lucide-react";
+import { CheckCircle, FileText, Tag, Truck, Wrench } from "lucide-react";
 
 
 export async function generateStaticParams() {
@@ -117,12 +117,25 @@ export default function UrunDetayPage({ params }: { params: { slug: string } }) 
                 </div>
             </div>
 
+            {product.technicalDrawingUrl && (
+              <div className="mt-24">
+                <h2 className="text-3xl font-bold font-headline text-center mb-8">Teknik Çizim</h2>
+                <Card className="overflow-hidden bg-white/5 border-white/10">
+                  <CardContent className="p-2">
+                    <div className="aspect-[4/3] w-full max-w-4xl mx-auto">
+                        <iframe src={product.technicalDrawingUrl} width="100%" height="100%" />
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            )}
+
             {relatedSectors.length > 0 && (
                  <div className="mt-24">
                     <h2 className="text-3xl font-bold font-headline text-center mb-8">İlgili Sektörler</h2>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         {relatedSectors.map(sector => {
-                            const image = findImage(sector.imageUrl)
+                            const image = findImage(sector.imageUrls[0])
                             return (
                                 <Link key={sector.id} href={`/sektorler/${sector.slug}`}>
                                     <Card className="overflow-hidden group h-full bg-white/5 border-white/10">
@@ -152,4 +165,3 @@ export default function UrunDetayPage({ params }: { params: { slug: string } }) 
        </>
     );
 }
-
