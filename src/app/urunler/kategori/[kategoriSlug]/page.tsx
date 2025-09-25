@@ -74,6 +74,58 @@ const cameraMonitorSubCategories = [
     },
 ];
 
+const detectionSystemSubCategories = [
+    {
+        title: 'Backsense® Radar',
+        slug: 'backsense-radar',
+        description: 'Backsense® ağır hizmet tipi radar yakınlık sensör sistemleri, kör noktalardaki nesneleri tespit etmek için tasarlanmıştır ve olayları önemli ölçüde azaltır. Sensörler, sabit algılama menzilli modellerde ve özel algılama alanlarına izin veren ve sabit nesneleri veya kaportayı kalibre etme yeteneğine sahip tamamen programlanabilir modellerde mevcuttur.',
+        features: ['Yanlış Uyarıları En Aza İndirir', 'Sesli Sürücü Uyarıları', 'Hem yol içi hem de yol dışı uygulamalar için uygundur', 'Ağır Hizmet Tipi'],
+        image: 'placeholder-24',
+        imageHint: 'radar sensor',
+    },
+    {
+        title: 'Radar Predict',
+        slug: 'radar-predict',
+        description: 'Yapay Zeka teknolojisini kullanan Radar Predict, hem aracın hem de bisikletlinin hız ve yönü gibi verileri analiz eden çift radarlı bir sistemdir. Statik ve hareketli nesneler arasında ayrım yaparak, Radar Predict algoritması bir bisikletli ile çarpışma olasılığı yüksek olduğunda sürücüyü uyarır.',
+        features: ['Yan kör nokta yönetmeliklerine uygundur', 'Yanlış alarmları azaltır', 'Zahmetsiz kurulum', 'Geniş algılama alanı'],
+        image: 'placeholder-22',
+        imageHint: 'AI radar prediction',
+    },
+    {
+        title: 'Ultrasonik Sensörler',
+        slug: 'ultrasonic-sensors',
+        description: 'Ultrasonik sensörler kullanarak engel tespiti, hem araç hasarını hem de yayalar veya bisikletlilerle çarpışmaları en aza indirebilir. Kapalı alanlarda çalışan veya düşük hızda manevra yapan karayolu ticari araçları için mükemmeldir.',
+        features: ['Sensör ve Montaj Ekipmanları', 'Görsel ve Sesli Ekran', 'Algoritma ECU', 'Sonradan Takılabilir'],
+        image: 'placeholder-21',
+        imageHint: 'ultrasonic parking sensor',
+    },
+    {
+        title: 'Ön Radar',
+        slug: 'front-radar',
+        description: 'DVS Ön Radar ve R159 Ön Radar, aracın önünde 180° algılama açısına sahip gelişmiş çift radarlı çarpışma tahmin sistemleridir. Sürücü, yakın çevrede savunmasız bir yol kullanıcısı tespit edilirse, görsel ve sesli sinyallerle ön yardım radarı aracılığıyla uyarılır.',
+        features: ['Görsel ve Sesli Ekran', 'Yanlış alarmları azaltır', 'Zahmetsiz kurulum', 'Geniş algılama alanı'],
+        image: 'placeholder-23',
+        imageHint: 'front vehicle radar',
+    },
+    {
+        title: 'ZoneSafe® RFID Tespiti',
+        slug: 'zonesafe-rfid-detection',
+        description: 'ZoneSafe®, araçlar ve mobil tesisler etrafında algılama bölgeleri oluşturmak için Radyo Frekansı Tanımlama (RFID) teknolojisini kullanır. Sistem, işçiler ve araçlar için kısıtlı veya kontrollü erişim için bariyerleri, kapıları vb. tetiklemek üzere bağlanabilir.',
+        features: ['Görüş Hattı Gerekmez', 'Saha Güvenliğini Artırır', 'Tam 360° Algılama', 'Benzersiz Etiket ID'],
+        image: 'placeholder-25',
+        imageHint: 'RFID safety system',
+    },
+    {
+        title: 'Careye® AI Dönüş Asistanı',
+        slug: 'careye-ai-turn-assist',
+        description: 'CAREYE®, bir araca takılan kameralardan gelen görüntüleri doğru bir şekilde değerlendirmek için yapay zeka kullanır ve yakındaki insanların veya nesnelerin gelecekteki hareket seyrini hesaplayabilir. Bu verilere dayanarak, sistem sürücüyü olası bir çarpışma gerçekleşmeden önce gerçek zamanlı olarak güvenilir ve doğru bir şekilde uyarır.',
+        features: ['Yanlış Pozitif Uyarıları En Aza İndirir', 'Her Türlü Araç İçin Uygundur', 'Gelişmiş Algılama', 'Nesneleri Sınıflandırma Yeteneği'],
+        image: 'placeholder-21',
+        imageHint: 'AI collision warning',
+    },
+];
+
+
 export async function generateStaticParams() {
     return allCategories.map((category) => ({
         kategoriSlug: categoryToSlug(category),
@@ -90,6 +142,16 @@ export default function UrunKategoriPage({ params }: { params: { kategoriSlug: s
   const filteredProducts = products.filter(p => p.category === categoryName);
 
   const isCameraMonitor = params.kategoriSlug === 'kamera-monitor-sistemleri';
+  const isDetectionSystem = params.kategoriSlug === 'tespit-sistemleri';
+  const hasSpecialLayout = isCameraMonitor || isDetectionSystem;
+
+  let pageDescription = "Bu kategoriye ait tüm ürünlerimizi aşağıda bulabilirsiniz.";
+  if (isCameraMonitor) {
+    pageDescription = "Araç kameraları, sürücünün kör noktaları görmesine yardımcı olabilir. Kameranın görüş alanındaki her şeyi monitörde canlı olarak göstererek, sürücülerin ve operatörlerin güvenli bir şekilde manevra yapmasını ve araç kullanmasını sağlarlar.";
+  } else if (isDetectionSystem) {
+    pageDescription = "Brigade’in Tespit Sistemleri, hareketli veya sabit olsun, araca yakın engeller hakkında sürücüyü uyarır. Kabin içindeki sesli ve/veya görsel bir uyarı, mesafeyi bildirirken, arabanın döndüğünü bisikletlilere ve yayalara bildirmek için isteğe bağlı bir harici konuşma alarmı eklenebilir.";
+  }
+
 
   return (
     <>
@@ -104,22 +166,16 @@ export default function UrunKategoriPage({ params }: { params: { kategoriSlug: s
                 </Button>
             </div>
           <h1 className="text-4xl font-bold font-headline mt-2">{categoryName}</h1>
-          {isCameraMonitor ? (
-            <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-              Araç kameraları, sürücünün kör noktaları görmesine yardımcı olabilir. Kameranın görüş alanındaki her şeyi monitörde canlı olarak göstererek, sürücülerin ve operatörlerin güvenli bir şekilde manevra yapmasını ve araç kullanmasını sağlarlar.
-            </p>
-          ) : (
-             <p className="mt-2 text-lg text-muted-foreground max-w-3xl mx-auto">
-                Bu kategoriye ait tüm ürünlerimizi aşağıda bulabilirsiniz.
-            </p>
-          )}
+          <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+            {pageDescription}
+          </p>
         </div>
       </div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <main>
-            {isCameraMonitor ? (
+            {hasSpecialLayout ? (
                  <div className="space-y-16">
-                    {cameraMonitorSubCategories.map((subCat, index) => (
+                    {(isCameraMonitor ? cameraMonitorSubCategories : detectionSystemSubCategories).map((subCat, index) => (
                         <SubCategoryShowcase
                             key={subCat.slug}
                             {...subCat}
@@ -151,3 +207,5 @@ export default function UrunKategoriPage({ params }: { params: { kategoriSlug: s
     </>
   );
 }
+
+    
