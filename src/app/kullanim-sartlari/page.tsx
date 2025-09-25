@@ -24,24 +24,24 @@ export default function KullanimSartlariPage() {
                         <p>Bu web sitesine ("Site") erişerek, bu Kullanım Şartları ve Koşullarına, geçerli tüm yasalara ve düzenlemelere bağlı kalmayı kabul edersiniz ve geçerli yerel yasalara uymaktan sorumlu olduğunuzu kabul edersiniz. Bu şartlardan herhangi birini kabul etmiyorsanız, bu siteyi kullanmanız veya siteye erişmeniz yasaktır. Bu sitede yer alan materyaller, ilgili telif hakkı ve marka kanunları ile korunmaktadır.</p>
 
                         <h2>2. Kullanım Lisansı</h2>
-                        <p>Yalnızca kişisel, ticari olmayan geçici görüntüleme için ADCentral'ın web sitesindeki materyallerin (bilgi veya yazılım) bir kopyasını geçici olarak indirme izni verilir. Bu, bir lisans devri olup, bir mülkiyet devri değildir ve bu lisans altında şunları yapamazsınız:</p>
+                        <p>Yalnızca kişisel, ticari olmayan geçici görüntüleme için ADC Tasarım'ın web sitesindeki materyallerin (bilgi veya yazılım) bir kopyasını geçici olarak indirme izni verilir. Bu, bir lisans devri olup, bir mülkiyet devri değildir ve bu lisans altında şunları yapamazsınız:</p>
                         <ul>
                             <li>materyalleri değiştiremez veya kopyalayamazsınız;</li>
                             <li>materyalleri herhangi bir ticari amaç için veya herhangi bir kamusal sergileme için (ticari veya ticari olmayan) kullanamazsınız;</li>
-                            <li>ADCentral'ın web sitesinde bulunan herhangi bir yazılımı kaynak koda dönüştürmeye veya tersine mühendislik yapmaya çalışamazsınız;</li>
+                            <li>ADC Tasarım'ın web sitesinde bulunan herhangi bir yazılımı kaynak koda dönüştürmeye veya tersine mühendislik yapmaya çalışamazsınız;</li>
                             <li>materyallerden herhangi bir telif hakkı veya diğer tescilli belgeleri kaldıramazsınız; veya</li>
                             <li>materyalleri başka bir kişiye devredemez veya materyalleri başka bir sunucuda "aynalayamazsınız".</li>
                         </ul>
-                        <p>Bu kısıtlamalardan herhangi birini ihlal etmeniz durumunda bu lisans otomatik olarak sona erer ve ADCentral tarafından herhangi bir zamanda sonlandırılabilir. Bu materyalleri görüntülemenizin sona ermesi veya bu lisansın sona ermesi üzerine, elinizde bulunan indirilmiş materyalleri elektronik veya basılı formatta imha etmeniz gerekir.</p>
+                        <p>Bu kısıtlamalardan herhangi birini ihlal etmeniz durumunda bu lisans otomatik olarak sona erer ve ADC Tasarım tarafından herhangi bir zamanda sonlandırılabilir. Bu materyalleri görüntülemenizin sona ermesi veya bu lisansın sona ermesi üzerine, elinizde bulunan indirilmiş materyalleri elektronik veya basılı formatta imha etmeniz gerekir.</p>
 
                         <h2>3. Sorumluluk Reddi</h2>
-                        <p>ADCentral'ın web sitesindeki materyaller 'olduğu gibi' sağlanmaktadır. ADCentral, açık veya zımni hiçbir garanti vermez ve burada, zımni garantiler veya satılabilirlik koşulları, belirli bir amaca uygunluk veya fikri mülkiyetin ihlal edilmemesi veya diğer hakların ihlal edilmemesi dahil ancak bunlarla sınırlı olmamak üzere diğer tüm garantileri reddeder ve geçersiz kılar.</p>
+                        <p>ADC Tasarım'ın web sitesindeki materyaller 'olduğu gibi' sağlanmaktadır. ADC Tasarım, açık veya zımni hiçbir garanti vermez ve burada, zımni garantiler veya satılabilirlik koşulları, belirli bir amaca uygunluk veya fikri mülkiyetin ihlal edilmemesi veya diğer hakların ihlal edilmemesi dahil ancak bunlarla sınırlı olmamak üzere diğer tüm garantileri reddeder ve geçersiz kılar.</p>
 
                         <h2>4. Sınırlamalar</h2>
-                        <p>Hiçbir durumda ADCentral veya tedarikçileri, ADCentral'ın web sitesindeki materyallerin kullanımından veya kullanılamamasından kaynaklanan herhangi bir zarardan (sınırlama olmaksızın, veri veya kar kaybı veya iş kesintisi nedeniyle oluşan zararlar dahil) sorumlu tutulamaz, ADCentral veya bir ADCentral yetkili temsilcisine sözlü veya yazılı olarak bu tür bir hasar olasılığı bildirilmiş olsa bile.</p>
+                        <p>Hiçbir durumda ADC Tasarım veya tedarikçileri, ADC Tasarım'ın web sitesindeki materyallerin kullanımından veya kullanılamamasından kaynaklanan herhangi bir zarardan (sınırlama olmaksızın, veri veya kar kaybı veya iş kesintisi nedeniyle oluşan zararlar dahil) sorumlu tutulamaz, ADC Tasarım veya bir ADC Tasarım yetkili temsilcisine sözlü veya yazılı olarak bu tür bir hasar olasılığı bildirilmiş olsa bile.</p>
 
                         <h2>5. Değişiklikler</h2>
-                        <p>ADCentral, web sitesi için bu kullanım şartlarını herhangi bir zamanda bildirimde bulunmaksızın revize edebilir. Bu web sitesini kullanarak, o sırada geçerli olan Kullanım Şartları ve Koşullarına bağlı kalmayı kabul etmiş olursunuz.</p>
+                        <p>ADC Tasarım, web sitesi için bu kullanım şartlarını herhangi bir zamanda bildirimde bulunmaksızın revize edebilir. Bu web sitesini kullanarak, o sırada geçerli olan Kullanım Şartları ve Koşullarına bağlı kalmayı kabul etmiş olursunuz.</p>
 
                         <h2>6. Geçerli Hukuk</h2>
                         <p>Bu şartlar ve koşullar, İstanbul, Türkiye yasalarına göre yönetilir ve yorumlanır ve siz, o Devlet veya yerdeki mahkemelerin münhasır yargı yetkisine geri dönülmez bir şekilde tabi olursunuz.</p>
