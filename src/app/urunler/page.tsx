@@ -1,4 +1,4 @@
-import { mockProducts } from '@/lib/mock-data';
+import { mockProducts, mockSectors } from '@/lib/mock-data';
 import { ProductCard } from '@/components/product-card';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
@@ -6,16 +6,14 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Separator } from '@/components/ui/separator';
 
 const categories = [...new Set(mockProducts.map(p => p.category))];
-// In a real app, this would come from a 'sectors' collection
-const sectors = ['Lojistik ve Taşımacılık', 'İnşaat ve Hafriyat', 'Belediye ve Atık Yönetimi', 'Yolcu Taşımacılığı'];
 
 export default function UrunlerPage() {
   return (
     <>
-      <div className="bg-secondary">
+      <div className="bg-black/50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold font-headline">Ürün Kataloğu</h1>
-          <p className="mt-2 text-lg text-muted-foreground max-w-3xl mx-auto">
+          <p className="mt-2 text-lg text-white/70 max-w-3xl mx-auto">
             Operasyonel mükemmellik için tasarlanmış Brigade Electronics güvenlik ve verimlilik ürünleri.
           </p>
         </div>
@@ -23,30 +21,30 @@ export default function UrunlerPage() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid lg:grid-cols-4 gap-8 items-start">
           <aside className="lg:col-span-1 sticky top-24">
-            <Card>
+            <Card className="bg-white/5 border-white/10">
               <CardHeader>
-                <CardTitle className="font-headline">Filtrele</CardTitle>
+                <CardTitle className="font-headline text-2xl">Filtrele</CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div>
-                  <h3 className="font-semibold mb-4">Kategori</h3>
+                  <h3 className="font-semibold mb-4 text-white">Kategori</h3>
                   <div className="space-y-3">
                     {categories.map(category => (
                       <div key={category} className="flex items-center space-x-2">
-                        <Checkbox id={category} />
-                        <Label htmlFor={category} className="font-normal leading-tight">{category}</Label>
+                        <Checkbox id={category} className="border-white/30"/>
+                        <Label htmlFor={category} className="font-normal leading-tight text-white/80">{category}</Label>
                       </div>
                     ))}
                   </div>
                 </div>
-                <Separator />
+                <Separator className="bg-white/10"/>
                  <div>
-                  <h3 className="font-semibold mb-4">Sektör</h3>
+                  <h3 className="font-semibold mb-4 text-white">Sektör</h3>
                   <div className="space-y-3">
-                    {sectors.map(sector => (
-                      <div key={sector} className="flex items-center space-x-2">
-                        <Checkbox id={sector} />
-                        <Label htmlFor={sector} className="font-normal leading-tight">{sector}</Label>
+                    {mockSectors.map(sector => (
+                      <div key={sector.id} className="flex items-center space-x-2">
+                        <Checkbox id={sector.slug} className="border-white/30" />
+                        <Label htmlFor={sector.slug} className="font-normal leading-tight text-white/80">{sector.name}</Label>
                       </div>
                     ))}
                   </div>
