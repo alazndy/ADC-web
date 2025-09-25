@@ -10,10 +10,10 @@ export function SectorsCarousel() {
     <section className="py-16 sm:py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold font-headline tracking-tight sm:text-4xl text-white">
+          <h2 className="text-3xl font-bold font-headline tracking-tight sm:text-4xl">
             Sektörel Çözümler
           </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-white/70">
+          <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
             Farklı endüstrilerin benzersiz zorluklarına özel mühendislik yaklaşımları.
           </p>
         </div>
@@ -25,7 +25,7 @@ export function SectorsCarousel() {
                 <CarouselItem key={`${sector.id}-${index}`} className="basis-1/2 md:basis-1/3 lg:basis-1/5 pl-2">
                   <Link href={`/sektorler/${sector.slug}`}>
                     <div className="p-1">
-                      <Card className="overflow-hidden group bg-white/5 border-white/10">
+                      <Card className="overflow-hidden group">
                         <CardContent className="relative aspect-square flex flex-col items-center justify-end p-4">
                           {image && (
                             <Image
@@ -36,7 +36,7 @@ export function SectorsCarousel() {
                               data-ai-hint={image.imageHint}
                             />
                           )}
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                           <h3 className="relative text-center font-semibold text-white z-10">
                             {sector.name}
                           </h3>
@@ -53,5 +53,3 @@ export function SectorsCarousel() {
     </section>
   );
 }
-
-    
