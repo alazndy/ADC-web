@@ -176,13 +176,12 @@ export const mockSectors: Sector[] = [
 ];
 
 export const mockProducts: Product[] = [
-  // 1. Kamera Monitör Sistemleri
   {
     id: 'product-1',
     name: 'AHD 360° KAMERA SİSTEMİ - BN360-300',
     slug: 'ahd-360-kamera-sistemi-bn360-300',
     partNumber: '5800',
-    category: '360° Kamera Sistemleri (Backeye®360)',
+    category: 'Kamera Monitör Sistemleri',
     shortDescription: 'Sürücüye aracın etrafının tam bir \'kuş bakışı\' görünümünü gerçek zamanlı olarak sağlayan akıllı bir kamera monitör sistemidir.',
     longDescription: 'Dört adet ultra geniş açılı kameradan gelen canlı görüntüler, bir elektronik kontrol ünitesi (ECU) tarafından işlenir, birleştirilir ve tek bir görüntü olarak monitöre yansıtılır. Bu sistemler, araç kör noktalarını ortadan kaldırmak ve düşük hızda manevra yapmaya yardımcı olmak için tasarlanmıştır.',
     features: [
@@ -212,7 +211,7 @@ export const mockProducts: Product[] = [
     name: 'HUMAN FORM RECOGNITION (HFR) 360° SİSTEMİ - VBV-360-1000-AI',
     slug: 'hfr-360-sistemi-vbv-360-1000-ai',
     partNumber: '7524 (Kablolar Dahil), 8123 (Kablolar Hariç)',
-    category: '360° Kamera Sistemleri (Backeye®360)',
+    category: 'Kamera Monitör Sistemleri',
     shortDescription: 'Yapay Zeka (AI) teknolojisi ile araç etrafındaki insanları tanır ve sürücüyü sesli ve görsel olarak uyarır.',
     longDescription: 'Bu akıllı sistem, Yapay Zeka (AI) kullanarak araç etrafındaki insanları tanır. Algılanan kişiler, sürücünün monitöründeki 360° görüntünün üzerinde renkli bir kutu içinde gösterilir ve sürücü sesli/görsel olarak uyarılır.',
     features: [
@@ -241,7 +240,7 @@ export const mockProducts: Product[] = [
     name: 'HUMAN FORM RECOGNITION (HFR) KAMERA',
     slug: 'hfr-kamera',
     partNumber: '7321, 7396',
-    category: 'İnsan Formu Tanıma (HFR) Kameraları',
+    category: 'Kamera Monitör Sistemleri',
     shortDescription: 'Ön ve arka kör noktalardaki insanları tanır ve sürücüyü uyarır.',
     longDescription: 'Yapay Zeka kullanarak insan formunu algılayan ve sürücüyü olası bir çarpışma öncesinde görsel ve/veya sesli olarak uyaran aktif kör nokta tespit sistemleridir. Algılanan kişiler, kamera görüntüsü üzerine bindirilmiş renkli bir kutu içinde gösterilir. Görüntü işleme doğrudan kamera ünitesi tarafından yapılır.',
     features: [
@@ -266,7 +265,7 @@ export const mockProducts: Product[] = [
     name: 'ELITE AHD KAMERA 1080p',
     slug: 'elite-ahd-kamera-1080p',
     partNumber: '6408, 6410',
-    category: 'Elite Serisi Kameralar',
+    category: 'Kamera Monitör Sistemleri',
     shortDescription: 'En zorlu koşullar için en üst düzey performans sunan yüksek çözünürlüklü kamera.',
     longDescription: 'Orijinal Ekipman Üreticileri (OEM\'ler) ve karoserciler için ilk tercih olan, en zorlu koşullarda istisnai kalite ve tutarlı performans sunan en üst düzey sistemlerdir.',
     features: [
@@ -290,7 +289,7 @@ export const mockProducts: Product[] = [
     name: 'WDR\'li ELITE KAMERA',
     slug: 'wdr-li-elite-kamera',
     partNumber: '1623, 1905, 2871, 4924',
-    category: 'Elite Serisi Kameralar',
+    category: 'Kamera Monitör Sistemleri',
     shortDescription: 'Geniş Dinamik Aralık (WDR) teknolojisine sahip, zorlu ışık koşulları için ideal kamera.',
     longDescription: 'Geliştirilmiş detay için Geniş Dinamik Aralık (WDR) teknolojisine sahip bu kameralar, ultra düşük ışık performansı için 5 Kızılötesi LED, Isıtıcı, Mikrofon gibi özelliklerle donatılmıştır.',
     features: [
@@ -314,7 +313,7 @@ export const mockProducts: Product[] = [
     name: 'WDR\'li SHUTTER KAMERA',
     slug: 'wdr-li-shutter-kamera',
     partNumber: '1242',
-    category: 'Elite Serisi Kameralar',
+    category: 'Kamera Monitör Sistemleri',
     shortDescription: 'Otomatik shutter özelliği ile lensi kirden ve hasardan koruyan WDR\'li kamera.',
     longDescription: 'Geniş Dinamik Aralık (WDR) teknolojisine ek olarak, otomatik shutter, ısıtıcı ve mikrofon özelliklerine sahiptir. Özellikle çamurlu ve tozlu ortamlar için idealdir.',
     features: [
@@ -338,7 +337,7 @@ export const mockProducts: Product[] = [
     name: 'SELECT AHD KAMERA 1080p',
     slug: 'select-ahd-kamera-1080p',
     partNumber: '5466, 5467, 5470, 5471',
-    category: 'Select Serisi Kameralar',
+    category: 'Kamera Monitör Sistemleri',
     shortDescription: 'Yüksek kaliteli, güvenilir ve popüler orta sınıf kamera sistemi.',
     longDescription: 'Yüksek kaliteli, güvenilir ve popüler orta sınıf sistemlerdir. 1080p AHD çözünürlük, 4 adet yüksek güçlü kızılötesi LED, mikrofon ve ayna görünümü özellikleri sunar.',
     features: [
@@ -361,7 +360,7 @@ export const mockProducts: Product[] = [
     name: 'SHUTTER KAMERA (Select Serisi)',
     slug: 'select-shutter-kamera',
     partNumber: '2808',
-    category: 'Select Serisi Kameralar',
+    category: 'Kamera Monitör Sistemleri',
     shortDescription: 'Otomatik shutter ve ısıtıcı özellikli, güvenilir orta sınıf kamera.',
     longDescription: 'Select serisinin bu shutter kamerası, 4 adet yüksek güçlü kızılötesi LED, otomatik shutter, ısıtıcı ve mikrofon özellikleriyle gelir. Zorlu koşullar için uygun maliyetli bir çözümdür.',
     features: [
@@ -385,7 +384,7 @@ export const mockProducts: Product[] = [
     name: 'AHD EYEBALL KAMERA',
     slug: 'ahd-eyeball-kamera',
     partNumber: '7143, 7144, 7145, 7146',
-    category: 'Select Serisi Kameralar',
+    category: 'Kamera Monitör Sistemleri',
     shortDescription: 'Kompakt, gömme montajlı "eyeball" kamera.',
     longDescription: 'Gömme montajlı "eyeball" kamera, 5 adet yüksek güçlü kızılötesi LED ve mikrofon özelliklerine sahiptir. Kompakt tasarımı sayesinde estetiğin önemli olduğu uygulamalar için idealdir.',
     features: [
@@ -408,7 +407,7 @@ export const mockProducts: Product[] = [
     name: 'AHD MİNİ KAMERA',
     slug: 'ahd-mini-kamera',
     partNumber: 'DMC-1035, DMC-1031',
-    category: 'Select Serisi Kameralar',
+    category: 'Kamera Monitör Sistemleri',
     shortDescription: 'İç mekan kullanımı için yüksek çözünürlüklü mini kamera.',
     longDescription: 'İç mekan kullanımı için tasarlanmış yüksek çözünürlüklü AHD mini kamera.',
     features: [],
@@ -421,7 +420,7 @@ export const mockProducts: Product[] = [
     name: 'SİLİNDİR KAMERA',
     slug: 'silindir-kamera',
     partNumber: 'VBV-485C, VBV-481C',
-    category: 'Select Serisi Kameralar',
+    category: 'Kamera Monitör Sistemleri',
     shortDescription: '9 LED\'li, IP69K/IP68 korumalı silindir kamera.',
     longDescription: '9 adet LED\'i bulunan, IP69K/IP68 korumalı, dayanıklı silindir kamera.',
     features: ['9 LED', 'IP69K/IP68 Koruma'],
@@ -434,7 +433,7 @@ export const mockProducts: Product[] = [
     name: 'AHD DOME KAMERA',
     slug: 'ahd-dome-kamera',
     partNumber: 'MD-60, MD-61 Serisi',
-    category: 'Select Serisi Kameralar',
+    category: 'Kamera Monitör Sistemleri',
     shortDescription: 'İç veya dış mekanda kullanılabilen, 150° hareket aralığına sahip dome kamera.',
     longDescription: 'İç veya dış mekanda kullanılabilen, 150° hareket aralığına sahip AHD dome kamera.',
     features: ['150° hareket aralığı'],
@@ -446,7 +445,7 @@ export const mockProducts: Product[] = [
     id: 'product-13',
     name: 'BE-970WFM 7" Dörtlü Monitör',
     slug: 'be-970wfm-monitor',
-    category: 'Elite Serisi Monitörler',
+    category: 'Kamera Monitör Sistemleri',
     partNumber: '800, 801',
     shortDescription: 'IP69K korumalı, 4 kamera girişli, 7 inçlik en üst düzey dörtlü monitör.',
     longDescription: 'Zorlu koşullar için tasarlanmış, 7 inçlik, IP69K korumalı, 4 kamera girişli Elite serisi monitör.',
@@ -460,7 +459,7 @@ export const mockProducts: Product[] = [
     id: 'product-14',
     name: 'VBV-7104HFM 10.4" Dörtlü Monitör',
     slug: 'vbv-7104hfm-monitor',
-    category: 'Select Serisi Monitörler',
+    category: 'Kamera Monitör Sistemleri',
     partNumber: '1021',
     shortDescription: 'AHD ve CVBS uyumlu, 4 kamera girişli, 10.4 inçlik geniş ekran monitör.',
     longDescription: 'AHD ve CVBS kameralarla uyumlu, 4 kamera girişli, 10.4 inçlik geniş ekran Select serisi monitör.',
@@ -474,7 +473,7 @@ export const mockProducts: Product[] = [
     id: 'product-15',
     name: 'VBV-243M 4.3" Ayna Monitör',
     slug: 'vbv-243m-monitor',
-    category: 'Essential Serisi Monitörler',
+    category: 'Kamera Monitör Sistemleri',
     partNumber: '1172',
     shortDescription: 'Mevcut dikiz aynasına takılabilen 4.3 inç dijital ayna monitör.',
     longDescription: 'Mevcut dikiz aynasına kolayca takılabilen, 2 kamera girişli, 4.3 inç boyutunda pratik ayna monitör.',
@@ -760,3 +759,4 @@ export const mockProjects: Project[] = [
     
 
     
+

@@ -6,62 +6,55 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { mockProducts } from '@/lib/mock-data';
-
-const categoryToSlug = (categoryName: string) => {
-  if (!categoryName) return '';
-  return categoryName.toLowerCase()
-    .replace(/ /g, '-')
-    .replace(/ı/g, 'i')
-    .replace(/ğ/g, 'g')
-    .replace(/ü/g, 'u')
-    .replace(/ş/g, 's')
-    .replace(/ö/g, 'o')
-    .replace(/ç/g, 'c')
-    .replace(/[^\w-]+/g, '');
-};
-
-const allCategories = [...new Set(mockProducts.map(p => p.category))].sort();
+import { categoryToSlug } from '@/lib/product-categories';
 
 const productCategories = [
   {
     title: 'Kamera Sistemleri',
     image: findImage('placeholder-1'),
+    imageHint: 'security camera system',
     items: ['Backeye®360', 'Backeye® Kablosuz Sistem', 'Kameralar', 'HFR Kameralar (Yapay Zekalı)', 'HFR HD Backeye®360 (360 AI)', 'IP Kameralar', 'Monitörler'],
     link: `/urunler/kategori/${categoryToSlug('Kamera Monitör Sistemleri')}`
   },
   {
     title: 'Tespit Sistemleri',
     image: findImage('placeholder-21'),
+    imageHint: 'radar detection sensor',
     items: ['Backsense® Radar', 'CAREYE® Yapay Zekalı Dönüş Asistanı', 'Ön Radar', 'Radar Predict', 'Ultrasonik Sensörler', 'ZoneSafe® RFID Tespiti'],
     link: `/urunler/kategori/${categoryToSlug('Tespit Sistemleri')}`
   },
   {
     title: 'Sürücü Güvenlik Sistemleri',
     image: findImage('placeholder-20'),
+    imageHint: 'driver safety camera',
     items: ['Sürücü Güvenlik Kameraları', 'MDR Yapay Zekalı Kameralar'],
     link: `/urunler/kategori/${categoryToSlug('Sürücü Güvenlik Sistemleri')}`
   },
   {
     title: 'Kayıt Sistemleri',
     image: findImage('placeholder-16'),
+    imageHint: 'digital video recorder',
     items: ['Yapay Zekalı Bağlantılı Araç Kamerası', 'Araç Kameraları (Dashcams)', 'Mobil Dijital Kayıt Cihazları'],
     link: `/urunler/kategori/${categoryToSlug('Kayıt Sistemleri')}`
   },
   {
     title: 'Uyarı Sistemleri',
     image: findImage('placeholder-26'),
+    imageHint: 'warning alarm light',
     items: ['Sessiz Araç Ses Cihazı (AVAS)', 'Tonal Alarmlar', 'Geri Vites & Uyarı Alarmları'],
     link: `/urunler/kategori/${categoryToSlug('Uyarı Alarmları')}`
   },
   {
     title: 'Brigade Van',
     image: findImage('sector-distribution'),
+    imageHint: 'delivery van city',
     items: ['Hafif ticari araçlar için özel güvenlik çözümleri.'],
-    link: '#' // Bu kategori için henüz bir sayfa yok, isterseniz oluşturabiliriz.
+    link: `/urunler/kategori/${categoryToSlug('Brigade Van')}` 
   },
   {
     title: 'Brigade Telematik',
     image: findImage('placeholder-18'),
+    imageHint: 'telematics dashboard data',
     items: ['Telematik', 'Telematik Görüntüleme'],
     link: '/teknoloji-cozumleri/telematik-ve-filo-yonetimi'
   },
@@ -75,7 +68,7 @@ export default function UrunlerPage() {
       <div className="relative h-[400px] md:h-[500px] bg-gray-800 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image 
-              src={findImage('hero-background')?.imageUrl || ''}
+              src={findImage('hero-background')?.imageUrl || 'https://picsum.photos/seed/hero-bg/1920/1080'}
               alt="Çalışma alanında güvenlik yeleği giyen bir Brigade çalışanı"
               fill
               sizes="100vw"
@@ -110,7 +103,7 @@ export default function UrunlerPage() {
                                 fill
                                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                 className="object-cover"
-                                data-ai-hint={category.image.imageHint || "product category"}
+                                data-ai-hint={category.imageHint}
                             />
                           )}
                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
