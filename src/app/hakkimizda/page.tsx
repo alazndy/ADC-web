@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { findImage } from "@/lib/placeholder-images";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users, Target, Milestone } from "lucide-react";
 
