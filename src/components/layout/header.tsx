@@ -2,11 +2,13 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import dynamic from 'next/dynamic';
 import { Menu, Search, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Logo } from "@/components/logo";
-import { SearchModal } from "@/components/search-modal";
+
+const SearchModal = dynamic(() => import('@/components/search-modal').then(mod => mod.SearchModal));
 
 const navLinks = [
   { href: "/hakkimizda", label: "Hakkımızda" },
@@ -35,7 +37,7 @@ export default function Header() {
     <>
       <header
         className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-          isScrolled ? "bg-background/80 backdrop-blur-xl border-b" : "bg-transparent"
+          isScrolled ? "bg-background/80 backdrop-blur-xl border-b border-white/10" : "bg-transparent"
         } dark:text-white`}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -109,7 +111,7 @@ export default function Header() {
           </div>
         </div>
       </header>
-      <SearchModal isOpen={isSearchOpen} onOpenChange={setIsSearchOpen} />
+      {isSearchOpen && <SearchModal isOpen={isSearchOpen} onOpenChange={setIsSearchOpen} />}
     </>
   );
 }
