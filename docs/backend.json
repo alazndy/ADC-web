@@ -1,0 +1,483 @@
+{
+  "entities": {
+    "Product": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Product",
+      "type": "object",
+      "description": "Represents a product in the ADC Tasarım catalog.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the Product entity."
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the product (e.g., 'Backeye®360 BN360-200')."
+        },
+        "slug": {
+          "type": "string",
+          "description": "URL-friendly slug for the product (e.g., 'backeye-360-bn360-200')."
+        },
+        "category": {
+          "type": "string",
+          "description": "Category of the product (e.g., 'Kamera Monitör Sistemleri')."
+        },
+        "shortDescription": {
+          "type": "string",
+          "description": "Short description of the product for list pages."
+        },
+        "longDescription": {
+          "type": "string",
+          "description": "Long description of the product for the product detail page."
+        },
+        "features": {
+          "type": "array",
+          "description": "List of features for the product.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "imageUrls": {
+          "type": "array",
+          "description": "URLs of images for the product.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "datasheetUrl": {
+          "type": "string",
+          "description": "URL of the technical datasheet (PDF) for the product.",
+          "format": "uri"
+        },
+        "relatedSectorIds": {
+          "type": "array",
+          "description": "References to Sectors. (Relationship: Sector N:N Product)",
+          "items": {
+            "type": "string"
+          }
+        },
+        "isFeatured": {
+          "type": "boolean",
+          "description": "Indicates whether the product is featured on the home page."
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "slug",
+        "category",
+        "shortDescription",
+        "longDescription",
+        "features",
+        "imageUrls"
+      ]
+    },
+    "Service": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Service",
+      "type": "object",
+      "description": "Represents a service offered by ADC Tasarım.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the Service entity."
+        },
+        "title": {
+          "type": "string",
+          "description": "Title of the service (e.g., 'Brigade Sistem Entegrasyonu')."
+        },
+        "slug": {
+          "type": "string",
+          "description": "URL-friendly slug for the service (e.g., 'brigade-sistem-entegrasyonu')."
+        },
+        "icon": {
+          "type": "string",
+          "description": "Icon name or SVG code for the service."
+        },
+        "summary": {
+          "type": "string",
+          "description": "Summary of the service to be displayed on the overview page."
+        },
+        "content": {
+          "type": "string",
+          "description": "Detailed content of the service for the service detail page."
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "slug",
+        "icon",
+        "summary",
+        "content"
+      ]
+    },
+    "TechSolution": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "TechSolution",
+      "type": "object",
+      "description": "Represents a technology solution offered by ADC Tasarım (e.g., Telematics).",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the TechSolution entity."
+        },
+        "title": {
+          "type": "string",
+          "description": "Title of the technology solution (e.g., 'Telematics Integration')."
+        },
+        "slug": {
+          "type": "string",
+          "description": "URL-friendly slug for the technology solution (e.g., 'telematics-integration')."
+        },
+        "icon": {
+          "type": "string",
+          "description": "Icon name or SVG code for the technology solution."
+        },
+        "summary": {
+          "type": "string",
+          "description": "Summary of the technology solution to be displayed on the overview page."
+        },
+        "content": {
+          "type": "string",
+          "description": "Detailed content of the technology solution for the detail page."
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "slug",
+        "icon",
+        "summary",
+        "content"
+      ]
+    },
+    "Sector": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Sector",
+      "type": "object",
+      "description": "Represents an industry sector that ADC Tasarım serves.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the Sector entity."
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the sector (e.g., 'Lojistik ve Taşımacılık')."
+        },
+        "slug": {
+          "type": "string",
+          "description": "URL-friendly slug for the sector (e.g., 'lojistik-ve-tasimacilik')."
+        },
+        "imageUrl": {
+          "type": "string",
+          "description": "URL of the image representing the sector.",
+          "format": "uri"
+        },
+        "challenges": {
+          "type": "string",
+          "description": "Description of the challenges faced by the sector."
+        },
+        "solutionsContent": {
+          "type": "string",
+          "description": "Content describing the solutions ADC offers to the sector."
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "slug",
+        "imageUrl",
+        "challenges",
+        "solutionsContent"
+      ]
+    },
+    "Project": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Project",
+      "type": "object",
+      "description": "Represents a project or case study.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the Project entity."
+        },
+        "title": {
+          "type": "string",
+          "description": "Title of the project."
+        },
+        "slug": {
+          "type": "string",
+          "description": "URL-friendly slug for the project."
+        },
+        "clientName": {
+          "type": "string",
+          "description": "Name of the client (optional)."
+        },
+        "sector": {
+          "type": "string",
+          "description": "Sector related to the project."
+        },
+        "coverImage": {
+          "type": "string",
+          "description": "URL of the cover image for the project.",
+          "format": "uri"
+        },
+        "challenge": {
+          "type": "string",
+          "description": "Description of the challenge the client faced."
+        },
+        "solution": {
+          "type": "string",
+          "description": "Description of the solution provided by ADC Tasarım."
+        },
+        "result": {
+          "type": "string",
+          "description": "Description of the results achieved."
+        },
+        "usedProductIds": {
+          "type": "array",
+          "description": "References to Products. (Relationship: Product N:N Project)",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "slug",
+        "sector",
+        "coverImage",
+        "challenge",
+        "solution",
+        "result"
+      ]
+    },
+    "BlogPost": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "BlogPost",
+      "type": "object",
+      "description": "Represents a blog post.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the BlogPost entity."
+        },
+        "title": {
+          "type": "string",
+          "description": "Title of the blog post."
+        },
+        "slug": {
+          "type": "string",
+          "description": "URL-friendly slug for the blog post."
+        },
+        "author": {
+          "type": "string",
+          "description": "Author of the blog post."
+        },
+        "publishDate": {
+          "type": "string",
+          "description": "Date and time when the blog post was published.",
+          "format": "date-time"
+        },
+        "content": {
+          "type": "string",
+          "description": "Content of the blog post."
+        },
+        "tags": {
+          "type": "array",
+          "description": "Tags associated with the blog post.",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "slug",
+        "author",
+        "publishDate",
+        "content",
+        "tags"
+      ]
+    },
+    "FormSubmission": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "FormSubmission",
+      "type": "object",
+      "description": "Represents a submission from a contact form.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the FormSubmission entity."
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the person submitting the form."
+        },
+        "email": {
+          "type": "string",
+          "description": "Email address of the person submitting the form.",
+          "format": "email"
+        },
+        "phone": {
+          "type": "string",
+          "description": "Phone number of the person submitting the form."
+        },
+        "subject": {
+          "type": "string",
+          "description": "Subject of the form submission."
+        },
+        "message": {
+          "type": "string",
+          "description": "Message content of the form submission."
+        },
+        "submittedAt": {
+          "type": "string",
+          "description": "Date and time when the form was submitted.",
+          "format": "date-time"
+        },
+        "status": {
+          "type": "string",
+          "description": "Status of the form submission (e.g., 'Yeni', 'Okundu', 'Yanıtlandı')."
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "email",
+        "phone",
+        "subject",
+        "message",
+        "submittedAt",
+        "status"
+      ]
+    }
+  },
+  "auth": {
+    "providers": [
+      "password",
+      "anonymous"
+    ]
+  },
+  "firestore": {
+    "structure": [
+      {
+        "path": "/products/{productId}",
+        "definition": {
+          "entityName": "Product",
+          "schema": {
+            "$ref": "#/backend/entities/Product"
+          },
+          "description": "Stores product information for ADC Tasarım.  Authorization: No hierarchical authorization dependencies.",
+          "params": [
+            {
+              "name": "productId",
+              "description": "Unique identifier for the product."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/services/{serviceId}",
+        "definition": {
+          "entityName": "Service",
+          "schema": {
+            "$ref": "#/backend/entities/Service"
+          },
+          "description": "Stores service information offered by ADC Tasarım. Authorization: No hierarchical authorization dependencies.",
+          "params": [
+            {
+              "name": "serviceId",
+              "description": "Unique identifier for the service."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/techSolutions/{techSolutionId}",
+        "definition": {
+          "entityName": "TechSolution",
+          "schema": {
+            "$ref": "#/backend/entities/TechSolution"
+          },
+          "description": "Stores technology solution information. Authorization: No hierarchical authorization dependencies.",
+          "params": [
+            {
+              "name": "techSolutionId",
+              "description": "Unique identifier for the tech solution."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/sectors/{sectorId}",
+        "definition": {
+          "entityName": "Sector",
+          "schema": {
+            "$ref": "#/backend/entities/Sector"
+          },
+          "description": "Stores industry sector information. Authorization: No hierarchical authorization dependencies.",
+          "params": [
+            {
+              "name": "sectorId",
+              "description": "Unique identifier for the sector."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/projects/{projectId}",
+        "definition": {
+          "entityName": "Project",
+          "schema": {
+            "$ref": "#/backend/entities/Project"
+          },
+          "description": "Stores project/case study information. Authorization: No hierarchical authorization dependencies.",
+          "params": [
+            {
+              "name": "projectId",
+              "description": "Unique identifier for the project."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/blogPosts/{blogPostId}",
+        "definition": {
+          "entityName": "BlogPost",
+          "schema": {
+            "$ref": "#/backend/entities/BlogPost"
+          },
+          "description": "Stores blog post information. Authorization: No hierarchical authorization dependencies.",
+          "params": [
+            {
+              "name": "blogPostId",
+              "description": "Unique identifier for the blog post."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/formSubmissions/{formSubmissionId}",
+        "definition": {
+          "entityName": "FormSubmission",
+          "schema": {
+            "$ref": "#/backend/entities/FormSubmission"
+          },
+          "description": "Stores form submission data. Authorization: No hierarchical authorization dependencies.",
+          "params": [
+            {
+              "name": "formSubmissionId",
+              "description": "Unique identifier for the form submission."
+            }
+          ]
+        }
+      }
+    ],
+    "reasoning": "The Firestore data structure is designed to support the ADC Tasarım website, focusing on product catalogs, project showcases, services, blog posts, and form submissions. The structure prioritizes clarity, scalability, and security, adhering to the principles of Authorization Independence and Structural Segregation.\n\nAuthorization Independence:\nAll collections are designed to avoid hierarchical authorization dependencies. There are no `get()` calls in rules.  Access control is simplified by owning all the data in the top level collections. Denormalization is not required since there is no hierarchical ownership.\n\nStructural Segregation:\nEach collection is designed to store homogeneous data with similar security requirements. For example, blog posts are stored separately from form submissions, each having distinct access control needs.\n\nQAPs (Rules are not Filters):\nThe design supports secure `list` operations. Since all documents in each collection share the same security posture (Structural Segregation), listing documents based on simple existence checks is straightforward and efficient.\n\nAccess Modeling:\nSimple path-based access is employed for all collections."
+  }
+}
