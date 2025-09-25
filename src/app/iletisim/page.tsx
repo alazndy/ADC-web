@@ -1,5 +1,5 @@
 import { ContactForm } from "@/components/contact-form";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Printer, Smartphone } from "lucide-react";
 
 export default function IletisimPage() {
   return (
@@ -25,7 +25,7 @@ export default function IletisimPage() {
                 </div>
                 <div>
                   <h3 className="font-semibold">Adres</h3>
-                  <p className="text-muted-foreground">Örnek Mah. Teknoloji Cad. No:123, 34750 Ataşehir/İstanbul</p>
+                  <p className="text-muted-foreground">Kızılırmak Mah. Dumlupınar Bulvarı NEXT LEVEL No: 3C1-160 Çankaya, 06520 Ankara - TÜRKİYE</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -34,7 +34,25 @@ export default function IletisimPage() {
                 </div>
                 <div>
                   <h3 className="font-semibold">Telefon</h3>
-                  <a href="tel:+902161234567" className="text-muted-foreground hover:text-primary">+90 (216) 123 45 67</a>
+                  <a href="tel:+903122403484" className="text-muted-foreground hover:text-primary">+90 (312) 240 34 84</a>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="bg-secondary p-3 rounded-full">
+                  <Smartphone className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-semibold">Mobil</h3>
+                  <a href="tel:+905383013303" className="text-muted-foreground hover:text-primary">+90 (538) 301 33 03</a>
+                </div>
+              </div>
+               <div className="flex items-start gap-4">
+                <div className="bg-secondary p-3 rounded-full">
+                  <Printer className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-semibold">Fax</h3>
+                  <p className="text-muted-foreground">+90 (312) 999 46 45</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -48,9 +66,7 @@ export default function IletisimPage() {
               </div>
             </div>
             <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden border">
-                <div className="bg-muted w-full h-full flex items-center justify-center">
-                    <p className="text-muted-foreground">Google Haritalar burada görünecek.</p>
-                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.435933393226!2d32.80860267675762!3d39.90858187152649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34f0f6f2e8f6f%3A0x1d5854f3ccb6354b!2sNext%20Level%20AVM!5e0!3m2!1str!2str!4v1716900989396!5m2!1str!2str" width="100%" height="100%" style={{border:0}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
           <div className="lg:col-span-3 bg-card p-8 rounded-lg shadow-lg">
