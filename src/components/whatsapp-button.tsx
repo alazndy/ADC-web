@@ -14,8 +14,7 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
   );
 
 export function WhatsAppButton() {
-  // TODO: Numarayı gerçek telefon numarasıyla değiştirin. Ülke kodu dahil edilmelidir.
-  const phoneNumber = "905551234567";
+  const phoneNumber = "905315130224";
   const message = "Merhaba, web sitenizden ulaşıyorum. Ürünleriniz hakkında bilgi almak istiyorum.";
 
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
