@@ -20,8 +20,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="tr" className={`${inter.variable} ${spaceGrotesk.variable} scroll-smooth dark`}>
-      <body className="font-body antialiased bg-black text-white">
+    <html lang="tr" className={`${inter.variable} ${spaceGrotesk.variable} scroll-smooth`}>
+      <body className="font-body antialiased bg-background text-foreground">
         <FirebaseClientProvider>
           <div className="flex flex-col min-h-screen">
             <Header />

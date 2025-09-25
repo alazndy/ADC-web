@@ -30,6 +30,7 @@ export default function Header() {
       setIsScrolled(window.scrollY > 10);
     };
     window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Set initial state
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -37,20 +38,22 @@ export default function Header() {
     <>
       <header
         className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-          isScrolled ? "bg-background/80 backdrop-blur-xl border-b border-white/10" : "bg-transparent"
-        } dark:text-white`}
+          isScrolled ? "bg-background/95 backdrop-blur-sm border-b" : "bg-transparent absolute text-white"
+        }`}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex h-20 items-center justify-between">
             <div className="flex items-center">
-              <Logo />
+              <Logo forceWhiteText={!isScrolled} />
             </div>
             <nav className="hidden lg:flex items-center space-x-8">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors dark:text-white/80 dark:hover:text-primary"
+                  className={`text-sm font-medium transition-colors ${
+                    isScrolled ? 'text-foreground/80 hover:text-primary' : 'text-white/80 hover:text-white'
+                  }`}
                   prefetch={false}
                 >
                   {link.label}
@@ -58,18 +61,18 @@ export default function Header() {
               ))}
             </nav>
             <div className="flex items-center space-x-2">
-              <Button variant="ghost" size="icon" onClick={() => setIsSearchOpen(true)}>
+              <Button variant="ghost" size="icon" onClick={() => setIsSearchOpen(true)} className={`${isScrolled ? 'text-foreground' : 'text-white hover:bg-white/10 hover:text-white'}`}>
                 <Search className="h-5 w-5" />
                 <span className="sr-only">Ara</span>
               </Button>
               <div className="hidden lg:block">
-                 <Button asChild>
+                 <Button asChild variant={isScrolled ? "default" : "secondary"}>
                     <Link href="/randevu-al">Randevu Al</Link>
                  </Button>
               </div>
               <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
                 <SheetTrigger asChild className="lg:hidden">
-                  <Button variant="ghost" size="icon">
+                  <Button variant="ghost" size="icon" className={`${isScrolled ? 'text-foreground' : 'text-white hover:bg-white/10 hover:text-white'}`}>
                     <Menu className="h-6 w-6" />
                     <span className="sr-only">Menüyü Aç</span>
                   </Button>
