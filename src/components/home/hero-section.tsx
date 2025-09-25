@@ -1,24 +1,52 @@
+
+'use client';
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { findImage } from "@/lib/placeholder-images";
 import { ChevronRight } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+import React from "react";
 
 export function HeroSection() {
-  const heroImage = findImage("hero-background");
+  const heroImages = [
+      findImage("hero-background"),
+      findImage("sector-logistics"),
+      findImage("sector-construction"),
+  ].filter(Boolean);
+
+  const plugin = React.useRef(
+    Autoplay({ delay: 5000, stopOnInteraction: true })
+  );
 
   return (
     <section className="relative h-[70vh] min-h-[500px] w-full flex items-center justify-center text-white overflow-hidden">
-      {heroImage && (
-        <Image
-          src={heroImage.imageUrl}
-          alt={heroImage.description}
-          fill
-          className="object-cover"
-          priority
-          data-ai-hint={heroImage.imageHint}
-        />
-      )}
+      <Carousel
+        plugins={[plugin.current]}
+        className="absolute inset-0 w-full h-full"
+        opts={{ loop: true }}
+        onMouseEnter={plugin.current.stop}
+        onMouseLeave={plugin.current.reset}
+      >
+        <CarouselContent className="h-full">
+          {heroImages.map((image, index) => (
+            <CarouselItem key={index} className="h-full">
+              {image && (
+                <Image
+                  src={image.imageUrl}
+                  alt={image.description}
+                  fill
+                  className="object-cover"
+                  priority={index === 0}
+                  data-ai-hint={image.imageHint}
+                />
+              )}
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel>
+      
       <div className="absolute inset-0 bg-black/60" />
       
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">

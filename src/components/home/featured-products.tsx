@@ -33,11 +33,11 @@ export function FeaturedProducts() {
                           <div className="aspect-video relative overflow-hidden rounded-t-lg bg-card">
                             {image && (
                               <Image
-                                src={image.imageUrl}
+                                src="https://picsum.photos/seed/product1/600/400"
                                 alt={product.name}
                                 fill
                                 className="object-contain p-8 group-hover:scale-105 transition-transform duration-300"
-                                data-ai-hint={image.imageHint}
+                                data-ai-hint="product image"
                               />
                             )}
                           </div>
