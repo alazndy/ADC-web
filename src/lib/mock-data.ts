@@ -1,4 +1,4 @@
-import type { Product, Service, Sector, Project, BlogPost } from '@/lib/types';
+import type { Product, Service, Sector, Project } from '@/lib/types';
 import { Camera, ShieldCheck, Wrench, Route, Cpu, Ship, Truck, Bus, Tractor, Construction } from 'lucide-react';
 
 export const mockServices: Service[] = [
@@ -160,32 +160,5 @@ export const mockProjects: Project[] = [
     solution: 'Her bir atık toplama aracına, 4 kameralı bir MDR-508 mobil DVR sistemi, aracın arkası ve yanları için özel kameralar ve operatörü sesli olarak uyaran bir Backscan® radar sistemi kuruldu. Sistem, araç geri vitese takıldığında otomatik olarak devreye giriyor ve sürücü monitöründe arka kamera görüntüsünü gösteriyordu.',
     result: 'Proje sonrasında, araç çevresindeki iş kazaları sıfıra indirildi. Olası anlaşmazlık durumları için tüm operasyonlar kayıt altına alındı ve halktan gelen şikayetlerin çözümünde video kanıtları kullanıldı.',
     usedProducts: ['mdr-508-mobil-dvr'],
-  },
-];
-
-export const mockBlogPosts: BlogPost[] = [
-  {
-    id: '1',
-    title: 'Kör Nokta Kazalarını Önlemenin 5 Yolu',
-    slug: 'kor-nokta-kazalarini-onlemenin-5-yolu',
-    author: 'ADC Tasarım Ekibi',
-    publishDate: '2024-05-15T10:00:00Z',
-    summary: 'Büyük araçlarda kör noktalar kaçınılmazdır, ancak teknoloji bu riskleri minimize etmemize nasıl yardımcı olabilir? Bu yazıda, filonuzun güvenliğini artıracak 5 etkili çözümü inceliyoruz.',
-    content: '<p>Ticari araçların karıştığı kazaların büyük bir çoğunluğu, sürücünün görüş alanının dışındaki "kör noktalar" nedeniyle meydana gelmektedir. Peki bu riski nasıl yönetebiliriz?</p><h3>1. 360 Derece Kamera Sistemleri</h3><p>Backeye®360 gibi sistemler, aracın etrafındaki birden fazla kameranın görüntüsünü birleştirerek sürücüye kuşbakışı bir görünüm sunar. Bu, özellikle park etme ve düşük hızlı manevralar için devrim niteliğindedir.</p><h3>2. Ultrasonik ve Radar Sensörleri</h3><p>Kameraların göremediği veya sürücünün fark etmediği durumlarda, radar ve ultrasonik sensörler devreye girer. Bu sistemler, kör noktaya bir nesne veya kişi girdiğinde sesli ve görsel uyarılar vererek sürücüyü anında bilgilendirir.</p>',
-    tags: ['Güvenlik', 'Kör Nokta', 'Teknoloji'],
-    coverImage: 'blog-blindspot-1',
-    imageHint: 'truck side mirror',
-  },
-  {
-    id: '2',
-    title: 'Filo Verimliliği Nasıl Artırılır? Telematik Çözümleri Rehberi',
-    slug: 'filo-verimliligi-nasil-artirilir',
-    author: 'ADC Tasarım Ekibi',
-    publishDate: '2024-04-28T14:30:00Z',
-    summary: 'Yakıt maliyetlerinden, bakım süreçlerine kadar filo yönetiminin tüm zorluklarına teknolojik bir yanıt: Telematik. Bu rehberde, telematik sistemlerinin operasyonel verimliliğinizi nasıl artırabileceğini keşfedin.',
-    content: '<p>Modern filo yönetimi, sadece araçların nerede olduğunu bilmekten çok daha fazlasıdır. Verimlilik, her kilometrede ve her litre yakıtta gizlidir.</p><h3>Araç Takibi ve Rota Optimizasyonu</h3><p>Telematik sistemlerinin en temel faydası, araçlarınızı anlık olarak harita üzerinde takip etmektir. Bu sayede en verimli rotaları planlayabilir, trafik sıkışıklıklarından kaçınabilir ve teslimat sürelerini kısaltabilirsiniz.</p><h3>Sürücü Davranış Analizi</h3><p>Ani hızlanma, sert fren veya rölantide uzun süre bekleme gibi alışkanlıklar yakıt tüketimini doğrudan etkiler. Telematik sistemleri, sürücü davranışlarını analiz ederek size puanlar sunar. Bu verilerle sürücülerinizi eğitebilir ve daha ekonomik bir sürüş kültürü oluşturabilirsiniz.</p>',
-    tags: ['Filo Yönetimi', 'Telematik', 'Verimlilik'],
-    coverImage: 'blog-telematics-1',
-    imageHint: 'dashboard analytics',
   },
 ];

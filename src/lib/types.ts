@@ -44,16 +44,3 @@ export interface Project {
   result: string;
   usedProducts: string[]; // Array of product slugs
 }
-
-export interface BlogPost {
-  id: string;
-  title: string;
-  slug: string;
-  author: string;
-  publishDate: string; // ISO string date
-  content: string;
-  tags: string[];
-  coverImage: string;
-  imageHint: string;
-  summary: string;
-}

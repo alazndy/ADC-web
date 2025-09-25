@@ -15,7 +15,6 @@ const navLinks = [
   { href: "/teknoloji-cozumleri", label: "Teknoloji Çözümleri" },
   { href: "/sektorler", label: "Sektörler" },
   { href: "/projeler", label: "Projeler" },
-  { href: "/blog", label: "Blog" },
   { href: "/iletisim", label: "İletişim" },
 ];
 

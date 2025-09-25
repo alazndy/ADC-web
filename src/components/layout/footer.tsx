@@ -10,7 +10,6 @@ const footerLinks = {
     { href: "/urunler", label: "Ürünler" },
     { href: "/hizmetler", label: "Hizmetler" },
     { href: "/projeler", label: "Projeler" },
-    { href: "/blog", label: "Blog" },
   ],
   yasal: [
     { href: "/gizlilik-politikasi", label: "Gizlilik Politikası" },
