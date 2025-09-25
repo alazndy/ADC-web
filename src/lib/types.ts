@@ -30,7 +30,7 @@ export interface Sector {
   name: string;
   slug: string;
   icon: React.ComponentType<{ className?: string }>;
-  imageUrl: string;
+  imageUrls: string[];
   imageHint: string;
   challenges: string;
   solutionsContent: string;
