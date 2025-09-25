@@ -45,29 +45,29 @@ export default function SektorDetayPage({ params }: { params: { slug:string } })
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
                 <div className="max-w-4xl mx-auto">
                     <div className="grid md:grid-cols-2 gap-8 mb-12">
-                        <Card className="border-l-4 border-destructive">
+                        <Card className="border-l-4 border-red-500 bg-white/5">
                              <CardHeader className="flex flex-row items-center gap-4">
-                                <AlertTriangle className="h-8 w-8 text-destructive flex-shrink-0"/>
-                                <CardTitle className="font-headline text-xl">Sektörel Zorluklar</CardTitle>
+                                <AlertTriangle className="h-8 w-8 text-red-500 flex-shrink-0"/>
+                                <CardTitle className="font-headline text-xl text-white">Sektörel Zorluklar</CardTitle>
                             </CardHeader>
                             <CardContent>
-                                <p className="text-muted-foreground">{sector.challenges}</p>
+                                <p className="text-white/70">{sector.challenges}</p>
                             </CardContent>
                         </Card>
-                        <Card className="border-l-4 border-primary">
+                        <Card className="border-l-4 border-red-500 bg-white/5">
                              <CardHeader className="flex flex-row items-center gap-4">
-                                <Shield className="h-8 w-8 text-primary flex-shrink-0"/>
-                                <CardTitle className="font-headline text-xl">ADC Çözümleri</CardTitle>
+                                <Shield className="h-8 w-8 text-red-500 flex-shrink-0"/>
+                                <CardTitle className="font-headline text-xl text-white">ADC Çözümleri</CardTitle>
                             </CardHeader>
                             <CardContent>
-                                <div className="text-muted-foreground" dangerouslySetInnerHTML={{ __html: sector.solutionsContent }}/>
+                                <div className="text-white/70" dangerouslySetInnerHTML={{ __html: sector.solutionsContent }}/>
                             </CardContent>
                         </Card>
                     </div>
                     
                     {relatedProducts.length > 0 && (
                         <div className="mt-20">
-                            <h2 className="text-3xl font-bold font-headline text-center mb-8">{sector.name} İçin Önerilen Ürünler</h2>
+                            <h2 className="text-3xl font-bold font-headline text-center mb-8 text-white">{sector.name} İçin Önerilen Ürünler</h2>
                             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                                 {relatedProducts.map(product => (
                                     <ProductCard key={product.id} product={product} />

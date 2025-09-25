@@ -39,7 +39,7 @@ export default function ProjeDetayPage({ params }: { params: { slug: string } })
                 )}
                 <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-                        <Badge variant="secondary" className="mb-4">{project.sector}</Badge>
+                        <Badge variant="destructive" className="mb-4 text-base">{mockSectors.find(s => s.slug === project.sector)?.name}</Badge>
                         <h1 className="text-4xl font-bold font-headline">{project.title}</h1>
                         {project.clientName && <p className="mt-2 text-lg text-white/80">Müşteri: {project.clientName}</p>}
                     </div>
@@ -49,38 +49,38 @@ export default function ProjeDetayPage({ params }: { params: { slug: string } })
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
                 <div className="max-w-4xl mx-auto">
                     <div className="grid md:grid-cols-3 gap-8 text-center mb-16">
-                        <Card>
+                        <Card className="bg-white/5 border-white/10">
                             <CardHeader>
-                                <AlertTriangle className="mx-auto h-10 w-10 text-destructive"/>
-                                <CardTitle className="font-headline text-xl mt-2">Zorluk</CardTitle>
+                                <AlertTriangle className="mx-auto h-10 w-10 text-red-500"/>
+                                <CardTitle className="font-headline text-xl mt-2 text-white">Zorluk</CardTitle>
                             </CardHeader>
                             <CardContent>
-                                <p className="text-muted-foreground">{project.challenge}</p>
+                                <p className="text-white/70">{project.challenge}</p>
                             </CardContent>
                         </Card>
-                        <Card>
+                        <Card className="bg-white/5 border-white/10">
                             <CardHeader>
-                                <Shield className="mx-auto h-10 w-10 text-primary"/>
-                                <CardTitle className="font-headline text-xl mt-2">Çözüm</CardTitle>
+                                <Shield className="mx-auto h-10 w-10 text-red-500"/>
+                                <CardTitle className="font-headline text-xl mt-2 text-white">Çözüm</CardTitle>
                             </CardHeader>
                             <CardContent>
-                                <p className="text-muted-foreground">{project.solution}</p>
+                                <p className="text-white/70">{project.solution}</p>
                             </CardContent>
                         </Card>
-                         <Card>
+                         <Card className="bg-white/5 border-white/10">
                             <CardHeader>
                                 <TrendingUp className="mx-auto h-10 w-10 text-green-500"/>
-                                <CardTitle className="font-headline text-xl mt-2">Sonuç</CardTitle>
+                                <CardTitle className="font-headline text-xl mt-2 text-white">Sonuç</CardTitle>
                             </CardHeader>
                             <CardContent>
-                                <p className="font-semibold text-lg">{project.result}</p>
+                                <p className="font-semibold text-lg text-white">{project.result}</p>
                             </CardContent>
                         </Card>
                     </div>
 
                     {relatedProducts.length > 0 && (
                         <div className="mt-16">
-                            <h2 className="text-3xl font-bold font-headline text-center mb-8">Projede Kullanılan Ürünler</h2>
+                            <h2 className="text-3xl font-bold font-headline text-center mb-8 text-white">Projede Kullanılan Ürünler</h2>
                              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                                 {relatedProducts.map(product => (
                                     <ProductCard key={product.id} product={product} />

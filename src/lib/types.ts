@@ -3,13 +3,17 @@ export interface Product {
   name: string;
   slug: string;
   category: string;
+  partNumber?: string;
   shortDescription: string;
   longDescription: string;
   features: string[];
+  specs?: { [key: string]: string };
   imageUrls: string[];
   datasheetUrl?: string;
   relatedSectors: string[]; // Array of sector slugs
   isFeatured: boolean;
+  warranty?: string;
+  notes?: string;
 }
 
 export interface Service {
