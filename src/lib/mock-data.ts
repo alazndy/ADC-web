@@ -49,7 +49,7 @@ export const mockSectors: Sector[] = [
     imageUrl: 'sector-agriculture',
     imageHint: 'tractor field',
     description: 'Tarım, küresel pazarda rekabetçi kalmak için verimliliğin hayati olduğu, kendine özgü zorluklara sahip, oldukça çeşitli bir endüstridir. Verimlilik ve güvenlik arasında bir denge kurma ihtiyacı çok önemlidir.',
-    challenges: 'Modern makinelerin tasarımı önemli performans iyileştirmelerine yol açmış olsa da, bu makinelerin doğası ve boyutu operatör görüşünün bozulmasına neden olmaktadır. Kör noktalar, tarım makinelerini içeren birçok kazada katkıda bulunan bir faktördür.',
+    challenges: 'Modern makinelerin tasarımı önemli performans iyileştirmelerine yol açmış olsa da, bu makinelerin doğası ve boyutu operatör görüşünün bozulmasına neden olmaktadır. Kör noktalar, tarım makinelerini içeren birçok kazada katkıda bulunan bir faktördür. Aslında, tarım Avrupa\'daki herhangi bir endüstrinin en kötü ölüm oranına sahiptir. Tarımdaki tüm ölümcül olayların dörtte biri hareketli araçlardan kaynaklanmaktadır.',
     solutionsContent: '<h3>Güvenlik Sistemi Önerileri</h3><p>Doğru cihazları seçmenize yardımcı olmak için her araç için önerilerde bulunduk. Önerilen çözümler arasında <strong>Yükleyici</strong>, <strong>Telehandler</strong>, <strong>Traktör</strong> ve <strong>Biçerdöver</strong> bulunmaktadır.</p><h4>Öne Çıkan Ürünler:</h4><ul><li>Backeye®360 Kamera Monitör Sistemi</li><li>Backsense® Radar</li><li>Geri Vites Alarmı</li><li>Dijital Kayıt Cihazları (MDR)</li></ul>',
   },
   {
@@ -60,7 +60,7 @@ export const mockSectors: Sector[] = [
     imageUrl: 'sector-airports',
     imageHint: 'airport tarmac',
     description: 'Havalimanları, sürekli hareket halinde olan çok çeşitli işletme araçlarının bulunduğu son derece yoğun yerlerdir. Bir havalimanı içindeki birden fazla şirket binlerce kişiyi istihdam etmekte ve her gün binlerce kişi daha seyahat etmektedir.',
-    challenges: 'Sürekli hareket halindeki çok çeşitli işletme araçları, sıkışık ve gürültülü ortamlar, farklı hız ve yönlerde hareket eden filolar ve sıkı zaman çizelgeleri altında güvenlik sağlama zorluğu. Apronlar, en tehlikeli havalimanı ortamları olabilir.',
+    challenges: 'Apronlar potansiyel olarak tüm havaalanı ortamlarının en tehlikelisidir: sıkışık, gürültülü ve çeşitli hızlarda ve yönlerde seyahat eden çeşitli bir araç filosuyla doludur. Sıkı bir programda çalışırken herkesi güvende tutmak karmaşık bir iştir, ancak büyük önem taşır.',
     solutionsContent: '<h3>Havalimanı Güvenliği İçin Çözümler</h3><p>Brigade\'in ticari araç ve tesis güvenlik sistemleri, çoğu havalimanı aracı için uygundur. Bu güvenlik sistemleri arasında ön ve arka görüş kameraları, 360° kameralar, kabin içi monitörler, Sidescan® Predict ultrasonik sensörler, Backsense® Radar tespiti, bbs-tek® geri vites alarmları ve mobil dijital kayıt cihazları bulunur.</p><h4>Öne Çıkan Ürünler:</h4><ul><li>Backeye®360 Kamera Monitör Sistemi</li><li>Backsense® Radar</li><li>Geri Vites Alarmı</li><li>Dijital Kayıt Cihazları (MDR)</li><li>Kameralar ve Monitörler</li></ul>',
   },
   {
@@ -71,8 +71,8 @@ export const mockSectors: Sector[] = [
     imageUrl: 'sector-bus',
     imageHint: 'city bus',
     description: 'Otobüsler, şehirlerarası otobüsler ve minibüsler gibi PSV taşımacılığı ve yolcu taşıyan araçlar, günümüzün yolcuları ve tatilcileri için temel bir hizmet sunmaktadır.',
-    challenges: 'Yoğun şehir ortamlarında bisikletliler ve diğer korunmasız yol kullanıcıları ile çarpışmalar, aracın arka çıkıntısı nedeniyle manevra sırasında hasar, otogar ve depolarda tehlikeli geri manevralar, vandalizm ve yolculara/personele yönelik saldırılar.',
-    solutionsContent: '<h3>Yolcu Taşımacılığı Güvenlik Çözümleri</h3><p>Yolcuların, çalışanların ve halkın güvenliği esastır. Araçların büyüklüğü ve sürücü konumu nedeniyle oluşan geniş kör noktalar, çarpışma riskini büyük ölçüde artırır. Brigade güvenlik sistemleri, olayları önlemeye ve sahte sigorta taleplerini caydırmaya yardımcı olur.</p><h4>Öne Çıkan Ürünler:</h4><ul><li>Backeye®360 Kamera Monitör Sistemi</li><li>Backsense® Radar</li><li>Geri Vites Alarmı</li><li>Dijital Kayıt Cihazları (MDR)</li><li>Kameralar ve Monitörler</li></ul>',
+    challenges: 'Araç boyutları ve sürücü pozisyonları nedeniyle, otobüsler ve yolcu otobüsleri geniş kör noktalara sahiptir. Bu görünürlük eksikliği, olaylara katkıda bulunan bir faktördür ve çarpışma riskini büyük ölçüde artırır. Olayları önleyebilmek ve sahte sigorta taleplerini ve vandalizmi caydırabilmek, yolcuların, personelin ve diğer yol kullanıcılarının güvenliği ile hizmetin güvenilirliği ve verimliliği için önemlidir.',
+    solutionsContent: '<h3>Yolcu Taşımacılığı Güvenlik Çözümleri</h3><p>Yolcuların, çalışanların ve halkın güvenliği esastır. Brigade güvenlik sistemleri, olayları önlemeye ve sahte sigorta taleplerini caydırmaya yardımcı olur.</p><h4>Öne Çıkan Ürünler:</h4><ul><li>Backeye®360 Kamera Monitör Sistemi</li><li>Backsense® Radar</li><li>Geri Vites Alarmı</li><li>Dijital Kayıt Cihazları (MDR)</li><li>Kameralar ve Monitörler</li></ul>',
   },
   {
     id: '4',
@@ -82,8 +82,8 @@ export const mockSectors: Sector[] = [
     imageUrl: 'sector-construction',
     imageHint: 'construction site',
     description: 'İnşaat sahalarında işçi ve araç güvenliği her şeyden önemlidir. Ancak, karayolu ve arazi inşaat araçlarıyla birleşen ağır iş makineleri gerçek bir tehdit oluşturmaktadır.',
-    challenges: 'Ön, yan ve arka kör noktalar nedeniyle şantiye içi ve dışında çarpışmalar; karanlık, sis, toz gibi kötü görüş koşulları; kulak koruyucuların yaklaşan araçları duymayı engellemesi; ve tek tonlu geri vites alarmlarının işçiler tarafından göz ardı edilmesi.',
-    solutionsContent: '<h3>İnşaat Güvenliği İçin Çözümler</h3><p>Yavaş hareket eden araçlar, kör noktalar ve zorlu koşullar, dünyanın en yüksek riskli çalışma ortamlarından bazılarını yaratır. Brigade\'in pazar lideri inşaat aracı güvenlik sistemleri, FORS, CLOCS, HS2 gibi yönetmeliklere uygun olarak olayları durdurmak ve güvenliği artırmak için tasarlanmıştır.</p><h4>Öne Çıkan Ürünler:</h4><ul><li>Backeye®360 AI Kameralı 360° Sistemler</li><li>Backsense® Radar</li><li>bbs-tek® Beyaz Sesli Geri Vites Alarmı</li><li>Mobil Dijital Kayıt Cihazları (MDR)</li></ul>',
+    challenges: 'Ortalama olarak, her yıl yedi işçi ölmekte ve 93 kişi ağır yaralanmaktadır. Yavaş hareket eden araçlar, kör noktalar ve zayıf görüş koşullarıyla dolu zorlu ortamlar, dünyanın en yüksek riskli çalışma ortamlarından bazılarını yaratır.',
+    solutionsContent: '<h3>İnşaat Güvenliği İçin Çözümler</h3><p>Brigade\'in pazar lideri inşaat aracı güvenlik sistemleri, FORS, CLOCS, HS2 gibi yönetmeliklere uygun olarak olayları durdurmak ve güvenliği artırmak için tasarlanmıştır. 360 derece kamera sistemlerinden beyaz sesli alarmlara kadar geniş ürün yelpazemizi görün.</p><h4>Öne Çıkan Ürünler:</h4><ul><li>Backeye®360 AI Kameralı 360° Sistemler</li><li>Backsense® Radar</li><li>bbs-tek® Beyaz Sesli Geri Vites Alarmı</li><li>Mobil Dijital Kayıt Cihazları (MDR)</li></ul>',
   },
   {
     id: '5',
@@ -572,7 +572,7 @@ export const mockProducts: Product[] = [
     partNumber: 'MDSM-22, MDSM-22S-DDAW',
     category: 'Sürücü Güvenlik Sistemleri',
     shortDescription: 'AB GSR yönetmeliğine uygun, sürücü uykululuğu ve dikkatini izleyen kamera sistemi.',
-    longDescription: 'MDSM-22 modeli yorgunluk, dikkat dağınıklığı, telefon kullanımı gibi birçok riskli davranışı algılar. MDSM-22S-DDAW modeli ise özel olarak AB 2019/2144 GSR yönetmeliğinin DDAW (Sürücü Uykululuk ve Dikkat Uyarısı) gerekliliklerine uygun olarak geliştirilmiştir.',
+    longDescription: 'MDSM-22 modeli yorgunluk, dikkat dağınıklığı, esneme, telefon kullanımı gibi birçok riskli davranışı algılar. MDSM-22S-DDAW modeli ise özel olarak AB 2019/2144 GSR yönetmeliğinin DDAW (Sürücü Uykululuk ve Dikkat Uyarısı) gerekliliklerine uygun olarak geliştirilmiştir.',
     features: [
         'Sürücü uykululuğu ve dikkat dağınıklığı tespiti',
         'Telefon kullanımı, sigara içme, emniyet kemeri takmama tespiti',
