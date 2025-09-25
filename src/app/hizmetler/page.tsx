@@ -1,18 +1,18 @@
-import { services, techSolutions } from "@/lib/data";
+import { services } from "@/lib/data";
 import Link from "next/link";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
 
 export default function HizmetlerPage() {
-    const allServices = [...services, ...techSolutions];
+    const allServices = [...services];
     
     return (
         <>
             <div className="bg-secondary">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-                    <h1 className="text-4xl font-bold font-headline">Hizmetler ve Teknoloji Çözümleri</h1>
+                    <h1 className="text-4xl font-bold font-headline">Hizmetlerimiz</h1>
                     <p className="mt-2 text-lg text-muted-foreground max-w-3xl mx-auto">
-                        Filonuzun güvenliğini ve verimliliğini artırmak için sunduğumuz profesyonel hizmetler ve entegre teknoloji çözümleri.
+                        Filonuzun güvenliğini ve verimliliğini artırmak için sunduğumuz profesyonel hizmetler.
                     </p>
                 </div>
             </div>
@@ -20,9 +20,7 @@ export default function HizmetlerPage() {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
                  <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
                     {allServices.map((service) => {
-                        const href = services.some(s => s.id === service.id)
-                        ? `/hizmetler/${service.slug}`
-                        : `/teknoloji-cozumleri/${service.slug}`;
+                        const href = `/hizmetler/${service.slug}`;
                         return (
                         <Link href={href} key={service.id} className="group h-full">
                             <Card className="h-full hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col">

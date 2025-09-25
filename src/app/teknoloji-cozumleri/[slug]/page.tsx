@@ -5,6 +5,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { redirect } from 'next/navigation';
+
 
 export async function generateStaticParams() {
     // Exclude telematics slug, as it has its own dedicated page
@@ -15,8 +17,8 @@ export async function generateStaticParams() {
 
 export default function TeknolojiCozumDetayPage({ params }: { params: { slug: string } }) {
     if (params.slug === 'telematik-ve-filo-yonetimi') {
-        // This should not happen due to generateStaticParams, but as a safeguard.
-        return <PlaceholderContent title="Yönlendiriliyor..." />;
+        // This should not happen due to generateStaticParams, but as a safeguard, we redirect.
+        redirect('/teknoloji-cozumleri/telematik-ve-filo-yonetimi');
     }
 
     const service = techSolutions.find(p => p.slug === params.slug);
@@ -61,7 +63,7 @@ export default function TeknolojiCozumDetayPage({ params }: { params: { slug: st
                                  <div className="flex items-start gap-3">
                                     <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                                     <p className="text-sm text-muted-foreground">Deneyimli ve sertifikalı teknik ekip.</p>
-                                </div>
+                                 </div>
                                 <div className="flex items-start gap-3">
                                     <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                                     <p className="text-sm text-muted-foreground">Proje sonrası tam destek ve servis güvencesi.</p>
