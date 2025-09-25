@@ -1,21 +1,12 @@
-import { mockProducts, mockSectors } from '@/lib/mock-data';
+
+import { mockProducts } from '@/lib/mock-data';
 import { ProductCard } from '@/components/product-card';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ChevronLeft } from 'lucide-react';
 import { PlaceholderContent } from '@/components/placeholder-content';
-
-const allCategories = [...new Set(mockProducts.map(p => p.category))].sort();
-const categoryToSlug = (categoryName: string) => {
-  return categoryName.toLowerCase()
-    .replace(/ /g, '-')
-    .replace(/[^\w-]+/g, '');
-};
-const slugToCategory = (slug: string) => {
-    return allCategories.find(cat => categoryToSlug(cat) === slug);
-}
-
+import { categoryToSlug, slugToCategory, allCategories } from '@/lib/product-categories';
 
 export async function generateStaticParams() {
     return allCategories.map((category) => ({
@@ -55,6 +46,11 @@ export default function UrunKategoriPage({ params }: { params: { kategoriSlug: s
                 <ProductCard key={product.id} product={product} />
               ))}
             </div>
+            {products.length === 0 && (
+                <div className="text-center py-12">
+                    <p className="text-muted-foreground">Bu kategoride gösterilecek ürün bulunmamaktadır.</p>
+                </div>
+            )}
         </main>
       </div>
     </>
