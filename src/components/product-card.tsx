@@ -9,9 +9,9 @@ export function ProductCard({ product }: { product: Product }) {
   const image = findImage(product.imageUrls[0]);
 
   return (
-    <Card className="h-full flex flex-col group overflow-hidden transition-shadow hover:shadow-lg hover:shadow-red-500/10 bg-white/5 border-white/10 hover:border-white/20">
+    <Card className="h-full flex flex-col group overflow-hidden transition-shadow hover:shadow-lg bg-card border-border hover:border-primary/30">
       <CardHeader className="p-0">
-        <Link href={`/urunler/${product.slug}`} className="block aspect-video relative overflow-hidden bg-white/[0.02]">
+        <Link href={`/urunler/${product.slug}`} className="block aspect-video relative overflow-hidden bg-secondary/50">
           {image && (
             <Image
               src={image.imageUrl}
@@ -21,18 +21,18 @@ export function ProductCard({ product }: { product: Product }) {
               data-ai-hint={image.imageHint}
             />
           )}
-           <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-white/5 pointer-events-none" />
+           <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-white/5 pointer-events-none dark:from-black/20 dark:to-white/5" />
         </Link>
       </CardHeader>
       <div className="p-4 flex flex-col flex-grow">
-        <Badge variant="secondary" className="w-fit mb-2 text-xs">{product.category}</Badge>
-        <CardTitle className="text-base font-headline flex-grow mt-1 text-white">
-            <Link href={`/urunler/${product.slug}`} className="hover:text-red-500 transition-colors">
+        <Badge variant="outline" className="w-fit mb-2 text-xs">{product.category}</Badge>
+        <CardTitle className="text-base font-headline flex-grow mt-1 text-card-foreground">
+            <Link href={`/urunler/${product.slug}`} className="hover:text-primary transition-colors">
                 <span className="absolute inset-0" />
                 {product.name}
             </Link>
         </CardTitle>
-        <p className="mt-2 text-sm text-white/60 line-clamp-2">{product.shortDescription}</p>
+        <p className="mt-2 text-sm text-muted-foreground line-clamp-2">{product.shortDescription}</p>
       </div>
     </Card>
   );

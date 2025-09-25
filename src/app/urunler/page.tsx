@@ -10,10 +10,10 @@ const categories = [...new Set(mockProducts.map(p => p.category))].sort();
 export default function UrunlerPage() {
   return (
     <>
-      <div className="bg-black/50">
+      <div className="bg-secondary">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold font-headline">Ürün Kataloğu</h1>
-          <p className="mt-2 text-lg text-white/70 max-w-3xl mx-auto">
+          <p className="mt-2 text-lg text-muted-foreground max-w-3xl mx-auto">
             Operasyonel mükemmellik için tasarlanmış Brigade Electronics güvenlik ve verimlilik ürünleri.
           </p>
         </div>
@@ -21,30 +21,30 @@ export default function UrunlerPage() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid lg:grid-cols-4 gap-8 items-start">
           <aside className="lg:col-span-1 sticky top-24">
-            <Card className="bg-white/5 border-white/10">
+            <Card>
               <CardHeader>
                 <CardTitle className="font-headline text-2xl">Filtrele</CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div>
-                  <h3 className="font-semibold mb-4 text-white">Kategori</h3>
+                  <h3 className="font-semibold mb-4">Kategori</h3>
                   <div className="space-y-3">
                     {categories.map(category => (
                       <div key={category} className="flex items-center space-x-2">
-                        <Checkbox id={category} className="border-white/30"/>
-                        <Label htmlFor={category} className="font-normal leading-tight text-white/80">{category}</Label>
+                        <Checkbox id={category} />
+                        <Label htmlFor={category} className="font-normal leading-tight">{category}</Label>
                       </div>
                     ))}
                   </div>
                 </div>
-                <Separator className="bg-white/10"/>
+                <Separator/>
                  <div>
-                  <h3 className="font-semibold mb-4 text-white">Sektör</h3>
+                  <h3 className="font-semibold mb-4">Sektör</h3>
                   <div className="space-y-3">
                     {mockSectors.map(sector => (
                       <div key={sector.id} className="flex items-center space-x-2">
-                        <Checkbox id={sector.slug} className="border-white/30" />
-                        <Label htmlFor={sector.slug} className="font-normal leading-tight text-white/80">{sector.name}</Label>
+                        <Checkbox id={sector.slug} />
+                        <Label htmlFor={sector.slug} className="font-normal leading-tight">{sector.name}</Label>
                       </div>
                     ))}
                   </div>
