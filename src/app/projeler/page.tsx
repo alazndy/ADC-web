@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { mockProjects, mockSectors } from '@/lib/mock-data';
+import { projects, sectors } from '@/lib/data';
 import { findImage } from '@/lib/placeholder-images';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -20,9 +20,9 @@ export default function ProjelerPage() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {mockProjects.map((project) => {
+          {projects.map((project) => {
             const image = findImage(project.coverImage);
-            const sector = mockSectors.find(s => s.slug === project.sector);
+            const sector = sectors.find(s => s.slug === project.sector);
             return (
               <Card key={project.id} className="group overflow-hidden flex flex-col">
                 {image && (

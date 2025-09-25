@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardContent } from '@/components/ui/card';
 import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
-import { mockSectors } from '@/lib/mock-data';
+import { sectors } from '@/lib/data';
 import { findImage } from '@/lib/placeholder-images';
 import Autoplay from "embla-carousel-autoplay";
 import React from "react";
@@ -33,7 +33,7 @@ export function SectorsCarousel() {
           onMouseLeave={plugin.current.reset}
         >
           <CarouselContent className="-ml-2">
-            {[...mockSectors, ...mockSectors].map((sector, index) => {
+            {[...sectors, ...sectors].map((sector, index) => {
               const image = findImage(sector.imageUrls[0]);
               return (
                 <CarouselItem key={`${sector.id}-${index}`} className="basis-1/2 md:basis-1/3 lg:basis-1/5 pl-2">
@@ -67,3 +67,4 @@ export function SectorsCarousel() {
     </section>
   );
 }
+

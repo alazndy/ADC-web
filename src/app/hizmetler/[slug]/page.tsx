@@ -1,4 +1,4 @@
-import { mockServices, mockTechSolutions } from "@/lib/mock-data";
+import { services, techSolutions } from "@/lib/data";
 import { PlaceholderContent } from "@/components/placeholder-content";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle } from "lucide-react";
@@ -6,13 +6,13 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 export async function generateStaticParams() {
-    return [...mockServices, ...mockTechSolutions].map((service) => ({
+    return [...services, ...techSolutions].map((service) => ({
         slug: service.slug,
     }));
 }
 
 export default function HizmetDetayPage({ params }: { params: { slug: string } }) {
-    const service = [...mockServices, ...mockTechSolutions].find(p => p.slug === params.slug);
+    const service = [...services, ...techSolutions].find(p => p.slug === params.slug);
 
     if (!service) {
         return <PlaceholderContent title="Hizmet Bulunamadı" description="Aradığınız hizmet mevcut değil." />;

@@ -5,7 +5,7 @@ import { findImage } from '@/lib/placeholder-images';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { mockProducts } from '@/lib/mock-data';
+import { products } from '@/lib/data';
 import { categoryToSlug } from '@/lib/product-categories';
 
 const productCategories = [
@@ -133,3 +133,4 @@ export default function UrunlerPage() {
     </div>
   );
 }
+

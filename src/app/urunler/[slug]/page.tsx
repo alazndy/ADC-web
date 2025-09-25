@@ -1,4 +1,4 @@
-import { mockProducts, mockSectors } from "@/lib/mock-data";
+import { products, sectors } from "@/lib/data";
 import { findImage } from "@/lib/placeholder-images";
 import { PlaceholderContent } from "@/components/placeholder-content";
 import Image from "next/image";
@@ -11,19 +11,19 @@ import { CheckCircle, FileText, Tag, Truck } from "lucide-react";
 
 
 export async function generateStaticParams() {
-    return mockProducts.map((product) => ({
+    return products.map((product) => ({
         slug: product.slug,
     }));
 }
 
 export default function UrunDetayPage({ params }: { params: { slug: string } }) {
-    const product = mockProducts.find(p => p.slug === params.slug);
+    const product = products.find(p => p.slug === params.slug);
 
     if (!product) {
         return <PlaceholderContent title="Ürün Bulunamadı" description="Aradığınız ürün mevcut değil." />;
     }
 
-    const relatedSectors = mockSectors.filter(s => product.relatedSectors.includes(s.slug));
+    const relatedSectors = sectors.filter(s => product.relatedSectors.includes(s.slug));
 
     return (
        <>
@@ -152,3 +152,4 @@ export default function UrunDetayPage({ params }: { params: { slug: string } }) 
        </>
     );
 }
+

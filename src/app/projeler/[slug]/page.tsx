@@ -1,4 +1,4 @@
-import { mockProjects, mockProducts, mockSectors } from "@/lib/mock-data";
+import { projects, products, sectors } from "@/lib/data";
 import { findImage } from "@/lib/placeholder-images";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,21 +10,21 @@ import { ProductCard } from "@/components/product-card";
 
 
 export async function generateStaticParams() {
-    return mockProjects.map((project) => ({
+    return projects.map((project) => ({
         slug: project.slug,
     }));
 }
 
 export default function ProjeDetayPage({ params }: { params: { slug: string } }) {
-    const project = mockProjects.find(p => p.slug === params.slug);
+    const project = projects.find(p => p.slug === params.slug);
 
     if (!project) {
         return <PlaceholderContent title="Proje Bulunamadı" description="Aradığınız proje mevcut değil." />;
     }
 
     const image = findImage(project.coverImage);
-    const relatedProducts = mockProducts.filter(p => project.usedProducts.includes(p.slug));
-    const sector = mockSectors.find(s => s.slug === project.sector);
+    const relatedProducts = products.filter(p => project.usedProducts.includes(p.slug));
+    const sector = sectors.find(s => s.slug === project.sector);
 
     return (
         <>

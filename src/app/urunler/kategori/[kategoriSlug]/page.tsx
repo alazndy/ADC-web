@@ -1,5 +1,5 @@
 
-import { mockProducts } from '@/lib/mock-data';
+import { products } from '@/lib/data';
 import { ProductCard } from '@/components/product-card';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
@@ -87,7 +87,7 @@ export default function UrunKategoriPage({ params }: { params: { kategoriSlug: s
       return <PlaceholderContent title="Kategori Bulunamadı" description="Aradığınız ürün kategorisi mevcut değil." />
   }
   
-  const products = mockProducts.filter(p => p.category === categoryName);
+  const filteredProducts = products.filter(p => p.category === categoryName);
 
   const isCameraMonitor = params.kategoriSlug === 'kamera-monitor-sistemleri';
 
@@ -130,11 +130,11 @@ export default function UrunKategoriPage({ params }: { params: { kategoriSlug: s
             ) : (
                 <>
                     <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-6">
-                        {products.map(product => (
+                        {filteredProducts.map(product => (
                             <ProductCard key={product.id} product={product} />
                         ))}
                     </div>
-                    {products.length === 0 && (
+                    {filteredProducts.length === 0 && (
                         <div className="text-center py-12">
                             <Card className="max-w-md mx-auto p-8">
                                 <p className="text-muted-foreground">Bu kategoride gösterilecek ürün bulunmamaktadır.</p>

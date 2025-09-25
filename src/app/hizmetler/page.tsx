@@ -1,10 +1,10 @@
-import { mockServices, mockTechSolutions } from "@/lib/mock-data";
+import { services, techSolutions } from "@/lib/data";
 import Link from "next/link";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
 
 export default function HizmetlerPage() {
-    const allServices = [...mockServices, ...mockTechSolutions];
+    const allServices = [...services, ...techSolutions];
     
     return (
         <>
@@ -20,7 +20,7 @@ export default function HizmetlerPage() {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
                  <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
                     {allServices.map((service) => {
-                        const href = mockServices.some(s => s.id === service.id)
+                        const href = services.some(s => s.id === service.id)
                         ? `/hizmetler/${service.slug}`
                         : `/teknoloji-cozumleri/${service.slug}`;
                         return (

@@ -1,7 +1,7 @@
 
-import { mockProducts } from '@/lib/mock-data';
+import { products } from '@/lib/data';
 
-export const allCategories = [...new Set(mockProducts.map(p => p.category))].sort();
+export const allCategories = [...new Set(products.map(p => p.category))].sort();
 
 export const categoryToSlug = (categoryName: string) => {
   if (!categoryName) return '';
@@ -19,3 +19,4 @@ export const categoryToSlug = (categoryName: string) => {
 export const slugToCategory = (slug: string) => {
     return allCategories.find(cat => categoryToSlug(cat) === slug);
 };
+
