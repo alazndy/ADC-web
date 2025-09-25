@@ -1,6 +1,8 @@
 "use server";
 
 import { z } from "zod";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { initializeFirebase } from "@/firebase";
 
 const formSchema = z.object({
   name: z.string().min(2, "İsim en az 2 karakter olmalıdır."),
@@ -35,18 +37,23 @@ export async function submitContactForm(
     };
   }
 
-  // Here you would typically save to Firestore
-  // For example:
-  // await db.collection("formSubmissions").add({
-  //   ...validatedFields.data,
-  //   submittedAt: new Date(),
-  //   status: "Yeni",
-  // });
-  
-  console.log("Form data submitted:", validatedFields.data);
+  try {
+    const { firestore } = initializeFirebase();
+    await addDoc(collection(firestore, "formSubmissions"), {
+      ...validatedFields.data,
+      submittedAt: serverTimestamp(),
+      status: "Yeni",
+    });
 
-  return {
-    message: "Mesajınız başarıyla gönderildi. En kısa sürede sizinle iletişime geçeceğiz.",
-    success: true,
-  };
+    return {
+      message: "Mesajınız başarıyla gönderildi. En kısa sürede sizinle iletişime geçeceğiz.",
+      success: true,
+    };
+  } catch (error) {
+    console.error("Error submitting form to Firestore:", error);
+    return {
+      message: "Mesajınız gönderilirken bir hata oluştu. Lütfen daha sonra tekrar deneyin.",
+      success: false,
+    };
+  }
 }
