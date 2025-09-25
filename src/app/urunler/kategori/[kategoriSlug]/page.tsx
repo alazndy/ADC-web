@@ -188,6 +188,33 @@ const recordingSystemSubCategories = [
     },
 ];
 
+const warningSystemSubCategories = [
+    {
+        title: 'Sessiz Araç Ses Cihazı (AVAS)',
+        slug: 'quiet-vehicle-sounder-avas',
+        description: 'Brigade, patentli bbs-tek® teknolojisini entegre eden çok frekanslı bir Sessiz Araç Ses Cihazı geliştirmiştir. bbs-tek®, geniş bir Beyaz Ses® frekans aralığı kullanır. Bu, aracın doğrudan yolundaki herkesin sesin nereden ve hangi yönden geldiğini anında bulmasını ve gerekirse kaçınma eylemi yapmasını sağlar. Daha güvenli bir alternatif yoktur.',
+        features: ['Yayaları Uyarır', 'Patentli Teknoloji', 'Otomatik Ses Seviyesi', 'Kesme Özelliği'],
+        image: 'placeholder-27',
+        imageHint: 'vehicle sounder device',
+    },
+    {
+        title: 'Geri Vites ve Uyarı Alarmları',
+        slug: 'reversing-warning-alarms',
+        description: 'Patentli Beyaz Ses® alarmlarımız dünyanın en güvenli geri vites alarmlarıdır ve gürültü rahatsızlığına neden olmaz. Takması basit ve nispeten ucuz olan ‘şşş şşş’ beyaz gürültü, kulaklık veya kulak koruyucu takarken bile veya işitme zorluğu çeken insanlar için bile tehlike bölgesinde son derece net bir şekilde duyulabilir.',
+        features: ['Gürültü Rahatsızlığına Neden Olmaz', '-5 dB Daha Sessiz', 'Gece Teslimatları', 'Ömür Boyu Garanti'],
+        image: 'placeholder-26',
+        imageHint: 'reversing alarm',
+    },
+    {
+        title: 'Tonal Alarmlar',
+        slug: 'tonal-alarms',
+        description: 'Bu alarmlar, ortam gürültüsünü aşarak yayaları ve çalışanları hareket eden araçların veya ekipmanların varlığına karşı uyarmak için kolayca tanınabilen belirli bir ton yaymak üzere tasarlanmıştır. Tonal alarmları kullanmanın birincil nedeni, bölgedeki diğer seslerin üzerinde duyulabilen net, sesli bir uyarı sağlayarak olay ve yaralanma riskini azaltmaktır.',
+        features: ['Akıllı Alarmlar', 'Ağır Hizmet', 'Orta Hizmet', 'Hafif Hizmet'],
+        image: 'placeholder-28',
+        imageHint: 'industrial alarm',
+    },
+];
+
 
 export async function generateStaticParams() {
     return allCategories.map((category) => ({
@@ -208,12 +235,14 @@ export default function UrunKategoriPage({ params }: { params: { kategoriSlug: s
   const isDetectionSystem = params.kategoriSlug === 'tespit-sistemleri';
   const isDriverSafety = params.kategoriSlug === 'surucu-guvenlik-sistemleri';
   const isRecordingSystem = params.kategoriSlug === 'kayit-sistemleri';
-  
+  const isWarningSystem = params.kategoriSlug === 'uyari-alarmlari';
+
   let subCategories = [];
   if (isCameraMonitor) subCategories = cameraMonitorSubCategories;
   else if (isDetectionSystem) subCategories = detectionSystemSubCategories;
   else if (isDriverSafety) subCategories = driverSafetySystemSubCategories;
   else if (isRecordingSystem) subCategories = recordingSystemSubCategories;
+  else if (isWarningSystem) subCategories = warningSystemSubCategories;
   
   const hasSpecialLayout = subCategories.length > 0;
 
@@ -226,6 +255,8 @@ export default function UrunKategoriPage({ params }: { params: { kategoriSlug: s
     pageDescription = "Brigade’in Sürücü Güvenlik Sistemleri, yol koşullarını ve sürücü davranışını izlemek, uyuşukluk, dikkat dağınıklığı ve yorgunluk belirtilerini tespit etmek için AI teknolojisinden yararlanır. Bu kompakt, kabin içi sistemler, sürücü güvenliğini ve uyanıklığını artırmak için gerçek zamanlı sesli uyarılar verir.";
   } else if (isRecordingSystem) {
     pageDescription = "Filo güvenliğinizi, Brigade Electronics'in araç kayıt sistemleriyle artırın. Filonuz için en üst düzeyde güvenlik sağlamak üzere kapsamlı izleme ile.";
+  } else if (isWarningSystem) {
+    pageDescription = "Brigade Electronics, kentsel ve çalışma ortamlarındaki alarmların etkinliği sorunlarını ele alan ilk geri vites alarmı modellerini tanıttığından beri geri vites alarmı teknolojisinin ön saflarında yer almaktadır.";
   }
 
 
