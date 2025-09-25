@@ -5,7 +5,7 @@ import { Label } from '@/components/ui/label';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Separator } from '@/components/ui/separator';
 
-const categories = [...new Set(mockProducts.map(p => p.category))];
+const categories = [...new Set(mockProducts.map(p => p.category))].sort();
 
 export default function UrunlerPage() {
   return (
