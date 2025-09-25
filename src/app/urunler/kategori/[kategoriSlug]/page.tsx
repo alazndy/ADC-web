@@ -125,6 +125,34 @@ const detectionSystemSubCategories = [
     },
 ];
 
+const driverSafetySystemSubCategories = [
+    {
+        title: 'Sürücü Güvenlik Kameraları',
+        slug: 'driver-safety-cameras',
+        description: 'Sürücü uyuşukluğu ve uyanıklık uyarı sistemleri (DDAW), dikkatsizlik, dikkat dağınıklığı ve yorgunluktan kaynaklanan potansiyel sorunlara karşı sürücü uyarıları sağlamak için AI teknolojisini kullanan kompakt, kabin içi sürücü destek sistemleridir.',
+        features: ['Uyuşukluk', 'Dikkat Dağınıklığı', 'Esneme', 'Cep telefonu kullanımı', 'Emniyet kemeri takmama', 'Sigara içme'],
+        image: 'placeholder-20',
+        imageHint: 'driver safety camera',
+    },
+    {
+        title: 'MDR AI Kameralar',
+        slug: 'mdr-ai-cameras',
+        description: 'MDR AI Kameralar, dikkatsizlik, dikkat dağınıklığı ve yorgunluktan kaynaklanan potansiyel sorunlara karşı sürücü uyarıları sağlamak için AI teknolojisini kullanan kompakt, kabin içi sürücü destek sistemleridir.',
+        features: [
+            'Sürücü yorgunluğu', 
+            'Esneme', 
+            'Sürücü dikkat dağınıklığı', 
+            'El cihazı kullanma', 
+            'Sigara içme',
+            'Şeritten ayrılma (LDW)',
+            'Takip mesafesi uyarısı (HMW)',
+            'Önden çarpışma uyarısı (FCW)'
+        ],
+        image: 'placeholder-19',
+        imageHint: 'AI dashcam',
+    },
+];
+
 
 export async function generateStaticParams() {
     return allCategories.map((category) => ({
@@ -143,13 +171,22 @@ export default function UrunKategoriPage({ params }: { params: { kategoriSlug: s
 
   const isCameraMonitor = params.kategoriSlug === 'kamera-monitor-sistemleri';
   const isDetectionSystem = params.kategoriSlug === 'tespit-sistemleri';
-  const hasSpecialLayout = isCameraMonitor || isDetectionSystem;
+  const isDriverSafety = params.kategoriSlug === 'surucu-guvenlik-sistemleri';
+  
+  let subCategories = [];
+  if (isCameraMonitor) subCategories = cameraMonitorSubCategories;
+  else if (isDetectionSystem) subCategories = detectionSystemSubCategories;
+  else if (isDriverSafety) subCategories = driverSafetySystemSubCategories;
+  
+  const hasSpecialLayout = subCategories.length > 0;
 
   let pageDescription = "Bu kategoriye ait tüm ürünlerimizi aşağıda bulabilirsiniz.";
   if (isCameraMonitor) {
     pageDescription = "Araç kameraları, sürücünün kör noktaları görmesine yardımcı olabilir. Kameranın görüş alanındaki her şeyi monitörde canlı olarak göstererek, sürücülerin ve operatörlerin güvenli bir şekilde manevra yapmasını ve araç kullanmasını sağlarlar.";
   } else if (isDetectionSystem) {
     pageDescription = "Brigade’in Tespit Sistemleri, hareketli veya sabit olsun, araca yakın engeller hakkında sürücüyü uyarır. Kabin içindeki sesli ve/veya görsel bir uyarı, mesafeyi bildirirken, arabanın döndüğünü bisikletlilere ve yayalara bildirmek için isteğe bağlı bir harici konuşma alarmı eklenebilir.";
+  } else if (isDriverSafety) {
+    pageDescription = "Brigade’in Sürücü Güvenlik Sistemleri, yol koşullarını ve sürücü davranışını izlemek, uyuşukluk, dikkat dağınıklığı ve yorgunluk belirtilerini tespit etmek için AI teknolojisinden yararlanır. Bu kompakt, kabin içi sistemler, sürücü güvenliğini ve uyanıklığını artırmak için gerçek zamanlı sesli uyarılar verir.";
   }
 
 
@@ -175,7 +212,7 @@ export default function UrunKategoriPage({ params }: { params: { kategoriSlug: s
         <main>
             {hasSpecialLayout ? (
                  <div className="space-y-16">
-                    {(isCameraMonitor ? cameraMonitorSubCategories : detectionSystemSubCategories).map((subCat, index) => (
+                    {subCategories.map((subCat, index) => (
                         <SubCategoryShowcase
                             key={subCat.slug}
                             {...subCat}
@@ -207,5 +244,3 @@ export default function UrunKategoriPage({ params }: { params: { kategoriSlug: s
     </>
   );
 }
-
-    
