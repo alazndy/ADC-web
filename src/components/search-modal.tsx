@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
-import { mockProducts, mockProjects, mockBlogPosts } from '@/lib/mock-data';
+import { mockProducts, mockProjects } from '@/lib/mock-data';
 import Link from 'next/link';
 
 type SearchResult = {
@@ -26,7 +26,6 @@ export function SearchModal({ isOpen, onOpenChange }: { isOpen: boolean; onOpenC
   const allContent = [
     ...mockProducts.map(p => ({ type: 'Ürün', title: p.name, slug: `/urunler/${p.slug}`, category: p.category })),
     ...mockProjects.map(p => ({ type: 'Proje', title: p.title, slug: `/projeler/${p.slug}`, category: p.sector })),
-    ...mockBlogPosts.map(p => ({ type: 'Blog', title: p.title, slug: `/blog/${p.slug}`, category: p.tags.join(', ') }))
   ];
   
   const filteredResults = query.length > 1
@@ -49,7 +48,7 @@ export function SearchModal({ isOpen, onOpenChange }: { isOpen: boolean; onOpenC
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
             <Input
               type="search"
-              placeholder="Ürün, proje veya blog yazısı arayın..."
+              placeholder="Ürün veya proje arayın..."
               className="w-full pl-10 h-12 text-lg"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
