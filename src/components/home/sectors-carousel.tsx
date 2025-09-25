@@ -1,11 +1,19 @@
+
+'use client';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardContent } from '@/components/ui/card';
 import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
 import { mockSectors } from '@/lib/mock-data';
 import { findImage } from '@/lib/placeholder-images';
+import Autoplay from "embla-carousel-autoplay";
+import React from "react";
 
 export function SectorsCarousel() {
+  const plugin = React.useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: true })
+  );
+
   return (
     <section className="py-16 sm:py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -17,10 +25,16 @@ export function SectorsCarousel() {
             Farklı endüstrilerin benzersiz zorluklarına özel mühendislik yaklaşımları.
           </p>
         </div>
-        <Carousel opts={{ align: 'start', loop: true }} className="w-full">
+        <Carousel 
+          plugins={[plugin.current]}
+          opts={{ align: 'start', loop: true }} 
+          className="w-full"
+          onMouseEnter={plugin.current.stop}
+          onMouseLeave={plugin.current.reset}
+        >
           <CarouselContent className="-ml-2">
             {[...mockSectors, ...mockSectors].map((sector, index) => {
-              const image = findImage(sector.imageUrl);
+              const image = findImage(sector.imageUrls[0]);
               return (
                 <CarouselItem key={`${sector.id}-${index}`} className="basis-1/2 md:basis-1/3 lg:basis-1/5 pl-2">
                   <Link href={`/sektorler/${sector.slug}`}>
