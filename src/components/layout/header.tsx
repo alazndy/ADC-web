@@ -35,20 +35,20 @@ export default function Header() {
     <>
       <header
         className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-          isScrolled ? "bg-card/80 backdrop-blur-lg border-b" : "bg-background/80"
-        }`}
+          isScrolled ? "bg-background/80 backdrop-blur-xl border-b" : "bg-transparent"
+        } dark:text-white`}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex h-20 items-center justify-between">
             <div className="flex items-center">
               <Logo />
             </div>
-            <nav className="hidden lg:flex items-center space-x-6">
+            <nav className="hidden lg:flex items-center space-x-8">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
+                  className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors dark:text-white/80 dark:hover:text-primary"
                   prefetch={false}
                 >
                   {link.label}

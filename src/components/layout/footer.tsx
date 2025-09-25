@@ -25,7 +25,7 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-card border-t">
+    <footer className="bg-black border-t border-white/10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="col-span-1 lg:col-span-1">
@@ -43,7 +43,7 @@ export default function Footer() {
             </div>
           </div>
           <div>
-            <h3 className="font-semibold font-headline">Hızlı Linkler</h3>
+            <h3 className="font-semibold font-headline text-white">Hızlı Linkler</h3>
             <ul className="mt-4 space-y-2">
               {footerLinks.hizliLinkler.map((link) => (
                 <li key={link.href}>
@@ -55,7 +55,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className="font-semibold font-headline">Yasal</h3>
+            <h3 className="font-semibold font-headline text-white">Yasal</h3>
             <ul className="mt-4 space-y-2">
               {footerLinks.yasal.map((link) => (
                 <li key={link.href}>
@@ -67,7 +67,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className="font-semibold font-headline">Bültenimize Abone Olun</h3>
+            <h3 className="font-semibold font-headline text-white">Bültenimize Abone Olun</h3>
             <p className="mt-4 text-sm text-muted-foreground">
               En son haberleri ve güncellemeleri alın.
             </p>
@@ -77,7 +77,7 @@ export default function Footer() {
             </form>
           </div>
         </div>
-        <div className="mt-12 border-t pt-8 flex flex-col sm:flex-row justify-between items-center">
+        <div className="mt-12 border-t border-white/10 pt-8 flex flex-col sm:flex-row justify-between items-center">
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} ADCentral. Tüm hakları saklıdır.
           </p>
