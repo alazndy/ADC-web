@@ -1,13 +1,21 @@
 
 import { products } from '@/lib/data';
 import { ProductCard } from '@/components/product-card';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ChevronLeft } from 'lucide-react';
+import { ChevronLeft, Check, Download } from 'lucide-react';
 import { PlaceholderContent } from '@/components/placeholder-content';
 import { categoryToSlug, slugToCategory, allCategories } from '@/lib/product-categories';
 import { SubCategoryShowcase } from '@/components/subcategory-showcase';
+import Image from 'next/image';
+import { findImage } from '@/lib/placeholder-images';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 
 const cameraMonitorSubCategories = [
     {
@@ -215,6 +223,43 @@ const warningSystemSubCategories = [
     },
 ];
 
+const brigadeVanProducts = {
+    "Kamera Monitör Sistemleri": [
+        {
+            title: "AHD Ön Kamera",
+            features: ["PAL/NTSC Modelleri", "Yüksek Çözünürlük (720p)", "IP55", "Görüş açısı: 92x51x102.9°", "Boyut: 115x98x53mm", "1 yıl garanti"],
+            image: "placeholder-7"
+        },
+        {
+            title: "AHD Plaka Kamerası",
+            features: ["PAL/NTSC Modelleri", "Yüksek Çözünürlük (720p)", "IP69K", "Görüş açısı: 145x80x165.6°", "Boyut: 215x68x42mm", "LED'ler", "Ses", "1 yıl garanti"],
+            image: "placeholder-9"
+        },
+        {
+            title: "AHD Eyeball Kamera",
+            features: ["PAL/NTSC Modelleri", "Yüksek Çözünürlük (720p)", "IP69K", "Görüş açısı: 110x82x152°", "Boyut: 57x42x70mm", "Dönebilen Lens", "LED'ler", "Ses", "3 yıl garanti"],
+            image: "placeholder-9"
+        },
+        {
+            title: "7″ FHD Ayna Monitör",
+            features: ["7″ Modeller", "Yüksek Çözünürlük (1080p)", "2 Kamera girişi", "2 Alarm tetikleyicisi", "Boyut: 250x107x40mm", "Ses", "1 yıl garanti"],
+            image: "placeholder-15"
+        }
+    ],
+    "Kayıt Sistemleri": [
+        {
+            title: "FHD Dijital Kayıt Cihazı",
+            features: ["Yüksek Çözünürlük (1080p)", "4 Kamera girişi", "4 Alarm tetikleyicisi", "256GB", "Boyut: 153x141x42mm", "Ses", "1 yıl garanti"],
+            image: "placeholder-16"
+        },
+        {
+            title: "AHD Dashcam Kayıt Cihazı",
+            features: ["Yüksek Çözünürlük (720p)", "12-24Vdc", "Dahili kamera", "1 harici kamera girişi", "1 video çıkışı", "Hızlı indirilebilir kayıtlar", "1 yıl garanti"],
+            image: "placeholder-18"
+        }
+    ]
+};
+
 
 export async function generateStaticParams() {
     return allCategories.map((category) => ({
@@ -236,6 +281,7 @@ export default function UrunKategoriPage({ params }: { params: { kategoriSlug: s
   const isDriverSafety = params.kategoriSlug === 'surucu-guvenlik-sistemleri';
   const isRecordingSystem = params.kategoriSlug === 'kayit-sistemleri';
   const isWarningSystem = params.kategoriSlug === 'uyari-alarmlari';
+  const isBrigadeVan = params.kategoriSlug === 'brigade-van';
 
   let subCategories = [];
   if (isCameraMonitor) subCategories = cameraMonitorSubCategories;
@@ -244,7 +290,7 @@ export default function UrunKategoriPage({ params }: { params: { kategoriSlug: s
   else if (isRecordingSystem) subCategories = recordingSystemSubCategories;
   else if (isWarningSystem) subCategories = warningSystemSubCategories;
   
-  const hasSpecialLayout = subCategories.length > 0;
+  const hasSpecialLayout = subCategories.length > 0 || isBrigadeVan;
 
   let pageDescription = "Bu kategoriye ait tüm ürünlerimizi aşağıda bulabilirsiniz.";
   if (isCameraMonitor) {
@@ -257,6 +303,8 @@ export default function UrunKategoriPage({ params }: { params: { kategoriSlug: s
     pageDescription = "Filo güvenliğinizi, Brigade Electronics'in araç kayıt sistemleriyle artırın. Filonuz için en üst düzeyde güvenlik sağlamak üzere kapsamlı izleme ile.";
   } else if (isWarningSystem) {
     pageDescription = "Brigade Electronics, kentsel ve çalışma ortamlarındaki alarmların etkinliği sorunlarını ele alan ilk geri vites alarmı modellerini tanıttığından beri geri vites alarmı teknolojisinin ön saflarında yer almaktadır.";
+  } else if (isBrigadeVan) {
+    pageDescription = "Van pazarında karşılaşılan güvenlik zorluklarıyla mücadele etmek için özel olarak geliştirilen Brigade Van, hızlı hareket eden bu pazar için özel olarak seçilmiş kaliteli ürünleri rekabetçi fiyatlarla sunar.";
   }
 
 
@@ -281,15 +329,102 @@ export default function UrunKategoriPage({ params }: { params: { kategoriSlug: s
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <main>
             {hasSpecialLayout ? (
-                 <div className="space-y-16">
-                    {subCategories.map((subCat, index) => (
-                        <SubCategoryShowcase
-                            key={subCat.slug}
-                            {...subCat}
-                            direction={index % 2 === 0 ? 'normal' : 'reverse'}
-                        />
-                    ))}
-                </div>
+                <>
+                {isBrigadeVan ? (
+                    <div className="space-y-16">
+                        <div>
+                            <h2 className="text-3xl font-headline font-bold text-center mb-10">Kamera Monitör Sistemleri</h2>
+                            <p className="max-w-3xl mx-auto text-center text-muted-foreground mb-12">Brigade Van kamera monitör sistemleri, sürücülerin güvenli bir şekilde manevra yapmasını ve araç kullanmasını sağlar. Kameralar, sürücünün kör noktaları görmesine yardımcı olabilir ve aracın kamera görüşündeki her şeyi (insanlar veya engeller dahil) monitörde canlı bir besleme sunarak geri vites yardımı sağlar. Tüm kameralar Brigade Van kayıt cihazlarıyla uyumludur.</p>
+                            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                                {brigadeVanProducts["Kamera Monitör Sistemleri"].map((product, index) => (
+                                    <Card key={index} className="flex flex-col">
+                                        <CardHeader>
+                                             <div className="aspect-square relative rounded-md overflow-hidden bg-card">
+                                                <Image src={findImage(product.image)!.imageUrl} alt={product.title} fill className="object-contain p-4"/>
+                                             </div>
+                                            <CardTitle className="pt-4">{product.title}</CardTitle>
+                                        </CardHeader>
+                                        <CardContent className="flex-grow">
+                                            <ul className="text-sm text-muted-foreground space-y-2">
+                                            {product.features.map((feature, i) => (
+                                                <li key={i} className="flex items-center gap-2">
+                                                    <Check className="h-4 w-4 text-primary" />
+                                                    <span>{feature}</span>
+                                                </li>
+                                            ))}
+                                            </ul>
+                                        </CardContent>
+                                    </Card>
+                                ))}
+                            </div>
+                        </div>
+
+                        <div>
+                            <h2 className="text-3xl font-headline font-bold text-center mb-10">Kayıt Sistemleri</h2>
+                            <p className="max-w-3xl mx-auto text-center text-muted-foreground mb-12">Sahte iddialar, "çarpışma için para" dolandırıcılıkları ve kayıplar, işletmelere her yıl milyonlara mal oluyor; ayrıca araç vandalizmi ve sürücülere yönelik saldırılar gibi sorunlar da var. Brigade Van'ın dijital kayıt ürünleri, bir olay durumunda doğru bir tanık sağlayarak ve reddedilemez kanıtlar sunarak bir çözüm sunar.</p>
+                             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                                {brigadeVanProducts["Kayıt Sistemleri"].map((product, index) => (
+                                     <Card key={index} className="flex flex-col">
+                                        <CardHeader>
+                                             <div className="aspect-square relative rounded-md overflow-hidden bg-card">
+                                                <Image src={findImage(product.image)!.imageUrl} alt={product.title} fill className="object-contain p-4"/>
+                                             </div>
+                                            <CardTitle className="pt-4">{product.title}</CardTitle>
+                                        </CardHeader>
+                                        <CardContent className="flex-grow">
+                                            <ul className="text-sm text-muted-foreground space-y-2">
+                                            {product.features.map((feature, i) => (
+                                                <li key={i} className="flex items-center gap-2">
+                                                    <Check className="h-4 w-4 text-primary" />
+                                                    <span>{feature}</span>
+                                                </li>
+                                            ))}
+                                            </ul>
+                                        </CardContent>
+                                    </Card>
+                                ))}
+                            </div>
+                        </div>
+
+                         <div className="grid md:grid-cols-2 gap-8">
+                             <Card>
+                                <CardHeader>
+                                    <CardTitle>Uyarı Sistemleri</CardTitle>
+                                </CardHeader>
+                                <CardContent>
+                                    <h3 className="font-semibold">Sessiz Araç Ses Cihazı</h3>
+                                    <p className="text-muted-foreground mt-2 mb-4">Elektrikli ve hibrit araçlar için ön hoparlör sistemi olan QVS, sessiz bir aracın yaklaştığını yayalara ve diğer savunmasız yol kullanıcılarına bildirir. bbs-tek® teknolojisini içeren bu sistemde, sesin perdesi ve seviyesi, içten yanmalı bir motora benzer şekilde araç hızıyla birlikte artar.</p>
+                                     <h3 className="font-semibold">bbs-tek® Beyaz Ses® Geri Vites Alarmı</h3>
+                                    <p className="text-muted-foreground mt-2">Anında bulunabilirliği ve yönlü sesi sayesinde dünyanın en güvenli alarmlarıdır. Çok frekanslı alarmlar sadece tehlike bölgesinde duyulur, böylece yerel sakinler için gürültü rahatsızlığını ortadan kaldırır.</p>
+                                </CardContent>
+                            </Card>
+                             <Card>
+                                <CardHeader>
+                                    <CardTitle>Sensör Sistemleri</CardTitle>
+                                </CardHeader>
+                                <CardContent>
+                                    <p className="text-muted-foreground">Brigade'in ultrasonik yakınlık sensörleri, hem araç hasarını hem de yayalar, bisikletliler veya nesnelerle çarpışmaları en aza indirir. Kapalı alanlarda çalışan veya düşük hızda manevra yapan araçlar için mükemmeldir. Algılama sistemi, hareketli veya sabit olsun, araca yakın engeller hakkında sürücüyü uyarır.</p>
+                                     <ul className="text-sm text-muted-foreground space-y-2 mt-4">
+                                        <li className="flex items-center gap-2"><Check className="h-4 w-4 text-primary" />4 sensörlü sistem aracın arkasına takılır</li>
+                                        <li className="flex items-center gap-2"><Check className="h-4 w-4 text-primary" />Askılı veya gömme montaj</li>
+                                        <li className="flex items-center gap-2"><Check className="h-4 w-4 text-primary" />Sistem geri vitesle etkinleştirilir</li>
+                                    </ul>
+                                </CardContent>
+                            </Card>
+                         </div>
+                    </div>
+                ) : (
+                    <div className="space-y-16">
+                        {subCategories.map((subCat, index) => (
+                            <SubCategoryShowcase
+                                key={subCat.slug}
+                                {...subCat}
+                                direction={index % 2 === 0 ? 'normal' : 'reverse'}
+                            />
+                        ))}
+                    </div>
+                )}
+                </>
             ) : (
                 <>
                     <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-6">
@@ -314,3 +449,6 @@ export default function UrunKategoriPage({ params }: { params: { kategoriSlug: s
     </>
   );
 }
+
+
+    
