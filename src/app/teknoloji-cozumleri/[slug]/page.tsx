@@ -1,3 +1,4 @@
+// This file is now a fallback. The detailed Telematics page is at /teknoloji-cozumleri/telematik-ve-filo-yonetimi/page.tsx
 import { services, techSolutions } from "@/lib/data";
 import { PlaceholderContent } from "@/components/placeholder-content";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -6,12 +7,18 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 export async function generateStaticParams() {
-    return techSolutions.map((service) => ({
+    // Exclude telematics slug, as it has its own dedicated page
+    return techSolutions.filter(s => s.slug !== 'telematik-ve-filo-yonetimi').map((service) => ({
         slug: service.slug,
     }));
 }
 
 export default function TeknolojiCozumDetayPage({ params }: { params: { slug: string } }) {
+    if (params.slug === 'telematik-ve-filo-yonetimi') {
+        // This should not happen due to generateStaticParams, but as a safeguard.
+        return <PlaceholderContent title="Yönlendiriliyor..." />;
+    }
+
     const service = techSolutions.find(p => p.slug === params.slug);
 
     if (!service) {
