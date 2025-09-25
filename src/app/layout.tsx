@@ -4,6 +4,7 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
+import { FirebaseClientProvider } from '@/firebase';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space-grotesk' });
@@ -21,12 +22,14 @@ export default function RootLayout({
   return (
     <html lang="tr" className={`${inter.variable} ${spaceGrotesk.variable} scroll-smooth dark`}>
       <body className="font-body antialiased bg-black text-white">
-        <div className="flex flex-col min-h-screen">
-          <Header />
-          <main className="flex-grow">{children}</main>
-          <Footer />
-        </div>
-        <Toaster />
+        <FirebaseClientProvider>
+          <div className="flex flex-col min-h-screen">
+            <Header />
+            <main className="flex-grow">{children}</main>
+            <Footer />
+          </div>
+          <Toaster />
+        </FirebaseClientProvider>
       </body>
     </html>
   );
