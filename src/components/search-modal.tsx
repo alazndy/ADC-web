@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Search, Loader2 } from "lucide-react";
 import Link from 'next/link';
 import { collection, query, getDocs, Firestore } from 'firebase/firestore';
-import { useFirestore, useMemoFirebase } from '@/firebase';
+import { useFirebase } from '@/firebase';
 import { products as staticProducts, projects as staticProjects } from '@/lib/data'; // fallback
 
 type SearchResult = {
@@ -20,7 +20,7 @@ function SearchModal({ isOpen, onOpenChange }: { isOpen: boolean; onOpenChange: 
   const [queryText, setQueryText] = useState('');
   const [results, setResults] = useState<SearchResult[]>([]);
   const [loading, setLoading] = useState(false);
-  const firestore = useFirestore();
+  const { firestore } = useFirebase();
 
   const performSearch = useCallback(async () => {
     if (queryText.length < 2) {
@@ -41,21 +41,22 @@ function SearchModal({ isOpen, onOpenChange }: { isOpen: boolean; onOpenChange: 
             const projectsQuery = query(projectsRef);
 
             const [productSnap, projectSnap] = await Promise.all([
-            getDocs(productsQuery),
-            getDocs(projectsQuery)
+                getDocs(productsQuery),
+                getDocs(projectsQuery)
             ]);
 
             allContent = [
-            ...productSnap.docs
-                .map(doc => doc.data())
-                .map(p => ({ type: 'Ürün', title: p.name, slug: `/urunler/${p.slug}`, category: p.category })),
-            ...projectSnap.docs
-                .map(doc => doc.data())
-                .map(p => ({ type: 'Proje', title: p.title, slug: `/projeler/${p.slug}`, category: p.sector })),
+                ...productSnap.docs
+                    .map(doc => doc.data())
+                    .filter(p => p.name && p.slug && p.category)
+                    .map(p => ({ type: 'Ürün', title: p.name, slug: `/urunler/${p.slug}`, category: p.category })),
+                ...projectSnap.docs
+                    .map(doc => doc.data())
+                    .filter(p => p.title && p.slug && p.sector)
+                    .map(p => ({ type: 'Proje', title: p.title, slug: `/projeler/${p.slug}`, category: p.sector })),
             ];
         } catch (error) {
             console.error("Arama sırasında Firestore hatası, statik verilere dönülüyor:", error);
-            // Fallback to static data if firestore fails
             allContent = [
                 ...staticProducts.map(p => ({ type: 'Ürün', title: p.name, slug: `/urunler/${p.slug}`, category: p.category })),
                 ...staticProjects.map(p => ({ type: 'Proje', title: p.title, slug: `/projeler/${p.slug}`, category: p.sector })),
@@ -71,7 +72,7 @@ function SearchModal({ isOpen, onOpenChange }: { isOpen: boolean; onOpenChange: 
     const lowercasedQuery = queryText.toLowerCase();
     const filtered = allContent.filter(item => 
         item.title.toLowerCase().includes(lowercasedQuery) || 
-        item.category.toLowerCase().includes(lowercasedQuery)
+        (item.category && item.category.toLowerCase().includes(lowercasedQuery))
     );
     setResults(filtered);
     setLoading(false);
@@ -91,7 +92,7 @@ function SearchModal({ isOpen, onOpenChange }: { isOpen: boolean; onOpenChange: 
     }, 300); // 300ms gecikme
 
     return () => clearTimeout(debounceTimer);
-  }, [performSearch]);
+  }, [queryText, performSearch]);
   
   const groupedResults = results.reduce((acc, item) => {
     if (!acc[item.type]) {
