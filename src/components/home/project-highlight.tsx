@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -16,21 +17,35 @@ export function ProjectHighlight() {
   return (
     <section className="py-16 sm:py-24 bg-secondary">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold font-headline tracking-tight sm:text-4xl">
+                Başarı Hikayelerimiz
+            </h2>
+            <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
+                Gerçek dünya zorluklarına nasıl etkili çözümler ürettiğimizi keşfedin.
+            </p>
+        </div>
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1">
-            <Badge>Vaka Analizi</Badge>
-            <h2 className="mt-4 text-3xl font-bold font-headline tracking-tight sm:text-4xl">
+            <Badge variant="outline">Vaka Analizi</Badge>
+            <h3 className="mt-4 text-3xl font-bold font-headline tracking-tight">
               {highlightedProject.title}
-            </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-              <strong className="text-foreground">Zorluk:</strong> {highlightedProject.challenge}
-            </p>
-            <p className="mt-4 text-lg text-muted-foreground">
-              <strong className="text-foreground">Çözüm:</strong> {highlightedProject.solution}
-            </p>
-             <p className="mt-6 text-xl font-semibold text-primary">
-              Sonuç: {highlightedProject.result}
-            </p>
+            </h3>
+            <div className="mt-6 space-y-4">
+                <div>
+                    <h4 className="font-semibold text-lg">Zorluk:</h4>
+                    <p className="text-muted-foreground">{highlightedProject.challenge}</p>
+                </div>
+                <div>
+                    <h4 className="font-semibold text-lg">Çözüm:</h4>
+                    <p className="text-muted-foreground">{highlightedProject.solution}</p>
+                </div>
+            </div>
+             <blockquote className="mt-6 border-l-4 border-primary pl-4 py-2 bg-background/50">
+              <p className="text-lg font-semibold">
+                Sonuç: {highlightedProject.result}
+              </p>
+            </blockquote>
             <div className="mt-8 flex flex-wrap gap-4">
                 <Button asChild size="lg">
                     <Link href={`/projeler/${highlightedProject.slug}`}>Projeyi İncele</Link>
@@ -40,16 +55,18 @@ export function ProjectHighlight() {
                 </Button>
             </div>
           </div>
-          <div className="order-1 lg:order-2 aspect-w-4 aspect-h-3">
+          <div className="order-1 lg:order-2 group overflow-hidden rounded-lg">
             {image && (
-                <Image
-                  src={image.imageUrl}
-                  alt={highlightedProject.title}
-                  width={600}
-                  height={450}
-                  className="rounded-lg shadow-xl object-cover w-full h-full"
-                  data-ai-hint={image.imageHint}
-                />
+                 <Link href={`/projeler/${highlightedProject.slug}`}>
+                    <Image
+                    src={image.imageUrl}
+                    alt={highlightedProject.title}
+                    width={600}
+                    height={450}
+                    className="rounded-lg shadow-xl object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                    data-ai-hint={image.imageHint}
+                    />
+                </Link>
             )}
           </div>
         </div>
@@ -57,4 +74,3 @@ export function ProjectHighlight() {
     </section>
   );
 }
-
