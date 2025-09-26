@@ -27,4 +27,17 @@ export const projects: Project[] = [
     result: 'Proje sonrasında, araç çevresindeki iş kazaları sıfıra indirildi. Olası anlaşmazlık durumları için tüm operasyonlar kayıt altına alındı ve halktan gelen şikayetlerin çözümünde video kanıtları kullanıldı.',
     usedProducts: ['mdr-600-serisi', 'bbs-tek-akilli-alarm'],
   },
+  {
+    id: '3',
+    title: 'UCPS-2SA Ultrasonik Çarpışma Önleme Sistemi',
+    slug: 'ucps-2sa-carpima-onleme',
+    clientName: 'TGS (Turkish Ground Services)',
+    sector: 'havalimanlari',
+    coverImage: 'ucps-main',
+    imageHint: 'ultrasonic collision prevention system',
+    challenge: 'Havalimanı yer hizmetleri operasyonlarında kullanılan araçların, uçak gibi değerli varlıklara düşük hızda manevra yaparken çarpma riskini ortadan kaldırmak.',
+    solution: 'ADC Tasarım tarafından geliştirilen, Brigade\'in ultrasonik sensörlerini ve özel bir kontrol ünitesini (JMI Controller) kullanan UCPS-2SA sistemi geliştirildi. Sistem; ayarlanabilir mesafe okuma, sesli/görsel uyarılar ve kritik mesafede aracı otomatik durdurma yeteneklerine sahiptir.',
+    result: 'Sistem sayesinde, kritik manevralar sırasında insan hatasından kaynaklanabilecek çarpışma riski minimize edildi. Ayarlanabilir ve şifre korumalı yapısı sayesinde farklı operasyonel ihtiyaçlara göre esneklik sağlandı ve sistemin genel güvenilirliği artırıldı.',
+    usedProducts: ['sidescan-flex-ss-4200w'],
+  }
 ];
