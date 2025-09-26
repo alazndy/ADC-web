@@ -23,6 +23,10 @@ export default function ProjelerPage() {
           {projects.map((project) => {
             const image = findImage(project.coverImage);
             const sector = sectors.find(s => s.slug === project.sector);
+            // Custom slug for the new special project page
+            const projectUrl = project.slug === 'ucps-2sa-carpima-onleme' 
+              ? `/projeler/ucps-2sa-carpima-onleme`
+              : `/projeler/${project.slug}`;
             return (
               <Card key={project.id} className="group overflow-hidden flex flex-col">
                 {image && (
@@ -43,7 +47,7 @@ export default function ProjelerPage() {
                     <strong>Zorluk:</strong> {project.challenge}
                   </p>
                   <Button asChild className="mt-6 w-full">
-                    <Link href={`/projeler/${project.slug}`}>Projeyi İncele</Link>
+                    <Link href={projectUrl}>Projeyi İncele</Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -54,5 +58,3 @@ export default function ProjelerPage() {
     </>
   );
 }
-
-    
