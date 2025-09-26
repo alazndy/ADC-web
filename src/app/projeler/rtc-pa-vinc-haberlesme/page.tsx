@@ -38,7 +38,7 @@ export default function RTCPAProjectPage() {
                         <div>
                             <h2 className="text-3xl font-bold font-headline">Projenin Amacı</h2>
                             <p className="mt-4 text-muted-foreground">
-                                Bu proje, gürültülü ve geniş liman sahalarında çalışan RTC vinç operatörleri ile sahadaki yer personeli arasındaki iletişimi güçlendirmek amacıyla geliştirilmiştir. Sistem, Brigade'in güvenilir Backchat haberleşme altyapısını, ADC Tasarım tarafından geliştirilen özel amplifikatör ve güç devresiyle birleştirerek, hem operatör ile yerdeki personel arasında iki yönlü iletişime olanak tanır hem de operatörün anonslarını vinç dışındaki geniş bir alana yüksek sesle ve net bir şekilde iletir.
+                                Bu proje, gürültülü ve geniş liman sahalarında çalışan RTC vinç operatörleri ile sahadaki yer personeli arasındaki iletişimi güçlendirmek amacıyla geliştirilmiştir. Sistem, Brigade&apos;in güvenilir Backchat haberleşme altyapısını, ADC Tasarım tarafından geliştirilen özel amplifikatör ve güç devresiyle birleştirerek, hem operatör ile yerdeki personel arasında iki yönlü iletişime olanak tanır hem de operatörün anonslarını vinç dışındaki geniş bir alana yüksek sesle ve net bir şekilde iletir.
                             </p>
                             <p className="mt-4 text-muted-foreground">
                                 Bu entegrasyon, operasyonel verimliliği artırırken, sahadaki iş güvenliğini en üst düzeye çıkarmayı hedefler.
@@ -120,7 +120,7 @@ export default function RTCPAProjectPage() {
                         <div>
                             <h2 className="text-3xl font-bold font-headline">Nasıl Çalışır?</h2>
                             <p className="mt-4 text-muted-foreground">
-                                Vinç operatörü, kabin içindeki Brigade Backchat ünitesini kullanarak yerdeki personel ile doğrudan konuşabilir. Aynı zamanda, operatörün sesi ADC Tasarım'ın özel amplifikatör devresi tarafından güçlendirilir ve vincin dışına monte edilmiş olan yüksek güçlü hoparlör aracılığıyla tüm sahaya anons olarak yayınlanır. Bu sayede, "konteyner indiriliyor", "dikkat, yük hareketi var" gibi kritik güvenlik uyarıları, gürültülü liman ortamında bile herkes tarafından net bir şekilde duyulur.
+                                Vinç operatörü, kabin içindeki Brigade Backchat ünitesini kullanarak yerdeki personel ile doğrudan konuşabilir. Aynı zamanda, operatörün sesi ADC Tasarım&apos;ın özel amplifikatör devresi tarafından güçlendirilir ve vincin dışına monte edilmiş olan yüksek güçlü hoparlör aracılığıyla tüm sahaya anons olarak yayınlanır. Bu sayede, &quot;konteyner indiriliyor&quot;, &quot;dikkat, yük hareketi var&quot; gibi kritik güvenlik uyarıları, gürültülü liman ortamında bile herkes tarafından net bir şekilde duyulur.
                             </p>
                         </div>
                     </div>

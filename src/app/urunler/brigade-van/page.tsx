@@ -1,12 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { brigadeVanProducts } from "@/lib/data";
 import { findImage } from "@/lib/placeholder-images";
-import { Check, ChevronLeft } from 'lucide-react';
+import { Check, ChevronLeft, ShieldCheck } from 'lucide-react';
 import { categoryToSlug } from '@/lib/product-categories';
-
 
 export default function BrigadeVanPage() {
     return (
@@ -23,13 +22,51 @@ export default function BrigadeVanPage() {
                     </div>
                     <h1 className="text-4xl font-bold font-headline mt-2">Brigade Van</h1>
                     <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-                        Hafif ticari araç pazarındaki güvenlik zorluklarıyla mücadele etmek için özel olarak geliştirilen Brigade Van, hızlı hareket eden bu pazar için özel olarak seçilmiş kaliteli ürünleri rekabetçi fiyatlarla sunar.
+                        Hafif ticari araç pazarındaki güvenlik zorluklarıyla mücadele etmek için özel olarak geliştirilen Brigade Van, hızlı hareket eden bu pazar için özel olarak seçilmiş kaliteli ürünleri rekabetçi fiyatlarla sunarak kamyonet pazarına güvenlik getiriyor.
                     </p>
                 </div>
             </div>
 
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
                 <div className="space-y-24">
+                    
+                    <div className="max-w-4xl mx-auto">
+                        <h2 className="text-3xl font-headline font-bold text-center mb-6">Kamyonet Sürücülerinin Karşılaştığı Zorluklar</h2>
+                        <p className="max-w-3xl mx-auto text-center text-muted-foreground mb-12">
+                            İnternet alışverişi ve son mil teslimatlarındaki artış, yollardaki kamyonet sayısının rekor seviyelere ulaşmasına neden oldu. Bu durum, kamyonetlerin karayolu yük taşımacılığı içindeki payını artırırken, sürüşle ilgili olaylarda da bir artışa yol açtı. Kamyonet sürücülerinin karşılaştığı bazı zorluklar şunlardır:
+                        </p>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+                            <Card className="bg-card border-none shadow-none">
+                                <CardHeader className='flex-row items-center gap-4 space-y-0'>
+                                    <ShieldCheck className="h-8 w-8 text-primary" />
+                                    <CardTitle>Kör Nokta Çarpışmaları</CardTitle>
+                                </CardHeader>
+                                <CardContent><p className='text-muted-foreground'>Kör noktalardan kaynaklanan artan çarpışma riski.</p></CardContent>
+                            </Card>
+                            <Card className="bg-card border-none shadow-none">
+                                <CardHeader className='flex-row items-center gap-4 space-y-0'>
+                                    <ShieldCheck className="h-8 w-8 text-primary" />
+                                    <CardTitle>Hırsızlık ve Suç Faaliyetleri</CardTitle>
+                                </CardHeader>
+                                <CardContent><p className='text-muted-foreground'>Araç ve içerisindeki yüke yönelik hırsızlık ve suç olayları.</p></CardContent>
+                            </Card>
+                            <Card className="bg-card border-none shadow-none">
+                                <CardHeader className='flex-row items-center gap-4 space-y-0'>
+                                    <ShieldCheck className="h-8 w-8 text-primary" />
+                                    <CardTitle>Sürücü Hataları</CardTitle>
+                                </CardHeader>
+                                <CardContent><p className='text-muted-foreground'>Dikkat dağınıklıkları ve sürücü hatalarından kaynaklanan kazalar.</p></CardContent>
+                            </Card>
+                            <Card className="bg-card border-none shadow-none">
+                                <CardHeader className='flex-row items-center gap-4 space-y-0'>
+                                    <ShieldCheck className="h-8 w-8 text-primary" />
+                                    <CardTitle>Sigorta Dolandırıcılıkları</CardTitle>
+                                </CardHeader>
+                                <CardContent><p className='text-muted-foreground'>"Çarpmak için nakit" gibi kasıtlı olarak düzenlenen sahte kaza senaryoları.</p></CardContent>
+                            </Card>
+                        </div>
+                    </div>
+
                     <div>
                         <h2 className="text-3xl font-headline font-bold text-center mb-6">Kamera Monitör Sistemleri</h2>
                         <p className="max-w-3xl mx-auto text-center text-muted-foreground mb-12">Brigade Van kamera monitör sistemleri, sürücülerin güvenli bir şekilde manevra yapmasını ve araç kullanmasını sağlar. Kameralar, sürücünün kör noktaları görmesine yardımcı olabilir ve aracın kamera görüşündeki her şeyi (insanlar veya engeller dahil) monitörde canlı bir besleme sunarak geri vites yardımı sağlar. Tüm kameralar Brigade Van kayıt cihazlarıyla uyumludur.</p>
@@ -38,7 +75,7 @@ export default function BrigadeVanPage() {
                                 <Card key={index} className="flex flex-col">
                                     <CardHeader>
                                             <div className="aspect-square relative rounded-md overflow-hidden bg-card border">
-                                            <Image src={findImage(product.image)!.imageUrl} alt={product.title} fill className="object-contain p-4" data-ai-hint={product.imageHint} />
+                                            <Image src={findImage(product.image)!.imageUrl} alt={product.title} fill sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw" className="object-contain p-4" data-ai-hint={product.imageHint} />
                                             </div>
                                         <CardTitle className="pt-4">{product.title}</CardTitle>
                                     </CardHeader>
@@ -65,7 +102,7 @@ export default function BrigadeVanPage() {
                                     <Card key={index} className="flex flex-col">
                                     <CardHeader>
                                             <div className="aspect-square relative rounded-md overflow-hidden bg-card border">
-                                            <Image src={findImage(product.image)!.imageUrl} alt={product.title} fill className="object-contain p-4" data-ai-hint={product.imageHint}/>
+                                            <Image src={findImage(product.image)!.imageUrl} alt={product.title} fill sizes="(min-width: 768px) 50vw, 100vw" className="object-contain p-4" data-ai-hint={product.imageHint}/>
                                             </div>
                                         <CardTitle className="pt-4">{product.title}</CardTitle>
                                     </CardHeader>

@@ -49,7 +49,7 @@ export default function AdminDashboardPage() {
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground">
-              ADC Tasarım Yönetim Paneli'ne hoş geldiniz. Sol taraftaki menüyü kullanarak web sitesinin içeriğini yönetebilirsiniz.
+              ADC Tasarım Yönetim Paneli&apos;ne hoş geldiniz. Sol taraftaki menüyü kullanarak web sitesinin içeriğini yönetebilirsiniz.
             </p>
           </CardContent>
         </Card>

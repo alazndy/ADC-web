@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { sectors } from '@/lib/data';
 import { findImage } from '@/lib/placeholder-images';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -49,5 +48,3 @@ export default function SektorlerPage() {
         </>
     );
 }
-
-    

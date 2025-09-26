@@ -18,7 +18,7 @@ export default function RandevuAlPage() {
           <CardHeader>
             <CardTitle className="font-headline">Randevu Takvimi</CardTitle>
             <CardDescription>
-              "Ürün Demosu" veya "Proje Danışmanlığı" gibi toplantı tiplerini seçebilirsiniz.
+              &quot;Ürün Demosu&quot; veya &quot;Proje Danışmanlığı&quot; gibi toplantı tiplerini seçebilirsiniz.
             </CardDescription>
           </CardHeader>
           <CardContent>
