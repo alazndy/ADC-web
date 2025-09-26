@@ -11,25 +11,6 @@ import { Separator } from "@/components/ui/separator";
 const mainImage = findImage('ucps-main');
 const boxContentImage = findImage('ucps-box-content');
 
-const screenImages = [
-    { id: "ucps-screen-1", title: "Ekran 1. Açılış Ekranı" },
-    { id: "ucps-screen-2", title: "Ekran 2. Normal Çalışma Ekranı, sistem AKTİF" },
-    { id: "ucps-screen-3", title: "Ekran 3. Normal Çalışma Ekranı, sistem PASİF" },
-    { id: "ucps-screen-4", title: "Ekran 4. Sağ Sensör Cisim Algılandı" },
-    { id: "ucps-screen-5", title: "Ekran 5. Her iki Sensör Cisim Algılandı" },
-    { id: "ucps-screen-6", title: "Ekran 6. Kullanıcı veya Yönetici Girişi" },
-    { id: "ucps-screen-7", title: "Ekran 7. Şifre Giriş Ekranı" },
-    { id: "ucps-screen-8", title: "Ekran 8. Şifre Değiştirme ve Kilit Mesafe Ayarları" },
-    { id: "ucps-screen-9", title: "Ekran 9. Sol Arka Kilit Mesafesi Ayarı" },
-    { id: "ucps-screen-10", title: "Ekran 10. Sağ Arka Kilit Mesafesi Ayarı" },
-    { id: "ucps-screen-11", title: "Ekran 11. Diğer Ayarlar Menüsü" },
-    { id: "ucps-screen-12", title: "Ekran 12. Zaman Ayarı" },
-    { id: "ucps-screen-13", title: "Ekran 13. Buzzer Aktif-Sessiz Seçimi" },
-    { id: "ucps-screen-14", title: "Ekran 14. Tüm Sistem Aktif-Sessiz Seçimi" },
-    { id: "ucps-screen-15", title: "Ekran 15. Sistemin Aracı Kilitlemesi Sonrası Çıkan Uyarı" },
-    { id: "ucps-screen-16", title: "Ekran 16. Araç Arkasındaki Butona Bastıktan sonra Çıkan Uyarı" },
-];
-
 const boxContent = [
     { no: 1, desc: 'UCPS-2SA Ana Ünite', model: 'UCPS-2SB-MU', unit: 'Ad', qty: 1 },
     { no: '1a', desc: 'Arka Montaj Plakası', model: 'ADC-AMP-02', unit: 'Ad', qty: 1 },
@@ -75,7 +56,7 @@ export default function UCPSProjectPage() {
                         <div>
                             <h2 className="text-3xl font-bold font-headline">Proje Tanıtımı</h2>
                             <p className="mt-4 text-muted-foreground">
-                                Bu proje, Brigade'in yüksek hassasiyetli ultrasonik sensörlerini ve ADC Tasarım'ın geliştirdiği özel kontrol ünitesini (UCPS JMI Controller) bir araya getirerek, özellikle havalimanı yer hizmetleri (TGS) gibi yüksek riskli ve hassas operasyonlar için tasarlanmıştır. Sistem, aracın çevresindeki mesafeyi sürekli okur, sürücüyü sesli ve görsel olarak uyarır ve kritik bir yakınlaşma durumunda aracı otomatik olarak durdurarak olası çarpmaları önler.
+                                Bu proje, Brigade'in yüksek hassasiyetli ultrasonik sensörlerini ve ADC Tasarım'ın geliştirdiği özel kontrol ünitesini (UCPS HMI Controller) bir araya getirerek, özellikle havalimanı yer hizmetleri (Turkish Fuel Services) gibi yüksek riskli ve hassas operasyonlar için tasarlanmıştır. Sistem, aracın çevresindeki mesafeyi sürekli okur, sürücüyü sesli ve görsel olarak uyarır ve kritik bir yakınlaşma durumunda aracı otomatik olarak durdurarak olası çarpmaları önler.
                             </p>
                             <p className="mt-4 text-muted-foreground">
                                 Sistem, ayrıca radar sensörleri ile çalışan RCPS (Radar Collision Prevention System) versiyonuna da sahiptir ve kullanıcı taleplerine göre esnek bir şekilde ayarlanabilir.
@@ -226,37 +207,6 @@ export default function UCPSProjectPage() {
                             </CardContent>
                          </Card>
                      </div>
-
-                    <Separator className="my-16" />
-
-                    {/* Screens Section */}
-                    <div>
-                        <h2 className="text-3xl font-bold font-headline text-center mb-12">Ekran Görüntüleri</h2>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                            {screenImages.map(screen => {
-                                const image = findImage(screen.id);
-                                return (
-                                    <Card key={screen.id} className="text-center">
-                                        <CardContent className="p-4">
-                                            {image && (
-                                                <Image 
-                                                    src={image.imageUrl}
-                                                    alt={screen.title}
-                                                    width={480}
-                                                    height={272}
-                                                    className="rounded-md border bg-black w-full"
-                                                    data-ai-hint={image.imageHint}
-                                                />
-                                            )}
-                                        </CardContent>
-                                        <CardHeader className="p-4 pt-0">
-                                            <CardTitle className="text-sm font-medium">{screen.title}</CardTitle>
-                                        </CardHeader>
-                                    </Card>
-                                );
-                            })}
-                        </div>
-                    </div>
                 </div>
             </div>
         </>
