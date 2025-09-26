@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { projects, sectors } from '@/lib/data';
@@ -20,7 +21,7 @@ export default function ProjelerPage() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => {
+          {projects.map((project, index) => {
             const image = findImage(project.coverImage);
             const sector = sectors.find(s => s.slug === project.sector);
             
@@ -31,17 +32,15 @@ export default function ProjelerPage() {
 
             return (
               <Card key={project.id} className="group overflow-hidden flex flex-col">
-                {image && (
-                  <div className="relative aspect-video">
-                    <Image
-                      src={image.imageUrl}
-                      alt={project.title}
-                      fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
-                      data-ai-hint={project.imageHint}
-                    />
-                  </div>
-                )}
+                <div className="relative aspect-video">
+                  <Image
+                    src={image?.imageUrl || `https://picsum.photos/seed/${project.id}/400/300`}
+                    alt={project.title}
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    data-ai-hint={image?.imageHint || 'project image'}
+                  />
+                </div>
                 <CardContent className="p-6 flex-grow flex flex-col">
                   {sector && <Badge variant="outline" className='mb-2 w-fit'>{sector.name}</Badge>}
                   <h2 className="text-xl font-bold font-headline flex-grow">{project.title}</h2>
