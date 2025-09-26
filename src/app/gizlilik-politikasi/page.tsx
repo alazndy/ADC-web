@@ -21,7 +21,7 @@ export default function GizlilikPolitikasiPage() {
                         <p>Son Güncelleme: [Tarih]</p>
                         
                         <h2>1. Giriş</h2>
-                        <p>ADC Tasarım ("biz", "bizim" veya "şirket") olarak, kullanıcılarımızın ("siz", "sizin") gizliliğine saygı duyuyoruz. Bu Gizlilik Politikası, web sitemizi [Web Sitesi Adresi] ("Site") ziyaret ettiğinizde topladığımız, kullandığımız, ifşa ettiğimiz ve koruduğumuz bilgileri açıklamaktadır.</p>
+                        <p>ADC Tasarım (&quot;biz&quot;, &quot;bizim&quot; veya &quot;şirket&quot;) olarak, kullanıcılarımızın (&quot;siz&quot;, &quot;sizin&quot;) gizliliğine saygı duyuyoruz. Bu Gizlilik Politikası, web sitemizi [Web Sitesi Adresi] (&quot;Site&quot;) ziyaret ettiğinizde topladığımız, kullandığımız, ifşa ettiğimiz ve koruduğumuz bilgileri açıklamaktadır.</p>
 
                         <h2>2. Topladığımız Bilgiler</h2>
                         <p>Sizinle ilgili bilgileri çeşitli yollarla toplayabiliriz. Site üzerinden toplayabileceğimiz bilgiler şunlardır:</p>
