@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -36,6 +37,7 @@ export function FeaturedProducts() {
                                 src="https://picsum.photos/seed/product1/600/400"
                                 alt={product.name}
                                 fill
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                 className="object-contain p-8 group-hover:scale-105 transition-transform duration-300"
                                 data-ai-hint="product image"
                               />

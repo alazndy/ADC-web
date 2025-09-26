@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
@@ -17,6 +18,7 @@ export function ProductCard({ product }: { product: Product }) {
               src={image.imageUrl}
               alt={product.name}
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-contain p-4 group-hover:scale-105 transition-transform duration-300"
               data-ai-hint={image.imageHint}
             />
