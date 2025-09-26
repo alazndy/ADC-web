@@ -23,10 +23,12 @@ export default function ProjelerPage() {
           {projects.map((project) => {
             const image = findImage(project.coverImage);
             const sector = sectors.find(s => s.slug === project.sector);
-            // Custom slug for the new special project page
-            const projectUrl = project.slug === 'ucps-2sa-carpima-onleme' 
-              ? `/projeler/ucps-2sa-carpima-onleme`
-              : `/projeler/${project.slug}`;
+            
+            let projectUrl = `/projeler/${project.slug}`;
+            if (project.slug === 'ucps-2sa-carpima-onleme' || project.slug === 'rtc-pa-vinc-haberlesme') {
+              projectUrl = `/projeler/${project.slug}`;
+            }
+
             return (
               <Card key={project.id} className="group overflow-hidden flex flex-col">
                 {image && (

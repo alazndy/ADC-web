@@ -39,5 +39,18 @@ export const projects: Project[] = [
     solution: 'ADC Tasarım tarafından geliştirilen, Brigade\'in ultrasonik sensörlerini ve özel bir kontrol ünitesini (UCPS HMI Controller) kullanan UCPS-2SA sistemi geliştirildi. Sistem; ayarlanabilir mesafe okuma, sesli/görsel uyarılar ve kritik mesafede aracı otomatik durdurma yeteneklerine sahiptir.',
     result: 'Sistem sayesinde, kritik manevralar sırasında insan hatasından kaynaklanabilecek çarpışma riski minimize edildi. Ayarlanabilir ve şifre korumalı yapısı sayesinde farklı operasyonel ihtiyaçlara göre esneklik sağlandı ve sistemin genel güvenilirliği artırıldı.',
     usedProducts: ['sidescan-flex-ss-4200w'],
+  },
+  {
+    id: '4',
+    title: 'RTC-PA Vinç Haberleşme Sistemi',
+    slug: 'rtc-pa-vinc-haberlesme',
+    clientName: 'Gümrük İşletmeleri',
+    sector: 'deniz-limanlari',
+    coverImage: 'rtc-pa-main',
+    imageHint: 'port crane communication',
+    challenge: 'Gürültülü liman sahalarında RTC vinç operatörleri ile yer personeli arasındaki iletişimin zayıf olması, hem iş güvenliği riskleri yaratıyor hem de operasyonel verimliliği düşürüyordu.',
+    solution: 'Brigade Backchat haberleşme sistemi, ADC Tasarım tarafından geliştirilen özel bir amplifikatör ve güç devresi ile entegre edildi. Bu sayede operatörün sesi, harici bir hoparlör aracılığıyla tüm sahaya net bir şekilde anons edilirken, operatör ve yer personeli arasında iki yönlü iletişim sağlandı.',
+    result: 'Sistem, vinç çevresindeki iş güvenliğini önemli ölçüde artırdı. Kritik anonsların herkes tarafından duyulması sağlandı ve operasyonel koordinasyon güçlendirildi.',
+    usedProducts: [],
   }
 ];
