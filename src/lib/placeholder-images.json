@@ -247,16 +247,16 @@
       "imageHint": "product image"
     },
     {
-      "id": "placeholder-29",
-      "description": "Placeholder image 29",
-      "imageUrl": "https://images.unsplash.com/photo-1715318892044-03ed44ee53ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwcm9qZWN0JTIwaW1hZ2V8ZW58MHx8fHwxNzU4ODAwMDkxfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "project image"
+      "id": "project-logistics",
+      "description": "Logistics project image",
+      "imageUrl": "https://images.unsplash.com/photo-1577562529881-224443a68188?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx0cnVjayUyMGZsZWV0fGVufDB8fHx8MTc1OTU4MjI4N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "truck fleet"
     },
     {
-      "id": "placeholder-30",
-      "description": "Placeholder image 30",
-      "imageUrl": "https://images.unsplash.com/photo-1715318892044-03ed44ee53ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwcm9qZWN0JTIwaW1hZ2V8ZW58MHx8fHwxNzU4ODAwMDkxfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "project image"
+      "id": "project-waste-management",
+      "description": "Waste management project image",
+      "imageUrl": "https://images.unsplash.com/photo-1561069157-218187260215?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnYXJiYWdlJTIwdHJ1Y2slMjBjaXR5fGVufDB8fHx8MTc1OTU4MjI4N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "garbage truck city"
     },
     {
       "id": "hero-background",
@@ -267,14 +267,14 @@
     {
       "id": "ucps-main",
       "description": "UCPS-2SA Ultrasonic Collision Prevention System main unit",
-      "imageUrl": "https://images.unsplash.com/photo-1729554981212-6557ef8e4835?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx1bHRyYXNvbmljJTIwY29sbGlzaW9uJTIwcHJldmVudGlvbnxlbnwwfHx8fDE3NTg4NzIyMjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "ultrasonic collision prevention"
+      "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx1bHRyYXNvbmljJTIwY29sbGlzaW9uJTIwcHJldmVudGlvbiUyMHN5c3RlbXxlbnwwfHx8fDE3NTk1ODIyODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "collision prevention system"
     },
     {
       "id": "ucps-box-content",
       "description": "UCPS-2SA box content",
-      "imageUrl": "https://images.unsplash.com/photo-1729883639235-ee9e904998a1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxlbGVjdHJvbmljcyUyMGNvbXBvbmVudHN8ZW58MHx8fHwxNzU4ODcyMjI0fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "electronics components"
+      "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxlbGVjdHJvbmljcyUyMGNvbXBvbmVudHMlMjBraXR8ZW58MHx8fHwxNzU5NTgyMjg4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "electronics components kit"
     },
     {
       "id": "rtc-pa-main",
@@ -287,6 +287,24 @@
       "description": "Image of an industrial communication system or amplifier",
       "imageUrl": "https://images.unsplash.com/photo-1588852358894-353489955768?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwY29tbXVuaWNhdGlvbiUyMHN5c3RlbXxlbnwwfHx8fDE3NTg4OTQyNzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "communication system"
+    },
+    {
+      "id": "demo-case-mdr",
+      "description": "Portable electronics demo case",
+      "imageUrl": "https://images.unsplash.com/photo-1599304029215-6859e156403c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb3J0YWJsZSUyMGVsZWN0cm9uaWNzJTIwY2FzZXxlbnwwfHx8fDE3NTk1ODQ2NTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "portable electronics case"
+    },
+    {
+      "id": "demo-vehicle-ai360",
+      "description": "Van with cameras and sensors for demo",
+      "imageUrl": "https://images.unsplash.com/photo-1618775438254-e0c1b7b019c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx2YW4lMjB3aXRoJTIwY2FtZXJhc3xlbnwwfHx8fDE3NTk1ODQ2NTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "van with cameras"
+    },
+    {
+      "id": "demo-case-wireless",
+      "description": "Wireless video transmitter in a case",
+      "imageUrl": "https://images.unsplash.com/photo-1581431889858-63875323855a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3aXJlbGVzcyUyMHRyYW5zbWl0dGVyJTIwYm94fGVufDB8fHx8MTc1OTU4NDY1MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "wireless transmitter box"
     }
   ]
 }
