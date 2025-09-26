@@ -29,9 +29,9 @@ export default function HizmetlerPage() {
         <>
             <div className="bg-secondary">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-                    <h1 className="text-4xl font-bold font-headline">Mühendislik ve Teknoloji Çözümleri</h1>
+                    <h1 className="text-4xl font-bold font-headline">Mühendislik Hizmetlerimiz</h1>
                     <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-                        Filonuzun güvenliğini ve operasyonel verimliliğini en üst düzeye çıkarmak için tasarladığımız profesyonel hizmetler ve entegre teknoloji çözümleri.
+                        Filonuzun güvenliğini ve operasyonel verimliliğini en üst düzeye çıkarmak için tasarladığımız profesyonel hizmetler.
                     </p>
                 </div>
             </div>
@@ -97,55 +97,19 @@ export default function HizmetlerPage() {
                                 ))}
                             </div>
                         </div>
-
-                        <div>
-                            <div className="text-center max-w-3xl mx-auto">
-                                <h2 className="text-3xl font-bold font-headline">Entegre Teknoloji Çözümleri</h2>
-                                <p className="mt-4 text-muted-foreground text-lg">
-                                    Filonuzu daha akıllı, daha güvenli ve daha verimli hale getiren ileri teknoloji uygulamaları.
-                                </p>
-                            </div>
-                            <div className="mt-12 grid gap-8 sm:grid-cols-2">
-                                {techSolutions.map((solution) => (
-                                    <Link href={`/teknoloji-cozumleri/${solution.slug}`} key={solution.id} className="group h-full">
-                                        <Card className="h-full hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col">
-                                            <CardHeader>
-                                                <div className="flex items-center gap-4">
-                                                    <div className="bg-primary/10 p-3 rounded-full">
-                                                        <solution.icon className="h-8 w-8 text-primary" />
-                                                    </div>
-                                                    <CardTitle className="font-headline text-xl">{solution.title}</CardTitle>
-                                                </div>
-                                            </CardHeader>
-                                            <CardContent className="flex-grow">
-                                                <CardDescription>{solution.summary}</CardDescription>
-                                            </CardContent>
-                                            <div className="p-6 pt-0">
-                                                <span className="font-semibold text-primary group-hover:underline flex items-center">
-                                                    Detayları Gör <ArrowRight className="ml-2 h-4 w-4" />
-                                                </span>
-                                            </div>
-                                        </Card>
-                                    </Link>
-                                ))}
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
 
             <div className="py-16 sm:py-24 bg-primary text-primary-foreground">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h2 className="text-3xl font-bold font-headline">Projenizi Konuşalım</h2>
+                    <h2 className="text-3xl font-bold font-headline">Daha Fazlasını Keşfedin</h2>
                     <p className="mt-4 max-w-2xl mx-auto text-lg text-primary-foreground/80">
-                       İhtiyaçlarınızı analiz etmek ve size en uygun güvenlik ve verimlilik çözümünü projelendirmek için bizimle iletişime geçin.
+                       Filonuzu daha akıllı, daha güvenli ve daha verimli hale getiren entegre teknoloji uygulamalarımızı keşfedin.
                     </p>
                     <div className="mt-8 flex flex-wrap justify-center gap-4">
                         <Button asChild size="lg" variant="secondary">
-                            <Link href="/iletisim">Teklif Alın</Link>
-                        </Button>
-                        <Button asChild size="lg" variant="outline" className="bg-transparent border-white/50 text-white hover:bg-white/10 hover:text-white">
-                            <Link href="/randevu-al">Online Toplantı Planlayın</Link>
+                            <Link href="/teknoloji-cozumleri">Teknoloji Çözümleri</Link>
                         </Button>
                     </div>
                 </div>
@@ -153,5 +117,3 @@ export default function HizmetlerPage() {
         </>
     );
 }
-
-    
