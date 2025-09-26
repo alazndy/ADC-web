@@ -1,13 +1,16 @@
 import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users, Target, Milestone } from "lucide-react";
+import { findImage } from "@/lib/placeholder-images";
 
 export default function HakkimizdaPage() {
   const teamMembers = [
-    { name: "Ahmet Yılmaz", role: "Kurucu & CEO", image: "https://picsum.photos/seed/person1/400/400" },
-    { name: "Ayşe Kaya", role: "Operasyon Direktörü", image: "https://picsum.photos/seed/person2/400/400" },
-    { name: "Mehmet Demir", role: "Baş Mühendis", image: "https://picsum.photos/seed/person3/400/400" },
+    { name: "Ahmet Yılmaz", role: "Kurucu & CEO", image: "person-1", imageHint: "man portrait" },
+    { name: "Ayşe Kaya", role: "Operasyon Direktörü", image: "person-2", imageHint: "woman portrait" },
+    { name: "Mehmet Demir", role: "Baş Mühendis", image: "person-3", imageHint: "man portrait" },
   ];
+
+  const officeImage = findImage("office-photo");
 
   return (
     <>
@@ -26,14 +29,16 @@ export default function HakkimizdaPage() {
             <p className="mt-4 text-muted-foreground">Mühendislik bilgimizi teknoloji tutkumuzla birleştirerek, her müşterimizin ihtiyacına özel, verimliliği ve güvenliği en üst düzeye çıkaran sistemler tasarlıyoruz.</p>
           </div>
           <div className="aspect-w-4 aspect-h-3">
-              <Image
-                src="https://picsum.photos/seed/office/600/450"
-                alt="Ofisimiz"
-                width={600}
-                height={450}
-                className="rounded-lg shadow-xl object-cover w-full h-full"
-                data-ai-hint="modern office"
-              />
+              {officeImage && (
+                <Image
+                  src={officeImage.imageUrl}
+                  alt="Ofisimiz"
+                  width={600}
+                  height={450}
+                  className="rounded-lg shadow-xl object-cover w-full h-full"
+                  data-ai-hint={officeImage.imageHint}
+                />
+              )}
           </div>
         </div>
 
@@ -66,15 +71,27 @@ export default function HakkimizdaPage() {
             <h2 className="text-3xl font-bold font-headline">Ekibimizle Tanışın</h2>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">Başarımızın arkasındaki güç, alanında uzman ve tutkulu ekibimizdir.</p>
             <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                {teamMembers.map((member, index) => (
-                    <Card key={index} className="text-center">
-                        <CardContent className="p-6">
-                            <Image src={member.image} alt={member.name} width={128} height={128} className="rounded-full mx-auto mb-4" data-ai-hint="person portrait" />
-                            <h3 className="text-lg font-semibold font-headline">{member.name}</h3>
-                            <p className="text-primary">{member.role}</p>
-                        </CardContent>
-                    </Card>
-                ))}
+                {teamMembers.map((member, index) => {
+                    const memberImage = findImage(member.image);
+                    return (
+                        <Card key={index} className="text-center">
+                            <CardContent className="p-6">
+                                {memberImage && (
+                                    <Image 
+                                      src={memberImage.imageUrl} 
+                                      alt={member.name} 
+                                      width={128} 
+                                      height={128} 
+                                      className="rounded-full mx-auto mb-4" 
+                                      data-ai-hint={member.imageHint} 
+                                    />
+                                )}
+                                <h3 className="text-lg font-semibold font-headline">{member.name}</h3>
+                                <p className="text-primary">{member.role}</p>
+                            </CardContent>
+                        </Card>
+                    )
+                })}
             </div>
         </div>
       </div>

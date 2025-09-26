@@ -183,128 +183,206 @@
     {
       "id": "placeholder-18",
       "description": "Placeholder image 18",
-      "imageUrl": "https://images.unsplash.com/photo-1597354984706-fac992d9306f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwcm9kdWN0JTIwaW1hZ2V8ZW58MHx8fHwxNzU4NzM3OTE3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1597354984706-fac992d9306f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwcm9kdWN0JTIwaW1hZ2V8ZW58MHx8fHwxNzU4NzM3OTE3fDA&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "product image"
     },
     {
       "id": "placeholder-19",
       "description": "Placeholder image 19",
-      "imageUrl": "https://images.unsplash.com/photo-1560769629-975ec94e6a86?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwcm9kdWN0JTIwaW1hZ2V8ZW58MHx8fHwxNzU4NzM3OTE3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1560769629-975ec94e6a86?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwcm9kdWN0JTIwaW1hZ2V8ZW58MHx8fHwxNzU4NzM3OTE3fDA&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "product image"
     },
     {
       "id": "placeholder-20",
       "description": "Placeholder image 20",
-      "imageUrl": "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwcm9kdWN0JTIwaW1hZ2V8ZW58MHx8fHwxNzU4NzM3OTE3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwcm9kdWN0JTIwaW1hZ2V8ZW58MHx8fHwxNzU4NzM3OTE3fDA&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "product image"
     },
     {
       "id": "placeholder-21",
       "description": "Placeholder image 21",
-      "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwcm9kdWN0JTIwaW1hZ2V8ZW58MHx8fHwxNzU4NzM3OTE3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwcm9kdWN0JTIwaW1hZ2V8ZW58MHx8fHwxNzU4NzM3OTE3fDA&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "product image"
     },
     {
       "id": "placeholder-22",
       "description": "Placeholder image 22",
-      "imageUrl": "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwcm9kdWN0JTIwaW1hZ2V8ZW58MHx8fHwxNzU4NzM3OTE3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwcm9kdWN0JTIwaW1hZ2V8ZW58MHx8fHwxNzU4NzM3OTE3fDA&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "product image"
     },
     {
       "id": "placeholder-23",
       "description": "Placeholder image 23",
-      "imageUrl": "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cHJvZHVjdCUyMGltYWdlfGVufDB8fHx8MTc1ODczNzkxN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cHJvZHVjdCUyMGltYWdlfGVufDB8fHx8MTc1ODczNzkxN3ww&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "product image"
     },
     {
       "id": "placeholder-24",
       "description": "Placeholder image 24",
-      "imageUrl": "https://images.unsplash.com/photo-1599318110381-64cf912a8f54?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwcm9kdWN0JTIwaW1hZ2V8ZW58MHx8fHwxNzU4NzM3OTE3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1599318110381-64cf912a8f54?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwcm9kdWN0JTIwaW1hZ2V8ZW58MHx8fHwxNzU4NzM3OTE3fDA&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "product image"
     },
     {
       "id": "placeholder-25",
       "description": "Placeholder image 25",
-      "imageUrl": "https://images.unsplash.com/photo-1599318110381-64cf912a8f54?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwcm9kdWN0JTIwaW1hZ2V8ZW58MHx8fHwxNzU4NzM3OTE3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1599318110381-64cf912a8f54?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwcm9kdWN0JTIwaW1hZ2V8ZW58MHx8fHwxNzU4NzM3OTE3fDA&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "product image"
     },
     {
       "id": "placeholder-26",
       "description": "Placeholder image 26",
-      "imageUrl": "https://images.unsplash.com/photo-1565438480821-03e254dae4f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwcm9kdWN0JTIwaW1hZ2V8ZW58MHx8fHwxNzU4NzM3OTE3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1565438480821-03e254dae4f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwcm9kdWN0JTIwaW1hZ2V8ZW58MHx8fHwxNzU4NzM3OTE3fDA&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "product image"
     },
     {
       "id": "placeholder-27",
       "description": "Placeholder image 27",
-      "imageUrl": "https://images.unsplash.com/photo-1560769629-975ec94e6a86?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwcm9kdWN0JTIwaW1hZ2V8ZW58MHx8fHwxNzU4NzM3OTE3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1560769629-975ec94e6a86?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwcm9kdWN0JTIwaW1hZ2V8ZW58MHx8fHwxNzU4NzM3OTE3fDA&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "product image"
     },
     {
       "id": "placeholder-28",
       "description": "Placeholder image 28",
-      "imageUrl": "https://images.unsplash.com/photo-1599318110381-64cf912a8f54?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwcm9kdWN0JTIwaW1hZ2V8ZW58MHx8fHwxNzU4NzM3OTE3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1599318110381-64cf912a8f54?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwcm9kdWN0JTIwaW1hZ2V8ZW58MHx8fHwxNzU4NzM3OTE3fDA&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "product image"
     },
     {
       "id": "project-logistics",
       "description": "Logistics project image",
-      "imageUrl": "https://images.unsplash.com/photo-1577562529881-224443a68188?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx0cnVjayUyMGZsZWV0fGVufDB8fHx8MTc1OTU4MjI4N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1577562529881-224443a68188?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx0cnVjayUyMGZsZWV0fGVufDB8fHx8MTc1OTU4MjI4N3ww&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "truck fleet"
     },
     {
       "id": "project-waste-management",
       "description": "Waste management project image",
-      "imageUrl": "https://images.unsplash.com/photo-1561069157-218187260215?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnYXJiYWdlJTIwdHJ1Y2slMjBjaXR5fGVufDB8fHx8MTc1OTU4MjI4N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1561069157-218187260215?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnYXJiYWdlJTIwdHJ1Y2slMjBjaXR5fGVufDB8fHx8MTc1OTU4MjI4N3ww&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "garbage truck city"
     },
     {
       "id": "hero-background",
       "description": "Homepage hero background",
-      "imageUrl": "https://images.unsplash.com/photo-1738996596684-4ed6d9a85a16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtb2Rlcm4lMjBoaWdod2F5fGVufDB8fHx8MTc1ODc5NjM3OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1738996596684-4ed6d9a85a16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtb2Rlcm4lMjBoaWdod2F5fGVufDB8fHx8MTc1ODc5NjM3OHww&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "modern highway"
     },
     {
       "id": "ucps-main",
       "description": "UCPS-2SA Ultrasonic Collision Prevention System main unit",
-      "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx1bHRyYXNvbmljJTIwY29sbGlzaW9uJTIwcHJldmVudGlvbiUyMHN5c3RlbXxlbnwwfHx8fDE3NTk1ODIyODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx1bHRyYXNvbmljJTIwY29sbGlzaW9uJTIwcHJldmVudGlvbiUyMHN5c3RlbXxlbnwwfHx8fDE3NTk1ODIyODh8MA&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "collision prevention system"
     },
     {
       "id": "ucps-box-content",
       "description": "UCPS-2SA box content",
-      "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxlbGVjdHJvbmljcyUyMGNvbXBvbmVudHMlMjBraXR8ZW58MHx8fHwxNzU5NTgyMjg4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxlbGVjdHJvbmljcyUyMGNvbXBvbmVudHMlMjBraXR8ZW58MHx8fHwxNzU5NTgyMjg4fDA&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "electronics components kit"
     },
     {
       "id": "rtc-pa-main",
       "description": "Image of a port crane, representing the RTC-PA project",
-      "imageUrl": "https://images.unsplash.com/photo-1623812829913-395a02018873?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwb3J0JTIwY3JhbmV8ZW58MHx8fHwxNzU4ODk0Mjc4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1623812829913-395a02018873?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwb3J0JTIwY3JhbmV8ZW58MHx8fHwxNzU4ODk0Mjc4fDA&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "port crane"
     },
     {
       "id": "brigade-backchat",
       "description": "Image of an industrial communication system or amplifier",
-      "imageUrl": "https://images.unsplash.com/photo-1588852358894-353489955768?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwY29tbXVuaWNhdGlvbiUyMHN5c3RlbXxlbnwwfHx8fDE3NTg4OTQyNzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1588852358894-353489955768?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwY29tbXVuaWNhdGlvbiUyMHN5c3RlbXxlbnwwfHx8fDE3NTg4OTQyNzh8MA&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "communication system"
     },
     {
       "id": "demo-case-mdr",
       "description": "Portable electronics demo case",
-      "imageUrl": "https://images.unsplash.com/photo-1599304029215-6859e156403c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb3J0YWJsZSUyMGVsZWN0cm9uaWNzJTIwY2FzZXxlbnwwfHx8fDE3NTk1ODQ2NTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1599304029215-6859e156403c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb3J0YWJsZSUyMGVsZWN0cm9uaWNzJTIwY2FzZXxlbnwwfHx8fDE3NTk1ODQ2NTB8MA&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "portable electronics case"
     },
     {
       "id": "demo-vehicle-ai360",
       "description": "Van with cameras and sensors for demo",
-      "imageUrl": "https://images.unsplash.com/photo-1618775438254-e0c1b7b019c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx2YW4lMjB3aXRoJTIwY2FtZXJhc3xlbnwwfHx8fDE3NTk1ODQ2NTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1618775438254-e0c1b7b019c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx2YW4lMjB3aXRoJTIwY2FtZXJhc3xlbnwwfHx8fDE3NTk1ODQ2NTB8MA&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "van with cameras"
     },
     {
       "id": "demo-case-wireless",
       "description": "Wireless video transmitter in a case",
-      "imageUrl": "https://images.unsplash.com/photo-1581431889858-63875323855a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3aXJlbGVzcyUyMHRyYW5zbWl0dGVyJTIwYm94fGVufDB8fHx8MTc1OTU4NDY1MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1581431889858-63875323855a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3aXJlbGVzcyUyMHRyYW5zbWl0dGVyJTIwYm94fGVufDB8fHx8MTc1OTU4NDY1MHww&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "wireless transmitter box"
+    },
+    {
+      "id": "person-1",
+      "description": "Team member 1 portrait",
+      "imageUrl": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=400&h=400&fit=crop",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "person-2",
+      "description": "Team member 2 portrait",
+      "imageUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=400&h=400&fit=crop",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "person-3",
+      "description": "Team member 3 portrait",
+      "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&h=400&fit=crop",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "office-photo",
+      "description": "A modern office space",
+      "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=600&h=450&fit=crop",
+      "imageHint": "modern office"
+    },
+    {
+      "id": "telematics-tracking",
+      "description": "Vehicle tracking on a map illustration",
+      "imageUrl": "https://images.unsplash.com/photo-1560520655-54336c583645?q=80&w=400&h=250&fit=crop",
+      "imageHint": "map tracking"
+    },
+    {
+      "id": "telematics-geofence",
+      "description": "Geofence on a map illustration",
+      "imageUrl": "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=400&h=250&fit=crop",
+      "imageHint": "map geofence"
+    },
+    {
+      "id": "telematics-reporting",
+      "description": "Charts and graphs for reporting",
+      "imageUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=400&h=250&fit=crop",
+      "imageHint": "data charts"
+    },
+    {
+      "id": "telematics-alerts",
+      "description": "Alert notifications on a smartphone",
+      "imageUrl": "https://images.unsplash.com/photo-1558502521-19d690a2a44a?q=80&w=400&h=250&fit=crop",
+      "imageHint": "phone alerts"
+    },
+    {
+      "id": "telematics-driver-behavior",
+      "description": "Dashboard showing driver behavior",
+      "imageUrl": "https://images.unsplash.com/photo-1560264280-88b68371db39?q=80&w=400&h=250&fit=crop",
+      "imageHint": "analytics dashboard"
+    },
+    {
+      "id": "geotab-logo",
+      "description": "Geotab company logo",
+      "imageUrl": "https://images.unsplash.com/photo-1633355444131-4506f4c80344?q=80&w=500&h=250&fit=contain",
+      "imageHint": "company logo"
+    },
+    {
+      "id": "mdr-644",
+      "description": "MDR-644 digital video recorder",
+      "imageUrl": "https://images.unsplash.com/photo-1597354984706-fac992d9306f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwcm9kdWN0JTIwaW1hZ2V8ZW58MHx8fHwxNzU4NzM3OTE3fDA&ixlib=rb-4.1.0&q=80&w=400&h=250&fit=cover",
+      "imageHint": "video recorder"
+    },
+    {
+      "id": "backeye-360-system",
+      "description": "Backeye 360 camera system view",
+      "imageUrl": "https://images.unsplash.com/photo-1541643600914-78b084683601?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwcm9kdWN0JTIwaW1hZ2V8ZW58MHx8fHwxNzU4NzM3OTE3fDA&ixlib=rb-4.1.0&q=80&w=400&h=250&fit=cover",
+      "imageHint": "360 camera"
+    },
+    {
+      "id": "ai-dashcam",
+      "description": "AI dashcam product",
+      "imageUrl": "https://images.unsplash.com/photo-1560769629-975ec94e6a86?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwcm9kdWN0JTIwaW1hZ2V8ZW58MHx8fHwxNzU4NzM3OTE3fDA&ixlib=rb-4.1.0&q=80&w=400&h=250&fit=cover",
+      "imageHint": "AI dashcam"
     }
   ]
 }
