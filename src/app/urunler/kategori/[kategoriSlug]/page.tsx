@@ -1,240 +1,16 @@
-'use client';
 import { products } from '@/lib/data';
-import { ProductCard } from '@/components/product-card';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import { ChevronLeft, Check, Download } from 'lucide-react';
 import { PlaceholderContent } from '@/components/placeholder-content';
 import { categoryToSlug, slugToCategory, allCategories } from '@/lib/product-categories';
-import { SubCategoryShowcase } from '@/components/subcategory-showcase';
-import Image from 'next/image';
-import { findImage } from '@/lib/placeholder-images';
-import { motion } from "framer-motion";
-
-const cameraMonitorSubCategories = [
-    {
-        title: '360 Derece Kameralar',
-        slug: 'backeye-360',
-        description: 'Backeye®360, sürücüye aracın etrafının tam bir \'kuş bakışı\' görünümünü gerçek zamanlı olarak tek bir görüntüde sunan akıllı bir kamera monitör sistemidir.',
-        features: ['Kör Noktaları Ortadan Kaldırır', 'Gerçek Zamanlı Görünümler', 'Özelleştirilebilir Görünümler', 'Kaydedilebilir'],
-        image: 'placeholder-1',
-        imageHint: '360 camera view',
-    },
-    {
-        title: 'Araca Monte Kameralar',
-        slug: 'vehicle-mounted-cameras',
-        description: 'Kalibre edilmiş kameralar, aracın veya makinenin kör noktaları dahil tüm çevresini yakalar. Tek bir kamera, 180°\'nin üzerinde bir görüş açısıyla aracın bir tam yanını kapsar.',
-        features: ['Kör Noktaları Ortadan Kaldırır', 'Gerçek Zamanlı Görünümler', 'Ultra Geniş Açılı Kameralar', 'Kaydedilebilir'],
-        image: 'placeholder-4',
-        imageHint: 'vehicle camera',
-    },
-    {
-        title: 'İnsan Formu Tanıma (HFR) Kameraları',
-        slug: 'human-form-recognition-cameras',
-        description: 'Yapay Zeka kullanarak, bu kameralar önceden tanımlanmış algılama bölgesi içindeki insan formunu algılar ve olası bir çarpışmadan önce sürücüyü görsel ve/veya sesli olarak güvenilir bir şekilde uyarır.',
-        features: ['Tak ve Çalıştır', 'Yapay Zeka', 'Görüntü İşleme & Yer Paylaşımı', 'Sıfır Saniye Başlatma Süresi'],
-        image: 'placeholder-3',
-        imageHint: 'AI camera detection',
-    },
-     {
-        title: '360° Kameralar ve AI Teknolojisi',
-        slug: 'backeye-360-ai',
-        description: 'Backeye®360 AI Akıllı algılama, insanları tanımlamak ve tüm kör noktaları etkili bir şekilde ortadan kaldırmak için son teknoloji AI teknolojisiyle geliştirilmiş, 360 derecelik yüksek çözünürlüklü dört kameralı bir sistemdir.',
-        image: 'placeholder-2',
-        imageHint: 'AI 360 camera',
-    },
-    {
-        title: 'IP Kameralar',
-        slug: 'ip-cameras',
-        description: 'Tüm IP kameralar yüksek çözünürlüklü video, web tarayıcı erişimi ve CMOS teknolojisine sahiptir, bu da sert ışıkta görüntüde lekelenme ve daha az parlama anlamına gelir.',
-        features: ['Yüksek Çözünürlüklü Görüntüler', 'Çoklu Kameralar', 'Kanıt Yakalama', 'Kaydedilebilir'],
-        image: 'placeholder-12',
-        imageHint: 'IP camera',
-    },
-    {
-        title: 'Monitörler',
-        slug: 'monitors',
-        description: 'Monitörler, sürücülerin ve operatörlerin güvenli bir şekilde manevra yapmasını ve araç kullanmasını sağlar. Brigade monitörleri, sürücünün insanları veya engelleri de içeren kamera görüntüsündeki her şeyi canlı bir beslemeyle görmesine yardımcı olarak kör noktaları görmesine ve geri vites yardımı sunmasına olanak tanır.',
-        features: ['Yüksek Çözünürlüklü', 'Gerçek Zamanlı Görünümler', 'Ses', 'Çoklu Kamera Girişleri'],
-        image: 'placeholder-14',
-        imageHint: 'in-cab monitor',
-    },
-    {
-        title: 'Kablosuz Kamera Monitör Sistemi',
-        slug: 'wireless-camera-system',
-        description: 'Büyük bir araca veya makineye bir geri görüş kamerası sistemi bağlamak, kurulacak kablo miktarı nedeniyle zaman alıcı ve zahmetli olabilir. Brigade’in kablosuz sistemi fazla kablolamayı ortadan kaldırır, iki saate kadar montaj süresinden tasarruf sağlar ve mafsallı araçlarda ek geri çekilebilir sarmal kablo ihtiyacını ortadan kaldırır.',
-        features: ['Uyumluluk', 'Verici Eşleştirme', 'Basitleştirilmiş', 'Değiştirilebilir'],
-        image: 'placeholder-1',
-        imageHint: 'wireless camera system'
-    },
-    {
-        title: 'AI Teknolojili Kameralar',
-        slug: 'ai-cameras',
-        description: 'Acil servis araçlarının sürücüleri sayısız tehlikeyle karşılaşır. Olaylara hızla müdahale etmek, yoğun trafikte ve kalabalık yaya alanlarında yüksek hızlarda gezinmeyi gerektirir. Yapay Zeka kullanarak, kameralar önceden tanımlanmış algılama bölgesi içindeki yayaları algılar ve tanır ve olası bir çarpışmadan önce sürücüyü görsel ve/veya sesli olarak güvenilir bir şekilde uyarır.',
-        image: 'placeholder-19',
-        imageHint: 'AI camera technology',
-    },
-];
-
-const detectionSystemSubCategories = [
-    {
-        title: 'Backsense® Radar',
-        slug: 'backsense-radar',
-        description: 'Backsense® ağır hizmet tipi radar yakınlık sensör sistemleri, kör noktalardaki nesneleri tespit etmek için tasarlanmıştır ve olayları önemli ölçüde azaltır. Sensörler, sabit algılama menzilli modellerde ve özel algılama alanlarına izin veren ve sabit nesneleri veya kaportayı kalibre etme yeteneğine sahip tamamen programlanabilir modellerde mevcuttur.',
-        features: ['Yanlış Uyarıları En Aza İndirir', 'Sesli Sürücü Uyarıları', 'Hem yol içi hem de yol dışı uygulamalar için uygundur', 'Ağır Hizmet Tipi'],
-        image: 'placeholder-24',
-        imageHint: 'radar sensor',
-    },
-    {
-        title: 'Radar Predict',
-        slug: 'radar-predict',
-        description: 'Yapay Zeka teknolojisini kullanan Radar Predict, hem aracın hem de bisikletlinin hız ve yönü gibi verileri analiz eden çift radarlı bir sistemdir. Statik ve hareketli nesneler arasında ayrım yaparak, Radar Predict algoritması bir bisikletli ile çarpışma olasılığı yüksek olduğunda sürücüyü uyarır.',
-        features: ['Yan kör nokta yönetmeliklerine uygundur', 'Yanlış alarmları azaltır', 'Zahmetsiz kurulum', 'Geniş algılama alanı'],
-        image: 'placeholder-22',
-        imageHint: 'AI radar prediction',
-    },
-    {
-        title: 'Ultrasonik Sensörler',
-        slug: 'ultrasonic-sensors',
-        description: 'Ultrasonik sensörler kullanarak engel tespiti, hem araç hasarını hem de yayalar veya bisikletlilerle çarpışmaları en aza indirebilir. Kapalı alanlarda çalışan veya düşük hızda manevra yapan karayolu ticari araçları için mükemmeldir.',
-        features: ['Sensör ve Montaj Ekipmanları', 'Görsel ve Sesli Ekran', 'Algoritma ECU', 'Sonradan Takılabilir'],
-        image: 'placeholder-21',
-        imageHint: 'ultrasonic parking sensor',
-    },
-    {
-        title: 'Ön Radar',
-        slug: 'front-radar',
-        description: 'DVS Ön Radar ve R159 Ön Radar, aracın önünde 180° algılama açısına sahip gelişmiş çift radarlı çarpışma tahmin sistemleridir. Sürücü, yakın çevrede savunmasız bir yol kullanıcısı tespit edilirse, görsel ve sesli sinyallerle ön yardım radarı aracılığıyla uyarılır.',
-        features: ['Görsel ve Sesli Ekran', 'Yanlış alarmları azaltır', 'Zahmetsiz kurulum', 'Geniş algılama alanı'],
-        image: 'placeholder-23',
-        imageHint: 'front vehicle radar',
-    },
-    {
-        title: 'ZoneSafe® RFID Tespiti',
-        slug: 'zonesafe-rfid-detection',
-        description: 'ZoneSafe®, araçlar ve mobil tesisler etrafında algılama bölgeleri oluşturmak için Radyo Frekansı Tanımlama (RFID) teknolojisini kullanır. Sistem, işçiler ve araçlar için kısıtlı veya kontrollü erişim için bariyerleri, kapıları vb. tetiklemek üzere bağlanabilir.',
-        features: ['Görüş Hattı Gerekmez', 'Saha Güvenliğini Artırır', 'Tam 360° Algılama', 'Benzersiz Etiket ID'],
-        image: 'placeholder-25',
-        imageHint: 'RFID safety system',
-    },
-    {
-        title: 'Careye® AI Dönüş Asistanı',
-        slug: 'careye-ai-turn-assist',
-        description: 'CAREYE®, bir araca takılan kameralardan gelen görüntüleri doğru bir şekilde değerlendirmek için yapay zeka kullanır ve yakındaki insanların veya nesnelerin gelecekteki hareket seyrini hesaplayabilir. Bu verilere dayanarak, sistem sürücüyü olası bir çarpışma gerçekleşmeden önce gerçek zamanlı olarak güvenilir ve doğru bir şekilde uyarır.',
-        features: ['Yanlış Pozitif Uyarıları En Aza İndirir', 'Her Türlü Araç İçin Uygundur', 'Gelişmiş Algılama', 'Nesneleri Sınıflandırma Yeteneği'],
-        image: 'placeholder-21',
-        imageHint: 'AI collision warning',
-    },
-];
-
-const driverSafetySystemSubCategories = [
-    {
-        title: 'Sürücü Güvenlik Kameraları',
-        slug: 'driver-safety-cameras',
-        description: 'Sürücü uyuşukluğu ve uyanıklık uyarı sistemleri (DDAW), dikkatsizlik, dikkat dağınıklığı ve yorgunluktan kaynaklanan potansiyel sorunlara karşı sürücü uyarıları sağlamak için AI teknolojisini kullanan kompakt, kabin içi sürücü destek sistemleridir.',
-        features: ['Uyuşukluk', 'Dikkat Dağınıklığı', 'Esneme', 'Cep telefonu kullanımı', 'Emniyet kemeri takmama', 'Sigara içme'],
-        image: 'placeholder-20',
-        imageHint: 'driver safety camera',
-    },
-    {
-        title: 'MDR AI Kameralar',
-        slug: 'mdr-ai-cameras',
-        description: 'MDR AI Kameralar, dikkatsizlik, dikkat dağınıklığı ve yorgunluktan kaynaklanan potansiyel sorunlara karşı sürücü uyarıları sağlamak için AI teknolojisini kullanan kompakt, kabin içi sürücü destek sistemleridir.',
-        features: [
-            'Sürücü yorgunluğu', 
-            'Esneme', 
-            'Sürücü dikkat dağınıklığı', 
-            'El cihazı kullanma', 
-            'Sigara içme',
-            'Şeritten ayrılma (LDW)',
-            'Takip mesafesi uyarısı (HMW)',
-            'Önden çarpışma uyarısı (FCW)'
-        ],
-        image: 'placeholder-19',
-        imageHint: 'AI dashcam',
-    },
-];
-
-const recordingSystemSubCategories = [
-    {
-        title: 'Dijital Kayıt Cihazları (MDR)',
-        slug: 'digital-recorders-mdr',
-        description: 'Brigade\'in MDR dijital video kayıt cihazları, bir olay durumunda yanılmaz kanıtlar ve doğru tanıklıklar sağlayarak ideal çözümü sunar. Sizi ve sürücülerinizi koruduğundan emin olabilirsiniz.',
-        features: ['Koruma Sağlar', 'En İyi Sürücü Pratiklerini Teşvik Eder', 'Vandalizmi Caydırır', 'İç Huzuru'],
-        image: 'placeholder-16',
-        imageHint: 'digital video recorder',
-    },
-    {
-        title: 'Araç Kameraları (Dashcams)',
-        slug: 'dashcams',
-        description: 'Brigade\'in Araç Kameraları – kompakt, birleşik kamera ve kayıt sistemleri – araç olayları durumunda kanıt sağlar. Avuç içi büyüklüğündeki cihazlar, ön camınıza kolayca takılarak ilerideki yolu kaydetmenizi sağlar.',
-        features: ['Yüksek Çözünürlük', 'Konum ve Hız', 'Çoklu Kayıt Modları', 'İndirilebilir Yazılım'],
-        image: 'placeholder-18',
-        imageHint: 'dashcam view',
-    },
-    {
-        title: 'Yapay Zeka Destekli Araç Kameraları',
-        slug: 'ai-connected-dashcams',
-        description: 'Yapay Zeka Destekli Araç Kamerası, olay uyarıları, yüksek çözünürlüklü olay kaydı ve sürücü davranışını izlemek için AI teknolojisini kullanan, ön cama monte edilen kompakt bir çift kamera sistemidir.',
-        features: ['Yapay Zeka', '4G Bağlantısı', '1TB Depolama', 'Yüksek Çönürlük'],
-        image: 'placeholder-19',
-        imageHint: 'AI dashcam interface',
-    },
-    {
-        title: 'AI Sürücü Dikkat Dağınıklığı Kameraları',
-        slug: 'ai-driver-distraction-cameras',
-        description: 'AI Sürücü Dikkat Dağınıklığı Kameraları, sürücü dikkat dağınıklığını ve yorgunluğunu azaltmak için tasarlanmış gelişmiş bir güvenlik sistemidir. Aracın içine yerleştirilen kamera, sürücünün yüzünü, gözlerini ve kafa hareketlerini sürekli olarak izler. Dahili AI, dikkat dağınıklığı ve yorgunluk belirtilerini tespit etmek için sürücüyü analiz eder ve sürücüye sesli uyarılar verir.',
-        features: ['Daha Güvenli Yollar', 'Aşamalı Uyarılar', 'Sürücü Güvencesi'],
-        image: 'placeholder-20',
-        imageHint: 'driver monitoring camera',
-    },
-];
-
-const warningSystemSubCategories = [
-    {
-        title: 'Sessiz Araç Ses Cihazı (AVAS)',
-        slug: 'quiet-vehicle-sounder-avas',
-        description: 'Brigade, patentli bbs-tek® teknolojisini entegre eden çok frekanslı bir Sessiz Araç Ses Cihazı geliştirmiştir. bbs-tek®, geniş bir Beyaz Ses® frekans aralığı kullanır. Bu, aracın doğrudan yolundaki herkesin sesin nereden ve hangi yönden geldiğini anında bulmasını ve gerekirse kaçınma eylemi yapmasını sağlar. Daha güvenli bir alternatif yoktur.',
-        features: ['Yayaları Uyarır', 'Patentli Teknoloji', 'Otomatik Ses Seviyesi', 'Kesme Özelliği'],
-        image: 'placeholder-27',
-        imageHint: 'vehicle sounder device',
-    },
-    {
-        title: 'Geri Vites ve Uyarı Alarmları',
-        slug: 'reversing-warning-alarms',
-        description: 'Patentli Beyaz Ses® alarmlarımız dünyanın en güvenli geri vites alarmlarıdır ve gürültü rahatsızlığına neden olmaz. Takması basit ve nispeten ucuz olan ‘şşş şşş’ beyaz gürültü, kulaklık veya kulak koruyucu takarken bile veya işitme zorluğu çeken insanlar için bile tehlike bölgesinde son derece net bir şekilde duyulabilir.',
-        features: ['Gürültü Rahatsızlığına Neden Olmaz', '-5 dB Daha Sessiz', 'Gece Teslimatları', 'Ömür Boyu Garanti'],
-        image: 'placeholder-26',
-        imageHint: 'reversing alarm',
-    },
-    {
-        title: 'Tonal Alarmlar',
-        slug: 'tonal-alarms',
-        description: 'Bu alarmlar, ortam gürültüsünü aşarak yayaları ve çalışanları hareket eden araçların veya ekipmanların varlığına karşı uyarmak için kolayca tanınabilen belirli bir ton yaymak üzere tasarlanmıştır. Tonal alarmları kullanmanın birincil nedeni, bölgedeki diğer seslerin üzerinde duyulabilen net, sesli bir uyarı sağlayarak olay ve yaralanma riskini azaltmaktır.',
-        features: ['Akıllı Alarmlar', 'Ağır Hizmet', 'Orta Hizmet', 'Hafif Hizmet'],
-        image: 'placeholder-28',
-        imageHint: 'industrial alarm',
-    },
-];
-
-const sectionVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.15,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
-};
+import { 
+    cameraMonitorSubCategories, 
+    detectionSystemSubCategories, 
+    driverSafetySystemSubCategories, 
+    recordingSystemSubCategories, 
+    warningSystemSubCategories 
+} from '@/lib/data/subcategories';
+import { UrunKategoriClientPage } from '@/components/urun-kategori-client-page';
 
 export async function generateStaticParams() {
-    // Exclude 'brigade-van' as it has its own page now
     return allCategories
         .filter(cat => categoryToSlug(cat) !== 'brigade-van')
         .map((category) => ({
@@ -257,7 +33,7 @@ export default function UrunKategoriPage({ params }: { params: { kategoriSlug: s
   const isRecordingSystem = params.kategoriSlug === 'kayit-sistemleri';
   const isWarningSystem = params.kategoriSlug === 'uyari-sistemleri';
   
-  let subCategories = [];
+  let subCategories: any[] = [];
   if (isCameraMonitor) subCategories = cameraMonitorSubCategories;
   else if (isDetectionSystem) subCategories = detectionSystemSubCategories;
   else if (isDriverSafety) subCategories = driverSafetySystemSubCategories;
@@ -279,76 +55,13 @@ export default function UrunKategoriPage({ params }: { params: { kategoriSlug: s
     pageDescription = "Brigade Electronics, kentsel ve çalışma ortamlarındaki alarmların etkinliği sorunlarını ele alan ilk geri vites alarmı modellerini tanıttığından beri geri vites alarmı teknolojisinin ön saflarında yer almaktadır.";
   }
 
+  const pageProps = {
+    categoryName,
+    pageDescription,
+    hasSpecialLayout,
+    subCategories,
+    filteredProducts,
+  };
 
-  return (
-    <>
-      <motion.div 
-        className="bg-secondary"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, ease: "easeOut" }}
-      >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
-            <motion.div 
-                className="inline-block"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.2, duration: 0.5 }}
-            >
-                <Button asChild variant="ghost" size="sm">
-                    <Link href="/urunler">
-                        <ChevronLeft className="mr-2 h-4 w-4" />
-                        Tüm Kategoriler
-                    </Link>
-                </Button>
-            </motion.div>
-          <motion.h1 className="text-4xl font-bold font-headline mt-2" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.6 }}>{categoryName}</motion.h1>
-          <motion.p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.6 }}>
-            {pageDescription}
-          </motion.p>
-        </div>
-      </motion.div>
-      <motion.div 
-        className="container mx-auto px-4 sm:px-6 lg:px-8 py-16"
-        variants={sectionVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        <main>
-            {hasSpecialLayout ? (
-                <motion.div className="space-y-16" variants={sectionVariants}>
-                    {subCategories.map((subCat, index) => (
-                        <motion.div key={subCat.slug} variants={itemVariants}>
-                          <SubCategoryShowcase
-                              {...subCat}
-                              direction={index % 2 === 0 ? 'normal' : 'reverse'}
-                          />
-                        </motion.div>
-                    ))}
-                </motion.div>
-            ) : (
-                <>
-                    <motion.div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-6" variants={sectionVariants}>
-                        {filteredProducts.map(product => (
-                            <motion.div key={product.id} variants={itemVariants}>
-                              <ProductCard product={product} />
-                            </motion.div>
-                        ))}
-                    </motion.div>
-                    {filteredProducts.length === 0 && (
-                        <motion.div className="text-center py-12" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}>
-                            <Card className="max-w-md mx-auto p-8 bg-card">
-                                <p className="text-muted-foreground">Bu kategoride gösterilecek ürün bulunmamaktadır.</p>
-                                <Button asChild className="mt-4">
-                                    <Link href="/urunler">Diğer Kategorilere Göz Atın</Link>
-                                </Button>
-                            </Card>
-                        </motion.div>
-                    )}
-                </>
-            )}
-        </main>
-      </motion.div>
-    </>
-  );
+  return <UrunKategoriClientPage {...pageProps} />;
 }
