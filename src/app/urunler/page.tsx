@@ -1,4 +1,4 @@
-
+'use client';
 import Link from 'next/link';
 import Image from 'next/image';
 import { findImage } from '@/lib/placeholder-images';
@@ -7,6 +7,7 @@ import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { products } from '@/lib/data';
 import { categoryToSlug } from '@/lib/product-categories';
+import { motion } from "framer-motion";
 
 const productCategories = [
   {
@@ -60,12 +61,31 @@ const productCategories = [
   },
 ];
 
+const sectionVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
 
 export default function UrunlerPage() {
   return (
     <div className="bg-background text-foreground">
       {/* Hero Section */}
-      <div className="relative h-[400px] md:h-[500px] bg-gray-800 text-white overflow-hidden">
+      <motion.div 
+        className="relative h-[400px] md:h-[500px] bg-gray-800 text-white overflow-hidden"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+      >
         <div className="absolute inset-0 z-0">
           <Image 
               src={findImage('hero-background')?.imageUrl || 'https://picsum.photos/seed/hero-bg/1920/1080'}
@@ -78,23 +98,35 @@ export default function UrunlerPage() {
            <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-black/50 to-black" />
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
-            <div className="relative z-10 w-full md:w-2/3 lg:w-1/2">
+            <motion.div 
+                className="relative z-10 w-full md:w-2/3 lg:w-1/2"
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+            >
                 <h1 className="text-4xl md:text-6xl font-bold font-headline max-w-md text-white">Ticari Araç Güvenlik Ürünleri</h1>
                 <p className="mt-6 text-lg text-white/90 max-w-xl">
                   Brigade olarak, ticari ve arazi araçları için karmaşık güvenlik sorunlarını yönetme ve kör noktaları ortadan kaldırma konusunda yılların deneyimine sahibiz. Misyonumuz çarpışmaları önlemek ve hayat kurtarmaktır.
                 </p>
-            </div>
+            </motion.div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Categories Section */}
       <div className="bg-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h2 className="text-3xl font-bold font-headline text-center mb-12 text-foreground">Ürün Kategorilerimiz</h2>
+        <motion.div 
+          className="container mx-auto px-4 sm:px-6 lg:px-8 py-16"
+          variants={sectionVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+        >
+          <motion.h2 variants={itemVariants} className="text-3xl font-bold font-headline text-center mb-12 text-foreground">Ürün Kategorilerimiz</motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {productCategories.map((category, index) => (
-                  <Link href={category.link} key={index} className="group block">
-                    <Card className="flex flex-col h-full overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border-border bg-card">
+                <motion.div key={index} variants={itemVariants} whileHover={{ y: -5, transition: { duration: 0.2 } }}>
+                  <Link href={category.link} className="group block h-full">
+                    <Card className="flex flex-col h-full overflow-hidden transition-shadow duration-300 hover:shadow-xl border-border bg-card">
                       <CardHeader className='p-0 relative aspect-video'>
                           {category.image && (
                             <Image
@@ -102,7 +134,7 @@ export default function UrunlerPage() {
                                 alt={category.title}
                                 fill
                                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                className="object-cover"
+                                className="object-cover transition-transform duration-300 group-hover:scale-105"
                                 data-ai-hint={category.imageHint}
                             />
                           )}
@@ -126,9 +158,10 @@ export default function UrunlerPage() {
                       </div>
                     </Card>
                   </Link>
+                </motion.div>
               ))}
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

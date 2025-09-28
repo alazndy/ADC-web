@@ -1,4 +1,4 @@
-
+'use client';
 import { products } from '@/lib/data';
 import { ProductCard } from '@/components/product-card';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
@@ -10,6 +10,7 @@ import { categoryToSlug, slugToCategory, allCategories } from '@/lib/product-cat
 import { SubCategoryShowcase } from '@/components/subcategory-showcase';
 import Image from 'next/image';
 import { findImage } from '@/lib/placeholder-images';
+import { motion } from "framer-motion";
 
 const cameraMonitorSubCategories = [
     {
@@ -176,7 +177,7 @@ const recordingSystemSubCategories = [
         title: 'Yapay Zeka Destekli Araç Kameraları',
         slug: 'ai-connected-dashcams',
         description: 'Yapay Zeka Destekli Araç Kamerası, olay uyarıları, yüksek çözünürlüklü olay kaydı ve sürücü davranışını izlemek için AI teknolojisini kullanan, ön cama monte edilen kompakt bir çift kamera sistemidir.',
-        features: ['Yapay Zeka', '4G Bağlantısı', '1TB Depolama', 'Yüksek Çözünürlük'],
+        features: ['Yapay Zeka', '4G Bağlantısı', '1TB Depolama', 'Yüksek Çönürlük'],
         image: 'placeholder-19',
         imageHint: 'AI dashcam interface',
     },
@@ -217,6 +218,20 @@ const warningSystemSubCategories = [
     },
 ];
 
+const sectionVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
 
 export async function generateStaticParams() {
     // Exclude 'brigade-van' as it has its own page now
@@ -267,55 +282,73 @@ export default function UrunKategoriPage({ params }: { params: { kategoriSlug: s
 
   return (
     <>
-      <div className="bg-secondary">
+      <motion.div 
+        className="bg-secondary"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+      >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
-            <div className="inline-block">
+            <motion.div 
+                className="inline-block"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.2, duration: 0.5 }}
+            >
                 <Button asChild variant="ghost" size="sm">
                     <Link href="/urunler">
                         <ChevronLeft className="mr-2 h-4 w-4" />
                         Tüm Kategoriler
                     </Link>
                 </Button>
-            </div>
-          <h1 className="text-4xl font-bold font-headline mt-2">{categoryName}</h1>
-          <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+            </motion.div>
+          <motion.h1 className="text-4xl font-bold font-headline mt-2" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.6 }}>{categoryName}</motion.h1>
+          <motion.p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.6 }}>
             {pageDescription}
-          </p>
+          </motion.p>
         </div>
-      </div>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      </motion.div>
+      <motion.div 
+        className="container mx-auto px-4 sm:px-6 lg:px-8 py-16"
+        variants={sectionVariants}
+        initial="hidden"
+        animate="visible"
+      >
         <main>
             {hasSpecialLayout ? (
-                <div className="space-y-16">
+                <motion.div className="space-y-16" variants={sectionVariants}>
                     {subCategories.map((subCat, index) => (
-                        <SubCategoryShowcase
-                            key={subCat.slug}
-                            {...subCat}
-                            direction={index % 2 === 0 ? 'normal' : 'reverse'}
-                        />
+                        <motion.div key={subCat.slug} variants={itemVariants}>
+                          <SubCategoryShowcase
+                              {...subCat}
+                              direction={index % 2 === 0 ? 'normal' : 'reverse'}
+                          />
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
             ) : (
                 <>
-                    <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-6">
+                    <motion.div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-6" variants={sectionVariants}>
                         {filteredProducts.map(product => (
-                            <ProductCard key={product.id} product={product} />
+                            <motion.div key={product.id} variants={itemVariants}>
+                              <ProductCard product={product} />
+                            </motion.div>
                         ))}
-                    </div>
+                    </motion.div>
                     {filteredProducts.length === 0 && (
-                        <div className="text-center py-12">
-                            <Card className="max-w-md mx-auto p-8">
+                        <motion.div className="text-center py-12" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}>
+                            <Card className="max-w-md mx-auto p-8 bg-card">
                                 <p className="text-muted-foreground">Bu kategoride gösterilecek ürün bulunmamaktadır.</p>
                                 <Button asChild className="mt-4">
                                     <Link href="/urunler">Diğer Kategorilere Göz Atın</Link>
                                 </Button>
                             </Card>
-                        </div>
+                        </motion.div>
                     )}
                 </>
             )}
         </main>
-      </div>
+      </motion.div>
     </>
   );
 }

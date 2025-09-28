@@ -1,6 +1,7 @@
 
 "use client";
 
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { findImage } from "@/lib/placeholder-images";
@@ -21,38 +22,68 @@ interface SubCategoryShowcaseProps {
 export function SubCategoryShowcase({ title, slug, description, features, image: imageId, imageHint, direction = 'normal' }: SubCategoryShowcaseProps) {
     const image = findImage(imageId);
 
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: { staggerChildren: 0.3, delayChildren: 0.2 }
+        }
+    };
+
+    const itemVariants = {
+        hidden: { opacity: 0, x: direction === 'reverse' ? 100 : -100 },
+        visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } }
+    };
+    
+    const textVariants = {
+        hidden: { opacity: 0, x: direction === 'reverse' ? -100 : 100 },
+        visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } }
+    };
+
+    const featureVariants = {
+        hidden: { opacity: 0, x: 20 },
+        visible: { opacity: 1, x: 0 }
+    };
+
     return (
-        <div className={cn("grid md:grid-cols-2 gap-8 md:gap-12 items-center", direction === 'reverse' && 'md:[&>*:last-child]:order-first')}>
-            <div className="aspect-square relative rounded-lg overflow-hidden group border bg-card">
+        <motion.div 
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            className={cn("grid md:grid-cols-2 gap-8 md:gap-12 items-center", direction === 'reverse' && 'md:[&>*:last-child]:order-first')}>
+            <motion.div variants={itemVariants} className="aspect-square relative rounded-lg overflow-hidden group border bg-card">
                  {image && (
                     <Image
                         src={image.imageUrl}
                         alt={title}
                         fill
+                        sizes="(min-width: 768px) 50vw, 100vw"
                         className="object-contain p-8 group-hover:scale-105 transition-transform duration-300"
                         data-ai-hint={imageHint}
                     />
                 )}
-            </div>
-            <div>
+            </motion.div>
+            <motion.div variants={textVariants}>
                 <h2 className="text-3xl font-bold font-headline">{title}</h2>
                 <p className="mt-4 text-muted-foreground text-base">{description}</p>
                 {features && features.length > 0 && (
-                    <ul className="mt-6 space-y-3">
+                    <motion.ul 
+                        variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
+                        className="mt-6 space-y-3">
                         {features.map((feature, index) => (
-                            <li key={index} className="flex items-center gap-3">
+                            <motion.li key={index} variants={featureVariants} className="flex items-center gap-3">
                                 <Check className="h-5 w-5 text-primary flex-shrink-0" />
                                 <span className="text-foreground/90">{feature}</span>
-                            </li>
+                            </motion.li>
                         ))}
-                    </ul>
+                    </motion.ul>
                 )}
                 <Button asChild className="mt-8">
-                    {/* This link should eventually go to a more specific sub-category or product list */}
                     <Link href={`/urunler/kategori/kamera-monitor-sistemleri`}>Daha Fazla Bilgi Edin</Link>
                 </Button>
-            </div>
-        </div>
+            </motion.div>
+        </motion.div>
     );
 }
 
