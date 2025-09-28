@@ -57,7 +57,8 @@ export function SubCategoryShowcase({ title, slug, description, features, image:
                     <Image
                         src={image.imageUrl}
                         alt={title}
-                        fill
+                        width={600}
+                        height={600}
                         sizes="(min-width: 768px) 50vw, 100vw"
                         className="object-contain p-8 group-hover:scale-105 transition-transform duration-300"
                         data-ai-hint={imageHint}
@@ -86,4 +87,3 @@ export function SubCategoryShowcase({ title, slug, description, features, image:
         </motion.div>
     );
 }
-
