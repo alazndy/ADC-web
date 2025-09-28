@@ -4,4 +4,11 @@ import { sectors } from './sectors';
 import { services, techSolutions } from './services';
 import { brigadeVanProducts } from './brigade-van';
 
-export { products, projects, sectors, services, techSolutions, brigadeVanProducts };
+export { 
+    products, 
+    projects, 
+    sectors, 
+    services, 
+    techSolutions, 
+    brigadeVanProducts,
+};
