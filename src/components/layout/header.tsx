@@ -63,11 +63,7 @@ export default function Header() {
                 <Search className="h-5 w-5" />
                 <span className="sr-only">Ara</span>
               </Button>
-              <div className="hidden lg:block">
-                 <Button asChild>
-                    <Link href="/randevu-al">Randevu Al</Link>
-                 </Button>
-              </div>
+              
               <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
                 <SheetTrigger asChild className="lg:hidden">
                   <Button variant="ghost" size="icon" className={`text-foreground`}>
@@ -100,11 +96,6 @@ export default function Header() {
                         ))}
                       </ul>
                     </nav>
-                    <div className="p-4 border-t">
-                      <Button asChild className="w-full">
-                        <Link href="/randevu-al">Randevu Al</Link>
-                      </Button>
-                    </div>
                   </div>
                 </SheetContent>
               </Sheet>
