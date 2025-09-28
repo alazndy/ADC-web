@@ -35,7 +35,7 @@ const text = {
         y: 0,
     },
     animate: {
-        y: 40,
+        y: 0,
         transition: {
             duration: 1.5,
             ease: [0.87, 0, 0.13, 1],
@@ -63,7 +63,7 @@ export const Preloader = () => {
                 className='text-3xl font-bold font-headline fill-foreground'
                 x="50%" y="50%" 
                 textAnchor="middle"
-                dominantBaseline="middle"
+                dy="0.35em"
             >
                 ADC TASARIM
             </motion.text>

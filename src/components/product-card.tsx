@@ -25,12 +25,6 @@ const imageHoverVariants = {
   hover: { scale: 1.05, transition: { duration: 0.4, ease: "easeOut" } },
 };
 
-const titleHoverVariants = {
-    rest: { color: 'inherit' },
-    hover: { color: 'var(--primary)', transition: { duration: 0.3 } },
-};
-
-
 export function ProductCard({ product }: { product: Product }) {
   const image = findImage(product.imageUrls[0]);
 
@@ -62,14 +56,12 @@ export function ProductCard({ product }: { product: Product }) {
         </CardHeader>
         <div className="p-4 flex flex-col flex-grow">
           <Badge variant="outline" className="w-fit mb-2 text-xs">{product.category}</Badge>
-          <motion.div variants={titleHoverVariants}>
             <CardTitle className="text-base font-headline flex-grow mt-1 text-card-foreground">
-                <Link href={`/urunler/${product.slug}`} className="transition-colors">
+                <Link href={`/urunler/${product.slug}`} className="transition-colors group-hover:text-primary">
                     <span className="absolute inset-0" />
                     {product.name}
                 </Link>
             </CardTitle>
-          </motion.div>
           <p className="mt-2 text-sm text-muted-foreground line-clamp-2">{product.shortDescription}</p>
         </div>
       </Card>
