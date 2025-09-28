@@ -54,7 +54,7 @@ export function HeroSection() {
       >
         <CarouselContent className="h-full">
           {heroImages.map((image, index) => (
-            <CarouselItem key={index} className="h-full relative">
+            <CarouselItem key={index} className="relative">
               {image && (
                 <Image
                   src={image.imageUrl}
