@@ -128,12 +128,12 @@ export default function HakkimizdaPage() {
                                   {memberImage && (
                                       <div className="w-32 h-32 mx-auto relative">
                                           <Image 
-                                          src={memberImage.imageUrl} 
-                                          alt={member.name} 
-                                          fill
-                                          sizes="128px"
-                                          className="rounded-full object-cover shadow-md" 
-                                          data-ai-hint={member.imageHint} 
+                                            src={memberImage.imageUrl} 
+                                            alt={member.name} 
+                                            width={128}
+                                            height={128}
+                                            className="rounded-full object-cover shadow-md" 
+                                            data-ai-hint={member.imageHint} 
                                           />
                                       </div>
                                   )}
