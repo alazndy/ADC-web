@@ -7,7 +7,6 @@ import Footer from '@/components/layout/footer';
 import { FirebaseClientProvider } from '@/firebase';
 import { WhatsAppButton } from '@/components/whatsapp-button';
 import PageTransition from '@/components/page-transition';
-import { CustomCursor } from '@/components/custom-cursor';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' });
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space-grotesk', display: 'swap' });
@@ -26,7 +25,6 @@ export default function RootLayout({
     <html lang="tr" className={`${inter.variable} ${spaceGrotesk.variable} scroll-smooth`}>
       <body className="font-body antialiased bg-background text-foreground">
         <FirebaseClientProvider>
-            <CustomCursor />
           <div className="flex flex-col min-h-screen">
             <Header />
             <main className="flex-grow">
