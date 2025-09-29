@@ -26,7 +26,6 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
-  // Klavyeden arama kısayolu (Cmd+K veya Ctrl+K)
   useEffect(() => {
     const down = (e: KeyboardEvent) => {
       if (e.key === 'k' && (e.metaKey || e.ctrlKey)) {
@@ -57,79 +56,80 @@ export default function Header() {
                   className="h-10 w-auto"
                 />
               </a>
+              <a href="https://brigade-electronics.com/" target="_blank" rel="noopener noreferrer">
+                <Image
+                  src="https://firebasestorage.googleapis.com/v0/b/adc-web-473522.firebasestorage.app/o/Company%20Logos%2FBrigade%2Fbsp-.PNG?alt=media&token=681c1759-61ec-4a0b-a093-e9d562b5e1a3"
+                  alt="Brigade BSP Logo"
+                  width={80}
+                  height={32}
+                  className="h-8 w-auto"
+                />
+              </a>
             </div>
             <nav className="hidden lg:flex items-center space-x-8">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`text-sm font-medium text-foreground/80 hover:text-primary transition-colors`}
-                  prefetch={false}
+                  className="text-sm font-medium transition-colors hover:text-primary"
                 >
                   {link.label}
                 </Link>
               ))}
             </nav>
             <div className="flex items-center space-x-2">
-              <Button variant="ghost" size="icon" onClick={() => setIsSearchOpen(true)} className={`text-foreground`}>
+              <Button variant="ghost" size="icon" onClick={() => setIsSearchOpen(true)} className="lg:flex">
                 <Search className="h-5 w-5" />
                 <span className="sr-only">Ara</span>
               </Button>
-              
               <ThemeToggle />
-
               <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
-                <SheetTrigger asChild className="lg:hidden">
-                  <Button variant="ghost" size="icon" className={`text-foreground`}>
+                <SheetTrigger asChild>
+                  <Button variant="ghost" size="icon" className="lg:hidden">
                     <Menu className="h-6 w-6" />
                     <span className="sr-only">Menüyü Aç</span>
                   </Button>
                 </SheetTrigger>
-                <SheetContent side="left" className="w-full max-w-sm bg-card p-0">
-                  <div className="flex flex-col h-full">
-                    <div className="flex items-center justify-between p-4 border-b">
-                       <div className="flex items-center space-x-4">
-                         <Logo />
-                         <div className="border-l border-gray-300 dark:border-gray-700 h-8"></div>
-                         <a href="https://brigade-electronics.com/" target="_blank" rel="noopener noreferrer">
-                           <Image
-                              src="https://firebasestorage.googleapis.com/v0/b/adc-web-473522.firebasestorage.app/o/Company%20Logos%2FBrigade%2FBrigade-logo-white-teal-dot.png?alt=media&token=94609207-14e0-4cb0-94fb-5aff75f25041"
-                              alt="Brigade Logo"
-                              width={80}
-                              height={32}
-                              className="h-8 w-auto"
-                           />
-                         </a>
-                       </div>
-                       <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(false)}>
-                         <X className="h-6 w-6" />
-                         <span className="sr-only">Menüyü Kapat</span>
-                       </Button>
+                <SheetContent side="left" className="w-full sm:w-3/4 md:w-1/2 p-0">
+                  <div className="flex justify-between items-center p-4 border-b">
+                    <div className="flex items-center space-x-2">
+                        <a href="https://brigade-electronics.com/" target="_blank" rel="noopener noreferrer">
+                            <Image
+                                src="https://firebasestorage.googleapis.com/v0/b/adc-web-473522.firebasestorage.app/o/Company%20Logos%2FBrigade%2FBrigade-logo-white-teal-dot.png?alt=media&token=94609207-14e0-4cb0-94fb-5aff75f25041"
+                                alt="Brigade Logo"
+                                width={80}
+                                height={32}
+                                className="h-8 w-auto"
+                            />
+                        </a>
                     </div>
-                    <nav className="flex-grow p-4">
-                      <ul className="space-y-4">
-                        {navLinks.map((link) => (
-                          <li key={link.href}>
-                            <Link
-                              href={link.href}
-                              className="block text-lg font-medium hover:text-primary transition-colors"
-                              onClick={() => setIsMobileMenuOpen(false)}
-                              prefetch={false}
-                            >
-                              {link.label}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </nav>
+                    <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(false)}>
+                      <X className="h-6 w-6" />
+                      <span className="sr-only">Menüyü Kapat</span>
+                    </Button>
                   </div>
+                  <nav className="flex-grow p-4">
+                    <ul className="space-y-4">
+                      {navLinks.map((link) => (
+                        <li key={link.href}>
+                          <Link
+                            href={link.href}
+                            className="block text-lg font-medium py-2 hover:text-primary"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            {link.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </nav>
                 </SheetContent>
               </Sheet>
             </div>
           </div>
         </div>
       </header>
-      {isSearchOpen && <SearchModal isOpen={isSearchOpen} onOpenChange={setIsSearchOpen} />}
+      <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
     </>
   );
 }
