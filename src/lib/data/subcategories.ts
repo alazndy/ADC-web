@@ -1,104 +1,142 @@
 
-export const cameraMonitorSubCategories = [
+interface SubCategory {
+    title: string;
+    slug: string;
+    description: string;
+    features?: string[];
+    image: string;
+    imageHint?: string;
+}
+
+export const cameraMonitorSubCategories: SubCategory[] = [
     {
-        title: "Backeye®360",
-        slug: "backeye-360",
-        description: "Backeye®360, dört ultra geniş açılı kameradan gelen canlı görüntüleri birleştirerek, sürücüye aracın çevresinin 360 derecelik, kuşbakışı bir görünümünü sunan akıllı bir kamera monitör sistemidir. Bu sistem, kör noktaları tamamen ortadan kaldırır ve düşük hızda manevra yapmayı kolaylaştırır.",
-        features: ["360° kuşbakışı görünüm", "Özelleştirilebilir ekran görünümleri", "Tetikleyicilerle otomatik görüntü değiştirme", "Ağır hizmet tipi kameralar"],
-        image: "placeholder-1",
-        imageHint: "360 camera view"
+        title: 'Backeye®360',
+        slug: 'backeye-360',
+        description: 'Backeye®360, dört ultra geniş açılı kameradan gelen canlı görüntüleri birleştirerek, aracın çevresinin gerçek zamanlı, tek bir kuşbakışı görüntüsünü oluşturan akıllı bir kamera monitör sistemidir. Kör noktaları tamamen ortadan kaldırarak sürücülerin düşük hızlarda güvenle manevra yapmasını sağlar.',
+        features: [
+            '360° kuşbakışı görünüm',
+            'Kör noktaları ortadan kaldırır',
+            'Düşük hızlarda manevra güvenliğini artırır',
+            'Özelleştirilebilir görüntüleme seçenekleri',
+            'Tetikleyicilerle (örneğin geri vites) otomatik ekran aktivasyonu'
+        ],
+        image: 'subcategory-backeye360',
+        imageHint: 'A commercial truck from above showing the 360 degree camera view',
     },
     {
-        title: "Kameralar",
-        slug: "kameralar",
-        description: "Geniş bir yelpazedeki ticari araçlar ve mobil makineler için tasarlanmış yüksek kaliteli kameralar. Elite, Select ve Essential serilerimiz, her türlü çalışma koşuluna ve bütçeye uygun çözümler sunar.",
-        features: ["Yüksek çözünürlük", "Geniş dinamik aralık (WDR)", "Kızılötesi LED'ler ile gece görüşü", "IP69K'ya kadar su ve toz geçirmezlik"],
-        image: "placeholder-4",
-        imageHint: "vehicle camera"
+        title: 'Akıllı Kameralar',
+        slug: 'akilli-kameralar',
+        description: 'Yapay zeka ile güçlendirilmiş bu kameralar, insanları ve araçları aktif olarak algılayarak sürücüyü potansiyel tehlikelere karşı uyarır. Sadece bir kamera değil, proaktif bir güvenlik asistanıdır.',
+        features: [
+            'Yapay Zeka ile İnsan Tespiti',
+            'Görsel ve Sesli Sürücü Uyarıları',
+            'Gereksiz uyarıları azaltmak için akıllı filtreleme',
+            'Geniş görüş açısı'
+        ],
+        image: 'subcategory-ai-camera',
+        imageHint: 'An AI camera detecting pedestrians near a construction vehicle',
     },
     {
-        title: "Monitörler",
-        slug: "monitorler",
-        description: "Brigade'in kamera monitörleri, sürücülerin ve operatörlerin kör noktaları net bir şekilde görmelerini sağlar. Çeşitli boyutlarda ve özelliklerde sunulan monitörlerimiz, her türlü araç kabinine ve uygulamaya uyum sağlar.",
-        features: ["Farklı ekran boyutları (5\" ila 10.4\")", "Çoklu kamera girişleri", "AHD ve CVBS uyumluluğu", "Ayna, gösterge paneli ve dörtlü ekran seçenekleri"],
-        image: "placeholder-14",
-        imageHint: "vehicle monitor"
+        title: 'Ağır Hizmet Tipi Kameralar',
+        slug: 'agir-hizmet-tipi-kameralar',
+        description: 'En zorlu koşullara dayanacak şekilde tasarlanmış bu kameralar, darbelere, titreşime, toza ve neme karşı dayanıklıdır. İnşaat, madencilik ve tarım gibi sektörler için idealdir.',
+        features: [
+            'Yüksek IP koruma sınıfları (IP68, IP69K)',
+            'Darbeye ve titreşime dayanıklı yapı',
+            'Geniş çalışma sıcaklığı aralığı',
+            'Mükemmel düşük ışık performansı'
+        ],
+        image: 'subcategory-heavy-duty-camera',
+        imageHint: 'A rugged, heavy-duty camera mounted on an excavator',
+    },
+    {
+        title: 'Monitörler',
+        slug: 'monitorler',
+        description: 'Sürücü kabini için tasarlanmış yüksek çözünürlüklü monitörlerimiz, kamera görüntülerinin net ve anlaşılır bir şekilde görüntülenmesini sağlar. Farklı boyut ve konfigürasyonlarda mevcuttur.',
+        features: [
+            'Yüksek çözünürlüklü, parlama önleyici ekranlar',
+            'Birden fazla kamera girişini destekleme',
+            'Dayanıklı ve kompakt tasarım',
+            'Kolay okunabilir arayüz'
+        ],
+        image: 'subcategory-monitors',
+        imageHint: 'An in-cab monitor showing multiple camera feeds',
+    },
+];
+
+export const detectionSystemSubCategories: SubCategory[] = [
+    {
+        title: 'Radar Sensör Sistemleri',
+        slug: 'radar-sensor-sistemleri',
+        description: 'Radar sensörleri, aracın kör noktalarındaki hareketli ve sabit nesneleri algılamak için kullanılır. Kötü hava koşullarında ve düşük görüşte bile güvenilir performans sunar.',
+        image: 'subcategory-radar',
+        imageHint: 'Radar waves detecting an obstacle behind a truck',
+        features: [
+            'Her türlü hava koşulunda çalışır',
+            'Programlanabilir algılama bölgeleri',
+            'Görsel ve sesli uyarılar sağlar',
+            'Hatalı alarmları en aza indirir'
+        ],
+    },
+    {
+        title: 'Ultrasonik Sensörler',
+        slug: 'ultrasonik-sensorler',
+        description: 'Düşük hızlarda manevra yaparken aracın yakın çevresindeki engelleri tespit etmek için idealdir. Özellikle park etme ve dar alanlarda çalışma sırasında etkilidir.',
+        image: 'subcategory-ultrasonic',
+        imageHint: 'Ultrasonic sensors on the bumper of a delivery van',
+        features: [
+            'Yakın mesafe engelleri için hassas algılama',
+            'Kademeli sesli ve görsel uyarılar',
+            'Dayanıklı ve boyanabilir sensörler',
+            'Düşük maliyetli ve etkili çözüm'
+        ],
+    },
+];
+
+export const recordingSystemSubCategories: SubCategory[] = [
+    {
+        title: 'Mobil Dijital Kayıt Cihazları (MDR)',
+        slug: 'mobil-dijital-kayit-cihazlari-mdr',
+        description: 'MDR sistemleri, araca bağlı kameralardan gelen görüntüleri kaydeder. Kaza analizi, sürücü eğitimi ve sigorta talepleri için değerli kanıtlar sunar.',
+        image: 'subcategory-mdr',
+        imageHint: 'A secure Mobile Digital Recorder (MDR) unit',
+        features: [
+            'Çok kanallı video kaydı',
+            'GPS ile konum ve hız takibi',
+            '4G/5G ile uzaktan erişim (opsiyonel)',
+            'Kilitlenebilir, sabotaja karşı korumalı depolama'
+        ],
+    },
+];
+
+export const driverSafetySystemSubCategories: SubCategory[] = [
+    {
+        title: 'Sürücü Yorgunluk ve Dikkat Tespiti',
+        slug: 'surucu-yorgunluk-tespiti',
+        description: 'Yapay zeka ve yüz tanıma teknolojisi kullanarak sürücünün yorgunluk, uykusuzluk ve dikkat dağınıklığı belirtilerini anlık olarak analiz eden ve sürücüyü uyaran sistemlerdir.',
+        image: 'subcategory-fatigue-detection',
+        imageHint: 'An in-cab camera monitoring a driver for signs of fatigue',
+        features: [
+            'Göz kapağı kapanma tespiti',
+            'Esnerne algılama',
+            'Telefonla konuşma ve sigara içme tespiti',
+            'Sesli ve görsel uyarılar'
+        ],
     }
 ];
 
-export const detectionSystemSubCategories = [
-     {
-        title: "Radar Tespit Sistemleri",
-        slug: "radar-tespit-sistemleri",
-        description: "Brigade'in radar sensör sistemleri, kötü hava ve zorlu görüş koşullarında bile aracın kör noktalarındaki sabit ve hareketli nesneleri algılar. Sürücüleri sesli ve görsel olarak uyararak çarpışmaları önlemeye yardımcı olur.",
-        features: ["Ağır hizmet tipi tasarım", "Programlanabilir algılama aralığı", "Yanlış alarmları azaltan akıllı algoritmalar", "IP69K koruma sınıfı"],
-        image: "placeholder-24",
-        imageHint: "radar sensor"
-    },
+export const warningSystemSubCategories: SubCategory[] = [
     {
-        title: "Ultrasonik Tespit Sistemleri",
-        slug: "ultrasonik-tespit-sistemleri",
-        description: "Düşük hızda manevra yapan araçlar için tasarlanan ultrasonik yakınlık sensörlerimiz, sürücüye aracın etrafındaki engeller hakkında sesli ve görsel uyarılar sağlar. Özellikle dar alanlarda çalışan araçlar için idealdir.",
-        features: ["2, 3 veya 4 sensörlü sistemler", "Adım adım sesli uyarılar", "Düşük hızda manevralar için ideal", "Özelleştirilebilir algılama bölgeleri"],
-        image: "placeholder-21",
-        imageHint: "ultrasonic sensor"
-    }
-];
-
-export const driverSafetySystemSubCategories = [
-    {
-        title: "Sürücü Güvenlik Kameraları",
-        slug: "surucu-guvenlik-kameralari",
-        description: "Yapay zeka destekli bu kameralar, sürücünün davranışlarını sürekli izleyerek yorgunluk, dikkat dağınıklığı ve diğer riskli davranışları tespit eder. Sistem, gerçek zamanlı sesli uyarılar vererek sürücüyü uyarır ve olası kazaları önler.",
-        features: ["Yorgunluk ve dikkat dağınıklığı tespiti", "Telefon kullanımı ve sigara içme uyarısı", "AB GSR DDAW yönetmeliğine uygunluk", "Kompakt kabin içi tasarım"],
-        image: "placeholder-20",
-        imageHint: "driver safety camera"
-    },
-    {
-        title: "Yapay Zeka Destekli Kameralar",
-        slug: "yapay-zeka-destekli-kameralar",
-        description: "Bu akıllı kameralar, sadece görüntü kaydetmekle kalmaz, aynı zamanda insan formunu tanıyabilir, şerit takibi yapabilir ve önden çarpışma riski algıladığında uyarı verebilir. Sürücüye proaktif bir güvenlik kalkanı sağlarlar.",
-        features: ["İnsan formu tanıma (HFR)", "Şeritten Ayrılma Uyarısı (LDW)", "Önden Çarpışma Uyarısı (FCW)", "MDR kayıt cihazları ile tam entegrasyon"],
-        image: "placeholder-19",
-        imageHint: "AI camera"
-    }
-];
-
-export const recordingSystemSubCategories = [
-     {
-        title: "Mobil Dijital Kayıt Cihazları (MDR)",
-        slug: "mobil-dijital-kayit-cihazlari",
-        description: "MDR serisi, bir olay durumunda reddedilemez kanıtlar sağlamak, sahte sigorta taleplerine karşı korunmak ve sürücü davranışlarını izlemek için araç kameralarından gelen görüntüleri kaydeder. 4G/WiFi bağlantısı ile uzaktan erişim ve filo yönetimi sağlar.",
-        features: ["Çoklu kanal kaydı (4, 8, 16 kanal)", "Yüksek çözünürlüklü AHD kayıt", "SSD veya HDD depolama seçenekleri", "4G/WiFi ile uzaktan erişim ve canlı izleme"],
-        image: "placeholder-16",
-        imageHint: "digital video recorder"
-    },
-     {
-        title: "Araç İçi Kameralar (Dashcams)",
-        slug: "arac-ici-kameralar",
-        description: "Kompakt ve kurulumu kolay araç içi kameralar, hem yolu hem de isteğe bağlı olarak kabin içini kaydeder. Kaza anında G-sensörü ile otomatik kayıt başlatma ve GPS ile konum ve hız verilerini kaydetme gibi özelliklere sahiptirler.",
-        features: ["Full HD kayıt", "G-sensörü ile olay tespiti", "GPS veri kaydı", "Yapay zeka ve ADAS özellikli modeller"],
-        image: "placeholder-18",
-        imageHint: "dashcam"
-    }
-];
-
-
-export const warningSystemSubCategories = [
-    {
-        title: "Geri Vites Alarmları",
-        slug: "geri-vites-alarmlari",
-        description: "Brigade, geleneksel 'bip-bip' alarmlarına göre daha güvenli ve daha az gürültü kirliliği yaratan bbs-tek® beyaz ses (white sound) alarmlarının mucididir. Bu alarmlar, sesin kaynağının anında tespit edilmesini sağlar ve sadece tehlike bölgesinde duyulur.",
-        features: ["Anında bulunabilirlik sağlayan beyaz ses", "Ortam gürültüsüne göre ses seviyesini ayarlayan akıllı modeller", "Ağır hizmet tipi ve su geçirmez tasarım", "Ömür boyu garanti"],
-        image: "placeholder-26",
-        imageHint: "reverse alarm"
-    },
-    {
-        title: "Sessiz Araç Ses Cihazı (AVAS)",
-        slug: "sessiz-arac-ses-cihazi",
-        description: "Elektrikli ve hibrit araçların sessizliği, yayalar için risk oluşturabilir. QVS (Sessiz Araç Ses Cihazı), düşük hızlarda gerçekçi bir motor sesi üreterek aracın varlığı konusunda yayaları uyarır ve uluslararası yönetmeliklere uygundur.",
-        features: ["Elektrikli ve hibrit araçlar için motor sesi simülasyonu", "Aracın hızına ve hareketine göre dinamik ses", "Uluslararası standartlara uygun (UN R138)", "bbs-tek® teknolojisi ile güvenli ses yayılımı"],
-        image: "placeholder-27",
-        imageHint: "electric vehicle sound"
+        title: 'bbs-tek® Beyaz Sesli Alarmlar',
+        slug: 'beyaz-sesli-alarmlar',
+        description: 'Geleneksel \'bip bip\' alarmlarının aksine, sadece tehlike bölgesinde duyulan, anında fark edilen ve gürültü kirliliğini azaltan patentli beyaz sesli geri vites alarmları.',
+        image: 'subcategory-bbs-tek',
+        imageHint: 'A white sound backup alarm emitting sound waves',
+        features: [
+            'Anında duyulabilir ve kaynağı belirlenebilir',
+            'Sadece tehlike bölgesinde duyulur, gürültü kirliliğini önler',
+            'Çoklu frekanslı \'şşş\' sesi',
+            'Ağır hizmet tipi ve dayanıklı yapı'
+        ],
     }
 ];

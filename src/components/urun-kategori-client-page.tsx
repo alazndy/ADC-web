@@ -1,122 +1,113 @@
+
 'use client';
-import { ProductCard } from '@/components/product-card';
-import { Card } from '@/components/ui/card';
+
+import { useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import { ChevronLeft } from 'lucide-react';
-import { SubCategoryShowcase } from '@/components/subcategory-showcase';
-import { motion } from "framer-motion";
+import { findImage } from '@/lib/placeholder-images';
+import { AnimatePresence, motion } from 'framer-motion';
 import type { Product } from '@/lib/types';
+// CORRECTED IMPORT: Ensure categoryToSlug is imported correctly
+import { categoryToSlug } from '@/lib/product-categories'; 
 
 interface SubCategory {
     title: string;
     slug: string;
     description: string;
-    features?: string[];
-    image: string;
-    imageHint?: string;
+    imagePlaceholder: string;
 }
 
 interface UrunKategoriClientPageProps {
     categoryName: string;
     pageDescription: string;
-    hasSpecialLayout: boolean;
     subCategories: SubCategory[];
+    hasSpecialLayout: boolean;
     filteredProducts: Product[];
 }
 
-const sectionVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.15,
-    },
-  },
+const ProductCard = ({ product }: { product: Product }) => {
+    const image = findImage(product.imagePlaceholder);
+    // The page now has the function to correctly generate this slug
+    const kategoriSlug = categoryToSlug(product.category);
+
+    if (!kategoriSlug) return null; // Or some fallback UI
+
+    return (
+        <motion.div
+            layout
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            transition={{ duration: 0.3 }}
+            className="bg-card rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col"
+        >
+            <Link href={`/urunler/kategori/${kategoriSlug}/${product.subCategorySlug}#${product.id}`} className="block">
+                <div className="relative h-48 w-full">
+                    {image && <Image src={image.src} alt={product.name} fill style={{ objectFit: 'contain' }} className="p-4" />}
+                </div>
+            </Link>
+            <div className="p-4 border-t border-border flex-grow flex flex-col">
+                <h3 className="font-bold text-lg flex-grow">
+                    <Link href={`/urunler/kategori/${kategoriSlug}/${product.subCategorySlug}#${product.id}`}>{product.name}</Link>
+                </h3>
+                <p className="text-sm text-muted-foreground mt-2">{product.shortDescription}</p>
+            </div>
+        </motion.div>
+    );
 };
 
-const itemVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
-};
-
-export function UrunKategoriClientPage({ 
-    categoryName, 
+export function UrunKategoriClientPage({
+    categoryName,
     pageDescription,
-    hasSpecialLayout,
     subCategories,
-    filteredProducts 
+    hasSpecialLayout,
+    filteredProducts,
 }: UrunKategoriClientPageProps) {
-  
-  return (
-    <>
-      <motion.div 
-        className="bg-secondary"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, ease: "easeOut" }}
-      >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
-            <motion.div 
-                className="inline-block"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.2, duration: 0.5 }}
-            >
-                <Button asChild variant="ghost" size="sm">
-                    <Link href="/urunler">
-                        <ChevronLeft className="mr-2 h-4 w-4" />
-                        Tüm Kategoriler
-                    </Link>
-                </Button>
+    const [activeTab, setActiveTab] = useState('all');
+
+    const getProductsForTab = (tab: string) => {
+        if (tab === 'all') return filteredProducts;
+        return filteredProducts.filter(p => p.subCategorySlug === tab);
+    };
+
+    const productsToShow = getProductsForTab(activeTab);
+
+    return (
+        <div className="container mx-auto px-4 py-16">
+            <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="text-center mb-12">
+                <h1 className="text-4xl md:text-5xl font-bold font-headline">{categoryName}</h1>
+                <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">{pageDescription}</p>
             </motion.div>
-          <motion.h1 className="text-4xl font-bold font-headline mt-2" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.6 }}>{categoryName}</motion.h1>
-          <motion.p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.6 }}>
-            {pageDescription}
-          </motion.p>
-        </div>
-      </motion.div>
-      <motion.div 
-        className="container mx-auto px-4 sm:px-6 lg:px-8 py-16"
-        variants={sectionVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        <main>
-            {hasSpecialLayout ? (
-                <motion.div className="space-y-16" variants={sectionVariants}>
-                    {subCategories.map((subCat, index) => (
-                        <motion.div key={subCat.slug} variants={itemVariants}>
-                          <SubCategoryShowcase
-                              {...subCat}
-                              direction={index % 2 === 0 ? 'normal' : 'reverse'}
-                          />
-                        </motion.div>
+
+            <div className="sticky top-0 z-10 bg-background/80 backdrop-blur-md mb-8 py-4">
+                <div className="flex justify-center flex-wrap gap-2">
+                    <button
+                        onClick={() => setActiveTab('all')}
+                        className={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${activeTab === 'all' ? 'bg-primary text-primary-foreground' : 'bg-muted hover:bg-muted/80'}`}>
+                        Tüm Ürünler
+                    </button>
+                    {subCategories.map(sc => (
+                        <button
+                            key={sc.slug}
+                            onClick={() => setActiveTab(sc.slug)}
+                            className={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${activeTab === sc.slug ? 'bg-primary text-primary-foreground' : 'bg-muted hover:bg-muted/80'}`}>
+                            {sc.title}
+                        </button>
                     ))}
-                </motion.div>
-            ) : (
-                <>
-                    <motion.div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-6" variants={sectionVariants}>
-                        {filteredProducts.map(product => (
-                            <motion.div key={product.id} variants={itemVariants}>
-                              <ProductCard product={product} />
-                            </motion.div>
-                        ))}
-                    </motion.div>
-                    {filteredProducts.length === 0 && (
-                        <motion.div className="text-center py-12" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}>
-                            <Card className="max-w-md mx-auto p-8 bg-card">
-                                <p className="text-muted-foreground">Bu kategoride gösterilecek ürün bulunmamaktadır.</p>
-                                <Button asChild className="mt-4">
-                                    <Link href="/urunler">Diğer Kategorilere Göz Atın</Link>
-                                </Button>
-                            </Card>
-                        </motion.div>
-                    )}
-                </>
-            )}
-        </main>
-      </motion.div>
-    </>
-  );
+                </div>
+            </div>
+
+            <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <AnimatePresence>
+                    {productsToShow.map(product => (
+                        <ProductCard key={product.id} product={product} />
+                    ))}
+                </AnimatePresence>
+            </motion.div>
+        </div>
+    );
 }

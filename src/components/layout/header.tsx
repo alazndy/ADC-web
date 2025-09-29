@@ -1,12 +1,14 @@
 'use client';
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import dynamic from 'next/dynamic';
 import { Menu, Search, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Logo } from "@/components/logo";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const SearchModal = dynamic(() => import('@/components/search-modal').then(mod => mod.SearchModal));
 
@@ -43,8 +45,18 @@ export default function Header() {
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex h-20 items-center justify-between">
-            <div className="flex items-center">
+            <div className="flex items-center space-x-4">
               <Logo />
+              <div className="border-l border-gray-300 dark:border-gray-700 h-10"></div>
+              <a href="https://brigade-electronics.com/" target="_blank" rel="noopener noreferrer">
+                <Image
+                  src="https://firebasestorage.googleapis.com/v0/b/adc-web-473522.firebasestorage.app/o/Company%20Logos%2FBrigade%2FBrigade-logo-white-teal-dot.png?alt=media&token=94609207-14e0-4cb0-94fb-5aff75f25041"
+                  alt="Brigade Logo"
+                  width={100}
+                  height={40}
+                  className="h-10 w-auto"
+                />
+              </a>
             </div>
             <nav className="hidden lg:flex items-center space-x-8">
               {navLinks.map((link) => (
@@ -64,6 +76,8 @@ export default function Header() {
                 <span className="sr-only">Ara</span>
               </Button>
               
+              <ThemeToggle />
+
               <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
                 <SheetTrigger asChild className="lg:hidden">
                   <Button variant="ghost" size="icon" className={`text-foreground`}>
@@ -74,7 +88,19 @@ export default function Header() {
                 <SheetContent side="left" className="w-full max-w-sm bg-card p-0">
                   <div className="flex flex-col h-full">
                     <div className="flex items-center justify-between p-4 border-b">
-                       <Logo />
+                       <div className="flex items-center space-x-4">
+                         <Logo />
+                         <div className="border-l border-gray-300 dark:border-gray-700 h-8"></div>
+                         <a href="https://brigade-electronics.com/" target="_blank" rel="noopener noreferrer">
+                           <Image
+                              src="https://firebasestorage.googleapis.com/v0/b/adc-web-473522.firebasestorage.app/o/Company%20Logos%2FBrigade%2FBrigade-logo-white-teal-dot.png?alt=media&token=94609207-14e0-4cb0-94fb-5aff75f25041"
+                              alt="Brigade Logo"
+                              width={80}
+                              height={32}
+                              className="h-8 w-auto"
+                           />
+                         </a>
+                       </div>
                        <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(false)}>
                          <X className="h-6 w-6" />
                          <span className="sr-only">Menüyü Kapat</span>

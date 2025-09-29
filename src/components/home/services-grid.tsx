@@ -1,9 +1,19 @@
+
 'use client';
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { services, techSolutions } from "@/lib/data";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+// CORRECTED: Import the actual icon components from lucide-react
+import { ArrowRight, Wrench, ShieldCheck, Route, Cpu, LucideIcon } from "lucide-react";
 import { motion } from "framer-motion";
+
+// CORRECTED: Create a map to link string names from data to actual components
+const iconMap: { [key: string]: LucideIcon } = {
+  Wrench,
+  ShieldCheck,
+  Route,
+  Cpu,
+};
 
 const featuredServices = [...services.slice(0, 2), ...techSolutions.slice(0, 2)];
 
@@ -48,13 +58,16 @@ export function ServicesGrid() {
             const href = services.some(s => s.id === service.id)
               ? `/hizmetler/${service.slug}`
               : `/teknoloji-cozumleri/${service.slug}`;
+            // CORRECTED: Look up the component from the map using the string from data.
+            const IconComponent = iconMap[service.icon]; 
             return (
               <motion.div key={service.id} variants={itemVariants} whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}>
                 <Link href={href} className="group h-full flex">
                    <Card className="h-full w-full border bg-card hover:border-primary/50 hover:shadow-lg transition-all duration-300 flex flex-col">
                     <CardHeader className="items-start text-left p-6 flex-grow">
                       <div className="bg-primary/10 p-4 rounded-lg text-primary">
-                        <service.icon className="h-8 w-8" />
+                        {/* CORRECTED: Render the component if it exists in the map. */}
+                        {IconComponent && <IconComponent className="h-8 w-8" />}
                       </div>
                       <CardTitle className="mt-4 font-headline">{service.title}</CardTitle>
                       <CardDescription className="mt-2 text-sm text-muted-foreground flex-grow">{service.summary}</CardDescription>
