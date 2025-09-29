@@ -1,67 +1,58 @@
-import { products } from '@/lib/data';
-import { PlaceholderContent } from '@/components/placeholder-content';
-import { categoryToSlug, slugToCategory, allCategories } from '@/lib/product-categories';
-import { 
-    cameraMonitorSubCategories, 
-    detectionSystemSubCategories, 
-    driverSafetySystemSubCategories, 
-    recordingSystemSubCategories, 
-    warningSystemSubCategories 
-} from '@/lib/data/subcategories';
-import { UrunKategoriClientPage } from '@/components/urun-kategori-client-page';
 
-export async function generateStaticParams() {
-    return allCategories
-        .filter(cat => categoryToSlug(cat) !== 'brigade-van')
-        .map((category) => ({
-            kategoriSlug: categoryToSlug(category),
-    }));
+import { notFound } from 'next/navigation';
+import Link from 'next/link';
+import { slugToCategory } from '@/lib/product-categories';
+// CORRECTED IMPORT: The component is in the global components directory
+import { UrunKategoriClientPage } from '@/components/urun-kategori-client-page'; 
+import { cameraMonitorSubCategories, detectionSystemSubCategories, recordingSystemSubCategories, driverSafetySystemSubCategories, warningSystemSubCategories } from '@/lib/data/subcategories';
+import { products } from '@/lib/data';
+
+interface UrunKategoriPageProps {
+    params: {
+        kategoriSlug: string;
+    };
 }
 
-export default function UrunKategoriPage({ params }: { params: { kategoriSlug: string } }) {
-  const categoryName = slugToCategory(params.kategoriSlug);
+const categoryToSubCategoryMap = {
+    'kamera-monitor-sistemleri': cameraMonitorSubCategories,
+    'tespit-sistemleri': detectionSystemSubCategories,
+    'kayit-sistemleri': recordingSystemSubCategories,
+    'surucu-guvenlik-sistemleri': driverSafetySystemSubCategories,
+    'uyari-sistemleri': warningSystemSubCategories,
+};
 
-  if (!categoryName || params.kategoriSlug === 'brigade-van') {
-      return <PlaceholderContent title="Kategori Bulunamadı" description="Aradığınız ürün kategorisi mevcut değil." />
-  }
-  
-  const filteredProducts = products.filter(p => p.category === categoryName);
+export default function UrunKategoriPage({ params }: UrunKategoriPageProps) {
+    const { kategoriSlug } = params;
+    const categoryName = slugToCategory(kategoriSlug);
 
-  const isCameraMonitor = params.kategoriSlug === 'kamera-monitor-sistemleri';
-  const isDetectionSystem = params.kategoriSlug === 'tespit-sistemleri';
-  const isDriverSafety = params.kategoriSlug === 'surucu-guvenlik-sistemleri';
-  const isRecordingSystem = params.kategoriSlug === 'kayit-sistemleri';
-  const isWarningSystem = params.kategoriSlug === 'uyari-sistemleri';
-  
-  let subCategories: any[] = [];
-  if (isCameraMonitor) subCategories = cameraMonitorSubCategories;
-  else if (isDetectionSystem) subCategories = detectionSystemSubCategories;
-  else if (isDriverSafety) subCategories = driverSafetySystemSubCategories;
-  else if (isRecordingSystem) subCategories = recordingSystemSubCategories;
-  else if (isWarningSystem) subCategories = warningSystemSubCategories;
-  
-  const hasSpecialLayout = subCategories.length > 0;
+    if (!categoryName) {
+        notFound();
+    }
 
-  let pageDescription = "Bu kategoriye ait tüm ürünlerimizi aşağıda bulabilirsiniz.";
-  if (isCameraMonitor) {
-    pageDescription = "Araç kameraları, sürücünün kör noktaları görmesine yardımcı olabilir. Kameranın görüş alanındaki her şeyi monitörde canlı olarak göstererek, sürücülerin ve operatörlerin güvenli bir şekilde manevra yapmasını ve araç kullanmasını sağlarlar.";
-  } else if (isDetectionSystem) {
-    pageDescription = "Brigade’in Tespit Sistemleri, hareketli veya sabit olsun, araca yakın engeller hakkında sürücüyü uyarır. Kabin içindeki sesli ve/veya görsel bir uyarı, mesafeyi bildirirken, arabanın döndüğünü bisikletlilere ve yayalara bildirmek için isteğe bağlı bir harici konuşma alarmı eklenebilir.";
-  } else if (isDriverSafety) {
-    pageDescription = "Brigade’in Sürücü Güvenlik Sistemleri, yol koşullarını ve sürücü davranışını izlemek, uyuşukluk, dikkat dağınıklığı ve yorgunluk belirtilerini tespit etmek için AI teknolojisinden yararlanır. Bu kompakt, kabin içi sistemler, sürücü güvenliğini ve uyanıklığını artırmak için gerçek zamanlı sesli uyarılar verir.";
-  } else if (isRecordingSystem) {
-    pageDescription = "Filo güvenliğinizi, Brigade Electronics'in araç kayıt sistemleriyle artırın. Filonuz için en üst düzeyde güvenlik sağlamak üzere kapsamlı izleme ile.";
-  } else if (isWarningSystem) {
-    pageDescription = "Brigade Electronics, kentsel ve çalışma ortamlarındaki alarmların etkinliği sorunlarını ele alan ilk geri vites alarmı modellerini tanıttığından beri geri vites alarmı teknolojisinin ön saflarında yer almaktadır.";
-  }
+    // Filter products for the client component
+    const filteredProducts = products.filter(p => p.category === categoryName);
+    const subCategories = categoryToSubCategoryMap[kategoriSlug];
 
-  const pageProps = {
-    categoryName,
-    pageDescription,
-    hasSpecialLayout,
-    subCategories,
-    filteredProducts,
-  };
+    if (!subCategories || subCategories.length === 0) {
+        return (
+            <div className="container mx-auto px-4 py-16 text-center">
+                <h1 className="text-4xl font-bold font-headline">{categoryName}</h1>
+                <p className="mt-4 text-muted-foreground">Bu kategoriye ait ürün aileleri yakında eklenecektir.</p>
+                 <Link href="/urunler" className="mt-8 inline-block bg-primary text-primary-foreground px-6 py-3 rounded-lg">Tüm Ürünlere Geri Dön</Link>
+            </div>
+        );
+    }
 
-  return <UrunKategoriClientPage {...pageProps} />;
+    const pageDescription = subCategories[0]?.description || 'Briggs Automotive güvencesiyle en gelişmiş araç güvenlik teknolojilerini keşfedin.';
+    const hasSpecialLayout = subCategories.some(sc => sc.slug === 'backeye-360');
+
+    return (
+        <UrunKategoriClientPage
+            categoryName={categoryName}
+            pageDescription={pageDescription}
+            subCategories={subCategories}
+            hasSpecialLayout={hasSpecialLayout}
+            filteredProducts={filteredProducts}
+        />
+    );
 }

@@ -1,23 +1,57 @@
 
-import { products } from '@/lib/data';
+import { 
+    cameraMonitorSubCategories, 
+    detectionSystemSubCategories, 
+    recordingSystemSubCategories, 
+    driverSafetySystemSubCategories, 
+    warningSystemSubCategories 
+} from "./data/subcategories";
 
-// Add "Brigade Van" to the list of categories manually as it doesn't exist in products
-export const allCategories = [...new Set(products.map(p => p.category)), "Brigade Van"].sort();
-
-export const categoryToSlug = (categoryName: string) => {
-  if (!categoryName) return '';
-  return categoryName.toLowerCase()
-    .replace(/ /g, '-')
-    .replace(/ı/g, 'i')
-    .replace(/ğ/g, 'g')
-    .replace(/ü/g, 'u')
-    .replace(/ş/g, 's')
-    .replace(/ö/g, 'o')
-    .replace(/ç/g, 'c')
-    .replace(/[^\w-]+/g, '');
+const productCategories = {
+    'kamera-monitor-sistemleri': 'Kamera Monitör Sistemleri',
+    'tespit-sistemleri': 'Tespit Sistemleri',
+    'kayit-sistemleri': 'Kayıt Sistemleri',
+    'surucu-guvenlik-sistemleri': 'Sürücü Güvenlik Sistemleri',
+    'uyari-sistemleri': 'Uyarı Sistemleri',
 };
 
-export const slugToCategory = (slug: string) => {
-    // Find matching category name from allCategories by comparing slugs
-    return allCategories.find(cat => categoryToSlug(cat) === slug);
+// NEWLY ADDED and EXPORTED: Converts a category name back to a slug.
+export const categoryToSlug = (name: string): string | undefined => {
+    return Object.keys(productCategories).find(slug => productCategories[slug] === name);
+}
+
+const categoryToSubCategoryMap = {
+    'kamera-monitor-sistemleri': cameraMonitorSubCategories,
+    'tespit-sistemleri': detectionSystemSubCategories,
+    'kayit-sistemleri': recordingSystemSubCategories,
+    'surucu-guvenlik-sistemleri': driverSafetySystemSubCategories,
+    'uyari-sistemleri': warningSystemSubCategories,
+};
+
+export const slugToCategory = (slug: string): string | undefined => {
+    return productCategories[slug];
+}
+
+export const slugToSubCategory = (categorySlug: string, subCategorySlug: string) => {
+    const subCategories = categoryToSubCategoryMap[categorySlug];
+    if (!subCategories) {
+        return undefined;
+    }
+    return subCategories.find(sc => sc.slug === subCategorySlug);
+}
+
+export const getAllSubCategoryParams = () => {
+    const params = [];
+    for (const categorySlug in categoryToSubCategoryMap) {
+        const subCategories = categoryToSubCategoryMap[categorySlug];
+        if (subCategories && subCategories.length > 0) {
+            for (const subCategory of subCategories) {
+                params.push({
+                    kategoriSlug: categorySlug,
+                    altKategoriSlug: subCategory.slug,
+                });
+            }
+        }
+    }
+    return params;
 };

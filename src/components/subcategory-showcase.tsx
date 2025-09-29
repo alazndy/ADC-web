@@ -3,7 +3,6 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 import { findImage } from "@/lib/placeholder-images";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -80,9 +79,7 @@ export function SubCategoryShowcase({ title, slug, description, features, image:
                         ))}
                     </motion.ul>
                 )}
-                <Button asChild className="mt-8">
-                    <Link href={`/urunler/kategori/kamera-monitor-sistemleri`}>Daha Fazla Bilgi Edin</Link>
-                </Button>
+                <Button className="mt-8" tabIndex={-1}>Daha Fazla Bilgi Edin</Button>
             </motion.div>
         </motion.div>
     );

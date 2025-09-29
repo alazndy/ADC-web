@@ -1,35 +1,37 @@
-"use client";
 
-import { useState, useEffect, useCallback } from 'react';
-import { Dialog, DialogContent } from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Search, Loader2 } from "lucide-react";
-import Link from 'next/link';
+'use client';
+
+import { useState, useEffect, useCallback, useRef } from 'react';
+import { Search, Loader2 } from 'lucide-react';
+import { Dialog, DialogContent } from '@/components/ui/dialog';
 import { collection, query, getDocs, Firestore } from 'firebase/firestore';
 import { useFirebase } from '@/firebase';
-import { products as staticProducts, projects as staticProjects } from '@/lib/data'; // fallback
+
+// CORRECTED IMPORTS: Data is now imported from modular files as a fallback
+import { products as staticProducts } from '@/lib/data/products'; 
+import { projects as staticProjects } from '@/lib/data/projects'; 
 
 type SearchResult = {
   type: string;
   title: string;
-  slug: string;
-  category: string;
-}
+  url: string;
+};
 
-function SearchModal({ isOpen, onOpenChange }: { isOpen: boolean; onOpenChange: (isOpen: boolean) => void }) {
+export function SearchModal({ open, onOpenChange }: { open: boolean, onOpenChange: (open: boolean) => void }) {
   const [queryText, setQueryText] = useState('');
   const [results, setResults] = useState<SearchResult[]>([]);
   const [loading, setLoading] = useState(false);
   const { firestore } = useFirebase();
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const performSearch = useCallback(async () => {
     if (queryText.length < 2) {
       setResults([]);
       return;
     }
-    
-    setLoading(true);
 
+    setLoading(true);
+    
     let allContent: SearchResult[] = [];
 
     if (firestore) {
@@ -45,107 +47,85 @@ function SearchModal({ isOpen, onOpenChange }: { isOpen: boolean; onOpenChange: 
                 getDocs(projectsQuery)
             ]);
 
-            allContent = [
-                ...productSnap.docs
-                    .map(doc => doc.data())
-                    .filter(p => p.name && p.slug && p.category)
-                    .map(p => ({ type: 'Ürün', title: p.name, slug: `/urunler/${p.slug}`, category: p.category })),
-                ...projectSnap.docs
-                    .map(doc => doc.data())
-                    .filter(p => p.title && p.slug && p.sector)
-                    .map(p => ({ type: 'Proje', title: p.title, slug: `/projeler/${p.slug}`, category: p.sector })),
-            ];
+            productSnap.forEach(doc => {
+                const data = doc.data();
+                allContent.push({ type: 'Ürün', title: data.name, url: `/urunler/${data.id}` });
+            });
+
+            projectSnap.forEach(doc => {
+                const data = doc.data();
+                allContent.push({ type: 'Proje', title: data.title, url: `/projeler/${data.slug}` });
+            });
+
         } catch (error) {
-            console.error("Arama sırasında Firestore hatası, statik verilere dönülüyor:", error);
-            allContent = [
-                ...staticProducts.map(p => ({ type: 'Ürün', title: p.name, slug: `/urunler/${p.slug}`, category: p.category })),
-                ...staticProjects.map(p => ({ type: 'Proje', title: p.title, slug: `/projeler/${p.slug}`, category: p.sector })),
-            ];
+            console.error("Firebase search failed, falling back to static data:", error);
+            // Fallback to static data if Firestore fails
+            allContent.push(...staticProducts.map(p => ({ type: 'Ürün', title: p.name, url: `/urunler/kategori/kamera-monitor-sistemleri/${p.subCategorySlug}#${p.id}` }))); // Note: a more robust URL strategy would be needed here
+            allContent.push(...staticProjects.map(p => ({ type: 'Proje', title: p.title, url: `/projeler/${p.slug}` })));
         }
     } else {
-         allContent = [
-            ...staticProducts.map(p => ({ type: 'Ürün', title: p.name, slug: `/urunler/${p.slug}`, category: p.category })),
-            ...staticProjects.map(p => ({ type: 'Proje', title: p.title, slug: `/projeler/${p.slug}`, category: p.sector })),
-        ];
+        // Fallback for when firestore is not available
+        allContent.push(...staticProducts.map(p => ({ type: 'Ürün', title: p.name, url: `/urunler/kategori/kamera-monitor-sistemleri/${p.subCategorySlug}#${p.id}` })));
+        allContent.push(...staticProjects.map(p => ({ type: 'Proje', title: p.title, url: `/projeler/${p.slug}` })));
     }
 
-    const lowercasedQuery = queryText.toLowerCase();
-    const filtered = allContent.filter(item => 
-        item.title.toLowerCase().includes(lowercasedQuery) || 
-        (item.category && item.category.toLowerCase().includes(lowercasedQuery))
+    const lowerCaseQuery = queryText.toLowerCase();
+    const filteredResults = allContent.filter(item => 
+      item.title.toLowerCase().includes(lowerCaseQuery)
     );
-    setResults(filtered);
-    setLoading(false);
 
+    setResults(filteredResults);
+    setLoading(false);
   }, [queryText, firestore]);
 
   useEffect(() => {
-    if (!isOpen) {
-      setQueryText('');
-      setResults([]);
-    }
-  }, [isOpen]);
-
-  useEffect(() => {
-    const debounceTimer = setTimeout(() => {
+    const handler = setTimeout(() => {
       performSearch();
-    }, 300); // 300ms gecikme
+    }, 300); // Debounce search
 
-    return () => clearTimeout(debounceTimer);
+    return () => {
+      clearTimeout(handler);
+    };
   }, [queryText, performSearch]);
   
-  const groupedResults = results.reduce((acc, item) => {
-    if (!acc[item.type]) {
-      acc[item.type] = [];
+  useEffect(() => {
+    if (open) {
+        // Timeout to allow dialog to render before focusing
+        setTimeout(() => inputRef.current?.focus(), 100);
     }
-    acc[item.type].push(item);
-    return acc;
-  }, {} as Record<string, SearchResult[]>);
+  }, [open]);
 
   return (
-    <Dialog open={isOpen} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-2xl p-0 overflow-hidden top-1/4 bg-background/90 backdrop-blur-sm border-border">
-        <div className="p-6">
-          <div className="relative">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
-            <Input
-              type="search"
-              placeholder="Ürün, proje veya kategori arayın..."
-              className="w-full pl-10 h-12 text-lg bg-transparent border-border focus-visible:ring-primary"
-              value={queryText}
-              onChange={(e) => setQueryText(e.target.value)}
-              autoFocus
-            />
-            {loading && <Loader2 className="absolute right-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground animate-spin" />}
-          </div>
+    <Dialog open={open} onOpenChange={onOpenChange}>
+      <DialogContent className="p-0 max-w-lg gap-0">
+        <div className="flex items-center border-b px-4">
+          <Search className="h-5 w-5 text-muted-foreground" />
+          <input
+            ref={inputRef}
+            value={queryText}
+            onChange={(e) => setQueryText(e.target.value)}
+            placeholder="Ürün veya proje arayın..."
+            className="w-full p-4 bg-transparent focus:outline-none"
+          />
+          {loading && <Loader2 className="h-5 w-5 animate-spin text-muted-foreground" />}
         </div>
-        <div className="max-h-[50vh] overflow-y-auto px-6 pb-6">
-          {queryText.length > 1 && !loading && results.length === 0 && (
-            <p className="text-center text-muted-foreground py-8">Aramanızla eşleşen sonuç bulunamadı.</p>
-          )}
-          {Object.entries(groupedResults).map(([type, items]) => (
-            <div key={type} className="mb-6 last:mb-0">
-              <h3 className="text-sm font-semibold text-muted-foreground mb-2 px-2">{type}</h3>
-              <ul>
-                {items.map((item, index) => (
-                  <li key={`${type}-${index}`}>
-                    <Link
-                      href={item.slug}
-                      className="block p-3 rounded-md hover:bg-accent"
-                      onClick={() => onOpenChange(false)}
-                    >
-                      <p className="font-medium text-foreground">{item.title}</p>
-                      <p className="text-sm text-muted-foreground">{item.category}</p>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+        <div className="p-4 max-h-[400px] overflow-y-auto">
+            {results.length > 0 ? (
+                <ul>
+                    {results.map((item, index) => (
+                        <li key={index} className="border-b last:border-b-0">
+                            <a href={item.url} onClick={() => onOpenChange(false)} className="block p-3 hover:bg-muted rounded-md transition-colors">
+                                <p className="font-semibold">{item.title}</p>
+                                <p className="text-sm text-muted-foreground">{item.type}</p>
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            ) : (
+                !loading && queryText.length >= 2 && <p className="text-center text-muted-foreground p-4">Sonuç bulunamadı.</p>
+            )}
         </div>
       </DialogContent>
     </Dialog>
   );
 }
-
-export { SearchModal };

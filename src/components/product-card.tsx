@@ -1,70 +1,59 @@
-"use client";
-import { motion } from "framer-motion";
+
+'use client';
+
+import { findImage } from "@/lib/placeholder-images";
 import Image from "next/image";
 import Link from "next/link";
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
-import { findImage } from "@/lib/placeholder-images";
-import { Badge } from "@/components/ui/badge";
-import type { Product } from "@/lib/types";
-
-
-const cardHoverVariants = {
-  rest: {
-    y: 0,
-    boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.05)"
-  },
-  hover: {
-    y: -5,
-    boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.1)",
-    transition: { duration: 0.3, ease: "easeOut" }
-  },
-};
-
-const imageHoverVariants = {
-  rest: { scale: 1 },
-  hover: { scale: 1.05, transition: { duration: 0.4, ease: "easeOut" } },
-};
+import { motion } from "framer-motion";
+import type { Product } from '@/lib/types';
+import { categoryToSlug } from '@/lib/product-categories';
 
 export function ProductCard({ product }: { product: Product }) {
-  const image = findImage(product.imageUrls[0]);
+  // Corrected to use imagePlaceholder, which exists on the Product type
+  const image = findImage(product.imagePlaceholder);
+  const kategoriSlug = categoryToSlug(product.category);
+
+  // Fallback in case the slug can't be generated
+  if (!kategoriSlug) {
+    return (
+        <div className="bg-card rounded-lg overflow-hidden shadow-lg p-4 border border-destructive">
+            <p className="text-destructive-foreground">Ürün verisi yüklenemedi.</p>
+        </div>
+    );
+  }
+
+  const productUrl = `/urunler/kategori/${kategoriSlug}/${product.subCategorySlug}#${product.id}`;
 
   return (
     <motion.div
-      initial="rest"
-      whileHover="hover"
-      animate="rest"
-      className="h-full"
-      variants={cardHoverVariants}
+      layout
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0.95 }}
+      transition={{ duration: 0.3, ease: "easeOut" }}
+      className="bg-card rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col h-full"
     >
-      <Card className="h-full flex flex-col group overflow-hidden transition-all duration-300 bg-card border-border/20">
-        <CardHeader className="p-0">
-          <Link href={`/urunler/${product.slug}`} className="block aspect-video relative overflow-hidden bg-secondary/50">
-            {image && (
-                <motion.div className="absolute inset-0" variants={imageHoverVariants}>
-                    <Image
-                        src={image.imageUrl}
-                        alt={product.name}
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        className="object-contain p-4 transition-transform duration-300"
-                        data-ai-hint={image.imageHint}
-                    />
-                </motion.div>
-            )}
-             <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-white/5 pointer-events-none dark:from-black/20 dark:to-white/5" />
-          </Link>
-        </CardHeader>
-        <div className="p-4 flex flex-col flex-grow">
-          <Badge variant="outline" className="w-fit mb-2 text-xs">{product.category}</Badge>
-            <CardTitle className="text-base font-headline flex-grow mt-1 text-card-foreground">
-                <Link href={`/urunler/${product.slug}`} className="transition-colors group-hover:text-primary">
-                    <span className="absolute inset-0" />
-                    {product.name}
-                </Link>
-            </CardTitle>
-          <p className="mt-2 text-sm text-muted-foreground line-clamp-2">{product.shortDescription}</p>
+      <Link href={productUrl} className="block group">
+        <div className="relative h-48 w-full bg-muted/30">
+          {image ? (
+            <Image 
+              src={image.src} 
+              alt={product.name} 
+              fill 
+              style={{ objectFit: 'contain' }} 
+              className="p-4 group-hover:scale-105 transition-transform duration-300"
+            />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center text-muted-foreground">Resim yok</div>
+          )}
         </div>
-      </Card>
+      </Link>
+      <div className="p-4 border-t border-border/50 flex-grow flex flex-col">
+        <h3 className="font-semibold text-base leading-snug flex-grow">
+          <Link href={productUrl}>{product.name}</Link>
+        </h3>
+        <p className="text-sm text-muted-foreground mt-2 line-clamp-2">{product.shortDescription}</p>
+      </div>
     </motion.div>
   );
 }
