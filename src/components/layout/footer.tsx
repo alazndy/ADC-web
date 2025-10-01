@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 import { Logo } from "@/components/logo";
 import { ThemeToggle } from "@/components/theme-toggle";
@@ -7,18 +8,25 @@ export default function Footer() {
   return (
     <footer className="border-t">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 py-12">
-          <div className="space-y-4">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 py-12">
+          <div className="space-y-4 md:col-span-2">
             <div className="flex flex-col items-start space-y-4">
               <Logo />
               <div className="flex items-center space-x-4">
                 <a href="https://brigade-electronics.com/" target="_blank" rel="noopener noreferrer">
                   <Image
+                    src="https://firebasestorage.googleapis.com/v0/b/adc-web-473522.firebasestorage.app/o/Company%20Logos%2FBrigade%2FBrigade-logo-black-teal-dot.png?alt=media&token=50d9e973-9e78-4c03-8fbd-e885072265a3"
+                    alt="Brigade Logo"
+                    width={100}
+                    height={40}
+                    className="h-10 w-[100px] block dark:hidden"
+                  />
+                  <Image
                     src="https://firebasestorage.googleapis.com/v0/b/adc-web-473522.firebasestorage.app/o/Company%20Logos%2FBrigade%2FBrigade-logo-white-teal-dot.png?alt=media&token=94609207-14e0-4cb0-94fb-5aff75f25041"
                     alt="Brigade Logo"
                     width={100}
                     height={40}
-                    className="h-10 w-auto"
+                    className="h-10 w-[100px] hidden dark:block"
                   />
                 </a>
                 <a href="https://brigade-electronics.com/" target="_blank" rel="noopener noreferrer">
@@ -27,7 +35,7 @@ export default function Footer() {
                     alt="Brigade BSP Logo"
                     width={80}
                     height={32}
-                    className="h-8 w-auto"
+                    className="h-8 w-20"
                   />
                 </a>
               </div>
@@ -46,12 +54,10 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className="font-semibold mb-4">Teknoloji</h3>
+            <h3 className="font-semibold mb-4">Yasal</h3>
             <ul className="space-y-2">
-              <li><Link href="/teknoloji-cozumleri/radar-sensorler" className="text-sm text-muted-foreground hover:text-primary">Radar Sensörler</Link></li>
-              <li><Link href="/teknoloji-cozumleri/kamera-sistemleri" className="text-sm text-muted-foreground hover:text-primary">Kamera Sistemleri</Link></li>
-              <li><Link href="/teknoloji-cozumleri/mobil-dvr" className="text-sm text-muted-foreground hover:text-primary">Mobil DVR</Link></li>
-              <li><Link href="/teknoloji-cozumleri/ultrasonik-sensorler" className="text-sm text-muted-foreground hover:text-primary">Ultrasonik Sensörler</Link></li>
+              <li><Link href="/gizlilik-politikasi" className="text-sm text-muted-foreground hover:text-primary">Gizlilik Politikası</Link></li>
+              <li><Link href="/kullanim-sartlari" className="text-sm text-muted-foreground hover:text-primary">Kullanım Şartları</Link></li>
             </ul>
           </div>
           <div>
