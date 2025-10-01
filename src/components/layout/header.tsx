@@ -49,20 +49,11 @@ export default function Header() {
               <div className="border-l border-gray-300 dark:border-gray-700 h-10"></div>
               <a href="https://brigade-electronics.com/" target="_blank" rel="noopener noreferrer">
                 <Image
-                  src="https://firebasestorage.googleapis.com/v0/b/adc-web-473522.firebasestorage.app/o/Company%20Logos%2FBrigade%2FBrigade-logo-white-teal-dot.png?alt=media&token=94609207-14e0-4cb0-94fb-5aff75f25041"
-                  alt="Brigade Logo"
-                  width={100}
-                  height={40}
-                  className="h-10 w-auto"
-                />
-              </a>
-              <a href="https://brigade-electronics.com/" target="_blank" rel="noopener noreferrer">
-                <Image
                   src="https://firebasestorage.googleapis.com/v0/b/adc-web-473522.firebasestorage.app/o/Company%20Logos%2FBrigade%2Fbsp-.PNG?alt=media&token=681c1759-61ec-4a0b-a093-e9d562b5e1a3"
                   alt="Brigade BSP Logo"
                   width={80}
                   height={32}
-                  className="h-8 w-auto"
+                  className="h-8 w-20"
                 />
               </a>
             </div>
@@ -95,11 +86,18 @@ export default function Header() {
                     <div className="flex items-center space-x-2">
                         <a href="https://brigade-electronics.com/" target="_blank" rel="noopener noreferrer">
                             <Image
+                                src="https://firebasestorage.googleapis.com/v0/b/adc-web-473522.firebasestorage.app/o/Company%20Logos%2FBrigade%2Fbsp-.PNG?alt=media&token=681c1759-61ec-4a0b-a093-e9d562b5e1a3"
+                                alt="Brigade Logo"
+                                width={80}
+                                height={32}
+                                className="h-8 w-20 block dark:hidden"
+                            />
+                            <Image
                                 src="https://firebasestorage.googleapis.com/v0/b/adc-web-473522.firebasestorage.app/o/Company%20Logos%2FBrigade%2FBrigade-logo-white-teal-dot.png?alt=media&token=94609207-14e0-4cb0-94fb-5aff75f25041"
                                 alt="Brigade Logo"
                                 width={80}
                                 height={32}
-                                className="h-8 w-auto"
+                                className="h-8 w-20 hidden dark:block"
                             />
                         </a>
                     </div>
