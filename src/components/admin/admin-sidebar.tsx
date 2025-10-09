@@ -27,8 +27,6 @@ import {
   User,
 } from "lucide-react"
 import { Logo } from "@/components/logo"
-import { Button } from "@/components/ui/button"
-
 
 export function AdminSidebar() {
   const pathname = usePathname()

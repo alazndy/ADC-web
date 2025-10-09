@@ -7,3 +7,4 @@ export * from './projects';
 export * from './categories';
 export * from './sectors';
 export * from './services'; // Exports 'services' and 'techSolutions'
+export * from './brigade-van';

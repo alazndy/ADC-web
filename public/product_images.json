@@ -1,0 +1,1024 @@
+{
+  "product_images": [
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/1744390933wpdm_BE-870L-000.jpg",
+      "product_name": "BE-870L-000"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/1744390955wpdm_Essential-AHD-CMS-Kit.jpg",
+      "product_name": "Essential AHD CMS Kit"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/1744724632wpdm_MDR-Buzzer.jpg",
+      "product_name": "MDR Buzzer"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/1746605004wpdm_4493-NA-Truck-MDR-5G-Detection-Zone-V1.jpg",
+      "product_name": "NA Truck MDR 5G Detection Zone V1"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/1746605005wpdm_4493-NA-Truck-MDR-4G-Detection-Zone-V1.jpg",
+      "product_name": "NA Truck MDR 4G Detection Zone V1"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/1746605050wpdm_4493-NA-Truck-CMS-Detection-Zone-V1.jpg",
+      "product_name": "NA Truck CMS Detection Zone V1"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/1746605093wpdm_4493-NA-Truck-Radar-Predict-Detection-Zone-V1.jpg",
+      "product_name": "NA Truck Radar Predict Detection Zone V1"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/1746605525wpdm_4493-NA-Truck-AI-Camera-Front-Detection-Zone-V1.jpg",
+      "product_name": "NA Truck AI Camera Front Detection Zone V1"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/1746605525wpdm_4493-NA-Truck-AI-Camera-Front-Rear-Detection-Zone-V1.jpg",
+      "product_name": "NA Truck AI Camera Front Rear Detection Zone V1"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/1746605526wpdm_4493-NA-Truck-AI-Camera-Rear-Detection-Zone-V1.jpg",
+      "product_name": "NA Truck AI Camera Rear Detection Zone V1"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/1753112304wpdm_BE-8100C.jpg",
+      "product_name": "BE-8100C"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/3721-Sensor-Sleeves.jpg",
+      "product_name": "3721 Sensor Sleeves"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/3726-Sensor-mounts.jpg",
+      "product_name": "3726 Sensor mounts"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/4493-Bus-360-Detection-Zone-V1.jpg",
+      "product_name": "Bus 360 Detection Zone V1"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/4493-Bus-AI360-Detection-Zone-V1.jpg",
+      "product_name": "Bus AI 360 Detection Zone V1"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/4493-Bus-AI360-RHD-Detection-Zone-V1.jpg",
+      "product_name": "Bus AI 360 RHD Detection Zone V1"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/4493-Bus-RHD-360-Detection-Zone-V1.jpg",
+      "product_name": "Bus RHD 360 Detection Zone V1"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/4493-EU-Truck-AI-Camera-Front-Detection-Zone-V1.jpg",
+      "product_name": "EU Truck AI Camera Front Detection Zone V1"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/4493-EU-Truck-AI-Camera-Front-Rear-Detection-Zone-V1.jpg",
+      "product_name": "EU Truck AI Camera Front Rear Detection Zone V1"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/4493-EU-Truck-AI-Camera-Rear-Detection-Zone-V1.jpg",
+      "product_name": "EU Truck AI Camera Rear Detection Zone V1"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/4493-EU-Truck-Backeye-CMS-Detection-Zone-V1.jpg",
+      "product_name": "EU Truck Backeye CMS Detection Zone V1"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/4493-EU-Truck-MDR-4G-Detection-Zone-V1.jpg",
+      "product_name": "EU Truck MDR 4G Detection Zone V1"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/4493-EU-Truck-MDR-5G-Detection-Zone-V1.jpg",
+      "product_name": "EU Truck MDR 5G Detection Zone V1"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/4493-EU-Truck-Radar-Predict-Detection-Zone-V1.jpg",
+      "product_name": "EU Truck Radar Predict Detection Zone V1"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/4493-LHD-Truck-Backeye-360-Detection-Zone-V2.jpg",
+      "product_name": "LHD Truck Backeye 360 Detection Zone V2"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/4493-NA-Truck-360-Detection-Zone-V2.jpg",
+      "product_name": "NA Truck 360 Detection Zone V2"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/4493-NA-Truck-AI-360-Detection-Zone-V2.jpg",
+      "product_name": "NA Truck AI 360 Detection Zone V2"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/4493-School-Bus-360-Detection-Zone-V1.jpg",
+      "product_name": "School Bus 360 Detection Zone V1"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/4493-School-Bus-AI360-Detection-Zone-V1.jpg",
+      "product_name": "School Bus AI 360 Detection Zone V1"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/4493-Truck-Backsense-Radar-Detection-Zone-V2A.jpg",
+      "product_name": "Truck Backsense Radar Detection Zone V2A"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/4493-Truck-Backsense-Radar-Detection-Zone-V2B.jpg",
+      "product_name": "Truck Backsense Radar Detection Zone V2B"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/4493-UK-Truck-AI-Camera-Front-Detection-Zone-V1.jpg",
+      "product_name": "UK Truck AI Camera Front Detection Zone V1"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/4493-UK-Truck-AI-Camera-Front-Rear-Detection-Zone-V1.jpg",
+      "product_name": "UK Truck AI Camera Front Rear Detection Zone V1"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/4493-UK-Truck-AI-Camera-Rear-Detection-Zone-V1.jpg",
+      "product_name": "UK Truck AI Camera Rear Detection Zone V1"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/4493-UK-Truck-Backeye-360-Detection-Zone-V2.jpg",
+      "product_name": "UK Truck Backeye 360 Detection Zone V2"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/4493-UK-Truck-Backeye-CMS-Detection-Zone-V1.jpg",
+      "product_name": "UK Truck Backeye CMS Detection Zone V1"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/4493-UK-Truck-MDR-4G-Detection-Zone-V1.jpg",
+      "product_name": "UK Truck MDR 4G Detection Zone V1"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/4493-UK-Truck-MDR-5G-Detection-Zone-V1.jpg",
+      "product_name": "UK Truck MDR 5G Detection Zone V1"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/4493-UK-Truck-Radar-Predict-Detection-Zone-V1.jpg",
+      "product_name": "UK Truck Radar Predict Detection Zone V1"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/4493-Wheel-Loader-Backeye-360-AI-Detection-Zone-V1.jpg",
+      "product_name": "Wheel Loader Backeye 360 AI Detection Zone V1"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/4493-Wheel-Loader-Backeye-360-Detection-Zone-V1.jpg",
+      "product_name": "Wheel Loader Backeye 360 Detection Zone V1"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/4493-Wheel-Loader-CMS-Detection-Zone-V1.jpg",
+      "product_name": "Wheel Loader CMS Detection Zone V1"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/AC-24-12011.jpg",
+      "product_name": "AC-24-12011"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/AI-Camera-Box-Contents.jpg",
+      "product_name": "AI Camera Box Contents"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/AI-Driver-Distraction-Camera-.jpg",
+      "product_name": "AI Driver Distraction Camera"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/AI-Driver-Distraction-Camera-Kit.jpg",
+      "product_name": "AI Driver Distraction Camera Kit"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/AI-Driver-Distraction-Camera_png.png",
+      "product_name": "AI Driver Distraction Camera"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/AI-Driver-Distraction-Camera_w_rings.png",
+      "product_name": "AI Driver Distraction Camera with Rings"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/AI-Driver-Distraction-ECU.jpg",
+      "product_name": "AI Driver Distraction ECU"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Asset-tag-battery.jpg",
+      "product_name": "Asset Tag Battery"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/BA-13.0015.jpg",
+      "product_name": "BA-13.0015"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/BA-165.jpg",
+      "product_name": "BA-165"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/BA-32.0993.jpg",
+      "product_name": "BA-32.0993"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/BA-32ADR.1160.jpg",
+      "product_name": "BA-32ADR.1160"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/BA-32NS.0747.jpg",
+      "product_name": "BA-32NS.0747"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/BA-42NS.jpg",
+      "product_name": "BA-42NS"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/BA-42NSADR-1.1347.jpg",
+      "product_name": "BA-42NSADR-1.1347"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/BA-42NSADR.1347.jpg",
+      "product_name": "BA-42NSADR.1347"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/BA-530.2736.jpg",
+      "product_name": "BA-530.2736"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/BA-530TCA-2.jpg",
+      "product_name": "BA-530TCA-2"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/BA-560.2742.jpg",
+      "product_name": "BA-560.2742"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/BA-57.0027.jpg",
+      "product_name": "BA-57.0027"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/BA-570.2885.jpg",
+      "product_name": "BA-570.2885"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/BA-680.1296.jpg",
+      "product_name": "BA-680.1296"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/BA-760.jpg",
+      "product_name": "BA-760"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/BA-890.1246.jpg",
+      "product_name": "BA-890.1246"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/BC-01.0077.jpg",
+      "product_name": "BC-01.0077"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/BC-01B.0079.jpg",
+      "product_name": "BC-01B.0079"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/BC-01HP.0665.jpg",
+      "product_name": "BC-01HP.0665"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/BC-01HPB.1199.jpg",
+      "product_name": "BC-01HPB.1199"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/BC-01HBrake.0849.jpg",
+      "product_name": "BC-01H Brake.0849"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/BC-01NS-B.1198.jpg",
+      "product_name": "BC-01NS-B.1198"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/BC-01NS.0378.jpg",
+      "product_name": "BC-01NS.0378"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/BC-02B.0083.jpg",
+      "product_name": "BC-02B.0083"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/BE-800C-1623C.png",
+      "product_name": "BE-800C-1623C"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/BE-800C.jpg",
+      "product_name": "BE-800C"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/BE-810C-Closed.jpg",
+      "product_name": "BE-810C Closed"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/BE-810C-Open.jpg",
+      "product_name": "BE-810C Open"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/BE-856-000.jpg",
+      "product_name": "BE-856-000"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/BE-870-000.jpg",
+      "product_name": "BE-870-000"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/BE-870FM-000.jpg",
+      "product_name": "BE-870FM-000"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/BE-870FM.jpg",
+      "product_name": "BE-870FM"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/BE-870HM.jpg",
+      "product_name": "BE-870HM"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/BE-870L-000.jpg",
+      "product_name": "BE-870L-000"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/BE-870LM.jpg",
+      "product_name": "BE-870LM"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/BE-890C.jpg",
+      "product_name": "BE-890C"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/BE-970F-000.jpg",
+      "product_name": "BE-970F-000"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/BE-970W-000.jpg",
+      "product_name": "BE-970W-000"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/BE-970WM.jpg",
+      "product_name": "BE-970WM"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/BS-8100.jpg",
+      "product_name": "BS-8100"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/BS-8100b.jpg",
+      "product_name": "BS-8100b"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Backscan-Kit-2.jpg",
+      "product_name": "Backscan Kit 2"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Backscan-Kit.jpg",
+      "product_name": "Backscan Kit"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Backsense-77GHz-Display.jpg",
+      "product_name": "Backsense 77GHz Display"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Brigade-Camera-Spacer.jpg",
+      "product_name": "Brigade Camera Spacer"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Brigade_Dashboard.png",
+      "product_name": "Brigade Dashboard"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Brigade_VBV-700C.png",
+      "product_name": "Brigade VBV-700C"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/CT-470.1292.jpg",
+      "product_name": "CT-470.1292"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Cornerscan-kit-2.jpg",
+      "product_name": "Cornerscan kit 2"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Cornerscan-kit.jpg",
+      "product_name": "Cornerscan kit"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/DC-204-AI-driver-facing.png",
+      "product_name": "DC-204-AI driver facing"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/DC-204-AI.png",
+      "product_name": "DC-204-AI"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/DF-470.1360.jpg",
+      "product_name": "DF-470.1360"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/DMC-1025.jpg",
+      "product_name": "DMC-1025"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/DMC-1035.jpg",
+      "product_name": "DMC-1035"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/DT-460.1346.jpg",
+      "product_name": "DT-460.1346"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Display-buzzer.jpg",
+      "product_name": "Display buzzer"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Driver-facing-camera-mount-1.jpg",
+      "product_name": "Driver facing camera mount 1"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Driver-facing-camera-mount-2.jpg",
+      "product_name": "Driver facing camera mount 2"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Driver-facing-camera-mount-3.jpg",
+      "product_name": "Driver facing camera mount 3"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Driver-facing-camera.jpg",
+      "product_name": "Driver facing camera"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/ECU.jpg",
+      "product_name": "ECU"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/EVS-Sounder.jpg",
+      "product_name": "EVS Sounder"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Essential-AHD-CMS-Kit.jpg",
+      "product_name": "Essential AHD CMS Kit"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Essential-Monitor.jpg",
+      "product_name": "Essential Monitor"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Ethernet-cable-web.jpg",
+      "product_name": "Ethernet cable web"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Ethernet-cable.jpg",
+      "product_name": "Ethernet cable"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Front-Radar-Display-Left-Amber.jpg",
+      "product_name": "Front Radar Display Left Amber"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Front-Radar-Display-Left-Green.jpg",
+      "product_name": "Front Radar Display Left Green"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Front-Radar-Display-Left-Red.jpg",
+      "product_name": "Front Radar Display Left Red"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Front-Radar-Display-Middle-Amber.jpg",
+      "product_name": "Front Radar Display Middle Amber"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Front-Radar-Display-Middle-Green.jpg",
+      "product_name": "Front Radar Display Middle Green"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Front-Radar-Display-Middle-Red.jpg",
+      "product_name": "Front Radar Display Middle Red"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Front-Radar-Display-Right-Amber.jpg",
+      "product_name": "Front Radar Display Right Amber"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Front-Radar-Display-Right-Green.jpg",
+      "product_name": "Front Radar Display Right Green"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Front-Radar-Display-Right-Red.jpg",
+      "product_name": "Front Radar Display Right Red"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Front-Radar-Display.jpg",
+      "product_name": "Front Radar Display"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Front-Radar-Housing.jpg",
+      "product_name": "Front Radar Housing"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Front-Radar-Kit.png",
+      "product_name": "Front Radar Kit"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Front-Radar-No-Housing.jpg",
+      "product_name": "Front Radar No Housing"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Front-Radar-With-Housing.jpg",
+      "product_name": "Front Radar With Housing"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Frontscan-kit-2.jpg",
+      "product_name": "Frontscan kit 2"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Frontscan-kit.jpg",
+      "product_name": "Frontscan kit"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/HDD-rear.jpg",
+      "product_name": "HDD rear"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/IP-1000C.jpg",
+      "product_name": "IP-1000C"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/IP-1100C.jpg",
+      "product_name": "IP-1100C"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/IP-1200C.jpg",
+      "product_name": "IP-1200C"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/IP-EM4-5860.jpg",
+      "product_name": "IP-EM4-5860"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/IP-EM8-5861.jpg",
+      "product_name": "IP-EM8-5861"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/IP-cable-new.jpg",
+      "product_name": "IP cable new"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/IP-cable-web.jpg",
+      "product_name": "IP cable web"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/MD-50-0.jpg",
+      "product_name": "MD-50-0"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/MD-50-15.jpg",
+      "product_name": "MD-50-15"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/MD-50-25.jpg",
+      "product_name": "MD-50-25"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/MD-50.jpg",
+      "product_name": "MD-50"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/MD-50AM.jpg",
+      "product_name": "MD-50AM"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/MD-50SM.jpg",
+      "product_name": "MD-50SM"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/MD-60.jpg",
+      "product_name": "MD-60"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/MDR-500-MCU.jpg",
+      "product_name": "MDR-500-MCU"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/MDR-504.jpg",
+      "product_name": "MDR-504"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/MDR-508.jpg",
+      "product_name": "MDR-508"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/MDR-641.jpg",
+      "product_name": "MDR-641"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/MDR-641b.jpg",
+      "product_name": "MDR-641b"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/MDR-644-Action-1.png",
+      "product_name": "MDR-644 Action 1"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/MDR-644-Action-2.png",
+      "product_name": "MDR-644 Action 2"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/MDR-644-Action-3.png",
+      "product_name": "MDR-644 Action 3"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/MDR-644-Action-4.png",
+      "product_name": "MDR-644 Action 4"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/MDR-644.jpg",
+      "product_name": "MDR-644"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/MDR-644.png.png",
+      "product_name": "MDR-644"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/MDR-AI-forward-facing-camera.jpg",
+      "product_name": "MDR AI forward facing camera"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/MDR-Buzzer.jpg",
+      "product_name": "MDR Buzzer"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/MDR-Dashboard-Phone.png",
+      "product_name": "MDR Dashboard Phone"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/MDR-HDD1.jpg",
+      "product_name": "MDR HDD1"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/OSD-Module.jpg",
+      "product_name": "OSD Module"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/QVS-CGI.png",
+      "product_name": "QVS CGI"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/QVS-ECU.jpg",
+      "product_name": "QVS ECU"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/QVS-Kit.jpg",
+      "product_name": "QVS Kit"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/QVS.jpg",
+      "product_name": "QVS"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/RX-TX-b.jpg",
+      "product_name": "RX TX b"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Radar-Predict-Display-LHD.png",
+      "product_name": "Radar Predict Display LHD"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Radar-Predict-Display-RHD.png",
+      "product_name": "Radar Predict Display RHD"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Radar-Predict-Housing.jpg",
+      "product_name": "Radar Predict Housing"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Radar-Predict-Kit-LHD.png",
+      "product_name": "Radar Predict Kit LHD"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Radar-Predict-Kit-RHD.png",
+      "product_name": "Radar Predict Kit RHD"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Radar-Predict-No-Housing.jpg",
+      "product_name": "Radar Predict No Housing"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Radar-Predict-With-Housing.jpg",
+      "product_name": "Radar Predict With Housing"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/SA-400.1310.jpg",
+      "product_name": "SA-400.1310"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/SA-600.1312.jpg",
+      "product_name": "SA-600.1312"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/SA-680.jpg",
+      "product_name": "SA-680"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/SA-800.1315.jpg",
+      "product_name": "SA-800.1315"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Sidescan-kit-2.jpg",
+      "product_name": "Sidescan kit 2"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Sidescan-kit.jpg",
+      "product_name": "Sidescan kit"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Smart-Gateway.jpeg",
+      "product_name": "Smart Gateway"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Stepscan-kit-2.jpg",
+      "product_name": "Stepscan kit 2"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Stepscan-kit.jpg",
+      "product_name": "Stepscan kit"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Tag-tester.jpg",
+      "product_name": "Tag tester"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/UDS-001BZ-3715-3D.png",
+      "product_name": "UDS-001BZ-3715-3D"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Ultrasonic-sensor-2.jpg",
+      "product_name": "Ultrasonic sensor 2"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Ultrasonic-sensor.jpg",
+      "product_name": "Ultrasonic sensor"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Ultrasonics-sensor.png.png",
+      "product_name": "Ultrasonics sensor"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/VBV-2220C-AI-D04-png.png",
+      "product_name": "VBV-2220C-AI-D04"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/VBV-2220C-AI-D04.jpg",
+      "product_name": "VBV-2220C-AI-D04"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/VBV-22X0C-CA-RJ45.jpg",
+      "product_name": "VBV-22X0C-CA-RJ45"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/VBV-3100C.jpg",
+      "product_name": "VBV-3100C"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/VBV-320C.jpg",
+      "product_name": "VBV-320C"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/VBV-320C.png.png",
+      "product_name": "VBV-320C"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/VBV-485.jpg",
+      "product_name": "VBV-485"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/VBV-600C.jpg",
+      "product_name": "VBV-600C"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/VBV-630C.jpeg",
+      "product_name": "VBV-630C"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/VBV-630C.jpg",
+      "product_name": "VBV-630C"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/VBV-63XC.jpg",
+      "product_name": "VBV-63XC"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/VBV-650M.jpg",
+      "product_name": "VBV-650M"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/VBV-670-000.jpg",
+      "product_name": "VBV-670-000"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/VBV-67XM.jpg",
+      "product_name": "VBV-67XM"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/VBV-7100C.jpg",
+      "product_name": "VBV-7100C"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/VBV-7104FM.jpg",
+      "product_name": "VBV-7104FM"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/VBV-7104FM.png.png",
+      "product_name": "VBV-7104FM"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/VBV-7104HFM-6057.png",
+      "product_name": "VBV-7104HFM-6057"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/VBV-711C.jpg",
+      "product_name": "VBV-711C"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/VBV-750B-000.jpg",
+      "product_name": "VBV-750B-000"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/VBV-750D-000.jpg",
+      "product_name": "VBV-750D-000"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/VBV-750M.jpg",
+      "product_name": "VBV-750M"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/VBV-770-004.jpg",
+      "product_name": "VBV-770-004"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/VBV-770B-000.jpg",
+      "product_name": "VBV-770B-000"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/VBV-770B-001.jpg",
+      "product_name": "VBV-770B-001"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/VBV-770B-002.jpg",
+      "product_name": "VBV-770B-002"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/VBV-770HM-.jpg",
+      "product_name": "VBV-770HM"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/VBV-770HM_mount.png",
+      "product_name": "VBV-770HM mount"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/VBV-770M-OSDa.jpg",
+      "product_name": "VBV-770M OSDa"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/VBV-770M-OSDb.jpg",
+      "product_name": "VBV-770M OSDb"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/VBV-770M-UDS-OSD-2.jpg",
+      "product_name": "VBV-770M UDS OSD 2"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/VBV-770M-UDS-OSD.jpg",
+      "product_name": "VBV-770M UDS OSD"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/VBV-770M.jpg",
+      "product_name": "VBV-770M"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/VBV-770M.png.png",
+      "product_name": "VBV-770M"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/VRA-390.jpg",
+      "product_name": "VRA-390"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/Wing-camera.jpg",
+      "product_name": "Wing camera"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/ZoneSafe-Antenna.jpg",
+      "product_name": "ZoneSafe Antenna"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/ZoneSafe-Complete-System-Antenna-Control-Unit-Tags.jpg",
+      "product_name": "ZoneSafe Complete System Antenna Control Unit Tags"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/ZoneSafe-Control-Unit-in-cab.jpg",
+      "product_name": "ZoneSafe Control Unit in cab"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/ZoneSafe-Qu-Box.jpg",
+      "product_name": "ZoneSafe Qu Box"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/ZoneSafe-Tag-Belt-Clip-Grey-Pedestrian.jpg",
+      "product_name": "ZoneSafe Tag Belt Clip Grey Pedestrian"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/ZoneSafe-TufTag.jpg",
+      "product_name": "ZoneSafe TufTag"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/ZoneSafe-USB-Desk-Top-Reader.jpg",
+      "product_name": "ZoneSafe USB Desk Top Reader"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/ZoneSafe-VibraTag-Grey-Pedestrian.jpg",
+      "product_name": "ZoneSafe VibraTag Grey Pedestrian"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/ZoneSafe-VibraTag-Yellow-Driver.jpg",
+      "product_name": "ZoneSafe VibraTag Yellow Driver"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/ZoneSafe-tag-charger.jpg",
+      "product_name": "ZoneSafe tag charger"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/ai-connected-dashcam-dashboard.png",
+      "product_name": "AI connected dashcam dashboard"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/ai-connected-dashcam-dashboard.png.png",
+      "product_name": "AI connected dashcam dashboard"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/camera-monitor.jpg",
+      "product_name": "camera monitor"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/distraction_camera_Fatigue.jpg",
+      "product_name": "Distraction Camera Fatigue"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/distraction_camera_Fatigue_rhd.jpg",
+      "product_name": "Distraction Camera Fatigue RHD"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/distraction_camera_Phone_Detection_edit.jpg",
+      "product_name": "Distraction Camera Phone Detection Edit"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/distraction_camera_Phone_Detection_no_smile.jpg",
+      "product_name": "Distraction Camera Phone Detection"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/distraction_camera_Phone_Detection_w_rings_lhd.jpg",
+      "product_name": "Distraction Camera Phone Detection with Rings LHD"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/distraction_camera_Phone_Detection_w_rings_rhd.jpg",
+      "product_name": "Distraction Camera Phone Detection with Rings RHD"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/distraction_camera_Seatbelt_Detection.jpg",
+      "product_name": "Distraction Camera Seatbelt Detection"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/distraction_camera_Seatbelt_Detection_w_rings_lhd.jpg",
+      "product_name": "Distraction Camera Seatbelt Detection with Rings LHD"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/distraction_camera_Seatbelt_Detection_w_rings_rhd.jpg",
+      "product_name": "Distraction Camera Seatbelt Detection with Rings RHD"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/distraction_camera_distraction.jpg",
+      "product_name": "Distraction Camera Distraction"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/distraction_camera_distraction_w_rings_lhd.jpg",
+      "product_name": "Distraction Camera Distraction with Rings LHD"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/distraction_camera_distraction_w_rings_rhd.jpg",
+      "product_name": "Distraction Camera Distraction with Rings RHD"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/distraction_camera_smoking_detected.jpg",
+      "product_name": "Distraction Camera Smoking Detected"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/distraction_camera_smoking_detected_lhd.jpg",
+      "product_name": "Distraction Camera Smoking Detected LHD"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/distraction_camera_smoking_detected_rhd.jpg",
+      "product_name": "Distraction Camera Smoking Detected RHD"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Product_Images/mdr-644.png",
+      "product_name": "MDR-644"
+    }
+  ]
+}

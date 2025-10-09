@@ -1,0 +1,548 @@
+{
+  "vehicle_images": [
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Ambulance_EU_w_rings.jpg",
+      "vehicle_type": "Ambulance EU"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Ambulance_German_w_rings.jpg",
+      "vehicle_type": "Ambulance German"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Ambulance_UK_w_rings.jpg",
+      "vehicle_type": "Ambulance UK"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Artic_EU_w_rings.jpg",
+      "vehicle_type": "Articulated Truck EU"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Artic_EU_w_rings_V4.png",
+      "vehicle_type": "Articulated Truck EU"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Artic_NA_w_rings.jpg",
+      "vehicle_type": "Articulated Truck NA"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Articulated_Truck_UK-w_rings.jpg",
+      "vehicle_type": "Articulated Truck UK"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Backhoe_Loader_w_rings-V3.png",
+      "vehicle_type": "Backhoe Loader"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Backhoe_Loader_w_rings.png",
+      "vehicle_type": "Backhoe Loader"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Backhoe_Loader_w_rings_V2.png",
+      "vehicle_type": "Backhoe Loader"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Belt_Loader_w_rings.png",
+      "vehicle_type": "Belt Loader"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Belt_Loader_w_rings_V2.png",
+      "vehicle_type": "Belt Loader"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Belt_Loader_w_rings_V3.png",
+      "vehicle_type": "Belt Loader"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Bus_w_rings.png",
+      "vehicle_type": "Bus"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Bus_w_rings_V2.png",
+      "vehicle_type": "Bus"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Bus_w_rings_V3.png",
+      "vehicle_type": "Bus"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Bus_w_rings_V4.png",
+      "vehicle_type": "Bus"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Bus_w_rings_V5.png",
+      "vehicle_type": "Bus"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Bus_w_rings_V6.png",
+      "vehicle_type": "Bus"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Bus_w_rings_V7.png",
+      "vehicle_type": "Bus"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Catering_truck_w_rings-V2.png",
+      "vehicle_type": "Catering Truck"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Catering_truck_w_rings.png",
+      "vehicle_type": "Catering Truck"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Cement_Truck_w_rings.png",
+      "vehicle_type": "Cement Truck"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Cement_Truck_w_rings_V3_USA.png",
+      "vehicle_type": "Cement Truck USA"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Cement_Truck_w_rings_V4_USA.png",
+      "vehicle_type": "Cement Truck USA"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Cement_truck_w_rings_V2.png",
+      "vehicle_type": "Cement Truck"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Coach_w_rings.png",
+      "vehicle_type": "Coach"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Coach_w_rings_v2.png",
+      "vehicle_type": "Coach"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Excavator_w_rings.png",
+      "vehicle_type": "Excavator"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Excavator_w_rings_V2.png",
+      "vehicle_type": "Excavator"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Excavator_w_rings_V3.png",
+      "vehicle_type": "Excavator"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Excavator_w_rings_V4.png",
+      "vehicle_type": "Excavator"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Excavator_w_rings_V5.png",
+      "vehicle_type": "Excavator"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Excavator_w_rings_V6.png",
+      "vehicle_type": "Excavator"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Excavator_w_rings_V7.png",
+      "vehicle_type": "Excavator"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Firetruck_EU_NA_w_Rings.jpg",
+      "vehicle_type": "Firetruck EU NA"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Firetruck_w_Rings_US_V3.jpg",
+      "vehicle_type": "Firetruck US"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Firetruck_w_rings.jpg",
+      "vehicle_type": "Firetruck"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Firetruck_w_rings_UK.jpg",
+      "vehicle_type": "Firetruck UK"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Firetruck_w_rings_US_V4.jpg",
+      "vehicle_type": "Firetruck US"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Firetruck_w_rings_V6.jpg",
+      "vehicle_type": "Firetruck"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Firetruck_w_truck_V2.png",
+      "vehicle_type": "Firetruck"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Firetruck_w_truck_V5.jpg",
+      "vehicle_type": "Firetruck"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Firetruck_w_truck_V7.jpg",
+      "vehicle_type": "Firetruck"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Forklift_w_rings.jpg",
+      "vehicle_type": "Forklift"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Forklift_w_rings_V2.jpg",
+      "vehicle_type": "Forklift"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Forklift_w_rings_V3.jpg",
+      "vehicle_type": "Forklift"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Forklift_w_rings_V4.jpg",
+      "vehicle_type": "Forklift"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Forklift_w_rings_V5.jpg",
+      "vehicle_type": "Forklift"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Fuel_Tanker_W_rings_V4_NA.jpg",
+      "vehicle_type": "Fuel Tanker NA"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Fuel_Tanker_w_rings_V7.png",
+      "vehicle_type": "Fuel Tanker"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Fuel_tanker_w_Rings_V2.jpg",
+      "vehicle_type": "Fuel Tanker"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Harvester_w_Rings.png",
+      "vehicle_type": "Harvester"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Harvester_w_rings_V2.png",
+      "vehicle_type": "Harvester"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Harvester_w_rings_V3.png",
+      "vehicle_type": "Harvester"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Harvester_w_rings_V5.png",
+      "vehicle_type": "Harvester"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Harvester_w_rings_V6.png",
+      "vehicle_type": "Harvester"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Large_Dumper_V2_w_rings.png",
+      "vehicle_type": "Large Dumper"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Large_Dumper_w_rings_V1.png",
+      "vehicle_type": "Large Dumper"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Large_Dumper_w_rings_V3.png",
+      "vehicle_type": "Large Dumper"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Large_Dumper_w_rings_V4.png",
+      "vehicle_type": "Large Dumper"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Large_Dumper_w_rings_V5.png",
+      "vehicle_type": "Large Dumper"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Large_Dumper_w_rings_V6_.png",
+      "vehicle_type": "Large Dumper"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Medium_Dumper_w_rings_V1.png",
+      "vehicle_type": "Medium Dumper"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Medium_Dumper_w_rings_V2.png",
+      "vehicle_type": "Medium Dumper"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Medium_Dumper_w_rings_V3.png",
+      "vehicle_type": "Medium Dumper"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Medium_Dumper_w_rings_V4-US.png",
+      "vehicle_type": "Medium Dumper US"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Medium_Dumper_w_rings_V4.png",
+      "vehicle_type": "Medium Dumper"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Medium_Dumper_w_rings_V5.png",
+      "vehicle_type": "Medium Dumper"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Medium_Dumper_w_rings_V6.png",
+      "vehicle_type": "Medium Dumper"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Medium_Dumper_w_rings_V7.png",
+      "vehicle_type": "Medium Dumper"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Medium_Dumper_w_rings_V8-us.png",
+      "vehicle_type": "Medium Dumper US"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Mini_bus_w_rings_V1.png",
+      "vehicle_type": "Minibus"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Mini_bus_w_rings_V2.png",
+      "vehicle_type": "Minibus"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Mini_bus_w_rings_V3.png",
+      "vehicle_type": "Minibus"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Mini_bus_w_rings_V4.png",
+      "vehicle_type": "Minibus"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Minibus_wi_rings.jpg",
+      "vehicle_type": "Minibus"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Mobile_Crane_truck_w_rings_V1.png",
+      "vehicle_type": "Mobile Crane Truck"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Mobile_Crane_truck_w_rings_V2.png",
+      "vehicle_type": "Mobile Crane Truck"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Mobile_Crane_truck_w_rings_V3.png",
+      "vehicle_type": "Mobile Crane Truck"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Mobile_Crane_truck_w_rings_V4.png",
+      "vehicle_type": "Mobile Crane Truck"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Reach_Stacker_w_rings_V1.png",
+      "vehicle_type": "Reach Stacker"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Reach_Stacker_w_rings_V2.png",
+      "vehicle_type": "Reach Stacker"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Reach_Stacker_w_rings_V3.png",
+      "vehicle_type": "Reach Stacker"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Reach_Stacker_w_rings_V5.png",
+      "vehicle_type": "Reach Stacker"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Rigid_Truck_UK_w_rings.png",
+      "vehicle_type": "Rigid Truck UK"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Rigid_Truck_UK_w_rings.jpg",
+      "vehicle_type": "Rigid Truck UK"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Rigid_Truck_US_w_rings.png",
+      "vehicle_type": "Rigid Truck US"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Rigid_Truck_With_Drawbar_EU_w_rings.png",
+      "vehicle_type": "Rigid Truck With Drawbar EU"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Rigid_Truck_With_Drawbar_EU_w_rings_V2.png",
+      "vehicle_type": "Rigid Truck With Drawbar EU"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Rigid_truck_EU_w_Rings_V1.png",
+      "vehicle_type": "Rigid Truck EU"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Rigid_truck_UK_w_Rings_V4.png",
+      "vehicle_type": "Rigid Truck UK"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Rigid_truck_w_Rings_V2.png",
+      "vehicle_type": "Rigid Truck"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Rigid_truck_w_Rings_V3.png",
+      "vehicle_type": "Rigid Truck"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Road-Roller_w_rings_v1.png",
+      "vehicle_type": "Road Roller"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Road-Roller_w_rings_v3.png",
+      "vehicle_type": "Road Roller"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Road_roller_w_rings_V2.png",
+      "vehicle_type": "Road Roller"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Road_roller_w_rings_V5.png",
+      "vehicle_type": "Road Roller"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Road_roller_w_rings_v4.png",
+      "vehicle_type": "Road Roller"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Road_roller_w_rings_v6.png",
+      "vehicle_type": "Road Roller"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Small_rigid_Truck_w_rings-V2.png",
+      "vehicle_type": "Small Rigid Truck"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Small_rigid_Truck_w_rings.png",
+      "vehicle_type": "Small Rigid Truck"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Small_rigid_Truck_w_rings_V3.png",
+      "vehicle_type": "Small Rigid Truck"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Sweeper_w_rings.jpg",
+      "vehicle_type": "Sweeper"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Sweeper_w_rings_2.jpg",
+      "vehicle_type": "Sweeper"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Sweeper_w_rings_4.png",
+      "vehicle_type": "Sweeper"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Sweeper_w_rings_5.png",
+      "vehicle_type": "Sweeper"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Sweeper_w_rings_V3.png",
+      "vehicle_type": "Sweeper"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Telehandler_w_rings_V1.png",
+      "vehicle_type": "Telehandler"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Telehandler_w_rings_v2.png",
+      "vehicle_type": "Telehandler"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Telehandler_w_rings_v3.png",
+      "vehicle_type": "Telehandler"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Tractor_w_rings_V1.png",
+      "vehicle_type": "Tractor"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Tractor_w_rings_V2.png",
+      "vehicle_type": "Tractor"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Tractor_w_rings_V3.png",
+      "vehicle_type": "Tractor"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Tractor_w_rings_V4.png",
+      "vehicle_type": "Tractor"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Waste_Truck_w_rings_V1.png",
+      "vehicle_type": "Waste Truck"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Waste_Truck_w_rings_V2.png",
+      "vehicle_type": "Waste Truck"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Waste_Truck_w_rings_V3.png",
+      "vehicle_type": "Waste Truck"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/Waste_Truck_w_rings_V4.png",
+      "vehicle_type": "Waste Truck"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/belt_loader_w_rings_V4.png",
+      "vehicle_type": "Belt Loader"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/fuel_tanker_w_rings.jpg",
+      "vehicle_type": "Fuel Tanker"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/fuel_tanker_w_rings_V3.jpg",
+      "vehicle_type": "Fuel Tanker"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/fuel_tanker_w_rings_V5_NA.jpg",
+      "vehicle_type": "Fuel Tanker NA"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/fuel_tanker_w_rings_V6_NA.jpg",
+      "vehicle_type": "Fuel Tanker NA"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/harvester_w_rings_V4.png",
+      "vehicle_type": "Harvester"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/motorhome_w_rings_V1.png",
+      "vehicle_type": "Motorhome"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/motorhome_w_rings_V2.png",
+      "vehicle_type": "Motorhome"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/motorhome_w_rings_V3.png",
+      "vehicle_type": "Motorhome"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/motorhome_w_rings_V4.png",
+      "vehicle_type": "Motorhome"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/motorhome_w_rings_V5.png",
+      "vehicle_type": "Motorhome"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/motorhome_w_rings_V6.png",
+      "vehicle_type": "Motorhome"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/reach_stacker_w_rings_v4.png",
+      "vehicle_type": "Reach Stacker"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/rigid_truck_With_drawbar_UK_w_rings_v1-copy.png",
+      "vehicle_type": "Rigid Truck With Drawbar UK"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/rigid_truck_With_drawbar_UK_w_rings_v2-copy.png",
+      "vehicle_type": "Rigid Truck With Drawbar UK"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/rigid_truck_With_drawbar_US-AI-Generated_w_rings_v2-copy-1.png",
+      "vehicle_type": "Rigid Truck With Drawbar US (AI-Generated)"
+    },
+    {
+      "path": "gs://adc-web-473522.firebasestorage.app/Vehicle_Images/rigid_truck_With_drawbar_US_w_rings_v2-copy.png",
+      "vehicle_type": "Rigid Truck With Drawbar US"
+    }
+  ]
+}

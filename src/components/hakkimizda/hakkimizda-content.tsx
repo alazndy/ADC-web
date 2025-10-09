@@ -54,7 +54,7 @@ export default function HakkimizdaContent() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div className="order-2 lg:order-1" variants={itemVariants}>
             <h2 className="text-3xl font-bold font-headline tracking-tight">Bir Güvenlik ve Verimlilik Ortağı</h2>
-            <p className="mt-4 text-muted-foreground">2010 yılında, ticari araç güvenliğinde devrim yaratma hedefiyle yola çıktık. Bugün, Brigade Electronics'in Türkiye'deki yetkili distribütörü ve mühendislik ortağı olarak, lojistikten madenciliğe, tarımdan inşaata kadar geniş bir yelpazede endüstrilere yön veriyoruz.</p>
+            <p className="mt-4 text-muted-foreground">2010 yılında, ticari araç güvenliğinde devrim yaratma hedefiyle yola çıktık. Bugün, Brigade Electronics&apos;in Türkiye&apos;deki yetkili distribütörü ve mühendislik ortağı olarak, lojistikten madenciliğe, tarımdan inşaata kadar geniş bir yelpazede endüstrilere yön veriyoruz.</p>
             <p className="mt-4 text-muted-foreground">ADC Tasarım sadece bir ürün tedarikçisi değil, aynı zamanda bir çözüm ortağıdır. Her müşterinin operasyonel zorluklarını anlıyor, analiz ediyor ve bu zorluklara özel, yenilikçi ve yüksek performanslı sistemler tasarlıyoruz. Tutkumuz, en zorlu koşullarda bile güvenliği ve verimliliği en üst düzeye çıkarmaktır.</p>
           </motion.div>
            <motion.div className="order-1 lg:order-2 aspect-w-4 aspect-h-3" variants={itemVariants} whileHover={{ scale: 1.03 }}>

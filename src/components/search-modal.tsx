@@ -4,7 +4,7 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { Search, Loader2 } from 'lucide-react';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
-import { collection, query, getDocs, Firestore } from 'firebase/firestore';
+import { collection, query, getDocs } from 'firebase/firestore';
 import { useFirebase } from '@/firebase';
 
 // CORRECTED IMPORTS: Data is now imported from modular files as a fallback
@@ -32,7 +32,7 @@ export function SearchModal({ open, onOpenChange }: { open: boolean, onOpenChang
 
     setLoading(true);
     
-    let allContent: SearchResult[] = [];
+    const allContent: SearchResult[] = [];
 
     if (firestore) {
         try {

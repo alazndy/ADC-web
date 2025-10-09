@@ -3,10 +3,11 @@ import Link from "next/link";
 import { findImage } from "@/lib/placeholder-images";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { AlertTriangle, BookOpen, CheckCircle, ChevronLeft, Cog, Cpu, Package, Shield, Wifi } from "lucide-react";
+import { ChevronLeft, Cog, Cpu, Shield, Wifi } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Separator } from "@/components/ui/separator";
+import UCPSInteractiveGuide from "@/components/ucps-interactive-guide";
 
 const mainImage = findImage('ucps-main');
 const boxContentImage = findImage('ucps-box-content');
@@ -44,7 +45,7 @@ export default function UCPSProjectPage() {
                     <Badge variant="outline" className="text-sm">ÖZEL PROJE</Badge>
                     <h1 className="text-4xl font-bold font-headline mt-4">UCPS-2SA Ultrasonik Çarpışma Önleme Sistemi</h1>
                     <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-                        ADC Tasarım tarafından geliştirilen, Brigade'in ultrasonik sensörlerini kullanan, havalimanı yer hizmetleri gibi kritik operasyonlar için tasarlanmış akıllı çarpışma önleme sistemi.
+                        ADC Tasarım tarafından geliştirilen, Brigade&apos;in ultrasonik sensörlerini kullanan, havalimanı yer hizmetleri gibi kritik operasyonlar için tasarlanmış akıllı çarpışma önleme sistemi.
                     </p>
                 </div>
             </div>
@@ -56,7 +57,7 @@ export default function UCPSProjectPage() {
                         <div>
                             <h2 className="text-3xl font-bold font-headline">Proje Tanıtımı</h2>
                             <p className="mt-4 text-muted-foreground">
-                                Bu proje, Brigade'in yüksek hassasiyetli ultrasonik sensörlerini ve ADC Tasarım'ın geliştirdiği özel kontrol ünitesini (UCPS HMI Controller) bir araya getirerek, özellikle havalimanı yer hizmetleri (Turkish Fuel Services) gibi yüksek riskli ve hassas operasyonlar için tasarlanmıştır. Sistem, aracın çevresindeki mesafeyi sürekli okur, sürücüyü sesli ve görsel olarak uyarır ve kritik bir yakınlaşma durumunda aracı otomatik olarak durdurarak olası çarpmaları önler.
+                                Bu proje, Brigade&apos;in yüksek hassasiyetli ultrasonik sensörlerini ve ADC Tasarım&apos;ın geliştirdiği özel kontrol ünitesini (UCPS HMI Controller) bir araya getirerek, özellikle havalimanı yer hizmetleri (Turkish Fuel Services) gibi yüksek riskli ve hassas operasyonlar için tasarlanmıştır. Sistem, aracın çevresindeki mesafeyi sürekli okur, sürücüyü sesli ve görsel olarak uyarır ve kritik bir yakınlaşma durumunda aracı otomatik olarak durdurarak olası çarpmaları önler.
                             </p>
                             <p className="mt-4 text-muted-foreground">
                                 Sistem, ayrıca radar sensörleri ile çalışan RCPS (Radar Collision Prevention System) versiyonuna da sahiptir ve kullanıcı taleplerine göre esnek bir şekilde ayarlanabilir.
@@ -114,13 +115,13 @@ export default function UCPSProjectPage() {
                                     <CardTitle className="mt-4 font-headline">Brigade Sensörleri</CardTitle>
                                 </CardHeader>
                                 <CardContent>
-                                    <p className="text-muted-foreground text-sm">Sektör lideri Brigade'in IP69K korumalı, yüksek hassasiyetli ultrasonik sensör altyapısını kullanır.</p>
+                                    <p className="text-muted-foreground text-sm">Sektör lideri Brigade&apos;in IP69K korumalı, yüksek hassasiyetli ultrasonik sensör altyapısını kullanır.</p>
                                 </CardContent>
                             </Card>
                         </div>
                     </div>
-                    
-                    <Separator className="my-16" />
+
+                    <UCPSInteractiveGuide />
 
                     {/* Technical Specs Section */}
                     <div className="mb-20">
@@ -138,7 +139,7 @@ export default function UCPSProjectPage() {
                                             <TableRow><TableCell>Onaylanmış Standartlar</TableCell><TableCell>FCC, IC, ECE R10</TableCell></TableRow>
                                             <TableRow><TableCell>Çalışma Gerilimi</TableCell><TableCell>19 – 32 VDC</TableCell></TableRow>
                                             <TableRow><TableCell>CAN İletişim Hızı</TableCell><TableCell>250 Kbps</TableCell></TableRow>
-                                            <TableRow><TableCell>Algılama Aralığı</TableCell><TableCell>2.5 mt'ye kadar</TableCell></TableRow>
+                                            <TableRow><TableCell>Algılama Aralığı</TableCell><TableCell>2.5 mt&apos;ye kadar</TableCell></TableRow>
                                         </TableBody>
                                     </Table>
                                 </CardContent>
@@ -203,6 +204,7 @@ export default function UCPSProjectPage() {
                                         />
                                     )}
                                  </div>
+
                                </div>
                             </CardContent>
                          </Card>
