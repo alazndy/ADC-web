@@ -21,7 +21,6 @@ interface UrunKategoriClientPageProps {
     categoryName: string;
     pageDescription: string;
     subCategories: SubCategory[];
-    hasSpecialLayout: boolean;
     filteredProducts: Product[];
 }
 
@@ -60,7 +59,6 @@ export function UrunKategoriClientPage({
     categoryName,
     pageDescription,
     subCategories,
-    hasSpecialLayout,
     filteredProducts,
 }: UrunKategoriClientPageProps) {
     const [activeTab, setActiveTab] = useState('all');

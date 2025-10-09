@@ -1,0 +1,112 @@
+{
+    "company_logos": [
+      {
+        "path": "gs://adc-web-473522.firebasestorage.app/Company Logos/ADC/ADC logo.png",
+        "description": "ADC Logo"
+      },
+      {
+        "path": "gs://adc-web-473522.firebasestorage.app/Company Logos/Brigade/1752833408wpdm_strapline-en-white.png",
+        "description": "Brigade Strapline English White"
+      },
+      {
+        "path": "gs://adc-web-473522.firebasestorage.app/Company Logos/Brigade/1752833412wpdm_strapline-en-black.png",
+        "description": "Brigade Strapline English Black"
+      },
+      {
+        "path": "gs://adc-web-473522.firebasestorage.app/Company Logos/Brigade/1752833413wpdm_strapline-en-aqua.png",
+        "description": "Brigade Strapline English Aqua"
+      },
+      {
+        "path": "gs://adc-web-473522.firebasestorage.app/Company Logos/Brigade/1752833413wpdm_strapline-en-grey.png",
+        "description": "Brigade Strapline English Grey"
+      },
+      {
+        "path": "gs://adc-web-473522.firebasestorage.app/Company Logos/Brigade/Brigade-logo-DARK-MODE-small.png",
+        "description": "Brigade Logo Dark Mode Small"
+      },
+      {
+        "path": "gs://adc-web-473522.firebasestorage.app/Company Logos/Brigade/Brigade-logo-black-teal-dot-strapline-E.png",
+        "description": "Brigade Logo Black Teal Dot Strapline English"
+      },
+      {
+        "path": "gs://adc-web-473522.firebasestorage.app/Company Logos/Brigade/Brigade-logo-black-teal-dot-strapline-F.png",
+        "description": "Brigade Logo Black Teal Dot Strapline French"
+      },
+      {
+        "path": "gs://adc-web-473522.firebasestorage.app/Company Logos/Brigade/Brigade-logo-black-teal-dot-strapline-I.png",
+        "description": "Brigade Logo Black Teal Dot Strapline Italian"
+      },
+      {
+        "path": "gs://adc-web-473522.firebasestorage.app/Company Logos/Brigade/Brigade-logo-black-teal-dot-strapline-P.png",
+        "description": "Brigade Logo Black Teal Dot Strapline Polish"
+      },
+      {
+        "path": "gs://adc-web-473522.firebasestorage.app/Company Logos/Brigade/Brigade-logo-black-teal-dot.png",
+        "description": "Brigade Logo Black Teal Dot"
+      },
+      {
+        "path": "gs://adc-web-473522.firebasestorage.app/Company Logos/Brigade/Brigade-logo-white-black-dot.png",
+        "description": "Brigade Logo White Black Dot"
+      },
+      {
+        "path": "gs://adc-web-473522.firebasestorage.app/Company Logos/Brigade/Brigade-logo-white-dot-40.png",
+        "description": "Brigade Logo White Dot 40"
+      },
+      {
+        "path": "gs://adc-web-473522.firebasestorage.app/Company Logos/Brigade/Brigade-logo-white-teal-dot-strapline-E.png",
+        "description": "Brigade Logo White Teal Dot Strapline English"
+      },
+      {
+        "path": "gs://adc-web-473522.firebasestorage.app/Company Logos/Brigade/Brigade-logo-white-teal-dot-strapline-F.png",
+        "description": "Brigade Logo White Teal Dot Strapline French"
+      },
+      {
+        "path": "gs://adc-web-473522.firebasestorage.app/Company Logos/Brigade/Brigade-logo-white-teal-dot-strapline-I.png",
+        "description": "Brigade Logo White Teal Dot Strapline Italian"
+      },
+      {
+        "path": "gs://adc-web-473522.firebasestorage.app/Company Logos/Brigade/Brigade-logo-white-teal-dot-strapline-P.png",
+        "description": "Brigade Logo White Teal Dot Strapline Polish"
+      },
+      {
+        "path": "gs://adc-web-473522.firebasestorage.app/Company Logos/Brigade/Brigade-logo-white-teal-dot.png",
+        "description": "Brigade Logo White Teal Dot"
+      },
+      {
+        "path": "gs://adc-web-473522.firebasestorage.app/Company Logos/Brigade/Brigade-van-DARK-MODE.png",
+        "description": "Brigade Van Dark Mode"
+      },
+      {
+        "path": "gs://adc-web-473522.firebasestorage.app/Company Logos/Brigade/Brigade_Blue_Dot40_Circle.png",
+        "description": "Brigade Blue Dot 40 Circle"
+      },
+      {
+        "path": "gs://adc-web-473522.firebasestorage.app/Company Logos/Brigade/Brigade_Profile_Aqua-02.png",
+        "description": "Brigade Profile Aqua"
+      },
+      {
+        "path": "gs://adc-web-473522.firebasestorage.app/Company Logos/Brigade/Circle-Profile-Photo-2.png",
+        "description": "Circle Profile Photo 2"
+      },
+      {
+        "path": "gs://adc-web-473522.firebasestorage.app/Company Logos/Brigade/Circle-Profile-Photo-3.png",
+        "description": "Circle Profile Photo 3"
+      },
+      {
+        "path": "gs://adc-web-473522.firebasestorage.app/Company Logos/Brigade/Square-Profile-Image-1.png",
+        "description": "Square Profile Image 1"
+      },
+      {
+        "path": "gs://adc-web-473522.firebasestorage.app/Company Logos/Brigade/Square-Profile-Image-2.png",
+        "description": "Square Profile Image 2"
+      },
+      {
+        "path": "gs://adc-web-473522.firebasestorage.app/Company Logos/Brigade/bsp-.PNG",
+        "description": "BSP Logo"
+      },
+      {
+        "path": "gs://adc-web-473522.firebasestorage.app/Company Logos/Brigade/bsp-1024x442-1.png",
+        "description": "BSP Logo Large"
+      }
+    ]
+  }

@@ -106,7 +106,7 @@ export function HeroSection() {
               className="mt-6 max-w-2xl text-lg md:text-xl text-white/80"
               variants={itemVariants}
             >
-              Brigade Electronics'in Türkiye'deki yetkili distribütörü ADC Tasarım olarak, operasyonlarınızı geleceğe taşıyan öncü teknolojiler sunuyoruz.
+              Brigade Electronics&apos;in Türkiye&apos;deki yetkili distribütörü ADC Tasarım olarak, operasyonlarınızı geleceğe taşıyan öncü teknolojiler sunuyoruz.
             </motion.p>
             <motion.div 
               className="mt-10 flex flex-wrap justify-start gap-4"

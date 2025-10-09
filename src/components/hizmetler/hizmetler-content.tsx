@@ -1,8 +1,8 @@
 'use client';
-import { services, techSolutions } from "@/lib/data";
+import { services } from "@/lib/data";
 import Link from "next/link";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
-import { ArrowRight, Wrench, Users, ShieldCheck, Cpu } from "lucide-react";
+import { ArrowRight, Wrench, Users, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 

@@ -10,7 +10,6 @@ import { Check } from "lucide-react";
 
 interface SubCategoryShowcaseProps {
     title: string;
-    slug: string;
     description: string;
     features?: string[];
     image: string;
@@ -18,7 +17,7 @@ interface SubCategoryShowcaseProps {
     direction?: 'normal' | 'reverse';
 }
 
-export function SubCategoryShowcase({ title, slug, description, features, image: imageId, imageHint, direction = 'normal' }: SubCategoryShowcaseProps) {
+export function SubCategoryShowcase({ title, description, features, image: imageId, imageHint, direction = 'normal' }: SubCategoryShowcaseProps) {
     const image = findImage(imageId);
 
     const containerVariants = {

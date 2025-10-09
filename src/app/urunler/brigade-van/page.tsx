@@ -62,7 +62,7 @@ export default function BrigadeVanPage() {
                                     <ShieldCheck className="h-8 w-8 text-primary" />
                                     <CardTitle>Sigorta Dolandırıcılıkları</CardTitle>
                                 </CardHeader>
-                                <CardContent><p className='text-muted-foreground'>"Çarpmak için nakit" gibi kasıtlı olarak düzenlenen sahte kaza senaryoları.</p></CardContent>
+                                <CardContent><p className='text-muted-foreground'>&quot;Çarpmak için nakit&quot; gibi kasıtlı olarak düzenlenen sahte kaza senaryoları.</p></CardContent>
                             </Card>
                         </div>
                     </div>
@@ -96,7 +96,7 @@ export default function BrigadeVanPage() {
 
                     <div>
                         <h2 className="text-3xl font-headline font-bold text-center mb-6">Kayıt Sistemleri</h2>
-                        <p className="max-w-3xl mx-auto text-center text-muted-foreground mb-12">Sahte iddialar, "çarpışma için para" dolandırıcılıkları ve kayıplar, işletmelere her yıl milyonlara mal oluyor; ayrıca araç vandalizmi ve sürücülere yönelik saldırılar gibi sorunlar da var. Brigade Van'ın dijital kayıt ürünleri, bir olay durumunda doğru bir tanık sağlayarak ve reddedilemez kanıtlar sunarak bir çözüm sunar.</p>
+                        <p className="max-w-3xl mx-auto text-center text-muted-foreground mb-12">Sahte iddialar, &quot;çarpışma için para&quot; dolandırıcılıkları ve kayıplar, işletmelere her yıl milyonlara mal oluyor; ayrıca araç vandalizmi ve sürücülere yönelik saldırılar gibi sorunlar da var. Brigade Van&apos;ın dijital kayıt ürünleri, bir olay durumunda doğru bir tanık sağlayarak ve reddedilemez kanıtlar sunarak bir çözüm sunar.</p>
                             <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
                             {brigadeVanProducts["Kayıt Sistemleri"].map((product, index) => (
                                     <Card key={index} className="flex flex-col">
@@ -141,7 +141,7 @@ export default function BrigadeVanPage() {
                                 <CardTitle className="font-headline">Sensör Sistemleri</CardTitle>
                             </CardHeader>
                             <CardContent>
-                                <p className="text-muted-foreground">Brigade'in ultrasonik yakınlık sensörleri, hem araç hasarını hem de yayalar, bisikletliler veya nesnelerle çarpışmaları en aza indirir. Kapalı alanlarda çalışan veya düşük hızda manevra yapan araçlar için mükemmeldir. Algılama sistemi, hareketli veya sabit olsun, araca yakın engeller hakkında sürücüyü uyarır.</p>
+                                <p className="text-muted-foreground">Brigade&apos;in ultrasonik yakınlık sensörleri, hem araç hasarını hem de yayalar, bisikletliler veya nesnelerle çarpışmaları en aza indirir. Kapalı alanlarda çalışan veya düşük hızda manevra yapan araçlar için mükemmeldir. Algılama sistemi, hareketli veya sabit olsun, araca yakın engeller hakkında sürücüyü uyarır.</p>
                                     <ul className="text-sm text-muted-foreground space-y-2 mt-4">
                                     <li className="flex items-center gap-2"><Check className="h-4 w-4 text-primary" />4 sensörlü sistem aracın arkasına takılır</li>
                                     <li className="flex items-center gap-2"><Check className="h-4 w-4 text-primary" />Askılı veya gömme montaj</li>

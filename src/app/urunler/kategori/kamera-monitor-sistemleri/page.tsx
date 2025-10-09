@@ -14,15 +14,15 @@ import { ArrowRight, Video, Monitor, CheckCircle, Construction, Bus, Warehouse, 
 
 import { findImage } from '@/lib/placeholder-images';
 import { products } from '@/lib/data/products';
-import { cameraMonitorSubcategories } from '@/lib/data/subcategories';
+import { cameraMonitorSubCategories } from '@/lib/data/subcategories';
 
 // Kategoriye özel ürünleri ve alt kategorileri filtrele
 const categoryProducts = products.filter(p => p.category === 'Kamera Monitör Sistemleri');
 const heavyDutyCameras = categoryProducts.filter(p => p.name.toLowerCase().includes('kamera'));
 const monitorProducts = categoryProducts.filter(p => p.name.toLowerCase().includes('monitör'));
 
-const cameraSubcategory = cameraMonitorSubcategories.find(sc => sc.slug === 'agir-hizmet-tipi-kameralar');
-const monitorSubcategory = cameraMonitorSubcategories.find(sc => sc.slug === 'monitorler');
+const cameraSubcategory = cameraMonitorSubCategories.find(sc => sc.slug === 'agir-hizmet-tipi-kameralar');
+const monitorSubcategory = cameraMonitorSubCategories.find(sc => sc.slug === 'monitorler');
 
 const usageAreas = [
     { name: 'İnşaat', icon: <Construction className="h-10 w-10 mb-2" /> },

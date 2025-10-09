@@ -3,8 +3,7 @@
 import React from 'react';
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { products } from "@/lib/data";
 import { findImage } from "@/lib/placeholder-images";
@@ -91,12 +90,11 @@ export function FeaturedProducts2() {
                                 <div className="aspect-[4/3] relative overflow-hidden rounded-t-lg bg-card">
                                     <motion.div className='absolute inset-0' variants={mainImageHoverVariants}>
                                         <Image
-                                            src={mainImage.imageUrl}
+                                            src="https://firebasestorage.googleapis.com/v0/b/adc-web-473522.firebasestorage.app/o/Product_Images%2FBN360-300-Kit.jpg?alt=media&token=60ba59d4-ce58-4be6-9e3b-cb291efdd62b"
                                             alt={mainFeatured.name}
                                             fill
                                             sizes="(max-width: 1024px) 100vw, 50vw"
                                             className="object-contain p-8 transition-transform duration-300"
-                                            data-ai-hint={mainImage.imageHint}
                                         />
                                     </motion.div>
                                 </div>
