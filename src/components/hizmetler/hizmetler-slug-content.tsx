@@ -1,4 +1,5 @@
 'use client';
+import ServiceContentRenderer from './service-content-renderer';
 import { services, techSolutions } from "@/lib/data";
 import { PlaceholderContent } from "@/components/placeholder-content";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -60,7 +61,7 @@ export default function HizmetSlugContent({ slug }: { slug: string }) {
                         className="lg:col-span-2"
                         variants={itemVariants}
                     >
-                        <div className="prose dark:prose-invert max-w-none" dangerouslySetInnerHTML={{ __html: service.content }}/>
+                        <ServiceContentRenderer service={service} />
                     </motion.div>
                     <motion.aside 
                         className="lg:col-span-1 sticky top-24 h-fit"

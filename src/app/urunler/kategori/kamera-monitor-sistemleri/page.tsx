@@ -59,7 +59,7 @@ export default function KameraMonitorSistemleriPage() {
                         </motion.p>
                     </div>
                 </div>
-                 {heroImage && <Image src={heroImage.src} alt="Kamera Monitör Sistemleri" layout="fill" objectFit="cover" className="absolute top-0 left-0 w-full h-full opacity-5 z-0"/>}
+                 {heroImage && <Image src={heroImage.imageUrl} alt="Kamera Monitör Sistemleri" layout="fill" objectFit="cover" className="absolute top-0 left-0 w-full h-full opacity-5 z-0"/>}
             </motion.section>
 
             {/* Why Choose Section */}
@@ -182,7 +182,7 @@ function ProductCard({ product }: { product: typeof categoryProducts[0] }) {
                 <CardHeader>
                     {productImage && (
                         <div className="aspect-video relative w-full mb-4">
-                            <Image src={productImage.src} alt={product.name} layout="fill" objectFit="contain" />
+                            <Image src={productImage.imageUrl} alt={product.name} layout="fill" objectFit="contain" />
                         </div>
                     )}
                     <CardTitle>{product.name}</CardTitle>

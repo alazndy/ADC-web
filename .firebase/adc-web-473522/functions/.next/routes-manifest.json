@@ -1,0 +1,289 @@
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "dynamicRoutes": [
+    {
+      "page": "/hizmetler/[slug]",
+      "regex": "^/hizmetler/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/hizmetler/(?<nxtPslug>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/kategoriler/[slug]",
+      "regex": "^/kategoriler/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/kategoriler/(?<nxtPslug>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/projeler/[slug]",
+      "regex": "^/projeler/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/projeler/(?<nxtPslug>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/sektorler/[slug]",
+      "regex": "^/sektorler/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/sektorler/(?<nxtPslug>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/teknoloji-cozumleri/[slug]",
+      "regex": "^/teknoloji\\-cozumleri/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/teknoloji\\-cozumleri/(?<nxtPslug>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/urunler/kategori/[kategoriSlug]",
+      "regex": "^/urunler/kategori/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPkategoriSlug": "nxtPkategoriSlug"
+      },
+      "namedRegex": "^/urunler/kategori/(?<nxtPkategoriSlug>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/urunler/kategori/[kategoriSlug]/[altKategoriSlug]",
+      "regex": "^/urunler/kategori/([^/]+?)/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPkategoriSlug": "nxtPkategoriSlug",
+        "nxtPaltKategoriSlug": "nxtPaltKategoriSlug"
+      },
+      "namedRegex": "^/urunler/kategori/(?<nxtPkategoriSlug>[^/]+?)/(?<nxtPaltKategoriSlug>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/urunler/[slug]",
+      "regex": "^/urunler/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/urunler/(?<nxtPslug>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/admin",
+      "regex": "^/admin(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin(?:/)?$"
+    },
+    {
+      "page": "/admin/products",
+      "regex": "^/admin/products(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/products(?:/)?$"
+    },
+    {
+      "page": "/admin/projects",
+      "regex": "^/admin/projects(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/projects(?:/)?$"
+    },
+    {
+      "page": "/admin/sectors",
+      "regex": "^/admin/sectors(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/sectors(?:/)?$"
+    },
+    {
+      "page": "/admin/services",
+      "regex": "^/admin/services(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/services(?:/)?$"
+    },
+    {
+      "page": "/admin/tech-solutions",
+      "regex": "^/admin/tech\\-solutions(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/tech\\-solutions(?:/)?$"
+    },
+    {
+      "page": "/cozumler",
+      "regex": "^/cozumler(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/cozumler(?:/)?$"
+    },
+    {
+      "page": "/cozumler/kayit-cihazlari",
+      "regex": "^/cozumler/kayit\\-cihazlari(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/cozumler/kayit\\-cihazlari(?:/)?$"
+    },
+    {
+      "page": "/cozumler/kayit-sistemleri",
+      "regex": "^/cozumler/kayit\\-sistemleri(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/cozumler/kayit\\-sistemleri(?:/)?$"
+    },
+    {
+      "page": "/favicon.ico",
+      "regex": "^/favicon\\.ico(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/favicon\\.ico(?:/)?$"
+    },
+    {
+      "page": "/gizlilik-politikasi",
+      "regex": "^/gizlilik\\-politikasi(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/gizlilik\\-politikasi(?:/)?$"
+    },
+    {
+      "page": "/hakkimizda",
+      "regex": "^/hakkimizda(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/hakkimizda(?:/)?$"
+    },
+    {
+      "page": "/hizmetler",
+      "regex": "^/hizmetler(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/hizmetler(?:/)?$"
+    },
+    {
+      "page": "/hizmetler/montaj-ve-bakim",
+      "regex": "^/hizmetler/montaj\\-ve\\-bakim(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/hizmetler/montaj\\-ve\\-bakim(?:/)?$"
+    },
+    {
+      "page": "/hizmetler/proje-danismanligi",
+      "regex": "^/hizmetler/proje\\-danismanligi(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/hizmetler/proje\\-danismanligi(?:/)?$"
+    },
+    {
+      "page": "/hizmetler/teknik-destek",
+      "regex": "^/hizmetler/teknik\\-destek(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/hizmetler/teknik\\-destek(?:/)?$"
+    },
+    {
+      "page": "/iletisim",
+      "regex": "^/iletisim(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/iletisim(?:/)?$"
+    },
+    {
+      "page": "/kullanim-sartlari",
+      "regex": "^/kullanim\\-sartlari(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/kullanim\\-sartlari(?:/)?$"
+    },
+    {
+      "page": "/projeler",
+      "regex": "^/projeler(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/projeler(?:/)?$"
+    },
+    {
+      "page": "/projeler/rtc-pa-vinc-haberlesme",
+      "regex": "^/projeler/rtc\\-pa\\-vinc\\-haberlesme(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/projeler/rtc\\-pa\\-vinc\\-haberlesme(?:/)?$"
+    },
+    {
+      "page": "/projeler/ucps-2sa-carpima-onleme",
+      "regex": "^/projeler/ucps\\-2sa\\-carpima\\-onleme(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/projeler/ucps\\-2sa\\-carpima\\-onleme(?:/)?$"
+    },
+    {
+      "page": "/randevu-al",
+      "regex": "^/randevu\\-al(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/randevu\\-al(?:/)?$"
+    },
+    {
+      "page": "/sektorler",
+      "regex": "^/sektorler(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/sektorler(?:/)?$"
+    },
+    {
+      "page": "/teknoloji-cozumleri",
+      "regex": "^/teknoloji\\-cozumleri(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/teknoloji\\-cozumleri(?:/)?$"
+    },
+    {
+      "page": "/teknoloji-cozumleri/telematik-ve-filo-yonetimi",
+      "regex": "^/teknoloji\\-cozumleri/telematik\\-ve\\-filo\\-yonetimi(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/teknoloji\\-cozumleri/telematik\\-ve\\-filo\\-yonetimi(?:/)?$"
+    },
+    {
+      "page": "/urunler",
+      "regex": "^/urunler(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/urunler(?:/)?$"
+    },
+    {
+      "page": "/urunler/brigade-van",
+      "regex": "^/urunler/brigade\\-van(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/urunler/brigade\\-van(?:/)?$"
+    },
+    {
+      "page": "/urunler/kategori/kamera-monitor-sistemleri",
+      "regex": "^/urunler/kategori/kamera\\-monitor\\-sistemleri(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/urunler/kategori/kamera\\-monitor\\-sistemleri(?:/)?$"
+    },
+    {
+      "page": "/urunler/kategori/kamera-monitor-sistemleri/backeye-360",
+      "regex": "^/urunler/kategori/kamera\\-monitor\\-sistemleri/backeye\\-360(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/urunler/kategori/kamera\\-monitor\\-sistemleri/backeye\\-360(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "RSC",
+    "varyHeader": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch",
+    "prefetchHeader": "Next-Router-Prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "Next-Router-Segment-Prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments"
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  },
+  "rewrites": []
+}

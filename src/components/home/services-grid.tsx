@@ -15,7 +15,7 @@ const iconMap: { [key: string]: LucideIcon } = {
   Cpu,
 };
 
-const featuredServices = [...services.slice(0, 2), ...techSolutions.slice(0, 2)];
+const featuredServices = [...services.slice(0, 3), ...techSolutions.slice(0, 1)];
 
 const sectionVariants = {
   hidden: { opacity: 0 },

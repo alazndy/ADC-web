@@ -22,12 +22,6 @@ const itemVariants = {
 };
 
 export default function HakkimizdaContent() {
-  const teamMembers = [
-    { name: "Ahmet Yılmaz", role: "Kurucu & CEO", image: "person-1", imageHint: "man portrait" },
-    { name: "Ayşe Kaya", role: "Operasyon Direktörü", image: "person-2", imageHint: "woman portrait" },
-    { name: "Mehmet Demir", role: "Baş Mühendis", image: "person-3", imageHint: "man portrait" },
-  ];
-
   const officeImage = findImage("office-photo");
 
   return (
@@ -54,8 +48,8 @@ export default function HakkimizdaContent() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div className="order-2 lg:order-1" variants={itemVariants}>
             <h2 className="text-3xl font-bold font-headline tracking-tight">Bir Güvenlik ve Verimlilik Ortağı</h2>
-            <p className="mt-4 text-muted-foreground">2010 yılında, ticari araç güvenliğinde devrim yaratma hedefiyle yola çıktık. Bugün, Brigade Electronics&apos;in Türkiye&apos;deki yetkili distribütörü ve mühendislik ortağı olarak, lojistikten madenciliğe, tarımdan inşaata kadar geniş bir yelpazede endüstrilere yön veriyoruz.</p>
-            <p className="mt-4 text-muted-foreground">ADC Tasarım sadece bir ürün tedarikçisi değil, aynı zamanda bir çözüm ortağıdır. Her müşterinin operasyonel zorluklarını anlıyor, analiz ediyor ve bu zorluklara özel, yenilikçi ve yüksek performanslı sistemler tasarlıyoruz. Tutkumuz, en zorlu koşullarda bile güvenliği ve verimliliği en üst düzeye çıkarmaktır.</p>
+            <p className="mt-4 text-muted-foreground">2010 yılında ticari araç güvenliğinde bir devrim yaratma vizyonuyla yola çıktık. O günden bu yana, sektörün öncüsü Brigade Electronics'in Türkiye'deki yetkili distribütörü ve mühendislik ortağı olarak, en zorlu çalışma sahalarında bile güvenliği ve verimliliği yeniden tanımlıyoruz. Lojistikten madenciliğe, tarımdan inşaata kadar Türkiye'nin can damarı olan endüstrilere, sadece ürün tedarik etmekle kalmıyor, aynı zamanda özel mühendislik çözümleri sunuyoruz.</p>
+            <p className="mt-4 text-muted-foreground">ADC Tasarım olarak biz, bir tedarikçiden çok daha fazlasıyız; biz sizin çözüm ortağınızız. Her projenin kendine özgü zorlukları olduğunun bilincindeyiz. Bu nedenle, sahadaki ihtiyaçlarınızı derinlemesine analiz ediyor, operasyonel verimliliğinizi en üst düzeye çıkaracak ve en önemlisi, insan hayatını koruyacak yenilikçi ve yüksek performanslı sistemler tasarlıyoruz. Bizim için tutku, teknolojiyi kullanarak daha güvenli bir çalışma ortamı yaratmaktır.</p>
           </motion.div>
            <motion.div className="order-1 lg:order-2 aspect-w-4 aspect-h-3" variants={itemVariants} whileHover={{ scale: 1.03 }}>
               {officeImage && (
@@ -87,7 +81,7 @@ export default function HakkimizdaContent() {
                       <CardTitle className="font-headline">Misyonumuz</CardTitle>
                   </CardHeader>
                   <CardContent>
-                      <p className="text-muted-foreground">Ticari araç operasyonlarında kaza riskini ortadan kaldırmak için en gelişmiş güvenlik teknolojilerini erişilebilir kılmak, bu sayede insan hayatını korurken müşterilerimizin operasyonel verimliliğini en üst seviyeye taşımak.</p>
+                      <p className="text-muted-foreground">Ticari araçların ve iş makinelerinin yer aldığı her operasyonda, kaza riskini sıfıra indirmek. Bunu, en gelişmiş ve kanıtlanmış güvenlik teknolojilerini erişilebilir kılarak, sahadaki her canı koruma altına alarak ve müşterilerimizin operasyonel verimliliğini en üst seviyeye taşıyarak başarıyoruz.</p>
                   </CardContent>
               </Card>
             </motion.div>
@@ -100,52 +94,13 @@ export default function HakkimizdaContent() {
                       <CardTitle className="font-headline">Vizyonumuz</CardTitle>
                   </CardHeader>
                   <CardContent>
-                      <p className="text-muted-foreground">Araç güvenliği ve filo yönetimi teknolojileri alanında, Türkiye ve çevre coğrafyalarda yenilikçiliğin, kalitenin ve güvenilirliğin simgesi haline gelerek sektörün lider çözüm ortağı olmak.</p>
+                      <p className="text-muted-foreground">Araç güvenlik sistemleri ve telematik çözümleri alanında, sadece Türkiye'de değil, çevre coğrafyalarda da teknolojik yenilikçiliğin, sarsılmaz kalitenin ve mutlak güvenilirliğin simgesi olmak. Sektörün standartlarını belirleyen ve her zaman bir adım önde olan lider çözüm ortağı olarak tanınmak.</p>
                   </CardContent>
               </Card>
             </motion.div>
         </motion.div>
 
-        <motion.div 
-          className="mt-24 text-center"
-          variants={sectionVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
-        >
-            <motion.h2 className="text-3xl font-bold font-headline" variants={itemVariants}>Ekibimizle Tanışın</motion.h2>
-            <motion.p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground" variants={itemVariants}>Başarımızın arkasındaki güç, alanında uzman ve tutkulu ekibimizdir.</motion.p>
-            <motion.div 
-              className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-8"
-              variants={sectionVariants}
-             >
-                {teamMembers.map((member, index) => {
-                    const memberImage = findImage(member.image);
-                    return (
-                        <motion.div key={index} variants={itemVariants} whileHover={{ y: -8 }}>
-                          <Card className="text-center group h-full border border-transparent hover:border-primary/50 transition-colors">
-                              <CardContent className="p-6">
-                                  {memberImage && (
-                                      <div className="w-32 h-32 mx-auto relative">
-                                          <Image 
-                                            src={memberImage.imageUrl} 
-                                            alt={member.name} 
-                                            width={128}
-                                            height={128}
-                                            className="rounded-full object-cover shadow-md" 
-                                            data-ai-hint={member.imageHint} 
-                                          />
-                                      </div>
-                                  )}
-                                  <h3 className="text-lg font-semibold font-headline mt-4">{member.name}</h3>
-                                  <p className="text-primary">{member.role}</p>
-                              </CardContent>
-                          </Card>
-                        </motion.div>
-                    )
-                })}
-            </motion.div>
-        </motion.div>
+
       </motion.div>
     </>
   );

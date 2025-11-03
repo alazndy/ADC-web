@@ -82,7 +82,7 @@ export default function ProjelerContent() {
                                         <div className="relative h-56 w-full">
                                             {image ? (
                                                 <Image
-                                                    src={image.src}
+                                                    src={image.imageUrl}
                                                     alt={project.title}
                                                     fill
                                                     style={{ objectFit: 'cover' }}

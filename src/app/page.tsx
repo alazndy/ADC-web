@@ -12,7 +12,6 @@ export default function Home() {
       <FeaturedProducts2 />
       <ServicesGrid />
       <SectorsCarousel />
-      <ProjectHighlight />
       <CallToActionBanner />
     </>
   );

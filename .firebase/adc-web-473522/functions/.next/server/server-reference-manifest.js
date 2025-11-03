@@ -1,0 +1,1 @@
+self.__RSC_SERVER_MANIFEST="{\"node\":{\"60eea63f1248c9593eb67464eed2f23895339c59af\":{\"workers\":{\"app/iletisim/page\":{\"moduleId\":\"63056\",\"async\":false}},\"layer\":{\"app/iletisim/page\":\"action-browser\"}}},\"edge\":{},\"encryptionKey\":\"process.env.NEXT_SERVER_ACTIONS_ENCRYPTION_KEY\"}"
