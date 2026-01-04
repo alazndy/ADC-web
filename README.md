@@ -1,5 +1,10 @@
-# Firebase Studio
+# ADC-web: Legacy Site
 
-This is a NextJS starter in Firebase Studio.
+![Status](https://img.shields.io/badge/Status-Deprecated-red)
 
-To get started, take a look at src/app/page.tsx.
+**ADC-web** was the previous version of the corporate website.
+
+## ⚠️ Status: Deprecated
+
+> [!CAUTION]
+> Please refer to **[ADCWEB](https://github.com/alazndy/ADCWEB)** for the active site.
